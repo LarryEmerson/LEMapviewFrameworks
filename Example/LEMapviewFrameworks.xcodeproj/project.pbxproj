@@ -13,6 +13,12 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		80528B201D34BB8A00AA2056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B1F1D34BB8A00AA2056 /* main.m */; };
+		80528B231D34BB8A00AA2056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B221D34BB8A00AA2056 /* AppDelegate.m */; };
+		80528B261D34BB8A00AA2056 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B251D34BB8A00AA2056 /* ViewController.m */; };
+		80528B291D34BB8A00AA2056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80528B271D34BB8A00AA2056 /* Main.storyboard */; };
+		80528B2B1D34BB8A00AA2056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80528B2A1D34BB8A00AA2056 /* Assets.xcassets */; };
+		80528B2E1D34BB8A00AA2056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80528B2C1D34BB8A00AA2056 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,16 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		80528B1C1D34BB8A00AA2056 /* LEMapviewFrameworks_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEMapviewFrameworks_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80528B1F1D34BB8A00AA2056 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80528B211D34BB8A00AA2056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80528B221D34BB8A00AA2056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80528B241D34BB8A00AA2056 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		80528B251D34BB8A00AA2056 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80528B281D34BB8A00AA2056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80528B2A1D34BB8A00AA2056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80528B2D1D34BB8A00AA2056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80528B2F1D34BB8A00AA2056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B373EA592DF8E713BE7D4CBE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B41C5371D7E4F460AB86E53F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C6B7800BCCD15FCA21255170 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +58,13 @@
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
 				4DB1FA6B563FD0B69525D1FE /* Pods_LEMapviewFrameworks_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80528B191D34BB8A00AA2056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +85,7 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F5B5195388D20070C39A /* Tests */,
+				80528B1D1D34BB8A00AA2056 /* LEMapviewFrameworks_Test */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				4A091F07FF725C116B4A0494 /* Pods */,
@@ -72,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5AE195388D20070C39A /* LEMapviewFrameworks_Tests.xctest */,
+				80528B1C1D34BB8A00AA2056 /* LEMapviewFrameworks_Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +142,30 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		80528B1D1D34BB8A00AA2056 /* LEMapviewFrameworks_Test */ = {
+			isa = PBXGroup;
+			children = (
+				80528B211D34BB8A00AA2056 /* AppDelegate.h */,
+				80528B221D34BB8A00AA2056 /* AppDelegate.m */,
+				80528B241D34BB8A00AA2056 /* ViewController.h */,
+				80528B251D34BB8A00AA2056 /* ViewController.m */,
+				80528B271D34BB8A00AA2056 /* Main.storyboard */,
+				80528B2A1D34BB8A00AA2056 /* Assets.xcassets */,
+				80528B2C1D34BB8A00AA2056 /* LaunchScreen.storyboard */,
+				80528B2F1D34BB8A00AA2056 /* Info.plist */,
+				80528B1E1D34BB8A00AA2056 /* Supporting Files */,
+			);
+			path = LEMapviewFrameworks_Test;
+			sourceTree = "<group>";
+		};
+		80528B1E1D34BB8A00AA2056 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80528B1F1D34BB8A00AA2056 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +189,23 @@
 			productReference = 6003F5AE195388D20070C39A /* LEMapviewFrameworks_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		80528B1B1D34BB8A00AA2056 /* LEMapviewFrameworks_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80528B321D34BB8A00AA2056 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks_Test" */;
+			buildPhases = (
+				80528B181D34BB8A00AA2056 /* Sources */,
+				80528B191D34BB8A00AA2056 /* Frameworks */,
+				80528B1A1D34BB8A00AA2056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LEMapviewFrameworks_Test;
+			productName = LEMapviewFrameworks_Test;
+			productReference = 80528B1C1D34BB8A00AA2056 /* LEMapviewFrameworks_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +218,9 @@
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					80528B1B1D34BB8A00AA2056 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -169,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				6003F5AD195388D20070C39A /* LEMapviewFrameworks_Tests */,
+				80528B1B1D34BB8A00AA2056 /* LEMapviewFrameworks_Test */,
 			);
 		};
 /* End PBXProject section */
@@ -179,6 +249,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80528B1A1D34BB8A00AA2056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80528B2E1D34BB8A00AA2056 /* LaunchScreen.storyboard in Resources */,
+				80528B2B1D34BB8A00AA2056 /* Assets.xcassets in Resources */,
+				80528B291D34BB8A00AA2056 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +321,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		80528B181D34BB8A00AA2056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80528B261D34BB8A00AA2056 /* ViewController.m in Sources */,
+				80528B231D34BB8A00AA2056 /* AppDelegate.m in Sources */,
+				80528B201D34BB8A00AA2056 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -250,6 +340,22 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		80528B271D34BB8A00AA2056 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80528B281D34BB8A00AA2056 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80528B2C1D34BB8A00AA2056 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80528B2D1D34BB8A00AA2056 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -370,6 +476,41 @@
 			};
 			name = Release;
 		};
+		80528B301D34BB8A00AA2056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = LEMapviewFrameworks_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larryemerson.LEFrameworks-Test.LEMapviewFrameworks-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80528B311D34BB8A00AA2056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = LEMapviewFrameworks_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larryemerson.LEFrameworks-Test.LEMapviewFrameworks-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -390,6 +531,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		80528B321D34BB8A00AA2056 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80528B301D34BB8A00AA2056 /* Debug */,
+				80528B311D34BB8A00AA2056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

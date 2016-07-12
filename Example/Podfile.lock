@@ -1,0 +1,16 @@
+PODS:
+  - LEMapviewFrameworks (0.1.0)
+
+DEPENDENCIES:
+  - LEMapviewFrameworks (from `../`)
+
+EXTERNAL SOURCES:
+  LEMapviewFrameworks:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LEMapviewFrameworks: bb105c8602474a79f1436d02eaec09a90c1bff3d
+
+PODFILE CHECKSUM: 08bbf84b52383084f3680c3cadd8cbef7fb68661
+
+COCOAPODS: 1.0.1

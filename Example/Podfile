@@ -1,0 +1,6 @@
+use_frameworks!
+target 'LEMapviewFrameworks_Tests' do
+  pod 'LEMapviewFrameworks', :path => '../'
+  
+  
+end

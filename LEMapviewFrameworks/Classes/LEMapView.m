@@ -23,11 +23,9 @@
 @interface LEMapView()
 @end
 
-#define MapSpan 0.02
 #define RefreshZoomLevel 16
 #define RefreshMoveSpace 0.003
 #define ZoomSize 1200
-#define https://github.com/LarryEmerson/LEMapviewFrameworksRadius 0.005
 
 typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //Inside
@@ -151,9 +149,9 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         for (int i=0; i<array.count; i++) {
             id<MAAnnotation> annotation=(LEMapViewAnnotation *)[array objectAtIndex:i];
             if([annotation isKindOfClass:[LEMapViewAnnotation class]]){
-                LEMapViewAnnotationView *view=(LEMapViewAnnotationView *)[curMapView viewForAnnotation:annotation];
-                if(view){
-                    [view onSetAngle:curMapView.rotationDegree];
+                LEMapBaseAnnotationView *view=(LEMapBaseAnnotationView *)[curMapView viewForAnnotation:annotation];
+                if([view isKindOfClass:[LEMapViewAnnotationView class]]){
+                    [(LEMapViewAnnotationView *)view onSetAngle:curMapView.rotationDegree];
                 }
             }
         }
@@ -200,7 +198,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 }
 //-(void) resetUserAnnotationImage{
 //    if(curUserAnnotationView){
-//        [curUserAnnotationView.userImage setImage:[UIImage imageNamed:curMapRotationStatus!=MapRotationStatusNone?@"https://github.com/LarryEmerson/LEMapviewFrameworksAroundUserIconArrow":@"https://github.com/LarryEmerson/LEMapviewFrameworksAroundUserIconDot"]];
+//        [curUserAnnotationView.userImage setImage:[UIImage imageNamed:curMapRotationStatus!=MapRotationStatusNone?@"LEMapviewFrameworksAroundUserIconArrow":@"LEMapviewFrameworksAroundUserIconDot"]];
 //    }
 //}
 -(void) resetUserAnnotationRotation:(float) angle{
@@ -337,14 +335,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [sizeUp setImageEdgeInsets:UIEdgeInsetsMake(6, 0, 0, 0)];
     [sizeDown setImageEdgeInsets:UIEdgeInsetsMake(-6, 0, 0, 0)];
     //
-    //    //TODO
-    if(!isZoomInited){
-        isZoomInited=YES;
-        MACoordinateRegion zoomRegion = MACoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(31.810282,119.992165), ZoomSize, ZoomSize);
-        [curMapView setRegion:zoomRegion];
-        lastZoomForRefresh=curMapView.zoomLevel;
-    }
-    [curMapView setCenterCoordinate:CLLocationCoordinate2DMake(31.810282,119.992165) animated:YES];
+    
 }
 
 -(void) checkGPSSettings{
@@ -430,7 +421,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         MACoordinateRegion zoomRegion;
         zoomRegion = MACoordinateRegionMakeWithDistance(curMapView.userLocation.coordinate, ZoomSize, ZoomSize);
         [curMapView setRegion:zoomRegion];// animated:YES];
-        //        isZoomInited=YES;
+        isZoomInited=YES;
         lastZoomForRefresh=curMapView.zoomLevel;
     }
 }
@@ -471,13 +462,21 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     if([view isKindOfClass:[LEMapViewAnnotationView class]]){
         //add
         LEMapViewAnnotation *an=(LEMapViewAnnotation *) view.annotation;
-        if(curCallOutView&&curCallOutView.annotation){
-            [mapView removeAnnotations:@[curCallOutView.annotation]];
-            curCallOutView=nil;
-        }
+        [self removeCalloutView];
         LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.index AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.index] UserCoordinate:mapView.userLocation.coordinate];
         [mapView addAnnotation:anno];
         [curMapView setCenterCoordinate:anno.coordinate animated:YES];
+    }else{
+        [self onOverwriteMapView:mapView didSelectAnnotationView:view];
+    }
+}
+-(void) onOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+    
+}
+-(void) removeCalloutView{
+    if(curCallOutView&&curCallOutView.annotation){
+        [curMapView removeAnnotations:@[curCallOutView.annotation]];
+        curCallOutView=nil;
     }
 }
 -(void) onNeedRefreshMap{

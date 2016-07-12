@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F6206167A896105569C934D /* libPods-LEMapviewFrameworks_Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE5DFDB119C3B7BAB060F0F /* libPods-LEMapviewFrameworks_Test.a */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -18,6 +19,8 @@
 		80528B291D34BB8A00AA2056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80528B271D34BB8A00AA2056 /* Main.storyboard */; };
 		80528B2B1D34BB8A00AA2056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80528B2A1D34BB8A00AA2056 /* Assets.xcassets */; };
 		80528B2E1D34BB8A00AA2056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80528B2C1D34BB8A00AA2056 /* LaunchScreen.storyboard */; };
+		80528B391D3507AE00AA2056 /* arrow@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80528B371D3507AE00AA2056 /* arrow@2x.jpg */; };
+		80528B3A1D3507AE00AA2056 /* end@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80528B381D3507AE00AA2056 /* end@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		61E13F6F2B23527F95DCE161 /* Pods-LEMapviewFrameworks_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Test/Pods-LEMapviewFrameworks_Test.debug.xcconfig"; sourceTree = "<group>"; };
 		80528B1C1D34BB8A00AA2056 /* LEMapviewFrameworks_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEMapviewFrameworks_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80528B1F1D34BB8A00AA2056 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80528B211D34BB8A00AA2056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,10 +45,13 @@
 		80528B2A1D34BB8A00AA2056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80528B2D1D34BB8A00AA2056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80528B2F1D34BB8A00AA2056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80528B371D3507AE00AA2056 /* arrow@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arrow@2x.jpg"; sourceTree = "<group>"; };
+		80528B381D3507AE00AA2056 /* end@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "end@2x.jpg"; sourceTree = "<group>"; };
+		AA2083663767D7BAA8925E92 /* libPods-LEMapviewFrameworks_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEMapviewFrameworks_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B373EA592DF8E713BE7D4CBE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B41C5371D7E4F460AB86E53F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C6B7800BCCD15FCA21255170 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FE51F59F55748C56CCCD38C3 /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BC89C9C795B9538B477FCC3F /* Pods-LEMapviewFrameworks_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Test/Pods-LEMapviewFrameworks_Test.release.xcconfig"; sourceTree = "<group>"; };
+		CDE5DFDB119C3B7BAB060F0F /* libPods-LEMapviewFrameworks_Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEMapviewFrameworks_Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6206167A896105569C934D /* libPods-LEMapviewFrameworks_Test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +79,8 @@
 		4A091F07FF725C116B4A0494 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C6B7800BCCD15FCA21255170 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */,
-				FE51F59F55748C56CCCD38C3 /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */,
+				61E13F6F2B23527F95DCE161 /* Pods-LEMapviewFrameworks_Test.debug.xcconfig */,
+				BC89C9C795B9538B477FCC3F /* Pods-LEMapviewFrameworks_Test.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -105,6 +113,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
+				AA2083663767D7BAA8925E92 /* libPods-LEMapviewFrameworks_Tests.a */,
+				CDE5DFDB119C3B7BAB060F0F /* libPods-LEMapviewFrameworks_Test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +155,8 @@
 				80528B221D34BB8A00AA2056 /* AppDelegate.m */,
 				80528B241D34BB8A00AA2056 /* ViewController.h */,
 				80528B251D34BB8A00AA2056 /* ViewController.m */,
+				80528B371D3507AE00AA2056 /* arrow@2x.jpg */,
+				80528B381D3507AE00AA2056 /* end@2x.jpg */,
 				80528B271D34BB8A00AA2056 /* Main.storyboard */,
 				80528B2A1D34BB8A00AA2056 /* Assets.xcassets */,
 				80528B2C1D34BB8A00AA2056 /* LaunchScreen.storyboard */,
@@ -190,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80528B321D34BB8A00AA2056 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks_Test" */;
 			buildPhases = (
+				17A9B9E5CAFED0D4BEFEC290 /* [CP] Check Pods Manifest.lock */,
 				80528B181D34BB8A00AA2056 /* Sources */,
 				80528B191D34BB8A00AA2056 /* Frameworks */,
 				80528B1A1D34BB8A00AA2056 /* Resources */,
+				9D09429FDA62BBC7DBE7243C /* [CP] Embed Pods Frameworks */,
+				81B444C8ACD03995295D628D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80528B391D3507AE00AA2056 /* arrow@2x.jpg in Resources */,
+				80528B3A1D3507AE00AA2056 /* end@2x.jpg in Resources */,
 				80528B2E1D34BB8A00AA2056 /* LaunchScreen.storyboard in Resources */,
 				80528B2B1D34BB8A00AA2056 /* Assets.xcassets in Resources */,
 				80528B291D34BB8A00AA2056 /* Main.storyboard in Resources */,
@@ -262,6 +279,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17A9B9E5CAFED0D4BEFEC290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		49DA82009D265D56594069F6 /* Find unused imports */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +323,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		81B444C8ACD03995295D628D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LEMapviewFrameworks_Test/Pods-LEMapviewFrameworks_Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9CB157AF1A3AC0BD1AEA2515 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +351,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D09429FDA62BBC7DBE7243C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LEMapviewFrameworks_Test/Pods-LEMapviewFrameworks_Test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EEFB055B405619EC139D757 /* [CP] Copy Pods Resources */ = {
@@ -447,7 +509,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6B7800BCCD15FCA21255170 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -470,7 +531,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE51F59F55748C56CCCD38C3 /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -489,6 +549,7 @@
 		};
 		80528B301D34BB8A00AA2056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E13F6F2B23527F95DCE161 /* Pods-LEMapviewFrameworks_Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -506,6 +567,7 @@
 		};
 		80528B311D34BB8A00AA2056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC89C9C795B9538B477FCC3F /* Pods-LEMapviewFrameworks_Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;

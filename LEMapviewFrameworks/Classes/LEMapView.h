@@ -43,4 +43,6 @@
 -(void) onRefreshMapviewAnnotationsAfterAnnotationsAdded;
 -(void) onOverwriteAnnotationMakerWithData:(NSMutableArray *) data;
 -(MAAnnotationView *) onOverwriteViewForAnnotation:(id<MAAnnotation>) annotation FromMapview:(MAMapView *) mapView;
+-(void) onOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view;
+-(void) removeCalloutView;
 @end

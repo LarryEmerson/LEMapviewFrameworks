@@ -5,7 +5,9 @@
 //  Created by emerson larry on 16/7/12.
 //
 //
-
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
 #import "LEMapView.h"
 #import "LEMapViewAnnotation.h"
 #import "LEMapViewSearchAnnotation.h"

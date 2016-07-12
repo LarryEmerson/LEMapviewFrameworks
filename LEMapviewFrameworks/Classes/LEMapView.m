@@ -8,17 +8,7 @@
 
 #import "LEMapView.h"
 
-#import "LEMapViewAnnotation.h"
-#import "LEMapViewAnnotationView.h"
 
-#import "LEMapViewSearchAnnotation.h"
-#import "LEMapViewSearchAnnotationView.h"
-
-#import "LEMapViewUserAnnotationView.h"
-
-#import "LEMapCallOutAnnotationView.h"
-#import "LEMapCallOutViewAnnotation.h"
-#import <AMapFoundationKit/AMapUtility.h>
 
 @interface LEMapView()
 @end

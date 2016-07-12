@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 360cbs. All rights reserved.
 //
 
-#import <MAMapKit/MAMapKit.h>
-#import "LEMapViewAnnotation.h" 
+#import <MAMapKit/MAMapKit.h> 
 
 @interface LEMapBaseAnnotationView : MAAnnotationView
 @property (nonatomic) NSDictionary *curData;

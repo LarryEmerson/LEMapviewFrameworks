@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/LEMapviewFrameworks.svg?style=flat)](http://cocoapods.org/pods/LEMapviewFrameworks)
 
 ## #import "LEMapviewFrameworks.h"
-![](http://cocoapods.org/pods/LEMapviewFrameworks/LEMapviewFrameworks.gif)
+![](https://github.com/LarryEmerson/LEMapviewFrameworks/blob/master/Example/LEMapviewFrameworks.gif)
 
 ### 
 
@@ -14,7 +14,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-
+ios 7.0
 ## Installation
 
 LEMapviewFrameworks is available through [CocoaPods](http://cocoapods.org). To install

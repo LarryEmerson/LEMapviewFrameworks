@@ -1,6 +1,6 @@
 //
 //  LEMapView.m
-//  LEFrameworks
+//  https://github.com/LarryEmerson/LEMapviewFrameworks
 //
 //  Created by Larry Emerson on 15/8/27.
 //  Copyright (c) 2015年 LarryEmerson. All rights reserved.
@@ -27,7 +27,7 @@
 #define RefreshZoomLevel 16
 #define RefreshMoveSpace 0.003
 #define ZoomSize 1200
-#define TicketRadius 0.005
+#define https://github.com/LarryEmerson/LEMapviewFrameworksRadius 0.005
 
 typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //Inside
@@ -200,7 +200,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 }
 //-(void) resetUserAnnotationImage{
 //    if(curUserAnnotationView){
-//        [curUserAnnotationView.userImage setImage:[UIImage imageNamed:curMapRotationStatus!=MapRotationStatusNone?@"TicketAroundUserIconArrow":@"TicketAroundUserIconDot"]];
+//        [curUserAnnotationView.userImage setImage:[UIImage imageNamed:curMapRotationStatus!=MapRotationStatusNone?@"https://github.com/LarryEmerson/LEMapviewFrameworksAroundUserIconArrow":@"https://github.com/LarryEmerson/LEMapviewFrameworksAroundUserIconDot"]];
 //    }
 //}
 -(void) resetUserAnnotationRotation:(float) angle{

@@ -7,81 +7,448 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1912A56831DA60109B09E207FA3E6E22 /* Pods-LEMapviewFrameworks_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 495F7CE497D956FB62947E3963581448 /* Pods-LEMapviewFrameworks_Tests-dummy.m */; };
-		1C98F9508CB313861CE5C94F808F9E74 /* Pods-LEMapviewFrameworks_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 113942190064A3C2D918F9F1807F288C /* Pods-LEMapviewFrameworks_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A93388E77A272B9ECACEEFD41585AA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		60DF3A5B8F968C1729D87D621B232064 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AF70402B0B133F112165852BC28EF2 /* ReplaceMe.m */; };
-		79137E0E7ADB5DAF9F2A959D67477694 /* LEMapviewFrameworks-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9393554E9548AF3086E1915168EFB641 /* LEMapviewFrameworks-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA8E310DD7CF457CF31008EF45BEF4D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		E6A2C41B6FA0662EDB2AD3B40459C6DA /* LEMapviewFrameworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A83B5B42632A3FE1FBDDEB9375A35A /* LEMapviewFrameworks-dummy.m */; };
+		020D978194D3ACB184D46FDC7006A85C /* LELineChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 573AC598EC56B5B2AE1203B04834B801 /* LELineChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0453DD7A1552870597C46A11EE030443 /* LEWaveProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 904F37D84F9A4F81390E6638F312946D /* LEWaveProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08FEF3A44BFC2F35B06F50677C8DB171 /* LEBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B2E5343528D8E47D18585D5A857E72 /* LEBarChart.m */; };
+		09D1720D7CC5854F14285F2965150A53 /* LEMapViewAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9464A806A3C2B9858D4D73BE5F925378 /* LEMapViewAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BAB4859F7F7370274F3C22CB881530B /* LEAppMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A816586F5C5931AD7B9B67E267FA0B88 /* LEAppMessageDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1B1497083E62B7C0DFECDF649B8015 /* LEExcelView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B136C484E07E494C45B9C07F47A3F84 /* LEExcelView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5265684D33F41D2155597B7F6B63DA /* LEMapViewSearchAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 95477C7A19C2B043FDC2867DB186F806 /* LEMapViewSearchAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1200A15FE3DBF77E13C7B5791846BA5C /* LE_common_btn_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B85EB97310BF9275B3C70BD76854E9 /* LE_common_btn_blue@2x.png */; };
+		13AF91D8B08D5E0AA7170F7030BD7D3C /* DJRefreshTopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E373EFA4419D0E1E0C70D3472E4A1BB /* DJRefreshTopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		167A2464C2CCEE170B4BC27400E2A59D /* LERefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 82617BA7EA0EB45AB122E872AB746D8F /* LERefresh.m */; };
+		1837D00FE8E35AF0B6CD17D92E6EE18C /* LEBaseEmptyTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7995EC4E9F8321C51051A336CA839644 /* LEBaseEmptyTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		192359773D14110434CE5453B3087239 /* LE_emoji_keyboardface@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01CCF5984A0E0B4D5292FBC975022065 /* LE_emoji_keyboardface@2x.png */; };
+		1F77D01E3AF9936A45DB899CE7DBDCE6 /* LETabbarRelatedPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B06B603985341BAD0F16996322022DA /* LETabbarRelatedPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21B6061521C725754917C7E307C6BD2B /* LEBaseTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 869F0CAB984FF02DDBDF7202336C0036 /* LEBaseTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21C61A6191CD65FEA083F4DF19D9F540 /* LELineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA286A57B4378569886E188B0C7CC2D /* LELineChart.m */; };
+		234CFC3B1E0357F058429225B599D5DC /* LELocalNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 08282479E9950DAE68D26C5DCFB87F5C /* LELocalNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25B848269982E068A22427C73B5C19D0 /* LEBaseTableViewSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 49D2C5E121AFC84878D7592B01251F6A /* LEBaseTableViewSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2871F7322FD60DC9160B53E7C6C3D319 /* LEMapViewUserAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7665182FD8CB6A6199D4658A2C65EA95 /* LEMapViewUserAnnotationView.m */; };
+		2915FE3981AF56F84EA9D287F9333935 /* LEMapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 056A095B27C1B5AE0456445B4F9F2A17 /* LEMapViewAnnotation.m */; };
+		2F1B2F3BB6BE70DBDF5DD63575E7D551 /* LE_EmojiToolBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C519B44265EEB2DEB2CAA1B18239E17 /* LE_EmojiToolBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F7FA9F0FC014CADF3996F51837D8FE2 /* LE_MultiImagePickerCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC78116F99A4060A5EDC4AC8FFD1DE51 /* LE_MultiImagePickerCheck@2x.png */; };
+		32F5197FD814F5B6D7812C3F9F08DC59 /* LEBasePopupEmptyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 404ED0A8B3BE83AEB86BF2F21D2F0DC1 /* LEBasePopupEmptyPage.m */; };
+		3473A0DF1715C732FCAE6FB141A1F6C9 /* LEBottomTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6857A4781B62EC5978542EAF6D5AFE3C /* LEBottomTabbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3644A0BF37541CDF2441E3AA34029340 /* LE_web_icon_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A967741A6FD9B77146B7E7AC3F381E8 /* LE_web_icon_refresh@3x.png */; };
+		3A3216B1F09486E74000585ED78A804E /* LEMapViewAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 458547C43BE0E6930F4D46909C0B5A97 /* LEMapViewAnnotationView.m */; };
+		3B8105FFB864AB1D633590DDA6394C46 /* LEMapCallOutAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A70D73CAC8C610157C50A35867AD32D /* LEMapCallOutAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DB81B969B09AE12107087542E8FADD3 /* LEExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AD13B95060A5583279612E6A951CA4 /* LEExcelView.m */; };
+		40554D4CA0E5B967E80858B7F0352087 /* DJRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1CE1CA084B81CF8BE80B3E0EC8C04A /* DJRefreshView.m */; };
+		42B9FBE4CCDAE9444898CE0B61BC5EA4 /* LECurveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE875ADAAA4D7F5630849C9B1A96DEEC /* LECurveProgressView.m */; };
+		43B027673F09B85CC9995A4FA2BCB780 /* LEPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C5237A9331BA7B0469F23C8B3232AD22 /* LEPieChart.m */; };
+		44E38C0EF6194252E68DB7CECD8C272F /* LEBaseEmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD17187C21C05ABC795C5668BFB4714 /* LEBaseEmptyTableViewCell.m */; };
+		45201AD83CDC4B19E0E686A0B3ED9A9E /* LEMapBaseAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E21200E5D6AB25C1FE5B0E71D922274 /* LEMapBaseAnnotationView.m */; };
+		45C2B55347F127D16948131EA831E552 /* LE_web_icon_forward_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A17D60511E890F1CC416DBE07F7FE80 /* LE_web_icon_forward_off@3x.png */; };
+		46FBFDFFE0DEFF1DC9A1037267C9CF25 /* LEMultiImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7970E6A4FF9BEFA62327A609EE306B /* LEMultiImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49818D41FB538714ECC26A4221048B1D /* LEMapCallOutViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9195EC2C0B114D43DCAF8D1313030D /* LEMapCallOutViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A7BFF38A5C6EB4E1C273D7B69BA0C2E /* LE_qrcode_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B41E757FB3A7BFD36A038B8806A8DD0 /* LE_qrcode_scan_line@2x.png */; };
+		4AC24E71B61104263283A6BE599A56A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		4C9AD613DFD04D8BC9A8899112C87507 /* LEBasePopupEmptyPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B024A1074ECA72BC3968C81D077BD3D /* LEBasePopupEmptyPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D60B4117D638033302B0D64EAC0A52A /* DJRefreshTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA35197119A93238CF9C32DCC32F8D5 /* DJRefreshTopView.m */; };
+		4FE161EEF75B7254716BEF167F2457DC /* LE_common_navigation_btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FE6C369D80CC240ED7B43300652D4A1 /* LE_common_navigation_btn_back@2x.png */; };
+		50874308FF466AE56ED05A31787652AF /* DJRefreshBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B77E5AFF9980B3EDC3F47919F9AC6239 /* DJRefreshBottomView.m */; };
+		51E7C4948E723DB1DFCA406D2F3BD88F /* LEPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = 16AC4D81F611A97239F5E867C8E40895 /* LEPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56134570B20FCACE304761250F297393 /* LEUIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = ED4B8D93AC80676A265777CB63499E25 /* LEUIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58F1424B396A16A033A8688006E61D24 /* LEBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 1070524A500263782ADA2BD2AEC36352 /* LEBadge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B1A8564E435BCE1C593A80BFE7E3275 /* LEBaseTableViewWithRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D171FDBE6C23B21FD32BD0039008D8 /* LEBaseTableViewWithRefresh.m */; };
+		5B68851F1D71FBE78C8B7AFF030E9BEF /* LELocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A183985E536CAC437B26B0AB4E707CCE /* LELocalNotification.m */; };
+		5C2B173612AD52D66ACEE39FFF039183 /* EmojiInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0726C1AA85AFA94BA630D782B3CD42 /* EmojiInputView.m */; };
+		5C80D644F1C69484D1F2FFBEF83AB320 /* LERefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E0924AFAC5A3C44A291918A5FE5E20 /* LERefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E7912271B8B6A24E491FD994900909E /* LE_common_btn_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D970EE1BE626BF5813E6BC6F33FC914 /* LE_common_btn_blue@3x.png */; };
+		61075D6CC5220B5D44676EDC6DAC3F46 /* LE_web_icon_forward_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BBF9B6FC0549529B21C1EC32E1EEB4 /* LE_web_icon_forward_off@2x.png */; };
+		6130D652E5BECD9496C8ED035D95A09B /* LEBaseTableViewSectionWithIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 023FB6E3891ACA26E7A9E3131274DA1C /* LEBaseTableViewSectionWithIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64BE2060A00CFCF8D8CE36C92843F94E /* LE_web_icon_backward_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E02C30901FE5527C39653A05D284A62B /* LE_web_icon_backward_on@2x.png */; };
+		67E54AC5FD8250459647614176FBC990 /* LELoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F493B73DA9B6345A999EA67F08FDA /* LELoadingAnimationView.m */; };
+		6B240FFF2D6352B3550E91C4066C02E1 /* LETabbarRelatedPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAA8A6A6D27E09594C82E3E0B19CEE /* LETabbarRelatedPageView.m */; };
+		6C096A33B373B7B613101535165FD62A /* LEMapviewFrameworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C60385C3B4B414FCA74522C59FD23 /* LEMapviewFrameworks-dummy.m */; };
+		6C6C3986591D04E7E13A0BEDA2556212 /* LEMapViewSearchAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A726F023868A49F64506A15D01218C /* LEMapViewSearchAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D3366616697DAAA7447F06D24E33CFA /* LE_common_btn_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D375316FFAF51F3EF6BBB742BE3FDC4 /* LE_common_btn_gray@2x.png */; };
+		6F6E618E8AEDAF7C9879003A5C96F61A /* LE_tableview_icon_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E628B341CFE154BC6EA310A31792DA8 /* LE_tableview_icon_arrow@3x.png */; };
+		71ECB46C060EBFFFC32E4B5C9E2C1C11 /* EmojiImagePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE07DF5DE7B37BB60263077A05E718B /* EmojiImagePageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76615CE9F4539B7C7DDAE2273176C78A /* EmojiInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1855C4B329B61D8C5F4F45E5A610EC7C /* EmojiInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DC3A616E76531EEEA4758E89815E3FA /* LE_NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5363371905C1B68D3ACFD67ED2A214 /* LE_NSDate+Category.m */; };
+		80528B351D34BF0300AA2056 /* LEMapviewFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 80528B331D34BF0300AA2056 /* LEMapviewFrameworks.h */; };
+		8087AFB1B9D56F9DF5524502DE80350C /* LELoadingAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9D765D0185A9C3004BCAD6C4DFFC35 /* LELoadingAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86A8FB4D222FC56965D9E6E9992A18DF /* LEUIFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 5561DCD4DF360624DDCED83607A8DAA6 /* LEUIFramework.m */; };
+		89B5F27482252F2759301D99E6520F9C /* LEMapViewAnnotationSubView.h in Headers */ = {isa = PBXBuildFile; fileRef = F8BD1D53053C1193F460D1383E8AAA62 /* LEMapViewAnnotationSubView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89EB777DA83D273FDBA88B1B47C7D851 /* LEMultiImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D909BF8BEB3D1DD36396BD4BD4A29 /* LEMultiImagePicker.m */; };
+		8B47A52A44D23CE899053B3D5B4BF6F1 /* LEScanQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DF9315FBAE0705152C9B4A1D5CFBED0 /* LEScanQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C63D53E40B1E7120566687F6D953829 /* LEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EF447F83A93279D35D8E47F5EA8B19 /* LEBaseViewController.m */; };
+		8E9315CFCC41B5F8715958914DDF228F /* LEMapSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F54D6C25A575C2850AEC5F6A03EDB78 /* LEMapSearchBar.m */; };
+		8F5F909C051B1DD079030AD4EDC16D7C /* LEFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F03E81DA358AAC2DB76C26A00E8A40 /* LEFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		925D2AC2214A876C3A541FA3C4F01FC4 /* LEPieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA9DAC7511DBB9083158AAD46FDA36A /* LEPieChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		930EC2FA56DFA590BD17F5B5D8EE801F /* LE_tableview_icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A22DD575F8F563E57A6BBE6A73E040 /* LE_tableview_icon_arrow@2x.png */; };
+		95721809C62C7C81EF4F61755372F1DF /* LE_web_icon_forward_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F899B5E801865B18A2D43EA964B5C0B /* LE_web_icon_forward_on@3x.png */; };
+		96376DA3525A99D06DAEDD860E10A56E /* LE_web_icon_backward_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F00CCF5C454B64CA103CB853FC54E873 /* LE_web_icon_backward_off@3x.png */; };
+		9B14B7912395F7AEB22FA8A098A36ED4 /* LEBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D45DDD0B556921E74AB2293D54E00F0 /* LEBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C9CEF9EB7A0B7436F518EDD079E81FD /* LE_web_icon_backward_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F4A2D036C8B1CAB6942D1DF0E5D3FF5 /* LE_web_icon_backward_on@3x.png */; };
+		9E61337E41910011176FDAF6167DF2D7 /* EmojiImagePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7C684916A5C25714DD08A0AADD4AC6 /* EmojiImagePageView.m */; };
+		A04B09112E423B27B373304F6BCCC5AD /* LEBaseTableViewWithRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E2F610C094DF2A373C67FC6B8ABCC1D /* LEBaseTableViewWithRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A250553E7538FAB8A64D3B8C726CCCD4 /* LEBottomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C384487AA837EF738C9B15F1086C419D /* LEBottomTabbar.m */; };
+		A25A70F18E421CD8C87D2C9710748569 /* LE_EmojiToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F515EE497693DF10C5613A913ED7E289 /* LE_EmojiToolBar.m */; };
+		A3125BCC3E16D5E5F185D5A809EF7B26 /* HMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8AF07B572F7AF14D7F01300CF3AC2F /* HMPageControl.m */; };
+		A346DEA5E18BC868FABD8233CD83E081 /* LEWaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BDF50F587E3C92AADFFA8F7DE09CA6 /* LEWaveProgressView.m */; };
+		A3874E240AC1489DE284FB69A75CE6D4 /* LE_qrcode_scan_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B19BA70FA0E9D205C6A87CFCA4049520 /* LE_qrcode_scan_bg@2x.png */; };
+		A3A473327FC66E6F0DE9CDB1E3BAF0B3 /* LE_common_btn_gray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9697C2D469581637CBFB4A9CA26D95DB /* LE_common_btn_gray@3x.png */; };
+		A6C3F6CD2B7723D3E135C3DE5469AFDB /* LE_common_navigation_btn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE47D7495121DA9E5C629ED6CC8D62F3 /* LE_common_navigation_btn_back@3x.png */; };
+		A749593D63C7FE2A32676A941589988A /* LEMapViewSearchAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FE7622D953826D6143FB29F194525B4 /* LEMapViewSearchAnnotationView.m */; };
+		A92821BE6801DD6B8EEE5485B3613CFF /* LE_lewaverotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 582872CE6003B4114A8C38D4F7B04C1F /* LE_lewaverotation.png */; };
+		AAAAC62DD5ACCF7654047C959A850885 /* LEWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA0AC7B0C589F7B222899133DD81C55 /* LEWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB0252FDE1B86996E4E106420052347E /* LE_MessageBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC2B65E62136FB16D120B5CE19B7DF8 /* LE_MessageBackground@3x.png */; };
+		AD18E6D6E33D5BF8CD6DA6880234E9EF /* LE_NSDate+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = E055E7CA1997AA559F72501A4B345D0D /* LE_NSDate+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B074A72E118216CB7674096A4F679AB8 /* LE_web_icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1AACC79E890B47614D7BF973539CC60 /* LE_web_icon_share@3x.png */; };
+		B0A1CF6312AAB43243D62B2044A44553 /* LE_web_icon_backward_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23557477F83A19E106330E150365E830 /* LE_web_icon_backward_off@2x.png */; };
+		B47EF781A69E4C1871B9D372482F5989 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B676830244EE4841DF1905899FD184AC /* LEBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A084BBE4AA150A01AB370F4B4143A67E /* LEBaseTableViewCell.m */; };
+		BA3E2D808614EA69C41FE0F5332CED0B /* Pods-LEMapviewFrameworks_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F36490768673E2A181BD5FB9D19862D /* Pods-LEMapviewFrameworks_Tests-dummy.m */; };
+		BDA734530698925A51708D005486BC4E /* DJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 2959B760661D9F1C8FEFFD70AF571FC3 /* DJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE55703E95702EA3F885303C37801DC8 /* LE_qrcode_scan_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EF8E004125D581B3DC24228A568EC1 /* LE_qrcode_scan_bg@3x.png */; };
+		C0151452C6508333CEE25DC20B037996 /* LEBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8354E54B7BBF7314899541C32F276C04 /* LEBaseTableView.m */; };
+		C0627B95D998C93D1327416200A49876 /* LE_emoji_smileface@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 421A8AF2E8AE33E287E81C8692F99CF7 /* LE_emoji_smileface@2x.png */; };
+		C23C1D5B6581FE6F6777D545F3030A75 /* LEBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0E27B527B817283DA828A1C150B348 /* LEBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32DA780CBDDCFC35AFF4499A4EC3CDC /* LEMapSearchBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9FF28F533AA6F619AA9BD8F3961AFE /* LEMapSearchBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3C36A74973E7229139EC3AA861F5143 /* LEMapCallOutViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B2FC7EF9375969389B116817394895B /* LEMapCallOutViewAnnotation.m */; };
+		C6AF8CE14939A9166E60E34A9D2A74BB /* LEMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2321C9C6FF8D47DDF0104B84B2D9E2D8 /* LEMapView.m */; };
+		C9FE356D9612035DAA057E75A2394C5B /* LE_web_icon_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 258208B1819269D1D9A4265057E952E0 /* LE_web_icon_refresh@2x.png */; };
+		CB1D8FF61EBA113AD5C0A37875BE9E65 /* DJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5A18FDBA72F0E22484BD5367F9FED /* DJRefresh.m */; };
+		CDC813BA14F31BE4E1B5304737830E4E /* LE_MessageBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD13FB120A7A94A073D3F508EA49481 /* LE_MessageBackground@2x.png */; };
+		D3BFFD60D1887AAEBAE422F0333A14D0 /* HMPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 11D3A6B58C3CA44094CB48FE105B9BD5 /* HMPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D40589C94C996662476EEA046A3978AE /* LE_emoji_smileface@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB11D1CB9FD30B0E34552849E20EAF5 /* LE_emoji_smileface@3x.png */; };
+		D506B05E0D4FF837CA261020FCAE2931 /* DJRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = 961D66A58905D310552186B71197CBA1 /* DJRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA00E972C53A583FB4CFE9230502466A /* LEMapViewUserAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = F567230ABA2ADFBC82B2380E3BDCFFF1 /* LEMapViewUserAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DADC85B51C46C812957D479C69436EB7 /* LEMapCallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE02012070D18B4490DC0D2BA55291A /* LEMapCallOutAnnotationView.m */; };
+		DB6B7F0B342BE2E3E0F579795B6E16A5 /* LEBaseTableViewSectionWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC79FA2B7699388055A123453A451C /* LEBaseTableViewSectionWithIcon.m */; };
+		DDAD1724BC475406443756FA8A078C64 /* LE_qrcode_scan_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFE33093DE1D17B566CF0E12DDD38971 /* LE_qrcode_scan_line@3x.png */; };
+		DE4F6D14CE362BAE80BF30E4F87ED8F9 /* EmojisList.plist in Sources */ = {isa = PBXBuildFile; fileRef = D66A0B95B3C9EE7465BEB23A5F23496D /* EmojisList.plist */; };
+		DE6D6DAE7CA664D83C6665A8F36CA9B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		DF047AA0F8685C4C2B76DDE170078288 /* LESegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BBE97F5C6804CA186718901A9F5EB4 /* LESegmentView.m */; };
+		E00EF63801219B1DD3D33643FB1D80E3 /* LEBaseTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C95F05BE13377E699E7CFBDD4E38033 /* LEBaseTableViewSection.m */; };
+		E03795C9B94AC91F2F5BB2AC8D55E1D9 /* DJRefreshBottomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 521D7DC337F539C85B95E7A208D36111 /* DJRefreshBottomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3CFFC8437D1A2043DE357663AC656D4 /* LEBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9229B77009B8DA1D4846FDB61F6CEEC0 /* LEBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E641B2C142C70D0591B8018E835BBAB6 /* LE_web_icon_forward_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D441C11908E8E628C63394F9E4003CAD /* LE_web_icon_forward_on@2x.png */; };
+		E77FB5A2D93978C6A19C1382BC033EE5 /* LESegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B134001ED3FF1972A54D8C22DBA676 /* LESegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E872228114886ECCFC6AA47F5F793205 /* LEWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B803AE9EB34D7DAB1D9F5790ABE1EF0A /* LEWebView.m */; };
+		E8D77A6ED2DE4D79594B94C50E9E7374 /* LEPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 569CCA931F29FC9398EEC4F875E37B2F /* LEPopup.m */; };
+		EA445F1ECFC0AC8B70FFB2895199977C /* LEMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F8CA8568D478C895A201739DBC7AA53 /* LEMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBF5E5BDEFA0D5598C1203992433FEA0 /* LEScanQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E6CE7DA0FA99A00855C66AD8B6D20 /* LEScanQRCode.m */; };
+		F0845D3A87779501600B1D1A1B7CE8FB /* LEMapViewSearchAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 537307F9C2FEA54F416031A9C33F1889 /* LEMapViewSearchAnnotation.m */; };
+		F132D917148B51E45FE4022AACAAD002 /* LECurveProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = AACFFA3819A8E63AF2B86C815A7CC786 /* LECurveProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F35FEBEEFE6CE6F57969D88A753F494E /* LEFrameworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D81CD4F46D2E2C11BF83DB7FA848FC /* LEFrameworks-dummy.m */; };
+		F374EC7E7FDC4001407AC996FD314448 /* LE_popup_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3C0BB8DEF2AB0E2C94B0B5B1075780 /* LE_popup_bg@2x.png */; };
+		F5B1C7989D4F21C2961BBB1AF8368508 /* LEMapViewAnnotationSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F365EC4AC48782F4F613275C671E18 /* LEMapViewAnnotationSubView.m */; };
+		F659D5B588764BAE301DCD852733F2A6 /* LEBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2A6126CDCFAE28E48E973C7414B64 /* LEBadge.m */; };
+		F86F028326DC20B05C59785FAD645C72 /* LEMapBaseAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F6D994DBD363A6E7B5B80C434608F3 /* LEMapBaseAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9ED131B9828CE716EB4E289F843A88B /* LE_web_icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 067819F0AD090E0148FB391C8D968696 /* LE_web_icon_share@2x.png */; };
+		FBD92A750AC90C04FE879C8403E5053D /* LEMapViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E2D81B02E363163BC7C860CD43B9B3 /* LEMapViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC631C1A18AC6909B8099C114373AD1B /* LE_web_icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BB498961FA915F6AF5A581B3D34EAB9 /* LE_web_icon_close@2x.png */; };
+		FC85343FBDD6CD418A5A80F6D1F08A58 /* LE_emoji_keyboardface@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB1DBAC4A5942AE17781DB23D1EC04B7 /* LE_emoji_keyboardface@3x.png */; };
+		FD44C796F5CB8A35A85BB78A8DA69757 /* LE_lewave.png in Resources */ = {isa = PBXBuildFile; fileRef = E67F68420CED29D700AAC823C3D3F47F /* LE_lewave.png */; };
+		FDDCB71A21F9970DCB4C9AB1CA587788 /* LE_web_icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 529BE9A6C5D0CA3BA3F599190B2FD250 /* LE_web_icon_close@3x.png */; };
+		FE70F2A065A6182982BD942823FFCB73 /* DJRefreshMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 20F2F272FCE755AF02FD1BB9D9EDD05B /* DJRefreshMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFBE0923D090A63D9B289864310A7CE3 /* LE_MultiImagePickerCheck@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0E5D25B026BBDFD0732B8BE07A1800 /* LE_MultiImagePickerCheck@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D50B8E47E2AF7C22A73C31F0CBFF401 /* PBXContainerItemProxy */ = {
+		19CDBB26BA6C9609623243297D4A3EF8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5DBF697C6756E06EF2902C9B6438554C;
+			remoteGlobalIDString = BCFFC25A975735A981074B6677E93B83;
 			remoteInfo = LEMapviewFrameworks;
+		};
+		2FEB49DBB39BD5A0971E0074068DA470 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BAB4F53BC55308AEAEFD532A045CB7D;
+			remoteInfo = LEFrameworks;
+		};
+		483932458BD85EB9898FAD266090F773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835E7701268E0CDE493C98CCF76922D8;
+			remoteInfo = "LEFrameworks-LEFrameworks";
+		};
+		D9C5355C93B2ADC35110C21097908316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BAB4F53BC55308AEAEFD532A045CB7D;
+			remoteInfo = LEFrameworks;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00A83B5B42632A3FE1FBDDEB9375A35A /* LEMapviewFrameworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LEMapviewFrameworks-dummy.m"; sourceTree = "<group>"; };
-		113942190064A3C2D918F9F1807F288C /* Pods-LEMapviewFrameworks_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LEMapviewFrameworks_Tests-umbrella.h"; sourceTree = "<group>"; };
-		1535F7F18A0583C8273EC73B6AEA4E9D /* Pods-LEMapviewFrameworks_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LEMapviewFrameworks_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2B5342D733FA46AB4AF67129CF408740 /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LEMapviewFrameworks_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		495F7CE497D956FB62947E3963581448 /* Pods-LEMapviewFrameworks_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LEMapviewFrameworks_Tests-dummy.m"; sourceTree = "<group>"; };
-		4BF7E657E5739B0F007981AD1B6D0798 /* Pods-LEMapviewFrameworks_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LEMapviewFrameworks_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4C690932AB537B2045B43147EC397C6B /* Pods-LEMapviewFrameworks_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LEMapviewFrameworks_Tests.modulemap"; sourceTree = "<group>"; };
-		5BCEA66F12D7441EFEA828D2F4C2A99F /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E94BE2AB09243E5E51A80F6B1BE09E8 /* Pods_LEMapviewFrameworks_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LEMapviewFrameworks_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EDD41FC2B79045CD35D96BA715C964E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		887FB4AB7111E4D6DACAD53F1448BE26 /* LEMapviewFrameworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEMapviewFrameworks-prefix.pch"; sourceTree = "<group>"; };
-		9393554E9548AF3086E1915168EFB641 /* LEMapviewFrameworks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEMapviewFrameworks-umbrella.h"; sourceTree = "<group>"; };
+		014D909BF8BEB3D1DD36396BD4BD4A29 /* LEMultiImagePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEMultiImagePicker.m; path = LEFrameworks/Classes/LEImagePicker/LEMultiImagePicker.m; sourceTree = "<group>"; };
+		01CCF5984A0E0B4D5292FBC975022065 /* LE_emoji_keyboardface@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_keyboardface@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_keyboardface@2x.png"; sourceTree = "<group>"; };
+		023FB6E3891ACA26E7A9E3131274DA1C /* LEBaseTableViewSectionWithIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewSectionWithIcon.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSectionWithIcon.h; sourceTree = "<group>"; };
+		03B134001ED3FF1972A54D8C22DBA676 /* LESegmentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LESegmentView.h; path = LEFrameworks/Classes/LESegmentView/LESegmentView.h; sourceTree = "<group>"; };
+		03F365EC4AC48782F4F613275C671E18 /* LEMapViewAnnotationSubView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotationSubView.m; sourceTree = "<group>"; };
+		04F6D114B1D0DDD9ADBF6206D0A96005 /* MACircleRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MACircleRenderer.h; path = MAMapKit.framework/Headers/MACircleRenderer.h; sourceTree = "<group>"; };
+		056A095B27C1B5AE0456445B4F9F2A17 /* LEMapViewAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotation.m; sourceTree = "<group>"; };
+		05D81CD4F46D2E2C11BF83DB7FA848FC /* LEFrameworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LEFrameworks-dummy.m"; sourceTree = "<group>"; };
+		067819F0AD090E0148FB391C8D968696 /* LE_web_icon_share@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_share@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_share@2x.png"; sourceTree = "<group>"; };
+		08282479E9950DAE68D26C5DCFB87F5C /* LELocalNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LELocalNotification.h; path = LEFrameworks/Classes/LELocalNotification/LELocalNotification.h; sourceTree = "<group>"; };
+		0ABAA8A6A6D27E09594C82E3E0B19CEE /* LETabbarRelatedPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LETabbarRelatedPageView.m; path = LEFrameworks/Classes/LEBottomTabbar/LETabbarRelatedPageView.m; sourceTree = "<group>"; };
+		0B136C484E07E494C45B9C07F47A3F84 /* LEExcelView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEExcelView.h; path = LEFrameworks/Classes/LEExcelView/LEExcelView.h; sourceTree = "<group>"; };
+		0C519B44265EEB2DEB2CAA1B18239E17 /* LE_EmojiToolBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LE_EmojiToolBar.h; path = LEFrameworks/Classes/LEEmojiInputView/LE_EmojiToolBar.h; sourceTree = "<group>"; };
+		0ECF8FCF7E08B59956F0D211F1913862 /* AMapServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapServices.h; path = AMapFoundationKit.framework/Headers/AMapServices.h; sourceTree = "<group>"; };
+		0F54D6C25A575C2850AEC5F6A03EDB78 /* LEMapSearchBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapSearchBar.m; sourceTree = "<group>"; };
+		0F899B5E801865B18A2D43EA964B5C0B /* LE_web_icon_forward_on@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_on@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_on@3x.png"; sourceTree = "<group>"; };
+		0FDA58C3B4CC46115A3A9A31FF21F340 /* MAOfflineMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineMap.h; path = MAMapKit.framework/Headers/MAOfflineMap.h; sourceTree = "<group>"; };
+		1070524A500263782ADA2BD2AEC36352 /* LEBadge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBadge.h; path = LEFrameworks/Classes/LEBadge/LEBadge.h; sourceTree = "<group>"; };
+		11D3A6B58C3CA44094CB48FE105B9BD5 /* HMPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMPageControl.h; path = LEFrameworks/Classes/LEEmojiInputView/HMPageControl/HMPageControl.h; sourceTree = "<group>"; };
+		1290C251F9D00D295ADEAF21378A69EE /* ResourceBundle-LEFrameworks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LEFrameworks-Info.plist"; sourceTree = "<group>"; };
+		16AC4D81F611A97239F5E867C8E40895 /* LEPopup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEPopup.h; path = LEFrameworks/Classes/LEPopup/LEPopup.h; sourceTree = "<group>"; };
+		183C60385C3B4B414FCA74522C59FD23 /* LEMapviewFrameworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LEMapviewFrameworks-dummy.m"; sourceTree = "<group>"; };
+		1855C4B329B61D8C5F4F45E5A610EC7C /* EmojiInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EmojiInputView.h; path = LEFrameworks/Classes/LEEmojiInputView/EmojiInputView.h; sourceTree = "<group>"; };
+		19BBF9B6FC0549529B21C1EC32E1EEB4 /* LE_web_icon_forward_off@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_off@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_off@2x.png"; sourceTree = "<group>"; };
+		1A2C6BBD43B83D193A9626B9F4A866C6 /* libPods-LEMapviewFrameworks_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEMapviewFrameworks_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA286A57B4378569886E188B0C7CC2D /* LELineChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LELineChart.m; path = LEFrameworks/Classes/LEChart/LELineChart.m; sourceTree = "<group>"; };
+		1D49B0C5BE381213CB8BA818B6666DDE /* MAAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAAnnotation.h; path = MAMapKit.framework/Headers/MAAnnotation.h; sourceTree = "<group>"; };
+		1D970EE1BE626BF5813E6BC6F33FC914 /* LE_common_btn_blue@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_blue@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_blue@3x.png"; sourceTree = "<group>"; };
+		1E373EFA4419D0E1E0C70D3472E4A1BB /* DJRefreshTopView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DJRefreshTopView.h; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshTopView.h; sourceTree = "<group>"; };
+		1EBBD42D05975E9E745CA3F9944FE0FD /* MAOfflineItemMunicipality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItemMunicipality.h; path = MAMapKit.framework/Headers/MAOfflineItemMunicipality.h; sourceTree = "<group>"; };
+		1F8CA8568D478C895A201739DBC7AA53 /* LEMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapView.h; sourceTree = "<group>"; };
+		20F2F272FCE755AF02FD1BB9D9EDD05B /* DJRefreshMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DJRefreshMacro.h; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshMacro.h; sourceTree = "<group>"; };
+		2321C9C6FF8D47DDF0104B84B2D9E2D8 /* LEMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapView.m; sourceTree = "<group>"; };
+		23557477F83A19E106330E150365E830 /* LE_web_icon_backward_off@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_off@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_off@2x.png"; sourceTree = "<group>"; };
+		2475D5AFDD8B02C22AAD6B52AD35690F /* MAGroundOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGroundOverlayRenderer.h; path = MAMapKit.framework/Headers/MAGroundOverlayRenderer.h; sourceTree = "<group>"; };
+		258208B1819269D1D9A4265057E952E0 /* LE_web_icon_refresh@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_refresh@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_refresh@2x.png"; sourceTree = "<group>"; };
+		28FAA67CF216622BC47B22D222DC59A4 /* Pods-LEMapviewFrameworks_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LEMapviewFrameworks_Tests-resources.sh"; sourceTree = "<group>"; };
+		2959B760661D9F1C8FEFFD70AF571FC3 /* DJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DJRefresh.h; path = LEFrameworks/Classes/LE_DJRefresh/DJRefresh.h; sourceTree = "<group>"; };
+		29D2F0BCB4DCD5C8E75A9AD7F1916379 /* MAOfflineCity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineCity.h; path = MAMapKit.framework/Headers/MAOfflineCity.h; sourceTree = "<group>"; };
+		2A9D765D0185A9C3004BCAD6C4DFFC35 /* LELoadingAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LELoadingAnimationView.h; path = LEFrameworks/Classes/LELoadingIndicator/LELoadingAnimationView.h; sourceTree = "<group>"; };
+		304E6CE7DA0FA99A00855C66AD8B6D20 /* LEScanQRCode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEScanQRCode.m; path = LEFrameworks/Classes/LEQRCodeScanner/LEScanQRCode.m; sourceTree = "<group>"; };
+		30F6D994DBD363A6E7B5B80C434608F3 /* LEMapBaseAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapBaseAnnotationView.h; sourceTree = "<group>"; };
+		3428D6A7BA5619FBE104DD96B6CB290A /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LEMapviewFrameworks_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		35F02C07EE9A5EE69DDCDD78CB0E3352 /* MAMultiTexturePolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiTexturePolylineRenderer.h; path = MAMapKit.framework/Headers/MAMultiTexturePolylineRenderer.h; sourceTree = "<group>"; };
+		38BDF50F587E3C92AADFFA8F7DE09CA6 /* LEWaveProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEWaveProgressView.m; path = LEFrameworks/Classes/LEProgress/LEWaveProgressView.m; sourceTree = "<group>"; };
+		39A726F023868A49F64506A15D01218C /* LEMapViewSearchAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewSearchAnnotationView.h; sourceTree = "<group>"; };
+		3B7970E6A4FF9BEFA62327A609EE306B /* LEMultiImagePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEMultiImagePicker.h; path = LEFrameworks/Classes/LEImagePicker/LEMultiImagePicker.h; sourceTree = "<group>"; };
+		3C9FF28F533AA6F619AA9BD8F3961AFE /* LEMapSearchBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapSearchBar.h; sourceTree = "<group>"; };
+		3DF9315FBAE0705152C9B4A1D5CFBED0 /* LEScanQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEScanQRCode.h; path = LEFrameworks/Classes/LEQRCodeScanner/LEScanQRCode.h; sourceTree = "<group>"; };
+		3E59066B749480D376B9789D7CC711C1 /* MAUserLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAUserLocation.h; path = MAMapKit.framework/Headers/MAUserLocation.h; sourceTree = "<group>"; };
+		404ED0A8B3BE83AEB86BF2F21D2F0DC1 /* LEBasePopupEmptyPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBasePopupEmptyPage.m; path = LEFrameworks/Classes/LEPopup/LEBasePopupEmptyPage.m; sourceTree = "<group>"; };
+		421A8AF2E8AE33E287E81C8692F99CF7 /* LE_emoji_smileface@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_smileface@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_smileface@2x.png"; sourceTree = "<group>"; };
+		4339C185E36DBDBE05658C856C132213 /* MAMapStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapStatus.h; path = MAMapKit.framework/Headers/MAMapStatus.h; sourceTree = "<group>"; };
+		43D016FDD28D54C9854FD547894F8B2C /* MAOfflineItemNationWide.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItemNationWide.h; path = MAMapKit.framework/Headers/MAOfflineItemNationWide.h; sourceTree = "<group>"; };
+		448D3BEAF00D09A10BE784673B492E53 /* MAOverlayPathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlayPathRenderer.h; path = MAMapKit.framework/Headers/MAOverlayPathRenderer.h; sourceTree = "<group>"; };
+		458547C43BE0E6930F4D46909C0B5A97 /* LEMapViewAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotationView.m; sourceTree = "<group>"; };
+		46DEB81C445EE36A5A1EABB24672FE1A /* MAHeatMapTileOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAHeatMapTileOverlay.h; path = MAMapKit.framework/Headers/MAHeatMapTileOverlay.h; sourceTree = "<group>"; };
+		499C8F84499B75060E2B3E8349400322 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		49D2C5E121AFC84878D7592B01251F6A /* LEBaseTableViewSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewSection.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSection.h; sourceTree = "<group>"; };
+		4AD17187C21C05ABC795C5668BFB4714 /* LEBaseEmptyTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseEmptyTableViewCell.m; path = LEFrameworks/Classes/LEBase/LEBaseEmptyTableViewCell.m; sourceTree = "<group>"; };
+		4BB498961FA915F6AF5A581B3D34EAB9 /* LE_web_icon_close@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_close@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_close@2x.png"; sourceTree = "<group>"; };
+		4BDE74871D259C29C9276861B7CB9979 /* LEFrameworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LEFrameworks.xcconfig; sourceTree = "<group>"; };
+		4D375316FFAF51F3EF6BBB742BE3FDC4 /* LE_common_btn_gray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_gray@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_gray@2x.png"; sourceTree = "<group>"; };
+		4D45DDD0B556921E74AB2293D54E00F0 /* LEBaseTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewCell.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewCell.h; sourceTree = "<group>"; };
+		4F36490768673E2A181BD5FB9D19862D /* Pods-LEMapviewFrameworks_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LEMapviewFrameworks_Tests-dummy.m"; sourceTree = "<group>"; };
+		4F3C0BB8DEF2AB0E2C94B0B5B1075780 /* LE_popup_bg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_popup_bg@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_popup_bg@2x.png"; sourceTree = "<group>"; };
+		521D7DC337F539C85B95E7A208D36111 /* DJRefreshBottomView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DJRefreshBottomView.h; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshBottomView.h; sourceTree = "<group>"; };
+		529BE9A6C5D0CA3BA3F599190B2FD250 /* LE_web_icon_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_close@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_close@3x.png"; sourceTree = "<group>"; };
+		537307F9C2FEA54F416031A9C33F1889 /* LEMapViewSearchAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSearchAnnotation.m; sourceTree = "<group>"; };
+		5561DCD4DF360624DDCED83607A8DAA6 /* LEUIFramework.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEUIFramework.m; path = LEFrameworks/Classes/LEAutoLayout/LEUIFramework.m; sourceTree = "<group>"; };
+		569CCA931F29FC9398EEC4F875E37B2F /* LEPopup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEPopup.m; path = LEFrameworks/Classes/LEPopup/LEPopup.m; sourceTree = "<group>"; };
+		573AC598EC56B5B2AE1203B04834B801 /* LELineChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LELineChart.h; path = LEFrameworks/Classes/LEChart/LELineChart.h; sourceTree = "<group>"; };
+		582872CE6003B4114A8C38D4F7B04C1F /* LE_lewaverotation.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = LE_lewaverotation.png; path = LEFrameworks/Assets/LEFrameworks.bundle/LE_lewaverotation.png; sourceTree = "<group>"; };
+		5A0E27B527B817283DA828A1C150B348 /* LEBarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBarChart.h; path = LEFrameworks/Classes/LEChart/LEBarChart.h; sourceTree = "<group>"; };
+		5A967741A6FD9B77146B7E7AC3F381E8 /* LE_web_icon_refresh@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_refresh@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_refresh@3x.png"; sourceTree = "<group>"; };
+		5C95F05BE13377E699E7CFBDD4E38033 /* LEBaseTableViewSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewSection.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSection.m; sourceTree = "<group>"; };
+		5DBBF715916797880B71861C97684C2F /* AMapUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapUtility.h; path = AMapFoundationKit.framework/Headers/AMapUtility.h; sourceTree = "<group>"; };
+		5EC4922FC3A8352A9A9E92B8B94E7AB0 /* Pods-LEMapviewFrameworks_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LEMapviewFrameworks_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5F4A2D036C8B1CAB6942D1DF0E5D3FF5 /* LE_web_icon_backward_on@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_on@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_on@3x.png"; sourceTree = "<group>"; };
+		60EF8E004125D581B3DC24228A568EC1 /* LE_qrcode_scan_bg@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_bg@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_bg@3x.png"; sourceTree = "<group>"; };
+		61E770D72007292D21A98EA88314CE8D /* MAMapVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapVersion.h; path = MAMapKit.framework/Headers/MAMapVersion.h; sourceTree = "<group>"; };
+		63B43BF481FA7A36410527B32186C82E /* MAMultiPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiPolyline.h; path = MAMapKit.framework/Headers/MAMultiPolyline.h; sourceTree = "<group>"; };
+		64EF447F83A93279D35D8E47F5EA8B19 /* LEBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseViewController.m; path = LEFrameworks/Classes/LEBase/LEBaseViewController.m; sourceTree = "<group>"; };
+		66F610A64FF0AD69FD0670BED0249A4A /* AMapSearchVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchVersion.h; path = AMapSearchKit.framework/Headers/AMapSearchVersion.h; sourceTree = "<group>"; };
+		67BEF6AB178C83A1C84F7BD030EF5FEF /* AMapNearbySearchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapNearbySearchManager.h; path = AMapSearchKit.framework/Headers/AMapNearbySearchManager.h; sourceTree = "<group>"; };
+		6857A4781B62EC5978542EAF6D5AFE3C /* LEBottomTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBottomTabbar.h; path = LEFrameworks/Classes/LEBottomTabbar/LEBottomTabbar.h; sourceTree = "<group>"; };
+		6A17D60511E890F1CC416DBE07F7FE80 /* LE_web_icon_forward_off@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_off@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_off@3x.png"; sourceTree = "<group>"; };
+		6E2F610C094DF2A373C67FC6B8ABCC1D /* LEBaseTableViewWithRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewWithRefresh.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewWithRefresh.h; sourceTree = "<group>"; };
+		6E628B341CFE154BC6EA310A31792DA8 /* LE_tableview_icon_arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_tableview_icon_arrow@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_tableview_icon_arrow@3x.png"; sourceTree = "<group>"; };
+		6FE7622D953826D6143FB29F194525B4 /* LEMapViewSearchAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSearchAnnotationView.m; sourceTree = "<group>"; };
+		73685500813AA61AA245A61AC442A9CF /* MAOfflineItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItem.h; path = MAMapKit.framework/Headers/MAOfflineItem.h; sourceTree = "<group>"; };
+		748794C7782BB37508974F84E644B345 /* MAOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlay.h; path = MAMapKit.framework/Headers/MAOverlay.h; sourceTree = "<group>"; };
+		7665182FD8CB6A6199D4658A2C65EA95 /* LEMapViewUserAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewUserAnnotationView.m; sourceTree = "<group>"; };
+		77BCAD1D575B83B8727BAE515AEF4B9E /* MATileOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MATileOverlay.h; path = MAMapKit.framework/Headers/MATileOverlay.h; sourceTree = "<group>"; };
+		780B512007476C635FB786582ECA0E36 /* MALineDrawType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MALineDrawType.h; path = MAMapKit.framework/Headers/MALineDrawType.h; sourceTree = "<group>"; };
+		7995EC4E9F8321C51051A336CA839644 /* LEBaseEmptyTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseEmptyTableViewCell.h; path = LEFrameworks/Classes/LEBase/LEBaseEmptyTableViewCell.h; sourceTree = "<group>"; };
+		79C3A7C63E532F041747029C27DB56AB /* MATileOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MATileOverlayRenderer.h; path = MAMapKit.framework/Headers/MATileOverlayRenderer.h; sourceTree = "<group>"; };
+		7B024A1074ECA72BC3968C81D077BD3D /* LEBasePopupEmptyPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBasePopupEmptyPage.h; path = LEFrameworks/Classes/LEPopup/LEBasePopupEmptyPage.h; sourceTree = "<group>"; };
+		7B41E757FB3A7BFD36A038B8806A8DD0 /* LE_qrcode_scan_line@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_line@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_line@2x.png"; sourceTree = "<group>"; };
+		7BE07DF5DE7B37BB60263077A05E718B /* EmojiImagePageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EmojiImagePageView.h; path = LEFrameworks/Classes/LEEmojiInputView/EmojiImagePageView.h; sourceTree = "<group>"; };
+		7C94F44B47E524EFB1A471936628E0C4 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		7CBA3B833DB81F22F878AD4C0A15B627 /* MATouchPoi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MATouchPoi.h; path = MAMapKit.framework/Headers/MATouchPoi.h; sourceTree = "<group>"; };
+		7E21200E5D6AB25C1FE5B0E71D922274 /* LEMapBaseAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapBaseAnnotationView.m; sourceTree = "<group>"; };
+		7EE02012070D18B4490DC0D2BA55291A /* LEMapCallOutAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapCallOutAnnotationView.m; sourceTree = "<group>"; };
+		7FB5A18FDBA72F0E22484BD5367F9FED /* DJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DJRefresh.m; path = LEFrameworks/Classes/LE_DJRefresh/DJRefresh.m; sourceTree = "<group>"; };
+		80528B331D34BF0300AA2056 /* LEMapviewFrameworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMapviewFrameworks.h; sourceTree = "<group>"; };
+		80B57E71040398AC90FD0DA75AA9E4B4 /* libLEMapviewFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLEMapviewFrameworks.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		814DA7A1876BFBE7DFB262E7ADE256A7 /* LEFrameworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEFrameworks-prefix.pch"; sourceTree = "<group>"; };
+		82617BA7EA0EB45AB122E872AB746D8F /* LERefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LERefresh.m; path = LEFrameworks/Classes/LEBase/LERefresh.m; sourceTree = "<group>"; };
+		82FB4938583C3400375F65A56F43FCBE /* libLEFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLEFrameworks.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8354E54B7BBF7314899541C32F276C04 /* LEBaseTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableView.m; path = LEFrameworks/Classes/LEBase/LEBaseTableView.m; sourceTree = "<group>"; };
+		841F6259D11328F44D757E892388A506 /* MAPointAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPointAnnotation.h; path = MAMapKit.framework/Headers/MAPointAnnotation.h; sourceTree = "<group>"; };
+		869F0CAB984FF02DDBDF7202336C0036 /* LEBaseTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableView.h; path = LEFrameworks/Classes/LEBase/LEBaseTableView.h; sourceTree = "<group>"; };
+		88BBE97F5C6804CA186718901A9F5EB4 /* LESegmentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LESegmentView.m; path = LEFrameworks/Classes/LESegmentView/LESegmentView.m; sourceTree = "<group>"; };
+		8B0726C1AA85AFA94BA630D782B3CD42 /* EmojiInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmojiInputView.m; path = LEFrameworks/Classes/LEEmojiInputView/EmojiInputView.m; sourceTree = "<group>"; };
+		8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LEMapviewFrameworks.xcconfig; sourceTree = "<group>"; };
+		8CA35197119A93238CF9C32DCC32F8D5 /* DJRefreshTopView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DJRefreshTopView.m; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshTopView.m; sourceTree = "<group>"; };
+		8CA9DAC7511DBB9083158AAD46FDA36A /* LEPieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEPieChart.h; path = LEFrameworks/Classes/LEChart/LEPieChart.h; sourceTree = "<group>"; };
+		904F37D84F9A4F81390E6638F312946D /* LEWaveProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEWaveProgressView.h; path = LEFrameworks/Classes/LEProgress/LEWaveProgressView.h; sourceTree = "<group>"; };
+		9229B77009B8DA1D4846FDB61F6CEEC0 /* LEBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseViewController.h; path = LEFrameworks/Classes/LEBase/LEBaseViewController.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD88A1C9B16A2CC90F9D7FA22FEDA574 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8257206365EE3843F481DF940DCBF7B /* LEMapviewFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LEMapviewFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF3B13BF96F7BB3338A7C99ACE6E8FD /* Pods-LEMapviewFrameworks_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LEMapviewFrameworks_Tests-resources.sh"; sourceTree = "<group>"; };
-		C770339B96A2DCB5BAAC8C5F9F7264F0 /* Pods-LEMapviewFrameworks_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LEMapviewFrameworks_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		9464A806A3C2B9858D4D73BE5F925378 /* LEMapViewAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotationView.h; sourceTree = "<group>"; };
+		95477C7A19C2B043FDC2867DB186F806 /* LEMapViewSearchAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewSearchAnnotation.h; sourceTree = "<group>"; };
+		95666968BBF48162A0D1680299D36342 /* AMapFoundationKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapFoundationKit.h; path = AMapFoundationKit.framework/Headers/AMapFoundationKit.h; sourceTree = "<group>"; };
+		95D171FDBE6C23B21FD32BD0039008D8 /* LEBaseTableViewWithRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewWithRefresh.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewWithRefresh.m; sourceTree = "<group>"; };
+		961D66A58905D310552186B71197CBA1 /* DJRefreshView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DJRefreshView.h; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshView.h; sourceTree = "<group>"; };
+		9697C2D469581637CBFB4A9CA26D95DB /* LE_common_btn_gray@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_gray@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_gray@3x.png"; sourceTree = "<group>"; };
+		97B61EBB90D396878043E34A9774E2E1 /* AMap.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		99F03E81DA358AAC2DB76C26A00E8A40 /* LEFrameworks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEFrameworks.h; path = LEFrameworks/Classes/LEFrameworks.h; sourceTree = "<group>"; };
+		9A70D73CAC8C610157C50A35867AD32D /* LEMapCallOutAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapCallOutAnnotationView.h; sourceTree = "<group>"; };
+		9AB389C75ED761146DBBA2D566108F43 /* MAPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPinAnnotationView.h; path = MAMapKit.framework/Headers/MAPinAnnotationView.h; sourceTree = "<group>"; };
+		9B06B603985341BAD0F16996322022DA /* LETabbarRelatedPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LETabbarRelatedPageView.h; path = LEFrameworks/Classes/LEBottomTabbar/LETabbarRelatedPageView.h; sourceTree = "<group>"; };
+		9B2FC7EF9375969389B116817394895B /* LEMapCallOutViewAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapCallOutViewAnnotation.m; sourceTree = "<group>"; };
+		9F5363371905C1B68D3ACFD67ED2A214 /* LE_NSDate+Category.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LE_NSDate+Category.m"; path = "LEFrameworks/Classes/LEDateCategory/LE_NSDate+Category.m"; sourceTree = "<group>"; };
+		9FBF817C5710BE9A102DD5871D9D1701 /* AMapSearchError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchError.h; path = AMapSearchKit.framework/Headers/AMapSearchError.h; sourceTree = "<group>"; };
+		9FE6C369D80CC240ED7B43300652D4A1 /* LE_common_navigation_btn_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_navigation_btn_back@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_navigation_btn_back@2x.png"; sourceTree = "<group>"; };
+		A05A396EDBF6D781CE90A24EA2B1957D /* MAShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAShape.h; path = MAMapKit.framework/Headers/MAShape.h; sourceTree = "<group>"; };
+		A06F493B73DA9B6345A999EA67F08FDA /* LELoadingAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LELoadingAnimationView.m; path = LEFrameworks/Classes/LELoadingIndicator/LELoadingAnimationView.m; sourceTree = "<group>"; };
+		A084BBE4AA150A01AB370F4B4143A67E /* LEBaseTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewCell.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewCell.m; sourceTree = "<group>"; };
+		A183985E536CAC437B26B0AB4E707CCE /* LELocalNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LELocalNotification.m; path = LEFrameworks/Classes/LELocalNotification/LELocalNotification.m; sourceTree = "<group>"; };
+		A60A9E4C8F26F9FBC37F771362B585A0 /* AMapSearchAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchAPI.h; path = AMapSearchKit.framework/Headers/AMapSearchAPI.h; sourceTree = "<group>"; };
+		A816586F5C5931AD7B9B67E267FA0B88 /* LEAppMessageDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEAppMessageDelegate.h; path = LEFrameworks/Classes/LEAppMessageDelegate/LEAppMessageDelegate.h; sourceTree = "<group>"; };
+		AACFFA3819A8E63AF2B86C815A7CC786 /* LECurveProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LECurveProgressView.h; path = LEFrameworks/Classes/LEProgress/LECurveProgressView.h; sourceTree = "<group>"; };
+		AAD13FB120A7A94A073D3F508EA49481 /* LE_MessageBackground@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MessageBackground@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MessageBackground@2x.png"; sourceTree = "<group>"; };
+		ABC77AA915268F0C0469F1453E749642 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		AD1B135EF1B130C5CBDACF1FE1020CFC /* MAOfflineItemCommonCity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItemCommonCity.h; path = MAMapKit.framework/Headers/MAOfflineItemCommonCity.h; sourceTree = "<group>"; };
+		AD70A8FFE51244909C033CC75CABD5FD /* MAGeodesicPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGeodesicPolyline.h; path = MAMapKit.framework/Headers/MAGeodesicPolyline.h; sourceTree = "<group>"; };
+		AEC2B65E62136FB16D120B5CE19B7DF8 /* LE_MessageBackground@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MessageBackground@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MessageBackground@3x.png"; sourceTree = "<group>"; };
+		AFB4D03B275E8B7AEC855ED7E65DE60D /* AMapSearchKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchKit.h; path = AMapSearchKit.framework/Headers/AMapSearchKit.h; sourceTree = "<group>"; };
+		B0AD13B95060A5583279612E6A951CA4 /* LEExcelView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEExcelView.m; path = LEFrameworks/Classes/LEExcelView/LEExcelView.m; sourceTree = "<group>"; };
+		B19BA70FA0E9D205C6A87CFCA4049520 /* LE_qrcode_scan_bg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_bg@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_bg@2x.png"; sourceTree = "<group>"; };
+		B2E2D81B02E363163BC7C860CD43B9B3 /* LEMapViewAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotation.h; sourceTree = "<group>"; };
+		B588FCC5EBBA976AA8CB055E8C5BCA7F /* MAIndoorInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAIndoorInfo.h; path = MAMapKit.framework/Headers/MAIndoorInfo.h; sourceTree = "<group>"; };
+		B77E5AFF9980B3EDC3F47919F9AC6239 /* DJRefreshBottomView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DJRefreshBottomView.m; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshBottomView.m; sourceTree = "<group>"; };
+		B7F0FBFB8FEDEF3A8A35B6C6BAD7811F /* LEFrameworks.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEFrameworks.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B803AE9EB34D7DAB1D9F5790ABE1EF0A /* LEWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEWebView.m; path = LEFrameworks/Classes/LEWebview/LEWebView.m; sourceTree = "<group>"; };
+		B914D5878349BC5694DD9CE6015E1CB1 /* MAAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAAnnotationView.h; path = MAMapKit.framework/Headers/MAAnnotationView.h; sourceTree = "<group>"; };
+		B95FFF2C1E1A1FFC8614C58B37211DBE /* AMapNearbyUploadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapNearbyUploadInfo.h; path = AMapSearchKit.framework/Headers/AMapNearbyUploadInfo.h; sourceTree = "<group>"; };
+		B9E0924AFAC5A3C44A291918A5FE5E20 /* LERefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LERefresh.h; path = LEFrameworks/Classes/LEBase/LERefresh.h; sourceTree = "<group>"; };
+		BACB3EE75FC0796651C36372F630D88C /* AMapURLSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapURLSearchType.h; path = AMapFoundationKit.framework/Headers/AMapURLSearchType.h; sourceTree = "<group>"; };
+		BB1DBAC4A5942AE17781DB23D1EC04B7 /* LE_emoji_keyboardface@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_keyboardface@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_keyboardface@3x.png"; sourceTree = "<group>"; };
+		BC1CE1CA084B81CF8BE80B3E0EC8C04A /* DJRefreshView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DJRefreshView.m; path = LEFrameworks/Classes/LE_DJRefresh/DJRefreshView/DJRefreshView.m; sourceTree = "<group>"; };
+		BCEC81C73EB4AAFB53F99604728A39C6 /* MAPolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolylineRenderer.h; path = MAMapKit.framework/Headers/MAPolylineRenderer.h; sourceTree = "<group>"; };
+		BE875ADAAA4D7F5630849C9B1A96DEEC /* LECurveProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LECurveProgressView.m; path = LEFrameworks/Classes/LEProgress/LECurveProgressView.m; sourceTree = "<group>"; };
+		C0B85EB97310BF9275B3C70BD76854E9 /* LE_common_btn_blue@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_blue@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_blue@2x.png"; sourceTree = "<group>"; };
+		C1B77FAF24316749A85949498ECBE3DF /* MAOfflineProvince.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineProvince.h; path = MAMapKit.framework/Headers/MAOfflineProvince.h; sourceTree = "<group>"; };
+		C2080042B4DB71761AD11F8680A5E03E /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		C384487AA837EF738C9B15F1086C419D /* LEBottomTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBottomTabbar.m; path = LEFrameworks/Classes/LEBottomTabbar/LEBottomTabbar.m; sourceTree = "<group>"; };
+		C51E6366CD19B1115E8F250CCE2AC7B6 /* AMapFoundationVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapFoundationVersion.h; path = AMapFoundationKit.framework/Headers/AMapFoundationVersion.h; sourceTree = "<group>"; };
+		C5237A9331BA7B0469F23C8B3232AD22 /* LEPieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEPieChart.m; path = LEFrameworks/Classes/LEChart/LEPieChart.m; sourceTree = "<group>"; };
+		C5DCCC36F576B3FBCFA4B8CA77414009 /* MAPolygonRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolygonRenderer.h; path = MAMapKit.framework/Headers/MAPolygonRenderer.h; sourceTree = "<group>"; };
+		C6C4B144FE98901171A9968A36CA44F1 /* MAMapKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapKit.h; path = MAMapKit.framework/Headers/MAMapKit.h; sourceTree = "<group>"; };
+		C7A22DD575F8F563E57A6BBE6A73E040 /* LE_tableview_icon_arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_tableview_icon_arrow@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_tableview_icon_arrow@2x.png"; sourceTree = "<group>"; };
+		CA1524687A6F7DD1B1EB95B33A573191 /* MAPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolyline.h; path = MAMapKit.framework/Headers/MAPolyline.h; sourceTree = "<group>"; };
+		CC7E4D378973AB41E13A13D22D30107E /* AMapURLSearchConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapURLSearchConfig.h; path = AMapFoundationKit.framework/Headers/AMapURLSearchConfig.h; sourceTree = "<group>"; };
+		CE9490C0187015D99A68842E374F641A /* MAPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolygon.h; path = MAMapKit.framework/Headers/MAPolygon.h; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D1940281162F3385287EFD683254B938 /* LEMapviewFrameworks.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LEMapviewFrameworks.modulemap; sourceTree = "<group>"; };
-		E7AF70402B0B133F112165852BC28EF2 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
-		E9EF22D3CB9B599FB710753455B3BE97 /* LEMapviewFrameworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LEMapviewFrameworks.xcconfig; sourceTree = "<group>"; };
+		CFDC79FA2B7699388055A123453A451C /* LEBaseTableViewSectionWithIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewSectionWithIcon.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSectionWithIcon.m; sourceTree = "<group>"; };
+		CFE33093DE1D17B566CF0E12DDD38971 /* LE_qrcode_scan_line@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_line@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_line@3x.png"; sourceTree = "<group>"; };
+		D0941A084B8556A3A09EA5ABC57EC068 /* MAMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapView.h; path = MAMapKit.framework/Headers/MAMapView.h; sourceTree = "<group>"; };
+		D17B5FB56015109B0152AB93D1FEDCF0 /* LEMapviewFrameworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEMapviewFrameworks-prefix.pch"; sourceTree = "<group>"; };
+		D1AACC79E890B47614D7BF973539CC60 /* LE_web_icon_share@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_share@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_share@3x.png"; sourceTree = "<group>"; };
+		D2B2E5343528D8E47D18585D5A857E72 /* LEBarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBarChart.m; path = LEFrameworks/Classes/LEChart/LEBarChart.m; sourceTree = "<group>"; };
+		D3D459FA21FF7C22935E1F73D0533D1B /* Pods-LEMapviewFrameworks_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LEMapviewFrameworks_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		D441C11908E8E628C63394F9E4003CAD /* LE_web_icon_forward_on@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_on@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_on@2x.png"; sourceTree = "<group>"; };
+		D66A0B95B3C9EE7465BEB23A5F23496D /* EmojisList.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = EmojisList.plist; path = LEFrameworks/Classes/LEEmojiInputView/EmojisList.plist; sourceTree = "<group>"; };
+		DAB6EF936EE5C14B9FBB1988A6D14BF1 /* MAOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlayRenderer.h; path = MAMapKit.framework/Headers/MAOverlayRenderer.h; sourceTree = "<group>"; };
+		DC8AF07B572F7AF14D7F01300CF3AC2F /* HMPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMPageControl.m; path = LEFrameworks/Classes/LEEmojiInputView/HMPageControl/HMPageControl.m; sourceTree = "<group>"; };
+		DE47D7495121DA9E5C629ED6CC8D62F3 /* LE_common_navigation_btn_back@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_navigation_btn_back@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_navigation_btn_back@3x.png"; sourceTree = "<group>"; };
+		E02C30901FE5527C39653A05D284A62B /* LE_web_icon_backward_on@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_on@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_on@2x.png"; sourceTree = "<group>"; };
+		E055E7CA1997AA559F72501A4B345D0D /* LE_NSDate+Category.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LE_NSDate+Category.h"; path = "LEFrameworks/Classes/LEDateCategory/LE_NSDate+Category.h"; sourceTree = "<group>"; };
+		E3AE027AC12456D032289A6CC92E36BD /* AMapURLSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapURLSearch.h; path = AMapFoundationKit.framework/Headers/AMapURLSearch.h; sourceTree = "<group>"; };
+		E4A88AA1422676EBA338B200CF6936BB /* AMapCommonObj.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapCommonObj.h; path = AMapSearchKit.framework/Headers/AMapCommonObj.h; sourceTree = "<group>"; };
+		E67F68420CED29D700AAC823C3D3F47F /* LE_lewave.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = LE_lewave.png; path = LEFrameworks/Assets/LEFrameworks.bundle/LE_lewave.png; sourceTree = "<group>"; };
+		E6AAB1EB4567D0CACD57C369EE4ADA4B /* MAMultiPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiPoint.h; path = MAMapKit.framework/Headers/MAMultiPoint.h; sourceTree = "<group>"; };
+		E79E6E2BD57F27AADEBDABCBF9320DF9 /* MACircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MACircle.h; path = MAMapKit.framework/Headers/MACircle.h; sourceTree = "<group>"; };
+		E83AB53B99A34712D6BADC92F0584A6C /* Pods-LEMapviewFrameworks_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LEMapviewFrameworks_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB7554E586F7006B8AD8D74B0F132986 /* MAGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGeometry.h; path = MAMapKit.framework/Headers/MAGeometry.h; sourceTree = "<group>"; };
+		EC78116F99A4060A5EDC4AC8FFD1DE51 /* LE_MultiImagePickerCheck@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MultiImagePickerCheck@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MultiImagePickerCheck@2x.png"; sourceTree = "<group>"; };
+		ED4B8D93AC80676A265777CB63499E25 /* LEUIFramework.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEUIFramework.h; path = LEFrameworks/Classes/LEAutoLayout/LEUIFramework.h; sourceTree = "<group>"; };
+		ED9195EC2C0B114D43DCAF8D1313030D /* LEMapCallOutViewAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapCallOutViewAnnotation.h; sourceTree = "<group>"; };
+		EE7C684916A5C25714DD08A0AADD4AC6 /* EmojiImagePageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmojiImagePageView.m; path = LEFrameworks/Classes/LEEmojiInputView/EmojiImagePageView.m; sourceTree = "<group>"; };
+		F00CCF5C454B64CA103CB853FC54E873 /* LE_web_icon_backward_off@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_off@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_off@3x.png"; sourceTree = "<group>"; };
+		F23C25CBD45FFED62790322EBBCB2694 /* MAMultiColoredPolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiColoredPolylineRenderer.h; path = MAMapKit.framework/Headers/MAMultiColoredPolylineRenderer.h; sourceTree = "<group>"; };
+		F2F4DCA982617BB5140C69B30C3C659A /* MAGroundOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGroundOverlay.h; path = MAMapKit.framework/Headers/MAGroundOverlay.h; sourceTree = "<group>"; };
+		F4B7C0AA7D98375E4020871478E670DF /* AMapSearchObj.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchObj.h; path = AMapSearchKit.framework/Headers/AMapSearchObj.h; sourceTree = "<group>"; };
+		F515EE497693DF10C5613A913ED7E289 /* LE_EmojiToolBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LE_EmojiToolBar.m; path = LEFrameworks/Classes/LEEmojiInputView/LE_EmojiToolBar.m; sourceTree = "<group>"; };
+		F567230ABA2ADFBC82B2380E3BDCFFF1 /* LEMapViewUserAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewUserAnnotationView.h; sourceTree = "<group>"; };
+		F8BD1D53053C1193F460D1383E8AAA62 /* LEMapViewAnnotationSubView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotationSubView.h; sourceTree = "<group>"; };
+		FAD2A6126CDCFAE28E48E973C7414B64 /* LEBadge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBadge.m; path = LEFrameworks/Classes/LEBadge/LEBadge.m; sourceTree = "<group>"; };
+		FC0E5D25B026BBDFD0732B8BE07A1800 /* LE_MultiImagePickerCheck@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MultiImagePickerCheck@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MultiImagePickerCheck@3x.png"; sourceTree = "<group>"; };
+		FCA0AC7B0C589F7B222899133DD81C55 /* LEWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEWebView.h; path = LEFrameworks/Classes/LEWebview/LEWebView.h; sourceTree = "<group>"; };
+		FCB11D1CB9FD30B0E34552849E20EAF5 /* LE_emoji_smileface@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_smileface@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_smileface@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		571D1CF1B5C0F07D423B647DDEBACD1A /* Frameworks */ = {
+		4ED0CC7BDAAFEAAFD8517CA24B5C1C21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A93388E77A272B9ECACEEFD41585AA8 /* Foundation.framework in Frameworks */,
+				DE6D6DAE7CA664D83C6665A8F36CA9B7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7737467B688E527058EFDA952D29BD25 /* Frameworks */ = {
+		92C809BD7C0E2475B793C5DF77ED7E88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA8E310DD7CF457CF31008EF45BEF4D5 /* Foundation.framework in Frameworks */,
+				B47EF781A69E4C1871B9D372482F5989 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B161D06D88CCCBE49A28E0FF053FE639 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC24E71B61104263283A6BE599A56A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D716126B3D6B6869F6FC409BB5737814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		330236F4608BA7E48FC50536AEDAF5CF /* Support Files */ = {
+		0A819C1BADC183A6456335BF41396529 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AD88A1C9B16A2CC90F9D7FA22FEDA574 /* Info.plist */,
-				D1940281162F3385287EFD683254B938 /* LEMapviewFrameworks.modulemap */,
-				E9EF22D3CB9B599FB710753455B3BE97 /* LEMapviewFrameworks.xcconfig */,
-				00A83B5B42632A3FE1FBDDEB9375A35A /* LEMapviewFrameworks-dummy.m */,
-				887FB4AB7111E4D6DACAD53F1448BE26 /* LEMapviewFrameworks-prefix.pch */,
-				9393554E9548AF3086E1915168EFB641 /* LEMapviewFrameworks-umbrella.h */,
+				C2080042B4DB71761AD11F8680A5E03E /* MAMapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D27EDBB43FD1FD76B893E20A799EBB1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BDE74871D259C29C9276861B7CB9979 /* LEFrameworks.xcconfig */,
+				05D81CD4F46D2E2C11BF83DB7FA848FC /* LEFrameworks-dummy.m */,
+				814DA7A1876BFBE7DFB262E7ADE256A7 /* LEFrameworks-prefix.pch */,
+				1290C251F9D00D295ADEAF21378A69EE /* ResourceBundle-LEFrameworks-Info.plist */,
 			);
 			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LEMapviewFrameworks";
+			path = "../Target Support Files/LEFrameworks";
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -92,47 +459,179 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		403D195C136B23082E080FA5EA792779 /* Pods-LEMapviewFrameworks_Tests */ = {
+		3EE7B007268FD7BF67B88D80202FE118 /* LEMapviewFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7EDD41FC2B79045CD35D96BA715C964E /* Info.plist */,
-				4C690932AB537B2045B43147EC397C6B /* Pods-LEMapviewFrameworks_Tests.modulemap */,
-				1535F7F18A0583C8273EC73B6AEA4E9D /* Pods-LEMapviewFrameworks_Tests-acknowledgements.markdown */,
-				4BF7E657E5739B0F007981AD1B6D0798 /* Pods-LEMapviewFrameworks_Tests-acknowledgements.plist */,
-				495F7CE497D956FB62947E3963581448 /* Pods-LEMapviewFrameworks_Tests-dummy.m */,
-				C770339B96A2DCB5BAAC8C5F9F7264F0 /* Pods-LEMapviewFrameworks_Tests-frameworks.sh */,
-				BFF3B13BF96F7BB3338A7C99ACE6E8FD /* Pods-LEMapviewFrameworks_Tests-resources.sh */,
-				113942190064A3C2D918F9F1807F288C /* Pods-LEMapviewFrameworks_Tests-umbrella.h */,
-				5BCEA66F12D7441EFEA828D2F4C2A99F /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */,
-				2B5342D733FA46AB4AF67129CF408740 /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */,
-			);
-			name = "Pods-LEMapviewFrameworks_Tests";
-			path = "Target Support Files/Pods-LEMapviewFrameworks_Tests";
-			sourceTree = "<group>";
-		};
-		4060DD235BA2DC5871189BE266DB47AF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B8257206365EE3843F481DF940DCBF7B /* LEMapviewFrameworks.framework */,
-				5E94BE2AB09243E5E51A80F6B1BE09E8 /* Pods_LEMapviewFrameworks_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		647ECC57DFBBA9D7743941579A7083B6 /* LEMapviewFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A8EA8A01EDF1934F361324E925D36A5E /* LEMapviewFrameworks */,
-				330236F4608BA7E48FC50536AEDAF5CF /* Support Files */,
+				D32491C07B8FFA24411AFDC06DB69A8F /* LEMapviewFrameworks */,
+				44B75F9F15DE3BD61FBAE4773F3F8EE7 /* Support Files */,
 			);
 			name = LEMapviewFrameworks;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		44B75F9F15DE3BD61FBAE4773F3F8EE7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */,
+				183C60385C3B4B414FCA74522C59FD23 /* LEMapviewFrameworks-dummy.m */,
+				D17B5FB56015109B0152AB93D1FEDCF0 /* LEMapviewFrameworks-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LEMapviewFrameworks";
+			sourceTree = "<group>";
+		};
+		489907A34C4E69CD55FEC65F372BE5AA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1D73F511CA2305E6C4DF63B765D84E9 /* Pods-LEMapviewFrameworks_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		500202B59CEE5E4963F7A1C19B2A98B0 /* AMap3DMap */ = {
+			isa = PBXGroup;
+			children = (
+				1D49B0C5BE381213CB8BA818B6666DDE /* MAAnnotation.h */,
+				B914D5878349BC5694DD9CE6015E1CB1 /* MAAnnotationView.h */,
+				E79E6E2BD57F27AADEBDABCBF9320DF9 /* MACircle.h */,
+				04F6D114B1D0DDD9ADBF6206D0A96005 /* MACircleRenderer.h */,
+				AD70A8FFE51244909C033CC75CABD5FD /* MAGeodesicPolyline.h */,
+				EB7554E586F7006B8AD8D74B0F132986 /* MAGeometry.h */,
+				F2F4DCA982617BB5140C69B30C3C659A /* MAGroundOverlay.h */,
+				2475D5AFDD8B02C22AAD6B52AD35690F /* MAGroundOverlayRenderer.h */,
+				46DEB81C445EE36A5A1EABB24672FE1A /* MAHeatMapTileOverlay.h */,
+				B588FCC5EBBA976AA8CB055E8C5BCA7F /* MAIndoorInfo.h */,
+				780B512007476C635FB786582ECA0E36 /* MALineDrawType.h */,
+				C6C4B144FE98901171A9968A36CA44F1 /* MAMapKit.h */,
+				4339C185E36DBDBE05658C856C132213 /* MAMapStatus.h */,
+				61E770D72007292D21A98EA88314CE8D /* MAMapVersion.h */,
+				D0941A084B8556A3A09EA5ABC57EC068 /* MAMapView.h */,
+				F23C25CBD45FFED62790322EBBCB2694 /* MAMultiColoredPolylineRenderer.h */,
+				E6AAB1EB4567D0CACD57C369EE4ADA4B /* MAMultiPoint.h */,
+				63B43BF481FA7A36410527B32186C82E /* MAMultiPolyline.h */,
+				35F02C07EE9A5EE69DDCDD78CB0E3352 /* MAMultiTexturePolylineRenderer.h */,
+				29D2F0BCB4DCD5C8E75A9AD7F1916379 /* MAOfflineCity.h */,
+				73685500813AA61AA245A61AC442A9CF /* MAOfflineItem.h */,
+				AD1B135EF1B130C5CBDACF1FE1020CFC /* MAOfflineItemCommonCity.h */,
+				1EBBD42D05975E9E745CA3F9944FE0FD /* MAOfflineItemMunicipality.h */,
+				43D016FDD28D54C9854FD547894F8B2C /* MAOfflineItemNationWide.h */,
+				0FDA58C3B4CC46115A3A9A31FF21F340 /* MAOfflineMap.h */,
+				C1B77FAF24316749A85949498ECBE3DF /* MAOfflineProvince.h */,
+				748794C7782BB37508974F84E644B345 /* MAOverlay.h */,
+				448D3BEAF00D09A10BE784673B492E53 /* MAOverlayPathRenderer.h */,
+				DAB6EF936EE5C14B9FBB1988A6D14BF1 /* MAOverlayRenderer.h */,
+				9AB389C75ED761146DBBA2D566108F43 /* MAPinAnnotationView.h */,
+				841F6259D11328F44D757E892388A506 /* MAPointAnnotation.h */,
+				CE9490C0187015D99A68842E374F641A /* MAPolygon.h */,
+				C5DCCC36F576B3FBCFA4B8CA77414009 /* MAPolygonRenderer.h */,
+				CA1524687A6F7DD1B1EB95B33A573191 /* MAPolyline.h */,
+				BCEC81C73EB4AAFB53F99604728A39C6 /* MAPolylineRenderer.h */,
+				A05A396EDBF6D781CE90A24EA2B1957D /* MAShape.h */,
+				77BCAD1D575B83B8727BAE515AEF4B9E /* MATileOverlay.h */,
+				79C3A7C63E532F041747029C27DB56AB /* MATileOverlayRenderer.h */,
+				7CBA3B833DB81F22F878AD4C0A15B627 /* MATouchPoi.h */,
+				3E59066B749480D376B9789D7CC711C1 /* MAUserLocation.h */,
+				0A819C1BADC183A6456335BF41396529 /* Frameworks */,
+				71ED412E2D9617A89E94568F125D157B /* Resources */,
+			);
+			path = AMap3DMap;
+			sourceTree = "<group>";
+		};
+		61C30C234064E0AC33DE4160BAEE32E8 /* LEFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2959B760661D9F1C8FEFFD70AF571FC3 /* DJRefresh.h */,
+				7FB5A18FDBA72F0E22484BD5367F9FED /* DJRefresh.m */,
+				521D7DC337F539C85B95E7A208D36111 /* DJRefreshBottomView.h */,
+				B77E5AFF9980B3EDC3F47919F9AC6239 /* DJRefreshBottomView.m */,
+				20F2F272FCE755AF02FD1BB9D9EDD05B /* DJRefreshMacro.h */,
+				1E373EFA4419D0E1E0C70D3472E4A1BB /* DJRefreshTopView.h */,
+				8CA35197119A93238CF9C32DCC32F8D5 /* DJRefreshTopView.m */,
+				961D66A58905D310552186B71197CBA1 /* DJRefreshView.h */,
+				BC1CE1CA084B81CF8BE80B3E0EC8C04A /* DJRefreshView.m */,
+				7BE07DF5DE7B37BB60263077A05E718B /* EmojiImagePageView.h */,
+				EE7C684916A5C25714DD08A0AADD4AC6 /* EmojiImagePageView.m */,
+				1855C4B329B61D8C5F4F45E5A610EC7C /* EmojiInputView.h */,
+				8B0726C1AA85AFA94BA630D782B3CD42 /* EmojiInputView.m */,
+				D66A0B95B3C9EE7465BEB23A5F23496D /* EmojisList.plist */,
+				11D3A6B58C3CA44094CB48FE105B9BD5 /* HMPageControl.h */,
+				DC8AF07B572F7AF14D7F01300CF3AC2F /* HMPageControl.m */,
+				0C519B44265EEB2DEB2CAA1B18239E17 /* LE_EmojiToolBar.h */,
+				F515EE497693DF10C5613A913ED7E289 /* LE_EmojiToolBar.m */,
+				E055E7CA1997AA559F72501A4B345D0D /* LE_NSDate+Category.h */,
+				9F5363371905C1B68D3ACFD67ED2A214 /* LE_NSDate+Category.m */,
+				A816586F5C5931AD7B9B67E267FA0B88 /* LEAppMessageDelegate.h */,
+				1070524A500263782ADA2BD2AEC36352 /* LEBadge.h */,
+				FAD2A6126CDCFAE28E48E973C7414B64 /* LEBadge.m */,
+				5A0E27B527B817283DA828A1C150B348 /* LEBarChart.h */,
+				D2B2E5343528D8E47D18585D5A857E72 /* LEBarChart.m */,
+				7995EC4E9F8321C51051A336CA839644 /* LEBaseEmptyTableViewCell.h */,
+				4AD17187C21C05ABC795C5668BFB4714 /* LEBaseEmptyTableViewCell.m */,
+				7B024A1074ECA72BC3968C81D077BD3D /* LEBasePopupEmptyPage.h */,
+				404ED0A8B3BE83AEB86BF2F21D2F0DC1 /* LEBasePopupEmptyPage.m */,
+				869F0CAB984FF02DDBDF7202336C0036 /* LEBaseTableView.h */,
+				8354E54B7BBF7314899541C32F276C04 /* LEBaseTableView.m */,
+				4D45DDD0B556921E74AB2293D54E00F0 /* LEBaseTableViewCell.h */,
+				A084BBE4AA150A01AB370F4B4143A67E /* LEBaseTableViewCell.m */,
+				49D2C5E121AFC84878D7592B01251F6A /* LEBaseTableViewSection.h */,
+				5C95F05BE13377E699E7CFBDD4E38033 /* LEBaseTableViewSection.m */,
+				023FB6E3891ACA26E7A9E3131274DA1C /* LEBaseTableViewSectionWithIcon.h */,
+				CFDC79FA2B7699388055A123453A451C /* LEBaseTableViewSectionWithIcon.m */,
+				6E2F610C094DF2A373C67FC6B8ABCC1D /* LEBaseTableViewWithRefresh.h */,
+				95D171FDBE6C23B21FD32BD0039008D8 /* LEBaseTableViewWithRefresh.m */,
+				9229B77009B8DA1D4846FDB61F6CEEC0 /* LEBaseViewController.h */,
+				64EF447F83A93279D35D8E47F5EA8B19 /* LEBaseViewController.m */,
+				6857A4781B62EC5978542EAF6D5AFE3C /* LEBottomTabbar.h */,
+				C384487AA837EF738C9B15F1086C419D /* LEBottomTabbar.m */,
+				AACFFA3819A8E63AF2B86C815A7CC786 /* LECurveProgressView.h */,
+				BE875ADAAA4D7F5630849C9B1A96DEEC /* LECurveProgressView.m */,
+				0B136C484E07E494C45B9C07F47A3F84 /* LEExcelView.h */,
+				B0AD13B95060A5583279612E6A951CA4 /* LEExcelView.m */,
+				99F03E81DA358AAC2DB76C26A00E8A40 /* LEFrameworks.h */,
+				573AC598EC56B5B2AE1203B04834B801 /* LELineChart.h */,
+				1AA286A57B4378569886E188B0C7CC2D /* LELineChart.m */,
+				2A9D765D0185A9C3004BCAD6C4DFFC35 /* LELoadingAnimationView.h */,
+				A06F493B73DA9B6345A999EA67F08FDA /* LELoadingAnimationView.m */,
+				08282479E9950DAE68D26C5DCFB87F5C /* LELocalNotification.h */,
+				A183985E536CAC437B26B0AB4E707CCE /* LELocalNotification.m */,
+				3B7970E6A4FF9BEFA62327A609EE306B /* LEMultiImagePicker.h */,
+				014D909BF8BEB3D1DD36396BD4BD4A29 /* LEMultiImagePicker.m */,
+				8CA9DAC7511DBB9083158AAD46FDA36A /* LEPieChart.h */,
+				C5237A9331BA7B0469F23C8B3232AD22 /* LEPieChart.m */,
+				16AC4D81F611A97239F5E867C8E40895 /* LEPopup.h */,
+				569CCA931F29FC9398EEC4F875E37B2F /* LEPopup.m */,
+				B9E0924AFAC5A3C44A291918A5FE5E20 /* LERefresh.h */,
+				82617BA7EA0EB45AB122E872AB746D8F /* LERefresh.m */,
+				3DF9315FBAE0705152C9B4A1D5CFBED0 /* LEScanQRCode.h */,
+				304E6CE7DA0FA99A00855C66AD8B6D20 /* LEScanQRCode.m */,
+				03B134001ED3FF1972A54D8C22DBA676 /* LESegmentView.h */,
+				88BBE97F5C6804CA186718901A9F5EB4 /* LESegmentView.m */,
+				9B06B603985341BAD0F16996322022DA /* LETabbarRelatedPageView.h */,
+				0ABAA8A6A6D27E09594C82E3E0B19CEE /* LETabbarRelatedPageView.m */,
+				ED4B8D93AC80676A265777CB63499E25 /* LEUIFramework.h */,
+				5561DCD4DF360624DDCED83607A8DAA6 /* LEUIFramework.m */,
+				904F37D84F9A4F81390E6638F312946D /* LEWaveProgressView.h */,
+				38BDF50F587E3C92AADFFA8F7DE09CA6 /* LEWaveProgressView.m */,
+				FCA0AC7B0C589F7B222899133DD81C55 /* LEWebView.h */,
+				B803AE9EB34D7DAB1D9F5790ABE1EF0A /* LEWebView.m */,
+				CFEB741466633F7EB3B4253AED769AB9 /* Resources */,
+				3D27EDBB43FD1FD76B893E20A799EBB1 /* Support Files */,
+			);
+			path = LEFrameworks;
+			sourceTree = "<group>";
+		};
+		71ED412E2D9617A89E94568F125D157B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97B61EBB90D396878043E34A9774E2E1 /* AMap.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		76E4D9206A29F85E83530BD173E75AF0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				647ECC57DFBBA9D7743941579A7083B6 /* LEMapviewFrameworks */,
+				3EE7B007268FD7BF67B88D80202FE118 /* LEMapviewFrameworks */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -143,25 +642,97 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				76E4D9206A29F85E83530BD173E75AF0 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4060DD235BA2DC5871189BE266DB47AF /* Products */,
-				9311D921A6F81060CE92390C1FD22200 /* Targets Support Files */,
+				FF49B04E55182F0C60BD31BA122567C9 /* Pods */,
+				961A81F8FD71C2F89E5438A06D25D623 /* Products */,
+				489907A34C4E69CD55FEC65F372BE5AA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9311D921A6F81060CE92390C1FD22200 /* Targets Support Files */ = {
+		85A286C3FAEB9CB23AD77E85FB19B1BB /* AMapFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				403D195C136B23082E080FA5EA792779 /* Pods-LEMapviewFrameworks_Tests */,
+				95666968BBF48162A0D1680299D36342 /* AMapFoundationKit.h */,
+				C51E6366CD19B1115E8F250CCE2AC7B6 /* AMapFoundationVersion.h */,
+				0ECF8FCF7E08B59956F0D211F1913862 /* AMapServices.h */,
+				E3AE027AC12456D032289A6CC92E36BD /* AMapURLSearch.h */,
+				CC7E4D378973AB41E13A13D22D30107E /* AMapURLSearchConfig.h */,
+				BACB3EE75FC0796651C36372F630D88C /* AMapURLSearchType.h */,
+				5DBBF715916797880B71861C97684C2F /* AMapUtility.h */,
+				B3119F17EE2BEDC5596FD86A202F6917 /* Frameworks */,
 			);
-			name = "Targets Support Files";
+			path = AMapFoundation;
 			sourceTree = "<group>";
 		};
-		A8EA8A01EDF1934F361324E925D36A5E /* LEMapviewFrameworks */ = {
+		961A81F8FD71C2F89E5438A06D25D623 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA05F2BCCF66A9AC37333CA283E5B556 /* Classes */,
+				B7F0FBFB8FEDEF3A8A35B6C6BAD7811F /* LEFrameworks.bundle */,
+				82FB4938583C3400375F65A56F43FCBE /* libLEFrameworks.a */,
+				80B57E71040398AC90FD0DA75AA9E4B4 /* libLEMapviewFrameworks.a */,
+				1A2C6BBD43B83D193A9626B9F4A866C6 /* libPods-LEMapviewFrameworks_Tests.a */,
 			);
-			path = LEMapviewFrameworks;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BA476BFC28CF275D25279B866C450A7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				30F6D994DBD363A6E7B5B80C434608F3 /* LEMapBaseAnnotationView.h */,
+				7E21200E5D6AB25C1FE5B0E71D922274 /* LEMapBaseAnnotationView.m */,
+				9A70D73CAC8C610157C50A35867AD32D /* LEMapCallOutAnnotationView.h */,
+				7EE02012070D18B4490DC0D2BA55291A /* LEMapCallOutAnnotationView.m */,
+				ED9195EC2C0B114D43DCAF8D1313030D /* LEMapCallOutViewAnnotation.h */,
+				9B2FC7EF9375969389B116817394895B /* LEMapCallOutViewAnnotation.m */,
+				3C9FF28F533AA6F619AA9BD8F3961AFE /* LEMapSearchBar.h */,
+				0F54D6C25A575C2850AEC5F6A03EDB78 /* LEMapSearchBar.m */,
+				1F8CA8568D478C895A201739DBC7AA53 /* LEMapView.h */,
+				2321C9C6FF8D47DDF0104B84B2D9E2D8 /* LEMapView.m */,
+				B2E2D81B02E363163BC7C860CD43B9B3 /* LEMapViewAnnotation.h */,
+				056A095B27C1B5AE0456445B4F9F2A17 /* LEMapViewAnnotation.m */,
+				F8BD1D53053C1193F460D1383E8AAA62 /* LEMapViewAnnotationSubView.h */,
+				03F365EC4AC48782F4F613275C671E18 /* LEMapViewAnnotationSubView.m */,
+				9464A806A3C2B9858D4D73BE5F925378 /* LEMapViewAnnotationView.h */,
+				458547C43BE0E6930F4D46909C0B5A97 /* LEMapViewAnnotationView.m */,
+				95477C7A19C2B043FDC2867DB186F806 /* LEMapViewSearchAnnotation.h */,
+				537307F9C2FEA54F416031A9C33F1889 /* LEMapViewSearchAnnotation.m */,
+				39A726F023868A49F64506A15D01218C /* LEMapViewSearchAnnotationView.h */,
+				6FE7622D953826D6143FB29F194525B4 /* LEMapViewSearchAnnotationView.m */,
+				F567230ABA2ADFBC82B2380E3BDCFFF1 /* LEMapViewUserAnnotationView.h */,
+				7665182FD8CB6A6199D4658A2C65EA95 /* LEMapViewUserAnnotationView.m */,
+				80528B331D34BF0300AA2056 /* LEMapviewFrameworks.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B1D73F511CA2305E6C4DF63B765D84E9 /* Pods-LEMapviewFrameworks_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E83AB53B99A34712D6BADC92F0584A6C /* Pods-LEMapviewFrameworks_Tests-acknowledgements.markdown */,
+				5EC4922FC3A8352A9A9E92B8B94E7AB0 /* Pods-LEMapviewFrameworks_Tests-acknowledgements.plist */,
+				4F36490768673E2A181BD5FB9D19862D /* Pods-LEMapviewFrameworks_Tests-dummy.m */,
+				D3D459FA21FF7C22935E1F73D0533D1B /* Pods-LEMapviewFrameworks_Tests-frameworks.sh */,
+				28FAA67CF216622BC47B22D222DC59A4 /* Pods-LEMapviewFrameworks_Tests-resources.sh */,
+				499C8F84499B75060E2B3E8349400322 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */,
+				3428D6A7BA5619FBE104DD96B6CB290A /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */,
+			);
+			name = "Pods-LEMapviewFrameworks_Tests";
+			path = "Target Support Files/Pods-LEMapviewFrameworks_Tests";
+			sourceTree = "<group>";
+		};
+		B3119F17EE2BEDC5596FD86A202F6917 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C94F44B47E524EFB1A471936628E0C4 /* AMapFoundationKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B87EA63E2C75BD387EA1C841E6E0A486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABC77AA915268F0C0469F1453E749642 /* AMapSearchKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -172,70 +743,225 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA05F2BCCF66A9AC37333CA283E5B556 /* Classes */ = {
+		CFEB741466633F7EB3B4253AED769AB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E7AF70402B0B133F112165852BC28EF2 /* ReplaceMe.m */,
+				C0B85EB97310BF9275B3C70BD76854E9 /* LE_common_btn_blue@2x.png */,
+				1D970EE1BE626BF5813E6BC6F33FC914 /* LE_common_btn_blue@3x.png */,
+				4D375316FFAF51F3EF6BBB742BE3FDC4 /* LE_common_btn_gray@2x.png */,
+				9697C2D469581637CBFB4A9CA26D95DB /* LE_common_btn_gray@3x.png */,
+				9FE6C369D80CC240ED7B43300652D4A1 /* LE_common_navigation_btn_back@2x.png */,
+				DE47D7495121DA9E5C629ED6CC8D62F3 /* LE_common_navigation_btn_back@3x.png */,
+				01CCF5984A0E0B4D5292FBC975022065 /* LE_emoji_keyboardface@2x.png */,
+				BB1DBAC4A5942AE17781DB23D1EC04B7 /* LE_emoji_keyboardface@3x.png */,
+				421A8AF2E8AE33E287E81C8692F99CF7 /* LE_emoji_smileface@2x.png */,
+				FCB11D1CB9FD30B0E34552849E20EAF5 /* LE_emoji_smileface@3x.png */,
+				E67F68420CED29D700AAC823C3D3F47F /* LE_lewave.png */,
+				582872CE6003B4114A8C38D4F7B04C1F /* LE_lewaverotation.png */,
+				AAD13FB120A7A94A073D3F508EA49481 /* LE_MessageBackground@2x.png */,
+				AEC2B65E62136FB16D120B5CE19B7DF8 /* LE_MessageBackground@3x.png */,
+				EC78116F99A4060A5EDC4AC8FFD1DE51 /* LE_MultiImagePickerCheck@2x.png */,
+				FC0E5D25B026BBDFD0732B8BE07A1800 /* LE_MultiImagePickerCheck@3x.png */,
+				4F3C0BB8DEF2AB0E2C94B0B5B1075780 /* LE_popup_bg@2x.png */,
+				B19BA70FA0E9D205C6A87CFCA4049520 /* LE_qrcode_scan_bg@2x.png */,
+				60EF8E004125D581B3DC24228A568EC1 /* LE_qrcode_scan_bg@3x.png */,
+				7B41E757FB3A7BFD36A038B8806A8DD0 /* LE_qrcode_scan_line@2x.png */,
+				CFE33093DE1D17B566CF0E12DDD38971 /* LE_qrcode_scan_line@3x.png */,
+				C7A22DD575F8F563E57A6BBE6A73E040 /* LE_tableview_icon_arrow@2x.png */,
+				6E628B341CFE154BC6EA310A31792DA8 /* LE_tableview_icon_arrow@3x.png */,
+				23557477F83A19E106330E150365E830 /* LE_web_icon_backward_off@2x.png */,
+				F00CCF5C454B64CA103CB853FC54E873 /* LE_web_icon_backward_off@3x.png */,
+				E02C30901FE5527C39653A05D284A62B /* LE_web_icon_backward_on@2x.png */,
+				5F4A2D036C8B1CAB6942D1DF0E5D3FF5 /* LE_web_icon_backward_on@3x.png */,
+				4BB498961FA915F6AF5A581B3D34EAB9 /* LE_web_icon_close@2x.png */,
+				529BE9A6C5D0CA3BA3F599190B2FD250 /* LE_web_icon_close@3x.png */,
+				19BBF9B6FC0549529B21C1EC32E1EEB4 /* LE_web_icon_forward_off@2x.png */,
+				6A17D60511E890F1CC416DBE07F7FE80 /* LE_web_icon_forward_off@3x.png */,
+				D441C11908E8E628C63394F9E4003CAD /* LE_web_icon_forward_on@2x.png */,
+				0F899B5E801865B18A2D43EA964B5C0B /* LE_web_icon_forward_on@3x.png */,
+				258208B1819269D1D9A4265057E952E0 /* LE_web_icon_refresh@2x.png */,
+				5A967741A6FD9B77146B7E7AC3F381E8 /* LE_web_icon_refresh@3x.png */,
+				067819F0AD090E0148FB391C8D968696 /* LE_web_icon_share@2x.png */,
+				D1AACC79E890B47614D7BF973539CC60 /* LE_web_icon_share@3x.png */,
 			);
-			path = Classes;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D32491C07B8FFA24411AFDC06DB69A8F /* LEMapviewFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BA476BFC28CF275D25279B866C450A7 /* Classes */,
+			);
+			path = LEMapviewFrameworks;
+			sourceTree = "<group>";
+		};
+		D4D13C8DF0C83F6234ADA5D9A5D38C94 /* AMapSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E4A88AA1422676EBA338B200CF6936BB /* AMapCommonObj.h */,
+				67BEF6AB178C83A1C84F7BD030EF5FEF /* AMapNearbySearchManager.h */,
+				B95FFF2C1E1A1FFC8614C58B37211DBE /* AMapNearbyUploadInfo.h */,
+				A60A9E4C8F26F9FBC37F771362B585A0 /* AMapSearchAPI.h */,
+				9FBF817C5710BE9A102DD5871D9D1701 /* AMapSearchError.h */,
+				AFB4D03B275E8B7AEC855ED7E65DE60D /* AMapSearchKit.h */,
+				F4B7C0AA7D98375E4020871478E670DF /* AMapSearchObj.h */,
+				66F610A64FF0AD69FD0670BED0249A4A /* AMapSearchVersion.h */,
+				B87EA63E2C75BD387EA1C841E6E0A486 /* Frameworks */,
+			);
+			path = AMapSearch;
+			sourceTree = "<group>";
+		};
+		FF49B04E55182F0C60BD31BA122567C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				500202B59CEE5E4963F7A1C19B2A98B0 /* AMap3DMap */,
+				85A286C3FAEB9CB23AD77E85FB19B1BB /* AMapFoundation */,
+				D4D13C8DF0C83F6234ADA5D9A5D38C94 /* AMapSearch */,
+				61C30C234064E0AC33DE4160BAEE32E8 /* LEFrameworks */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7D6451487AF87FD114ED26D5DE53C55B /* Headers */ = {
+		37084A58AB0BF8564D5203E8A5B2DE93 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C98F9508CB313861CE5C94F808F9E74 /* Pods-LEMapviewFrameworks_Tests-umbrella.h in Headers */,
+				BDA734530698925A51708D005486BC4E /* DJRefresh.h in Headers */,
+				E03795C9B94AC91F2F5BB2AC8D55E1D9 /* DJRefreshBottomView.h in Headers */,
+				FE70F2A065A6182982BD942823FFCB73 /* DJRefreshMacro.h in Headers */,
+				13AF91D8B08D5E0AA7170F7030BD7D3C /* DJRefreshTopView.h in Headers */,
+				D506B05E0D4FF837CA261020FCAE2931 /* DJRefreshView.h in Headers */,
+				71ECB46C060EBFFFC32E4B5C9E2C1C11 /* EmojiImagePageView.h in Headers */,
+				76615CE9F4539B7C7DDAE2273176C78A /* EmojiInputView.h in Headers */,
+				D3BFFD60D1887AAEBAE422F0333A14D0 /* HMPageControl.h in Headers */,
+				2F1B2F3BB6BE70DBDF5DD63575E7D551 /* LE_EmojiToolBar.h in Headers */,
+				AD18E6D6E33D5BF8CD6DA6880234E9EF /* LE_NSDate+Category.h in Headers */,
+				0BAB4859F7F7370274F3C22CB881530B /* LEAppMessageDelegate.h in Headers */,
+				58F1424B396A16A033A8688006E61D24 /* LEBadge.h in Headers */,
+				C23C1D5B6581FE6F6777D545F3030A75 /* LEBarChart.h in Headers */,
+				1837D00FE8E35AF0B6CD17D92E6EE18C /* LEBaseEmptyTableViewCell.h in Headers */,
+				4C9AD613DFD04D8BC9A8899112C87507 /* LEBasePopupEmptyPage.h in Headers */,
+				21B6061521C725754917C7E307C6BD2B /* LEBaseTableView.h in Headers */,
+				9B14B7912395F7AEB22FA8A098A36ED4 /* LEBaseTableViewCell.h in Headers */,
+				25B848269982E068A22427C73B5C19D0 /* LEBaseTableViewSection.h in Headers */,
+				6130D652E5BECD9496C8ED035D95A09B /* LEBaseTableViewSectionWithIcon.h in Headers */,
+				A04B09112E423B27B373304F6BCCC5AD /* LEBaseTableViewWithRefresh.h in Headers */,
+				E3CFFC8437D1A2043DE357663AC656D4 /* LEBaseViewController.h in Headers */,
+				3473A0DF1715C732FCAE6FB141A1F6C9 /* LEBottomTabbar.h in Headers */,
+				F132D917148B51E45FE4022AACAAD002 /* LECurveProgressView.h in Headers */,
+				0C1B1497083E62B7C0DFECDF649B8015 /* LEExcelView.h in Headers */,
+				8F5F909C051B1DD079030AD4EDC16D7C /* LEFrameworks.h in Headers */,
+				020D978194D3ACB184D46FDC7006A85C /* LELineChart.h in Headers */,
+				8087AFB1B9D56F9DF5524502DE80350C /* LELoadingAnimationView.h in Headers */,
+				234CFC3B1E0357F058429225B599D5DC /* LELocalNotification.h in Headers */,
+				46FBFDFFE0DEFF1DC9A1037267C9CF25 /* LEMultiImagePicker.h in Headers */,
+				925D2AC2214A876C3A541FA3C4F01FC4 /* LEPieChart.h in Headers */,
+				51E7C4948E723DB1DFCA406D2F3BD88F /* LEPopup.h in Headers */,
+				5C80D644F1C69484D1F2FFBEF83AB320 /* LERefresh.h in Headers */,
+				8B47A52A44D23CE899053B3D5B4BF6F1 /* LEScanQRCode.h in Headers */,
+				E77FB5A2D93978C6A19C1382BC033EE5 /* LESegmentView.h in Headers */,
+				1F77D01E3AF9936A45DB899CE7DBDCE6 /* LETabbarRelatedPageView.h in Headers */,
+				56134570B20FCACE304761250F297393 /* LEUIFramework.h in Headers */,
+				0453DD7A1552870597C46A11EE030443 /* LEWaveProgressView.h in Headers */,
+				AAAAC62DD5ACCF7654047C959A850885 /* LEWebView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96D0B21E5CD0F68E13F7A2C600AF467D /* Headers */ = {
+		E64FB2FBF377A7F2F5D99E0DEEDE4250 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79137E0E7ADB5DAF9F2A959D67477694 /* LEMapviewFrameworks-umbrella.h in Headers */,
+				F86F028326DC20B05C59785FAD645C72 /* LEMapBaseAnnotationView.h in Headers */,
+				3B8105FFB864AB1D633590DDA6394C46 /* LEMapCallOutAnnotationView.h in Headers */,
+				49818D41FB538714ECC26A4221048B1D /* LEMapCallOutViewAnnotation.h in Headers */,
+				C32DA780CBDDCFC35AFF4499A4EC3CDC /* LEMapSearchBar.h in Headers */,
+				EA445F1ECFC0AC8B70FFB2895199977C /* LEMapView.h in Headers */,
+				FBD92A750AC90C04FE879C8403E5053D /* LEMapViewAnnotation.h in Headers */,
+				80528B351D34BF0300AA2056 /* LEMapviewFrameworks.h in Headers */,
+				89B5F27482252F2759301D99E6520F9C /* LEMapViewAnnotationSubView.h in Headers */,
+				09D1720D7CC5854F14285F2965150A53 /* LEMapViewAnnotationView.h in Headers */,
+				0D5265684D33F41D2155597B7F6B63DA /* LEMapViewSearchAnnotation.h in Headers */,
+				6C6C3986591D04E7E13A0BEDA2556212 /* LEMapViewSearchAnnotationView.h in Headers */,
+				DA00E972C53A583FB4CFE9230502466A /* LEMapViewUserAnnotationView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5DBF697C6756E06EF2902C9B6438554C /* LEMapviewFrameworks */ = {
+		035BB9B2BE0BF02D8B96CEB03CF787D4 /* Pods-LEMapviewFrameworks_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E723D9720C46EC4FB9F4AD3B110C30B4 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */;
+			buildConfigurationList = 77C916D18D6CCC5C03BBC5E61A1225F8 /* Build configuration list for PBXNativeTarget "Pods-LEMapviewFrameworks_Tests" */;
 			buildPhases = (
-				6ECBCFE719E3639E561A46628876D6DE /* Sources */,
-				7737467B688E527058EFDA952D29BD25 /* Frameworks */,
-				96D0B21E5CD0F68E13F7A2C600AF467D /* Headers */,
+				7E3AB8DEDE0CABC6605A3B611A09CDB7 /* Sources */,
+				B161D06D88CCCBE49A28E0FF053FE639 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = LEMapviewFrameworks;
-			productName = LEMapviewFrameworks;
-			productReference = B8257206365EE3843F481DF940DCBF7B /* LEMapviewFrameworks.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B937F15E9E6BB255AFE414D81C902EE3 /* Pods-LEMapviewFrameworks_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0AE6C258E4DB80156E03B039D76B0AE0 /* Build configuration list for PBXNativeTarget "Pods-LEMapviewFrameworks_Tests" */;
-			buildPhases = (
-				DABE52778495C509791F0988245EBC0F /* Sources */,
-				571D1CF1B5C0F07D423B647DDEBACD1A /* Frameworks */,
-				7D6451487AF87FD114ED26D5DE53C55B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				850FA025476AFB604DFB806C8927DA66 /* PBXTargetDependency */,
+				367CD331B8A20542E5395ED532452EB0 /* PBXTargetDependency */,
+				3E5B7F882BFD23BDF9BE0329C8DF9B47 /* PBXTargetDependency */,
 			);
 			name = "Pods-LEMapviewFrameworks_Tests";
 			productName = "Pods-LEMapviewFrameworks_Tests";
-			productReference = 5E94BE2AB09243E5E51A80F6B1BE09E8 /* Pods_LEMapviewFrameworks_Tests.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 1A2C6BBD43B83D193A9626B9F4A866C6 /* libPods-LEMapviewFrameworks_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3BAB4F53BC55308AEAEFD532A045CB7D /* LEFrameworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC339F9035F63E32987E1CC458DA550F /* Build configuration list for PBXNativeTarget "LEFrameworks" */;
+			buildPhases = (
+				6F8FA1E58A140904DC7A95A887DFAC40 /* Sources */,
+				92C809BD7C0E2475B793C5DF77ED7E88 /* Frameworks */,
+				37084A58AB0BF8564D5203E8A5B2DE93 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07AAF90403F34D5F2A6702F986F57987 /* PBXTargetDependency */,
+			);
+			name = LEFrameworks;
+			productName = LEFrameworks;
+			productReference = 82FB4938583C3400375F65A56F43FCBE /* libLEFrameworks.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		835E7701268E0CDE493C98CCF76922D8 /* LEFrameworks-LEFrameworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE203C7A0283F997751C6BA0229F4ED /* Build configuration list for PBXNativeTarget "LEFrameworks-LEFrameworks" */;
+			buildPhases = (
+				F2C727A3144DF4F971A7E52FE72E6494 /* Sources */,
+				D716126B3D6B6869F6FC409BB5737814 /* Frameworks */,
+				C0093CD2684B16CF1CADB6AAFB245353 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LEFrameworks-LEFrameworks";
+			productName = "LEFrameworks-LEFrameworks";
+			productReference = B7F0FBFB8FEDEF3A8A35B6C6BAD7811F /* LEFrameworks.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BCFFC25A975735A981074B6677E93B83 /* LEMapviewFrameworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 387BA196436D4E2C55557059DCFA3AB7 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */;
+			buildPhases = (
+				2711447841178EC031A1AEF5F091EB61 /* Sources */,
+				4ED0CC7BDAAFEAAFD8517CA24B5C1C21 /* Frameworks */,
+				E64FB2FBF377A7F2F5D99E0DEEDE4250 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62BDE181021A704A24FA940660D6FC12 /* PBXTargetDependency */,
+			);
+			name = LEMapviewFrameworks;
+			productName = LEMapviewFrameworks;
+			productReference = 80B57E71040398AC90FD0DA75AA9E4B4 /* libLEMapviewFrameworks.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -254,42 +980,170 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4060DD235BA2DC5871189BE266DB47AF /* Products */;
+			productRefGroup = 961A81F8FD71C2F89E5438A06D25D623 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5DBF697C6756E06EF2902C9B6438554C /* LEMapviewFrameworks */,
-				B937F15E9E6BB255AFE414D81C902EE3 /* Pods-LEMapviewFrameworks_Tests */,
+				3BAB4F53BC55308AEAEFD532A045CB7D /* LEFrameworks */,
+				835E7701268E0CDE493C98CCF76922D8 /* LEFrameworks-LEFrameworks */,
+				BCFFC25A975735A981074B6677E93B83 /* LEMapviewFrameworks */,
+				035BB9B2BE0BF02D8B96CEB03CF787D4 /* Pods-LEMapviewFrameworks_Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		6ECBCFE719E3639E561A46628876D6DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		C0093CD2684B16CF1CADB6AAFB245353 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6A2C41B6FA0662EDB2AD3B40459C6DA /* LEMapviewFrameworks-dummy.m in Sources */,
-				60DF3A5B8F968C1729D87D621B232064 /* ReplaceMe.m in Sources */,
+				1200A15FE3DBF77E13C7B5791846BA5C /* LE_common_btn_blue@2x.png in Resources */,
+				5E7912271B8B6A24E491FD994900909E /* LE_common_btn_blue@3x.png in Resources */,
+				6D3366616697DAAA7447F06D24E33CFA /* LE_common_btn_gray@2x.png in Resources */,
+				A3A473327FC66E6F0DE9CDB1E3BAF0B3 /* LE_common_btn_gray@3x.png in Resources */,
+				4FE161EEF75B7254716BEF167F2457DC /* LE_common_navigation_btn_back@2x.png in Resources */,
+				A6C3F6CD2B7723D3E135C3DE5469AFDB /* LE_common_navigation_btn_back@3x.png in Resources */,
+				192359773D14110434CE5453B3087239 /* LE_emoji_keyboardface@2x.png in Resources */,
+				FC85343FBDD6CD418A5A80F6D1F08A58 /* LE_emoji_keyboardface@3x.png in Resources */,
+				C0627B95D998C93D1327416200A49876 /* LE_emoji_smileface@2x.png in Resources */,
+				D40589C94C996662476EEA046A3978AE /* LE_emoji_smileface@3x.png in Resources */,
+				FD44C796F5CB8A35A85BB78A8DA69757 /* LE_lewave.png in Resources */,
+				A92821BE6801DD6B8EEE5485B3613CFF /* LE_lewaverotation.png in Resources */,
+				CDC813BA14F31BE4E1B5304737830E4E /* LE_MessageBackground@2x.png in Resources */,
+				AB0252FDE1B86996E4E106420052347E /* LE_MessageBackground@3x.png in Resources */,
+				2F7FA9F0FC014CADF3996F51837D8FE2 /* LE_MultiImagePickerCheck@2x.png in Resources */,
+				FFBE0923D090A63D9B289864310A7CE3 /* LE_MultiImagePickerCheck@3x.png in Resources */,
+				F374EC7E7FDC4001407AC996FD314448 /* LE_popup_bg@2x.png in Resources */,
+				A3874E240AC1489DE284FB69A75CE6D4 /* LE_qrcode_scan_bg@2x.png in Resources */,
+				BE55703E95702EA3F885303C37801DC8 /* LE_qrcode_scan_bg@3x.png in Resources */,
+				4A7BFF38A5C6EB4E1C273D7B69BA0C2E /* LE_qrcode_scan_line@2x.png in Resources */,
+				DDAD1724BC475406443756FA8A078C64 /* LE_qrcode_scan_line@3x.png in Resources */,
+				930EC2FA56DFA590BD17F5B5D8EE801F /* LE_tableview_icon_arrow@2x.png in Resources */,
+				6F6E618E8AEDAF7C9879003A5C96F61A /* LE_tableview_icon_arrow@3x.png in Resources */,
+				B0A1CF6312AAB43243D62B2044A44553 /* LE_web_icon_backward_off@2x.png in Resources */,
+				96376DA3525A99D06DAEDD860E10A56E /* LE_web_icon_backward_off@3x.png in Resources */,
+				64BE2060A00CFCF8D8CE36C92843F94E /* LE_web_icon_backward_on@2x.png in Resources */,
+				9C9CEF9EB7A0B7436F518EDD079E81FD /* LE_web_icon_backward_on@3x.png in Resources */,
+				FC631C1A18AC6909B8099C114373AD1B /* LE_web_icon_close@2x.png in Resources */,
+				FDDCB71A21F9970DCB4C9AB1CA587788 /* LE_web_icon_close@3x.png in Resources */,
+				61075D6CC5220B5D44676EDC6DAC3F46 /* LE_web_icon_forward_off@2x.png in Resources */,
+				45C2B55347F127D16948131EA831E552 /* LE_web_icon_forward_off@3x.png in Resources */,
+				E641B2C142C70D0591B8018E835BBAB6 /* LE_web_icon_forward_on@2x.png in Resources */,
+				95721809C62C7C81EF4F61755372F1DF /* LE_web_icon_forward_on@3x.png in Resources */,
+				C9FE356D9612035DAA057E75A2394C5B /* LE_web_icon_refresh@2x.png in Resources */,
+				3644A0BF37541CDF2441E3AA34029340 /* LE_web_icon_refresh@3x.png in Resources */,
+				F9ED131B9828CE716EB4E289F843A88B /* LE_web_icon_share@2x.png in Resources */,
+				B074A72E118216CB7674096A4F679AB8 /* LE_web_icon_share@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DABE52778495C509791F0988245EBC0F /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2711447841178EC031A1AEF5F091EB61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1912A56831DA60109B09E207FA3E6E22 /* Pods-LEMapviewFrameworks_Tests-dummy.m in Sources */,
+				45201AD83CDC4B19E0E686A0B3ED9A9E /* LEMapBaseAnnotationView.m in Sources */,
+				DADC85B51C46C812957D479C69436EB7 /* LEMapCallOutAnnotationView.m in Sources */,
+				C3C36A74973E7229139EC3AA861F5143 /* LEMapCallOutViewAnnotation.m in Sources */,
+				8E9315CFCC41B5F8715958914DDF228F /* LEMapSearchBar.m in Sources */,
+				C6AF8CE14939A9166E60E34A9D2A74BB /* LEMapView.m in Sources */,
+				2915FE3981AF56F84EA9D287F9333935 /* LEMapViewAnnotation.m in Sources */,
+				F5B1C7989D4F21C2961BBB1AF8368508 /* LEMapViewAnnotationSubView.m in Sources */,
+				3A3216B1F09486E74000585ED78A804E /* LEMapViewAnnotationView.m in Sources */,
+				6C096A33B373B7B613101535165FD62A /* LEMapviewFrameworks-dummy.m in Sources */,
+				F0845D3A87779501600B1D1A1B7CE8FB /* LEMapViewSearchAnnotation.m in Sources */,
+				A749593D63C7FE2A32676A941589988A /* LEMapViewSearchAnnotationView.m in Sources */,
+				2871F7322FD60DC9160B53E7C6C3D319 /* LEMapViewUserAnnotationView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F8FA1E58A140904DC7A95A887DFAC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB1D8FF61EBA113AD5C0A37875BE9E65 /* DJRefresh.m in Sources */,
+				50874308FF466AE56ED05A31787652AF /* DJRefreshBottomView.m in Sources */,
+				4D60B4117D638033302B0D64EAC0A52A /* DJRefreshTopView.m in Sources */,
+				40554D4CA0E5B967E80858B7F0352087 /* DJRefreshView.m in Sources */,
+				9E61337E41910011176FDAF6167DF2D7 /* EmojiImagePageView.m in Sources */,
+				5C2B173612AD52D66ACEE39FFF039183 /* EmojiInputView.m in Sources */,
+				DE4F6D14CE362BAE80BF30E4F87ED8F9 /* EmojisList.plist in Sources */,
+				A3125BCC3E16D5E5F185D5A809EF7B26 /* HMPageControl.m in Sources */,
+				A25A70F18E421CD8C87D2C9710748569 /* LE_EmojiToolBar.m in Sources */,
+				7DC3A616E76531EEEA4758E89815E3FA /* LE_NSDate+Category.m in Sources */,
+				F659D5B588764BAE301DCD852733F2A6 /* LEBadge.m in Sources */,
+				08FEF3A44BFC2F35B06F50677C8DB171 /* LEBarChart.m in Sources */,
+				44E38C0EF6194252E68DB7CECD8C272F /* LEBaseEmptyTableViewCell.m in Sources */,
+				32F5197FD814F5B6D7812C3F9F08DC59 /* LEBasePopupEmptyPage.m in Sources */,
+				C0151452C6508333CEE25DC20B037996 /* LEBaseTableView.m in Sources */,
+				B676830244EE4841DF1905899FD184AC /* LEBaseTableViewCell.m in Sources */,
+				E00EF63801219B1DD3D33643FB1D80E3 /* LEBaseTableViewSection.m in Sources */,
+				DB6B7F0B342BE2E3E0F579795B6E16A5 /* LEBaseTableViewSectionWithIcon.m in Sources */,
+				5B1A8564E435BCE1C593A80BFE7E3275 /* LEBaseTableViewWithRefresh.m in Sources */,
+				8C63D53E40B1E7120566687F6D953829 /* LEBaseViewController.m in Sources */,
+				A250553E7538FAB8A64D3B8C726CCCD4 /* LEBottomTabbar.m in Sources */,
+				42B9FBE4CCDAE9444898CE0B61BC5EA4 /* LECurveProgressView.m in Sources */,
+				3DB81B969B09AE12107087542E8FADD3 /* LEExcelView.m in Sources */,
+				F35FEBEEFE6CE6F57969D88A753F494E /* LEFrameworks-dummy.m in Sources */,
+				21C61A6191CD65FEA083F4DF19D9F540 /* LELineChart.m in Sources */,
+				67E54AC5FD8250459647614176FBC990 /* LELoadingAnimationView.m in Sources */,
+				5B68851F1D71FBE78C8B7AFF030E9BEF /* LELocalNotification.m in Sources */,
+				89EB777DA83D273FDBA88B1B47C7D851 /* LEMultiImagePicker.m in Sources */,
+				43B027673F09B85CC9995A4FA2BCB780 /* LEPieChart.m in Sources */,
+				E8D77A6ED2DE4D79594B94C50E9E7374 /* LEPopup.m in Sources */,
+				167A2464C2CCEE170B4BC27400E2A59D /* LERefresh.m in Sources */,
+				EBF5E5BDEFA0D5598C1203992433FEA0 /* LEScanQRCode.m in Sources */,
+				DF047AA0F8685C4C2B76DDE170078288 /* LESegmentView.m in Sources */,
+				6B240FFF2D6352B3550E91C4066C02E1 /* LETabbarRelatedPageView.m in Sources */,
+				86A8FB4D222FC56965D9E6E9992A18DF /* LEUIFramework.m in Sources */,
+				A346DEA5E18BC868FABD8233CD83E081 /* LEWaveProgressView.m in Sources */,
+				E872228114886ECCFC6AA47F5F793205 /* LEWebView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E3AB8DEDE0CABC6605A3B611A09CDB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA3E2D808614EA69C41FE0F5332CED0B /* Pods-LEMapviewFrameworks_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2C727A3144DF4F971A7E52FE72E6494 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		850FA025476AFB604DFB806C8927DA66 /* PBXTargetDependency */ = {
+		07AAF90403F34D5F2A6702F986F57987 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LEFrameworks-LEFrameworks";
+			target = 835E7701268E0CDE493C98CCF76922D8 /* LEFrameworks-LEFrameworks */;
+			targetProxy = 483932458BD85EB9898FAD266090F773 /* PBXContainerItemProxy */;
+		};
+		367CD331B8A20542E5395ED532452EB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LEFrameworks;
+			target = 3BAB4F53BC55308AEAEFD532A045CB7D /* LEFrameworks */;
+			targetProxy = D9C5355C93B2ADC35110C21097908316 /* PBXContainerItemProxy */;
+		};
+		3E5B7F882BFD23BDF9BE0329C8DF9B47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LEMapviewFrameworks;
-			target = 5DBF697C6756E06EF2902C9B6438554C /* LEMapviewFrameworks */;
-			targetProxy = 3D50B8E47E2AF7C22A73C31F0CBFF401 /* PBXContainerItemProxy */;
+			target = BCFFC25A975735A981074B6677E93B83 /* LEMapviewFrameworks */;
+			targetProxy = 19CDBB26BA6C9609623243297D4A3EF8 /* PBXContainerItemProxy */;
+		};
+		62BDE181021A704A24FA940660D6FC12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LEFrameworks;
+			target = 3BAB4F53BC55308AEAEFD532A045CB7D /* LEFrameworks */;
+			targetProxy = 2FEB49DBB39BD5A0971E0074068DA470 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -332,127 +1186,163 @@
 			};
 			name = Release;
 		};
-		24B7F123AE6E8E1CC2680D25CC561D38 /* Debug */ = {
+		0EA6F1F802F0CBBA87F4C63B472CBFF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9EF22D3CB9B599FB710753455B3BE97 /* LEMapviewFrameworks.xcconfig */;
+			baseConfigurationReference = 3428D6A7BA5619FBE104DD96B6CB290A /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LEMapviewFrameworks/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LEMapviewFrameworks;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		24BE22EA336D8B0B9949BE2C26263CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDE74871D259C29C9276861B7CB9979 /* LEFrameworks.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LEFrameworks/LEFrameworks-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4C323F84191C0705F26424EC7D82FDEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 499C8F84499B75060E2B3E8349400322 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		9E6CE7BDA7B971AAEA7655899306165A /* Release */ = {
+		730AFDE558CB95709F06E74FE991EBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9EF22D3CB9B599FB710753455B3BE97 /* LEMapviewFrameworks.xcconfig */;
+			baseConfigurationReference = 4BDE74871D259C29C9276861B7CB9979 /* LEFrameworks.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LEFrameworks";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LEMapviewFrameworks/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LEMapviewFrameworks;
+				INFOPLIST_FILE = "Target Support Files/LEFrameworks/ResourceBundle-LEFrameworks-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = LEFrameworks;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		AB7D5CE2309D845DC3BB2B21593EDAF7 /* Release */ = {
+		941652DDE2D8E7CFCF988DFF4F0C1A4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B5342D733FA46AB4AF67129CF408740 /* Pods-LEMapviewFrameworks_Tests.release.xcconfig */;
+			baseConfigurationReference = 4BDE74871D259C29C9276861B7CB9979 /* LEFrameworks.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LEMapviewFrameworks_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LEMapviewFrameworks_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BF7D36732DEB1F86D4DBDBAAF2C63DB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BCEA66F12D7441EFEA828D2F4C2A99F /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LEMapviewFrameworks_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/LEFrameworks/LEFrameworks-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LEMapviewFrameworks_Tests;
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		94FFCC2B416618FCC09152DDBDEF4173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B1D172FBD25C65F504608652FB3B88F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C373333150BC8DAB37CB358B933AE670 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDE74871D259C29C9276861B7CB9979 /* LEFrameworks.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LEFrameworks";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/LEFrameworks/ResourceBundle-LEFrameworks-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = LEFrameworks;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -501,15 +1391,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AE6C258E4DB80156E03B039D76B0AE0 /* Build configuration list for PBXNativeTarget "Pods-LEMapviewFrameworks_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF7D36732DEB1F86D4DBDBAAF2C63DB3 /* Debug */,
-				AB7D5CE2309D845DC3BB2B21593EDAF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -519,11 +1400,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E723D9720C46EC4FB9F4AD3B110C30B4 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */ = {
+		387BA196436D4E2C55557059DCFA3AB7 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				24B7F123AE6E8E1CC2680D25CC561D38 /* Debug */,
-				9E6CE7BDA7B971AAEA7655899306165A /* Release */,
+				B1D172FBD25C65F504608652FB3B88F4 /* Debug */,
+				94FFCC2B416618FCC09152DDBDEF4173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77C916D18D6CCC5C03BBC5E61A1225F8 /* Build configuration list for PBXNativeTarget "Pods-LEMapviewFrameworks_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C323F84191C0705F26424EC7D82FDEE /* Debug */,
+				0EA6F1F802F0CBBA87F4C63B472CBFF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC339F9035F63E32987E1CC458DA550F /* Build configuration list for PBXNativeTarget "LEFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941652DDE2D8E7CFCF988DFF4F0C1A4F /* Debug */,
+				24BE22EA336D8B0B9949BE2C26263CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE203C7A0283F997751C6BA0229F4ED /* Build configuration list for PBXNativeTarget "LEFrameworks-LEFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C373333150BC8DAB37CB358B933AE670 /* Debug */,
+				730AFDE558CB95709F06E74FE991EBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

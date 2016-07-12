@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DB1FA6B563FD0B69525D1FE /* Pods_LEMapviewFrameworks_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026A52FEC894A0FCD1E5916B /* Pods_LEMapviewFrameworks_Tests.framework */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -19,10 +18,10 @@
 		80528B291D34BB8A00AA2056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80528B271D34BB8A00AA2056 /* Main.storyboard */; };
 		80528B2B1D34BB8A00AA2056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80528B2A1D34BB8A00AA2056 /* Assets.xcassets */; };
 		80528B2E1D34BB8A00AA2056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80528B2C1D34BB8A00AA2056 /* LaunchScreen.storyboard */; };
+		91F55457BE4CE84B93DBF26A /* libPods-LEMapviewFrameworks_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 855F37D8C7796ECAC940A5FD /* libPods-LEMapviewFrameworks_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		026A52FEC894A0FCD1E5916B /* Pods_LEMapviewFrameworks_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LEMapviewFrameworks_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956DB87CBBEE5507A2EFBB2 /* LEMapviewFrameworks.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LEMapviewFrameworks.podspec; path = ../LEMapviewFrameworks.podspec; sourceTree = "<group>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,6 +42,7 @@
 		80528B2A1D34BB8A00AA2056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80528B2D1D34BB8A00AA2056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80528B2F1D34BB8A00AA2056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		855F37D8C7796ECAC940A5FD /* libPods-LEMapviewFrameworks_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEMapviewFrameworks_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B373EA592DF8E713BE7D4CBE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B41C5371D7E4F460AB86E53F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C6B7800BCCD15FCA21255170 /* Pods-LEMapviewFrameworks_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Tests/Pods-LEMapviewFrameworks_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				4DB1FA6B563FD0B69525D1FE /* Pods_LEMapviewFrameworks_Tests.framework in Frameworks */,
+				91F55457BE4CE84B93DBF26A /* libPods-LEMapviewFrameworks_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				026A52FEC894A0FCD1E5916B /* Pods_LEMapviewFrameworks_Tests.framework */,
+				855F37D8C7796ECAC940A5FD /* libPods-LEMapviewFrameworks_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,6 +179,7 @@
 				6003F5AC195388D20070C39A /* Resources */,
 				7FF1611944A1743412B2CD52 /* [CP] Embed Pods Frameworks */,
 				9EEFB055B405619EC139D757 /* [CP] Copy Pods Resources */,
+				49DA82009D265D56594069F6 /* Find unused imports */,
 			);
 			buildRules = (
 			);
@@ -265,6 +266,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49DA82009D265D56594069F6 /* Find unused imports */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Find unused imports";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"/Users/LarryEmerson/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Volumes/MacHD/LarryEmerson/RemoteGits/LEMapviewFrameworks/Example\"";
+		};
 		7FF1611944A1743412B2CD52 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,6 +554,7 @@
 				80528B311D34BB8A00AA2056 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

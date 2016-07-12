@@ -1,6 +1,6 @@
 //
 //  LEMapViewAnnotationView.m
-//  LEFrameworks
+//  https://github.com/LarryEmerson/LEMapviewFrameworks
 //
 //  Created by Larry Emerson on 15/8/27.
 //  Copyright (c) 2015年 LarryEmerson. All rights reserved.

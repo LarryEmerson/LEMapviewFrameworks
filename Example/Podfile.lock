@@ -1,5 +1,14 @@
 PODS:
-  - LEMapviewFrameworks (0.1.0)
+  - AMap3DMap (4.0.3):
+    - AMapFoundation (~> 1.0)
+  - AMapFoundation (1.1.0)
+  - AMapSearch (4.1.0):
+    - AMapFoundation (~> 1.0)
+  - LEFrameworks (0.3.2)
+  - LEMapviewFrameworks (0.1.0):
+    - AMap3DMap
+    - AMapSearch
+    - LEFrameworks
 
 DEPENDENCIES:
   - LEMapviewFrameworks (from `../`)
@@ -9,8 +18,12 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LEMapviewFrameworks: bb105c8602474a79f1436d02eaec09a90c1bff3d
+  AMap3DMap: 8619d67fe7b3bbe45abf74b3434eb9ab20220507
+  AMapFoundation: 15db20567e6512422a086a01b42a88b145bc2500
+  AMapSearch: cb4722480d2d4331a032d43bd1070ed0fa55dac9
+  LEFrameworks: c63bb5208d6050c7bc96d2f2c4494d38baa2a1ad
+  LEMapviewFrameworks: 7c995cb2c0db19c74488ed22c94133170f476912
 
-PODFILE CHECKSUM: 08bbf84b52383084f3680c3cadd8cbef7fb68661
+PODFILE CHECKSUM: 9ec746810f27fc5776811f39cdb66f8a63afc666
 
 COCOAPODS: 1.0.1

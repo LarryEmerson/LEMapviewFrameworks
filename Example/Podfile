@@ -1,5 +1,5 @@
 
-target 'LEMapviewFrameworks_Tests' do
+target 'LEMapviewFrameworks_Test' do
   pod 'LEMapviewFrameworks', :path => '../'
   
   

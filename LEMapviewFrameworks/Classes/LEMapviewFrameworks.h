@@ -26,3 +26,4 @@
 #import "LEMapSearchBar.h"                  //地图搜索条
 
 
+#import "LEMapViewSettings.h"               //地图默认资源自定义入口

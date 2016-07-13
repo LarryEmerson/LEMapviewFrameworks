@@ -7,13 +7,14 @@
 //
 
 #import "LEMapViewSearchAnnotationView.h"
+#import "LEMapViewSettings.h"
 
 @implementation LEMapViewSearchAnnotationView
 
 - (id) initWithAnnotation:(id<MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier{
     if(self=[super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier]){
         self.annotation=annotation;
-        UIImage *imageIcon = [[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_pin_searched"];
+        UIImage *imageIcon = [[LEMapViewSettings sharedInstance] lePinForSearched];
         UIImageView *pinIcon = [[UIImageView alloc] initWithImage:imageIcon];
         [self addSubview:pinIcon];
         [pinIcon setUserInteractionEnabled:YES];

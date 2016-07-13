@@ -18,6 +18,11 @@
     "ios": "7.0"
   },
   "source_files": "LEMapviewFrameworks/Classes/**/*",
+  "resource_bundles": {
+    "LEMapviewFrameworks": [
+      "LEMapviewFrameworks/Classes/LEMapviewFrameworks.bundle/*.png"
+    ]
+  },
   "dependencies": {
     "AMap3DMap": [
 

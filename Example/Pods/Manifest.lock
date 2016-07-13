@@ -22,7 +22,7 @@ SPEC CHECKSUMS:
   AMapFoundation: 15db20567e6512422a086a01b42a88b145bc2500
   AMapSearch: cb4722480d2d4331a032d43bd1070ed0fa55dac9
   LEFrameworks: dd0d8af2dba3f4d24b2b43eb9a31e4986b2ce653
-  LEMapviewFrameworks: 46f2eb97f851ba90aa92dfb043d568e369ff7e7f
+  LEMapviewFrameworks: eedfddf36148f47034b669e8e106e26e5701dcd8
 
 PODFILE CHECKSUM: c46fc8e33c00af16e9e4133460dc29c5c6345032
 

@@ -7,129 +7,222 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002E6D3BB4DCA641C7451D7C35306114 /* map_pin_lightred_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D634587D37855DB4809621127407079D /* map_pin_lightred_sel@3x.png */; };
 		0061E549C1B254BA8A98B72048430BFF /* LE_emoji_keyboardface@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10B9686C54DDD871F64833E0BFBE02E5 /* LE_emoji_keyboardface@3x.png */; };
+		00716C257817E77124064ECD757304F3 /* map_btn_status3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB997B84050E470EAF272C4F1E42572 /* map_btn_status3@2x.png */; };
+		009125753C7C7BCCCA2F71046FCB12CC /* map_pin_lightred_sel@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = D634587D37855DB4809621127407079D /* map_pin_lightred_sel@3x.png */; };
 		011A8C002E1AEDC3B7C9A99402116946 /* LE_tableview_icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B9568C6C22EDF7E3C9775C37645E6E /* LE_tableview_icon_arrow@2x.png */; };
+		016F9D168ECF7282423DC053EA1DD3A4 /* mapScaleDown2@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 26CF7E64EC3EE8A907E512173E4F9898 /* mapScaleDown2@2x.png */; };
 		01D546CF8BCAED79DC3806D120052E56 /* LEUIFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 129EC74E4210F6F1927E4FD1AE5DD089 /* LEUIFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02396E9A9B3A4EE93FC02A7717A8BB8E /* LELoadingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 922A098097C77927F522790CCD865455 /* LELoadingAnimationView.m */; };
 		026161D6551FEEEA9FA6F40E6AF986F7 /* LELineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E3B3C0791A4B5A06FD7A402C3473DB /* LELineChart.m */; };
 		03B15D81B31AE5362B801CD51AA32B91 /* LEExcelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0DB90A5060892F83FEC847DA56F0D34 /* LEExcelView.m */; };
-		03D13C10990DE38F3F3521262073450C /* LEMapCallOutViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = E9C2D58E67C56E1087606F2E71AC1EEB /* LEMapCallOutViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F6C5D86A41671181FCB18E5102F07C /* LESegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35557AC857C72FEAFF119F48C96CAC48 /* LESegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0416B562017E79D6793B71E43164E077 /* LEMapSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1BE2815F18D8B3C7A419A5D12DCF30 /* LEMapSearchBar.m */; };
 		04EDE5299A77FAEFF267F562CBB0817F /* LEBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C17753EAE8BBA8084B74F9DD03AA5AB7 /* LEBaseTableView.m */; };
+		052758A59860F994B8C4042E4CFD59B2 /* map_loc_white@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 081379AC6D33A2CC144E10E17C066559 /* map_loc_white@2x.png */; };
+		059EA538F57CB281A879B71DEF068E8A /* map_btn_status2@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = C08493D57FAF9439E38EC11B55031C51 /* map_btn_status2@2x.png */; };
+		05DACF47EC6C62E5909B8834AFF7604F /* map_compass@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 82766A0B7787720A6663BEA8FC439C1C /* map_compass@3x.png */; };
 		06423029B266BD4C95170EF15924E8D3 /* LE_qrcode_scan_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2614A3E55B79CAA1F3C0068D19246BCF /* LE_qrcode_scan_line@3x.png */; };
+		065F785EB94A34653DDB092C77DCFE11 /* map_pin_lightred_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3856495469D64695B9738B6F1D29AD /* map_pin_lightred_big@2x.png */; };
 		0770D3624C17C89A6B2CF49CD503A42B /* LEFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = FCE2B2E8937B008E8C8548EAE4954009 /* LEFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08AB6EAE741E62338D45BC1755DCF4FD /* LEMapViewUserAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37EC38170B8BCA80E8B2182A041860 /* LEMapViewUserAnnotationView.m */; };
 		0928D54BB9B0338DB76327CC93E02999 /* LE_MessageBackground@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F1B3B607DACD6FFE13D0C3D582DA890 /* LE_MessageBackground@3x.png */; };
 		09949BD9326E1FA2ADD85D459B564DE6 /* LE_common_btn_gray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FDD2C576D43C13B00E926A289EDB7FB /* LE_common_btn_gray@3x.png */; };
 		09B8FCC932C64258F31B15920FFBC9D2 /* LEScanQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC13147761879A75E67719A5A8B715E /* LEScanQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A263B74000EAA3DB154162C6E975388 /* LEScanQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 536D10FA9E1453B0FFB6C0879FF484DA /* LEScanQRCode.m */; };
 		0A3B8126B3AD6F8CFE04787E2E08B105 /* LELocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = CB06ADB6B330D92DC3D3206AEB4EDE3B /* LELocalNotification.m */; };
+		0D332E05482E22067CB99E3AF1B0A6AA /* map_loc_white@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 8202A9C32FA3048C118BFBB5053AE0B9 /* map_loc_white@3x.png */; };
 		0ED367D880C8E7DA8F2FD2FF7C985EA0 /* LECurveProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ECF9A1EFD74B63DD0253F1B9D664C17 /* LECurveProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11CFBD66946A5D5F605F0FFFE3E193CD /* LEMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC8CFC936BAA1CD22BC852F05093D787 /* LEMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13A512A8257FFFB3558B05115004EA15 /* LELocalNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D4EA554AB29759D55858DF20C77EA6 /* LELocalNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13E24F8FB01418C7D1CC91043A309370 /* map_tip_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E3F5B39DAE19A03194B9190DEECC2 /* map_tip_normal@3x.png */; };
 		146D40C92F26E6A0AC1073F8FD551E7A /* LEBasePopupEmptyPage.h in Headers */ = {isa = PBXBuildFile; fileRef = A521E29E07DA023415D834D3D3C80433 /* LEBasePopupEmptyPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15D186398B878B926DE6C5BE439B5632 /* LEBottomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BC148D97296BED63ACF4E91DD95489 /* LEBottomTabbar.m */; };
 		175F556E7E606EC14483C2D36C7B0CFA /* LECurveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63300C1C3790342473371088FF024F81 /* LECurveProgressView.m */; };
-		1C69A262D73816878D1BE04366AFB618 /* LEMapCallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76FB13039771B52F51B767A1BFBEFB /* LEMapCallOutAnnotationView.m */; };
+		1C56038DAA7581DBC5F3F2AD9856F152 /* map_icon_refresh@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = EB7C1246A66E050E640FB452192C39B0 /* map_icon_refresh@3x.png */; };
+		1FB5FF1EB34820D8A202DCF0D0205DD3 /* map_pin_brown_sel@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 02845FF935A74D8FDC627F55D5EAC652 /* map_pin_brown_sel@2x.png */; };
 		20ECD376D100367EBFB5272273166637 /* LE_emoji_smileface@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7853D26938A7B21862A0C23A84BF11 /* LE_emoji_smileface@3x.png */; };
+		212C5D9E90EA5C9901601228350926F5 /* mapScaleUp2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AF96895E5F14B5F7F1378F4C5AF7B6B /* mapScaleUp2@2x.png */; };
 		225CEAED45B9693410F60068494C0661 /* LE_web_icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F3DD01D4CA80CE86F99CCA52CC8749A /* LE_web_icon_share@3x.png */; };
-		227975B8CF00AF599F58BAC502E11ECB /* LEMapViewSearchAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E3ABC455496C1C69D601B5AAA840812 /* LEMapViewSearchAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22C61D2954D71E9AFEF8B125807F7792 /* LEMapViewUserAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = B30BF6CF88432CB84189ECF62F163537 /* LEMapViewUserAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22E151EB132C3930E729EBCF8DA242F5 /* map_userpin_arrow@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 0A0CEC93A659C54D4774FD100E8B20A7 /* map_userpin_arrow@3x.png */; };
 		243187485B37E1CC5FA19536BA74FE34 /* LEWaveProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 510A87F5294DB8E3CF67BBB7607F3D10 /* LEWaveProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2498974932F97D417A06736B4C7E2F68 /* LEMapViewAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 23238D7970584DB2651005E8DD82E709 /* LEMapViewAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24A62FEBD5F5F1EF17B47F23AA032CC3 /* map_icon_refresh@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = ADF7DC0DB62714855E07AAFA5C1D6EB3 /* map_icon_refresh@2x.png */; };
 		252B524F053D865B82D25A21CF16E58A /* EmojiInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EF3E037DC035CDE7E957FF0FF062EE /* EmojiInputView.m */; };
-		2581434E0331CE7D25A7E473301A18AD /* LEMapSearchBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F75F2D309F8095B850A091257B3EE4 /* LEMapSearchBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27A1B08C5B5C8A85523087355B2601E5 /* LEMapViewUserAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5CBE3F97C5ED145BDAE8E92DE4D8F6B /* LEMapViewUserAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28190874CB372F8FAF2FF70904B97FFB /* mapScaleBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A10B7EFEFC1D00D2AB572E0C84905465 /* mapScaleBG@2x.png */; };
 		28ED0B2436EE49F29DD8699D0B64DEA7 /* LE_common_btn_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A3B1471663C8AFA90F6321707D544A /* LE_common_btn_gray@2x.png */; };
 		2B61A49ADE2CC93AC79799B2FAC38A65 /* LEBaseTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 276E27FF975B421273E72BD69B1DA51F /* LEBaseTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D32870480FCFA9C06BB3C0D6E2695D3 /* LEMapViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F48A5A46A37600325E607B80F3B1F674 /* LEMapViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C76185D06E0F1654FC155E1384D3B74 /* mapScaleDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ADAE172EB17331643588C21DA127698 /* mapScaleDown@2x.png */; };
+		2D07D5EEF92BB9D618582CE29FDF0A95 /* map_icon_refreshbg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8039440B92362C1CA5B6B6E54ABA01B /* map_icon_refreshbg@3x.png */; };
 		2D52FC6C5BEBB8E8BB51A1410DCF9013 /* EmojiImagePageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 94586024D84AD22D842DB697A6E75582 /* EmojiImagePageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DB0A4D810CA663104A442CC30D525D6 /* map_pin_brown_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02845FF935A74D8FDC627F55D5EAC652 /* map_pin_brown_sel@2x.png */; };
 		2E069D20DCE0F62DD29E05684E1E5AB7 /* LE_lewave.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA221A41DD488059A1E37337A5B34D9 /* LE_lewave.png */; };
 		31B8AB73722D0562ABB1D4483A8B744B /* LE_qrcode_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6CAC6E4E1C629B39A09B3A3B48A41 /* LE_qrcode_scan_line@2x.png */; };
+		320CA26A169DE0BA029D6BE59F50A8A4 /* LEMapViewAnnotationSubView.h in Headers */ = {isa = PBXBuildFile; fileRef = DEE4556B93F5E258B7CFD51F50A1926C /* LEMapViewAnnotationSubView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32F377331AC7BB5405611AB45D2A4C74 /* map_btn_status@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 2B94838BFBF3FD73A58811A61DD6011B /* map_btn_status@3x.png */; };
+		346420D9310C5457999DA5F26CEE87D8 /* map_tip_hot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDBB551329D6A637382A8E374352BEB1 /* map_tip_hot@2x.png */; };
 		34D44C8E204F695DA2AB984D00B8FEE2 /* LEWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A9C027108BF4DB385856589CF341157 /* LEWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E09BD4955D17B7EFCD45A3F0A28155 /* Pods-LEMapviewFrameworks_Test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F08913632AA04AA2A362708496247254 /* Pods-LEMapviewFrameworks_Test-dummy.m */; };
-		34E1EC5F74B3AA3FB6ED79B150BF8EFF /* LEMapViewSearchAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF68D9F7605B402EB2865C501AC2C70 /* LEMapViewSearchAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38ABB50C1AA46EC057432AFD8897ECF7 /* LE_web_icon_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31F4D2E1DE74BC890720061D8ED1080B /* LE_web_icon_refresh@3x.png */; };
-		3BC9B75566A8B9850560458E5FF58083 /* LEMapViewSearchAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE4BB18A29AC41B1EBE5885DE95012F /* LEMapViewSearchAnnotationView.m */; };
+		3AEFDE29C5D62DEBBE4B31AE01A50C35 /* LEMapSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D5EB2C098891912049BBE71CECF4E4 /* LEMapSearchBar.m */; };
+		3B2F467059D0FB8B262A885C3C9BAD5E /* map_tip_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA486E7FFF0D67028736841F435F876 /* map_tip_top@2x.png */; };
+		3BBACF72FF2DFE681C78EEA765947FBD /* map_btn_status2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75331AD703DBD5EAE07718BF0679AC76 /* map_btn_status2@3x.png */; };
+		3BD87613CFABAD7C4F57D6FEDE86A2BF /* map_userpin_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FC9A4D8D0E272894520C98142FD8D9A /* map_userpin_circle@2x.png */; };
+		3BEDA5C4A156475B242957D458E4B27F /* map_pin_red_sel@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 09184300574A914E8BB817C7FBB2F72C /* map_pin_red_sel@2x.png */; };
+		3E342CF030771A91C7B792EE20117356 /* map_rect_search@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = D1C247429858A70F4F7DC4EAFDF138E7 /* map_rect_search@3x.png */; };
 		3EB7F987E1CB6155862C46937D7D3306 /* LEBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C639D83EC170556836BC19019D98021 /* LEBadge.m */; };
+		3FB3902315C63FC4D8C7D300BAE8E73E /* map_icon_refreshbg@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 027E158117C2D5C43DFB26265A794AD8 /* map_icon_refreshbg@2x.png */; };
+		4053E59F3804144B35C80D214892E887 /* map_pin_searched@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 578316613D08D57EA68AEE656D35BAD4 /* map_pin_searched@2x.png */; };
 		40DD2F46A6B7A7B7626D5EBCF33B52E3 /* LE_common_navigation_btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2D41B3F0F58D505DDA02CD1D1023DDB /* LE_common_navigation_btn_back@2x.png */; };
+		4463CF47964A0445C5BAB6957CCEDF14 /* mapScaleDown2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CF7E64EC3EE8A907E512173E4F9898 /* mapScaleDown2@2x.png */; };
 		447C000385AF07912AA0FF94CB99B770 /* LEBaseTableViewWithRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D93B2E1A1D28C533045C60D8A0519DE /* LEBaseTableViewWithRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44BC0F13235DD45D7087F0CE41475A89 /* LE_web_icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCA0AEBF50AF156CE1EF55EE38DC4AD4 /* LE_web_icon_close@2x.png */; };
+		479853339DE7AA4902E95DEAAFEC3B52 /* LEMapCallOutAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = DC04161CF0555E6921F04800DE5B9C21 /* LEMapCallOutAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47B279BB25B82FD7F8EDBE223315E8CA /* LE_emoji_keyboardface@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 793C777504ED9974ECDFCC010378FD75 /* LE_emoji_keyboardface@2x.png */; };
+		4986DD3B3F07B223AC4F179ECCF05F27 /* map_pin_red_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 600C6D5B712EE928AF7E4F03D7D5BDA1 /* map_pin_red_sel@3x.png */; };
 		4A8BBC3A606B78BBE256657A0D1FEA75 /* LEBasePopupEmptyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8790D7CC9C309616F7E27BB704E5234A /* LEBasePopupEmptyPage.m */; };
+		4A945B49C8935B8E496AEE6AA7FEC3C0 /* map_pin_red_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4344ACBBD473A644BE176986003A8F4 /* map_pin_red_big@2x.png */; };
 		4AA214A9A7FA9AF82011E41E30A52799 /* LEBarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 5983B2CFD7FCEF9A879A840A0930C1A5 /* LEBarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AC203D44335744D026589804876F0B4 /* LELoadingAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E5D76BC27DD38B74DE08FDD7C38998 /* LELoadingAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AF7122C040B4E10D5EF9D3CEB1D6F4A /* map_btn_status@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = F5D730C9364D192F6537948535A47A70 /* map_btn_status@2x.png */; };
 		4BE3C895550F457967447CBEF4171F61 /* LE_MultiImagePickerCheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF151FD389B2C90B721E8574333839F1 /* LE_MultiImagePickerCheck@2x.png */; };
+		4C23683CDF71757F54AD9714EBC9C7AC /* map_tip_top@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 7BA486E7FFF0D67028736841F435F876 /* map_tip_top@2x.png */; };
 		4CB285875D1D89E939044656361D33A2 /* LEBottomTabbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A3E4AD176124D89690B8E61AF65C61 /* LEBottomTabbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D3409873CA40D8CB29E7E753CC335AD /* LEMapCallOutViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D2AFDEA89B87A076669A3ACD205EB /* LEMapCallOutViewAnnotation.m */; };
+		4E32588BEB2AA804833C39BD5E70E398 /* LEMapCallOutViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D972CCD58E3C28C2DD6E7FAE5AA3DF /* LEMapCallOutViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F18A2CAB39CE510BC95C58596DB8AB4 /* LEBaseTableViewWithRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC6E0DF40DE5FB4E272E5600039070 /* LEBaseTableViewWithRefresh.m */; };
+		4F5287BE85C20D59F2092EC0830B0169 /* LEMapViewSearchAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9B5F3B789B05457CA32F9A7E0BF822 /* LEMapViewSearchAnnotationView.m */; };
+		4F66FD33EC70486EC0DA6585F3176B5E /* map_btn_status3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13E594604ED7171F948F82BFB326F4A /* map_btn_status3@3x.png */; };
 		51205D4C09CCFA4494D04C393DFB52C2 /* LE_MultiImagePickerCheck@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E48D8683C4008E7157CAFE594B955F34 /* LE_MultiImagePickerCheck@3x.png */; };
+		53B99E33A1EE955FE99D17E229AD0987 /* map_btn_status2@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 75331AD703DBD5EAE07718BF0679AC76 /* map_btn_status2@3x.png */; };
 		54166B7AA997098400FE91CDA0535C2A /* LE_EmojiToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6873F88089148A7AF96A793B5917712B /* LE_EmojiToolBar.m */; };
-		58509776397C3339278AF7D0A8F59965 /* LEMapViewSearchAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19657FB83FBFBD7231180465FACC3D66 /* LEMapViewSearchAnnotation.m */; };
-		59B90B16AA63C3470CEC104D86918DB5 /* LEMapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD36FE42BCEA266910070CA73393D9D /* LEMapViewAnnotation.m */; };
+		55E5B2F378DAB8AF173ECFCE63506DE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		587677980455D055B16FBEE590507356 /* LEMapViewAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 898A51DB460E776FE2D9F0B6C75725D8 /* LEMapViewAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CB5812B2133C602525FF2F043611BFD /* map_pin_brown_big@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 2635EF29FA940F43D31C156CDCE75DB1 /* map_pin_brown_big@2x.png */; };
+		5D047194EF4DCAB70EA654790721E917 /* map_userpin_arrow@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 2A505764B5EF3D6E36E6C5B7D0BFE29B /* map_userpin_arrow@2x.png */; };
 		5EEEF91246043A1247A17D7237B1F095 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		5F7E38307C57EC77651709D4870EBFCE /* LE_lewaverotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 348815E38D48FCF78773EBD93119C1AF /* LE_lewaverotation.png */; };
+		5FCE5F42366F09CC12414D4DA279B29A /* map_icon_refreshbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 027E158117C2D5C43DFB26265A794AD8 /* map_icon_refreshbg@2x.png */; };
+		6336C5BA2266146EDDEB674D8E9C6CC6 /* map_userpin_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0CEC93A659C54D4774FD100E8B20A7 /* map_userpin_arrow@3x.png */; };
+		643121859A84EF1E37E43A4F5A09A304 /* map_pin_brown@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = FB86DB13D4439D94C24878DF4F0CCD78 /* map_pin_brown@2x.png */; };
+		644DD2F8D79DF9028BCE8547D3C527F0 /* map_userpin_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A505764B5EF3D6E36E6C5B7D0BFE29B /* map_userpin_arrow@2x.png */; };
 		654C09D86FF7C5A8CBD5297F625C5277 /* LE_web_icon_backward_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF4E8AF45E2E5E60E227BFCB8762E93 /* LE_web_icon_backward_off@2x.png */; };
-		66EA03B40AEAE00B9D88F6CD171D6A27 /* LEMapBaseAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B86CBA14098405E5F7B13E74D1804BC8 /* LEMapBaseAnnotationView.m */; };
+		68A98B667001EF75B060F38FC1A12048 /* map_pin_brown_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2635EF29FA940F43D31C156CDCE75DB1 /* map_pin_brown_big@2x.png */; };
 		6AE762DB71ABCD07AA0C5A1B1C22E63E /* LE_common_navigation_btn_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7EE71C4AA074D035CFB07C54B2B13 /* LE_common_navigation_btn_back@3x.png */; };
-		6B9D4322EA58C5BA6578896A1726BB39 /* LEMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9ABC1729E6C6F3181935B95AB13AE4 /* LEMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B3D22286BE9FF849BAEB7E53288429D /* LEMapBaseAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 02BF8415D638648CC7F05AD8E3BFD0C4 /* LEMapBaseAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DDD2F057BC663A9DCBD3C6AC799E578 /* map_icon_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF7DC0DB62714855E07AAFA5C1D6EB3 /* map_icon_refresh@2x.png */; };
+		6E7E7753815AE12896FF9493AFACC159 /* LEMapviewFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 75EC64FD5278B3F0E44D8261FAD696B4 /* LEMapviewFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F2370E3CB93DDF2A3314F53CFF26334 /* LEBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = F52795F110DAA563100702F5ED7F1C9F /* LEBarChart.m */; };
-		6F28EDF0F5C8C98426EE6C1CD292A043 /* LEMapViewAnnotationSubView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1C3E28D5A397B6DE9563C93AA877CF /* LEMapViewAnnotationSubView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F7F727254960D7E8ADE9C6BE70882C7 /* LEBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D2D64CE07D0B7E47EFA83A0FD3C0688 /* LEBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F9175AF1300DB8FDAF93D90E3CCBFB2 /* map_pin_brown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB86DB13D4439D94C24878DF4F0CCD78 /* map_pin_brown@2x.png */; };
+		6FCFEEEC6BB030E0EA8F675EB231BB52 /* map_tip_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98AF95176AD76A07A49BD0A005E5514D /* map_tip_normal@2x.png */; };
+		7056C068A83BCFAA1CC2AC7CCCC7593A /* map_tip_split@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85973625D3F7C70F5D829D919C5722DD /* map_tip_split@2x.png */; };
+		7096C2B500BFCADD2FD73C9F5EA04624 /* LEMapViewSearchAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B2019A7C8EE3E745D7A3A20EDF8EA0 /* LEMapViewSearchAnnotation.m */; };
+		71655E4E0E56DC2054C544F9CB58A4AE /* map_pin_red_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09184300574A914E8BB817C7FBB2F72C /* map_pin_red_sel@2x.png */; };
 		719F36D1FA0697D6390443E3DBAC31CA /* LEMultiImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 389F5E6AC274A106634584DC7D40730D /* LEMultiImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72B03B094E33AC9AE9E345575589EC49 /* map_loc_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8202A9C32FA3048C118BFBB5053AE0B9 /* map_loc_white@3x.png */; };
+		7331AD228DE598A954B99D9A9031DCA2 /* map_pin_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECB2C990A36C4F1022290C6A6B56D5A1 /* map_pin_red@3x.png */; };
 		75294A3578E33511ADDA923A307B83F1 /* LE_web_icon_forward_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E02806660D2A5C416E78E873BF82C1BB /* LE_web_icon_forward_off@3x.png */; };
 		7AF5E7E9A9C600EE764326032015D2A7 /* LE_NSDate+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1A22F63F45EE04398E66C8134A4D26 /* LE_NSDate+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B0805DDBBD0220CA2D0384644070FA8 /* map_pin_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B4E8E099DC37A8CE50CAFB346E7E19 /* map_pin_red@2x.png */; };
+		7C32F73181269731730CB929761AC164 /* map_pin_red_big@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = B4344ACBBD473A644BE176986003A8F4 /* map_pin_red_big@2x.png */; };
+		7DBEA65A6B1DF16989E202E1C0117584 /* map_icon_refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7C1246A66E050E640FB452192C39B0 /* map_icon_refresh@3x.png */; };
+		7DFA3001CA2B52C801764E4603BCB59B /* mapScaleUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F48DC4856646DE7F90DE0B7B75315821 /* mapScaleUp@2x.png */; };
+		7ED41C044263CE8DEB41E3DEAA7394B0 /* map_tip_normal@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = D40E3F5B39DAE19A03194B9190DEECC2 /* map_tip_normal@3x.png */; };
 		7EEE9BA5F2A2C58E45760B35906E8A5B /* LERefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEC6BF9F727CEAF13DBF9589D486CC4 /* LERefresh.m */; };
+		7FD3844208EAE81FE10D8A35B1577F64 /* map_pin_lightred_big@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 3B3856495469D64695B9738B6F1D29AD /* map_pin_lightred_big@2x.png */; };
+		8042CFE50F25DBFDA04985092CDDFF04 /* map_tip_split@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 85973625D3F7C70F5D829D919C5722DD /* map_tip_split@2x.png */; };
+		80528B3D1D35D77800AA2056 /* LEMapViewSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 80528B3B1D35D77800AA2056 /* LEMapViewSettings.h */; };
+		80528B3E1D35D77800AA2056 /* LEMapViewSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B3C1D35D77800AA2056 /* LEMapViewSettings.m */; };
 		814A1C1FD7B733328B43462C879F8654 /* LEBaseTableViewSectionWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 925E010520CA7BDA0D6A9FFB3F3A0F96 /* LEBaseTableViewSectionWithIcon.m */; };
 		81971FF4292A2F1B923BA223062E4B89 /* LE_web_icon_backward_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AE90C9724F97F6F0402295617FDA5EA /* LE_web_icon_backward_on@2x.png */; };
 		822180DD7E766FD68E0733F5111DA437 /* LE_NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F23E6921FEB0ED439AA629F7AD2ED7A3 /* LE_NSDate+Category.m */; };
 		840CC4DDD5809FF27BE2D37DD20B5B35 /* LE_common_btn_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 009E86F2BEF702078CAC5E9FF5EFB695 /* LE_common_btn_blue@2x.png */; };
 		84F3AC86EE93FAC9CF850D6A698EBD1B /* LEBaseTableViewSection.h in Headers */ = {isa = PBXBuildFile; fileRef = F1A6224B4F2C0F388139E128BBE186DB /* LEBaseTableViewSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		861ED904709EA01A7EB7B7A83B3EF26B /* EmojiImagePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A107B0740817E734E798F90CDD90894 /* EmojiImagePageView.m */; };
-		8622A78CE02DC8541DCAAE8942E1B980 /* LEMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D883A6271EE5ACF17AC2659B9001353 /* LEMapView.m */; };
 		87EA471568560CAFE9C7FD3687C8E08B /* LEPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B3ABB89844AF0B2C772F1A909F9C39 /* LEPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8808682045DF7AB37CD21BC6B494AA2A /* map_tip_normal@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 98AF95176AD76A07A49BD0A005E5514D /* map_tip_normal@2x.png */; };
+		889FF63419D96534639D4EC31D04F6E9 /* map_pin_lightred_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F716EEBE6A77F0A6C3D565F13384DF19 /* map_pin_lightred_sel@2x.png */; };
+		88CF48F86C29A3006FDC1010EC1DCAB3 /* mapScaleBG@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A10B7EFEFC1D00D2AB572E0C84905465 /* mapScaleBG@2x.png */; };
+		8AA5C2D2B6981574A75018B27C78747B /* map_rect_search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A27A301798D198A4480DB015DE7D3FF5 /* map_rect_search@2x.png */; };
 		8CA6E241EC9640F04F3831DF23E1054A /* LEAppMessageDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 597979A4C37D5BC12E3EC6A82220AB64 /* LEAppMessageDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D50404F868F14DBF55E06FEE6F691A0 /* LEExcelView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2D47B18A815EEBA68A55E6284422C8 /* LEExcelView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E4B31B2ABDA27CD795A7363FF41F57D /* LEMapviewFrameworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C60385C3B4B414FCA74522C59FD23 /* LEMapviewFrameworks-dummy.m */; };
-		9552402C75AB4E52DE792389F9AC6105 /* LEMapViewAnnotationSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 314503BC2D79843E87112D4B92AFE3CC /* LEMapViewAnnotationSubView.m */; };
+		8D6A48717C7E1DFA16576B6237F5256C /* LEMapCallOutViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137EACBF07C787D75481B7A9FFCC /* LEMapCallOutViewAnnotation.m */; };
+		93A664F7BBF8BE3C755F42507445D789 /* LEMapSearchBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 2978054CD281BDEF11E9AD30E95A76FF /* LEMapSearchBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		949F224DE7E23F405916422161ADBAA6 /* LEMapViewAnnotationSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F90CC62D903C9597727BD31B37FF94 /* LEMapViewAnnotationSubView.m */; };
 		958C7C10EB30E18D441357B3B96A9503 /* LELineChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 308A7A2CEA92FA20EECF7959D8CE34F3 /* LELineChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96B8D03778AC59B22A997F3224A4C7C8 /* map_pin_brown_sel@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = FE7A3699768F2EAE8D78DB433FFF9E21 /* map_pin_brown_sel@3x.png */; };
 		96C9F2EA232FCE2036C633BACF9C98EB /* LEBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 048DA0ACA0195B174B6CBAA5F86E6645 /* LEBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		975C0794037117F3EDD08221EC68636F /* HMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C24A9D0546B6463430C7AE1B3462600E /* HMPageControl.m */; };
-		97F2CE7EE671EF35BB8F2C125446EF6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		97D26663E4AD430A805F613D80434DBD /* mapScaleUp2@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 4AF96895E5F14B5F7F1378F4C5AF7B6B /* mapScaleUp2@2x.png */; };
 		98EFF5994ECA11EDD6E58D6EF11A3540 /* LEPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C5554D9280121A588B3BFAA2A66FF /* LEPopup.m */; };
+		9A89B9068885D116BD398065C2089B79 /* map_rect_search@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = A27A301798D198A4480DB015DE7D3FF5 /* map_rect_search@2x.png */; };
 		9ACDC81F9B35044A9EB0E4E8D6EB89A5 /* LEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE113BB2D82A4BE3F76D2ECCAA6D29 /* LEBaseViewController.m */; };
+		9BF6AEC8B7B74814E80A3C76CDD4B26D /* map_pin_lightred@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBE940F8CA865A91BC9984E39F55BAE /* map_pin_lightred@2x.png */; };
+		9C5E951B1C5E996DC11ABB85612917FF /* map_tip_hot@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = EDBB551329D6A637382A8E374352BEB1 /* map_tip_hot@2x.png */; };
 		9D6E8220FB9F6F8A3D4CFC16C58731A2 /* LETabbarRelatedPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C0408F3A9C470AE4884291D8B9988D /* LETabbarRelatedPageView.m */; };
 		9DE8407EB6CEFAAC6275A57D225D0205 /* LEWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC53AB38B77B350DC12E5BB0804C9EE5 /* LEWebView.m */; };
 		9E2C8EF94361BC42630C9F8EFA5724DD /* LE_web_icon_forward_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85DB1EE5262095F28EB6BDC7B4239AC /* LE_web_icon_forward_on@2x.png */; };
 		9ECBA805CE1BE18BB8FAC747EF7A6EB4 /* LEBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9FC33C61F5C5F1054D461E306E40E /* LEBaseTableViewCell.m */; };
 		A01BCBD5E151248F3A058F1197D18AA3 /* LE_EmojiToolBar.h in Headers */ = {isa = PBXBuildFile; fileRef = FE60B7D09B3C53E3451B470A389E32C7 /* LE_EmojiToolBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0476D1012394B427F987D20A99882C5 /* map_pin_lightred_sel@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = F716EEBE6A77F0A6C3D565F13384DF19 /* map_pin_lightred_sel@2x.png */; };
 		A20321FAD28CD1D3E085C5215231D0D9 /* LETabbarRelatedPageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A1B0C567F7382CEF3BE87D1212E83B43 /* LETabbarRelatedPageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2DB2237295BDEA41A0D126015C82758 /* LE_web_icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFA84055CF70235D33834737C655717 /* LE_web_icon_close@3x.png */; };
 		A2F46284F52C4AFA104AB7CE62F6B228 /* LE_emoji_smileface@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96425E0857A0BF30607011D3CA15176F /* LE_emoji_smileface@2x.png */; };
+		A35826729FEDEEEEEFC2090F780C0BC2 /* map_pin_brown@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 9BD6634417FC2C9145492470BA069032 /* map_pin_brown@3x.png */; };
 		A3AFFDCBDC4735E89FA84D3DDEEEFC02 /* LE_web_icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C529B364A803AE049539067F348EDB04 /* LE_web_icon_share@2x.png */; };
+		AA29A299E95778B651090052981E1CAD /* LEMapCallOutAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF482AFBFCB47EC371865A1F1287E6 /* LEMapCallOutAnnotationView.m */; };
 		AA662A937916DBB3D2B943ECE67F08D9 /* LE_MessageBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184289BC376890DCDE0C6534B7327746 /* LE_MessageBackground@2x.png */; };
 		ABA569B567D369B43B13AA399C3C5271 /* LE_qrcode_scan_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4796A9432923E294F457B9D3663DC865 /* LE_qrcode_scan_bg@3x.png */; };
+		ABEA0C681885E5079F21326AF1A97008 /* LEMapviewFrameworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED065E1853EFA4B0905B1E6491055070 /* LEMapviewFrameworks-dummy.m */; };
+		AE3ED64E07A90A40D13BACC350B30598 /* map_pin_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C610E141A2B4B72B386D45D618FAEE /* map_pin_selected@2x.png */; };
+		B20E71F415240725EA65A1993651704E /* map_btn_status3@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 0AB997B84050E470EAF272C4F1E42572 /* map_btn_status3@2x.png */; };
+		B280065D6EAF63E7E9DDBFA10133BC52 /* LEMapViewSearchAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBEE49276A49DF1F10E7FD8ED55F700 /* LEMapViewSearchAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35AE3EF55BCAFAEEDBDF2BC905EBE76 /* LE_web_icon_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA55216C364A3CBB889871A8CE003203 /* LE_web_icon_refresh@2x.png */; };
 		B3C00BE16A4C33A7BB529EB6342CF248 /* LERefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A1A6613BF06A9B23BB8F8C5AC69BD35 /* LERefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4B00F5D05BAC409E49334090398F5A1 /* map_compass@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82766A0B7787720A6663BEA8FC439C1C /* map_compass@3x.png */; };
+		B5BA80A71004477CA24CB9AE4216D0F9 /* LEMapViewSearchAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2306C083C7FE91400BEF41D3DCF6F5CE /* LEMapViewSearchAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E82F517EAEB984FCF6919F47050595 /* map_userpin_circle@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9A4D8D0E272894520C98142FD8D9A /* map_userpin_circle@2x.png */; };
+		B969B45FE1DAAADF3993C32E98A3FCDE /* LEMapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 951C7519347D6B70BA993482BA1828F1 /* LEMapViewAnnotation.m */; };
+		B981B342F0DBC36D6ED8B387E374377F /* map_compass@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 7BD39CCD61E816994651D3512203046F /* map_compass@2x.png */; };
 		B99106DDFEC60A323F9695C594D58681 /* LE_tableview_icon_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6187643A8B9BE2AD2959DA5E73D7C7E2 /* LE_tableview_icon_arrow@3x.png */; };
-		BA7D09DBA3FF288B787F8FD979A915AA /* LEMapViewUserAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E8262FE9D780A7545590044C95A351 /* LEMapViewUserAnnotationView.m */; };
 		BAA0C33EEC544D2CC1CFBD24B275B233 /* LEBaseTableViewSectionWithIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = DE8F1D41A678FE7951045D5A7ADDF8B5 /* LEBaseTableViewSectionWithIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAF23894B6D1E0E03892C8DC879D498A /* map_pin_red@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = F1B4E8E099DC37A8CE50CAFB346E7E19 /* map_pin_red@2x.png */; };
 		BB518C653056B319407858AFD92A9CAF /* LE_popup_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D852B336625CC607051E1F1DA825CD /* LE_popup_bg@2x.png */; };
+		BB54BC2E710C2FA11C9946E1F4D6BB0F /* map_pin_lightred@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 26479858620FB7BC7C2AB749DBAB3D53 /* map_pin_lightred@3x.png */; };
 		BB9CA176E674CE934FBE53CD99FBC2FA /* LEBaseTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3D1D000BC25DA87DBA467AA3842B6E /* LEBaseTableViewSection.m */; };
-		BBC6D6773B88A7E1EC2819F6E3CE50C8 /* LEMapviewFrameworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B10D686E6663D4DEC8AC993848ED72E /* LEMapviewFrameworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC2E13E12EBB112CA2D2B5312E22453C /* map_pin_red@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = ECB2C990A36C4F1022290C6A6B56D5A1 /* map_pin_red@3x.png */; };
 		BEF10F5B35CE0D8FE076645FB5D99B77 /* LEPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D64D769FDFE5F76DCF062372F55AC5B /* LEPieChart.m */; };
+		C1A79147E0422E28FD9C537F800B1EF3 /* map_compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD39CCD61E816994651D3512203046F /* map_compass@2x.png */; };
+		C4262BDC1A2B1195E6BDE59CDFF7CA7B /* map_pin_selected@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 40C610E141A2B4B72B386D45D618FAEE /* map_pin_selected@2x.png */; };
 		C4B7D16D984789C9F860DCC9FF038B41 /* EmojiInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECF0434FDE0113AA65DB4A0904AB2C90 /* EmojiInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5EDD0FC2CE2AB607CCDA9D6C4D8BF1D /* LE_web_icon_forward_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03C8A64A4A868BBF219CEFC27DB5ADB7 /* LE_web_icon_forward_on@3x.png */; };
 		C63AFDEE2D33FFEA29E3B838C6570594 /* LEMultiImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 072087BE751FD78E29CB113125AEE90F /* LEMultiImagePicker.m */; };
+		C7395A438D79AF31B2C7ABAAA8CB08CE /* map_pin_red_sel@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 600C6D5B712EE928AF7E4F03D7D5BDA1 /* map_pin_red_sel@3x.png */; };
 		C82EC504B06E92CA0F6A56574F6D7012 /* LEWaveProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F566D3B56E6A4472AC89C4F07A06A /* LEWaveProgressView.m */; };
+		CAC9FBA29DA6BC5BE12A46303AC02577 /* map_btn_status@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B94838BFBF3FD73A58811A61DD6011B /* map_btn_status@3x.png */; };
 		CAED4677B8F5A7DD92A8C7F1C552FFB3 /* LE_web_icon_backward_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B09484A76E47E6313C97CE4CA9664DEE /* LE_web_icon_backward_on@3x.png */; };
+		CC48B36E366695380CEB54611E563851 /* LEMapViewAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C606BC1E704D36C785928567D3FB5D8 /* LEMapViewAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC630709506B4B213920045679BA09ED /* LEMapViewAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BD64483CA41866FA8652464150F8E7 /* LEMapViewAnnotationView.m */; };
 		CD553CE4E7BA3D90A986E38749B7BF53 /* LEFrameworks-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0C9D50E49FF4E2CE69A077E40FB1C /* LEFrameworks-dummy.m */; };
-		CFAEB1DB460E1F9AB41096B5D27FF4D2 /* LEMapBaseAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = C18109205128A6B864C07EF21F6AC24A /* LEMapBaseAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD75B5DF1DC03471C4C6F227ABFCF8E8 /* map_pin_brown@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BD6634417FC2C9145492470BA069032 /* map_pin_brown@3x.png */; };
+		CF422F58B2EC179204F08C44811288D8 /* LEMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C5F7C286D4A9C76C59E7D6EE3006 /* LEMapView.m */; };
+		D0889E1720B27698647FCE38F595B820 /* map_btn_status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5D730C9364D192F6537948535A47A70 /* map_btn_status@2x.png */; };
+		D13F594E91C0DAA5C7E256716FE98C71 /* mapScaleUp@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = F48DC4856646DE7F90DE0B7B75315821 /* mapScaleUp@2x.png */; };
+		D2C9BCD7209ED64402AF9E115949E3A5 /* map_pin_brown_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7A3699768F2EAE8D78DB433FFF9E21 /* map_pin_brown_sel@3x.png */; };
+		D37DCEB459D11D373C8DE591061943DC /* LEMapBaseAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0825DF89CFBED8FBFF2E96664F20FBC2 /* LEMapBaseAnnotationView.m */; };
 		D3C063657D4F9422E38D9FBECFFB4A96 /* LEPieChart.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC9C26B500D0C039ACE1BCDAE4527F3 /* LEPieChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5499917D5E4D0E72DCE7B3AC999CCCC /* map_pin_lightred@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = ADBE940F8CA865A91BC9984E39F55BAE /* map_pin_lightred@2x.png */; };
+		D85F3BCA259C04A5CEC644828F4F4E88 /* map_btn_status3@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = C13E594604ED7171F948F82BFB326F4A /* map_btn_status3@3x.png */; };
 		D9D94EE7EDE480BE90DF2907627F8FAA /* LE_web_icon_forward_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EDAB0CB561B2CA46F9DB084A2E2C2B /* LE_web_icon_forward_off@2x.png */; };
-		DD533D32283F9E55B6D4C25613700872 /* LEMapViewAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8FFD2196F789BBDFA79D678DED17B9 /* LEMapViewAnnotationView.m */; };
 		DDCCC8A2480163412A909E91711F11C0 /* EmojisList.plist in Sources */ = {isa = PBXBuildFile; fileRef = 45F35B1F5F39DA79A7C39F37FFC73C61 /* EmojisList.plist */; };
+		DE7C6134A9E571EFA3D4B6365C260C53 /* map_btn_status2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C08493D57FAF9439E38EC11B55031C51 /* map_btn_status2@2x.png */; };
+		DEADEFBDE410929A7A76D462100005E0 /* map_pin_lightred@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26479858620FB7BC7C2AB749DBAB3D53 /* map_pin_lightred@3x.png */; };
+		E1AFBB672F97A9C954C01F789A1F226F /* map_loc_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 081379AC6D33A2CC144E10E17C066559 /* map_loc_white@2x.png */; };
 		E23B0FB12A264569171BD6CC96C28427 /* LE_qrcode_scan_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F809AA26E01ED9851815B45711A533F2 /* LE_qrcode_scan_bg@2x.png */; };
-		E5CAB93A13409EB7E1417E450C15E19D /* LEMapCallOutAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2BCEB7ADBC66DA5CEEC4BADE304DAF /* LEMapCallOutAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9B445109754A33E584DE925376968C6 /* mapScaleDown@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 2ADAE172EB17331643588C21DA127698 /* mapScaleDown@2x.png */; };
+		E9E540D975F3853D18B5636E6CA68442 /* map_pin_searched@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 578316613D08D57EA68AEE656D35BAD4 /* map_pin_searched@2x.png */; };
 		ECD828E6B6D49F8EB81C215C79A30C65 /* LESegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE48B9C2A3784F575015BFD6CDD0480D /* LESegmentView.m */; };
+		EEE907BF26BCCC25D29178203A503CA9 /* map_icon_refreshbg@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = A8039440B92362C1CA5B6B6E54ABA01B /* map_icon_refreshbg@3x.png */; };
 		F0BB24340130168992CF1EAE7DDB2E2A /* LEBaseEmptyTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D96ADC08F600E19D2CBD59AA0F35C4 /* LEBaseEmptyTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2115BDCB49E119EEA34E7BD578E8FE2 /* LEUIFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 13318A35DFCD4372F71010EEDAA38992 /* LEUIFramework.m */; };
 		F4EF8E4D83DF2E761D8B54F9E4FAE2B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -138,16 +231,10 @@
 		FC401E5F3985CDFF96A7215D80F9CD1D /* LEBaseEmptyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DB52C0B4B96123DE3B9EEF0D341554 /* LEBaseEmptyTableViewCell.m */; };
 		FD81F66A92CEFFE8B293C31643E07820 /* HMPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E1430BA8DA1B758442377D8A118F981E /* HMPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD9742625EC3B1AE1856AF6F5A6427A9 /* LE_common_btn_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F3DA9745ACEE36E1B79F474F959578 /* LE_common_btn_blue@3x.png */; };
+		FFDCB40C499E7A05E20FA63442FA6D35 /* map_rect_search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C247429858A70F4F7DC4EAFDF138E7 /* map_rect_search@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1772653AD885B2FAD70890F2A2CF6333 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E34EE452DD726C6EEBF93777C050558;
-			remoteInfo = LEFrameworks;
-		};
 		48452DE65D299571A43CAE16600AA9E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -162,11 +249,25 @@
 			remoteGlobalIDString = 3E34EE452DD726C6EEBF93777C050558;
 			remoteInfo = LEFrameworks;
 		};
+		7A013CEC1BC692041D4607DBB30D8186 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B1C5361B7F96D68AC4963E8BD521F2F;
+			remoteInfo = "LEMapviewFrameworks-LEMapviewFrameworks";
+		};
+		86C27D816C5F76F61C8D79B23164A51E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E34EE452DD726C6EEBF93777C050558;
+			remoteInfo = LEFrameworks;
+		};
 		D85104C52DAE405DDD2555DB48E5CAE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 219C3121616836580C0513E9E9450AB3;
+			remoteGlobalIDString = 572A6DF96E758C18598BCF2D5C805DF7;
 			remoteInfo = LEMapviewFrameworks;
 		};
 /* End PBXContainerItemProxy section */
@@ -174,43 +275,56 @@
 /* Begin PBXFileReference section */
 		009E86F2BEF702078CAC5E9FF5EFB695 /* LE_common_btn_blue@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_blue@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_blue@2x.png"; sourceTree = "<group>"; };
 		01E5D76BC27DD38B74DE08FDD7C38998 /* LELoadingAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LELoadingAnimationView.h; path = LEFrameworks/Classes/LELoadingIndicator/LELoadingAnimationView.h; sourceTree = "<group>"; };
+		027E158117C2D5C43DFB26265A794AD8 /* map_icon_refreshbg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_icon_refreshbg@2x.png"; sourceTree = "<group>"; };
+		02845FF935A74D8FDC627F55D5EAC652 /* map_pin_brown_sel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_brown_sel@2x.png"; sourceTree = "<group>"; };
+		02BF8415D638648CC7F05AD8E3BFD0C4 /* LEMapBaseAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapBaseAnnotationView.h; sourceTree = "<group>"; };
 		03C8A64A4A868BBF219CEFC27DB5ADB7 /* LE_web_icon_forward_on@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_on@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_on@3x.png"; sourceTree = "<group>"; };
 		048DA0ACA0195B174B6CBAA5F86E6645 /* LEBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseViewController.h; path = LEFrameworks/Classes/LEBase/LEBaseViewController.h; sourceTree = "<group>"; };
 		04A6CAC6E4E1C629B39A09B3A3B48A41 /* LE_qrcode_scan_line@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_line@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_line@2x.png"; sourceTree = "<group>"; };
 		072087BE751FD78E29CB113125AEE90F /* LEMultiImagePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEMultiImagePicker.m; path = LEFrameworks/Classes/LEImagePicker/LEMultiImagePicker.m; sourceTree = "<group>"; };
+		081379AC6D33A2CC144E10E17C066559 /* map_loc_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_loc_white@2x.png"; sourceTree = "<group>"; };
+		0825DF89CFBED8FBFF2E96664F20FBC2 /* LEMapBaseAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapBaseAnnotationView.m; sourceTree = "<group>"; };
+		09184300574A914E8BB817C7FBB2F72C /* map_pin_red_sel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_red_sel@2x.png"; sourceTree = "<group>"; };
+		0A0CEC93A659C54D4774FD100E8B20A7 /* map_userpin_arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_userpin_arrow@3x.png"; sourceTree = "<group>"; };
 		0A2D47B18A815EEBA68A55E6284422C8 /* LEExcelView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEExcelView.h; path = LEFrameworks/Classes/LEExcelView/LEExcelView.h; sourceTree = "<group>"; };
+		0AB997B84050E470EAF272C4F1E42572 /* map_btn_status3@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_btn_status3@2x.png"; sourceTree = "<group>"; };
 		0AE90C9724F97F6F0402295617FDA5EA /* LE_web_icon_backward_on@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_on@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_on@2x.png"; sourceTree = "<group>"; };
 		0ECF9A1EFD74B63DD0253F1B9D664C17 /* LECurveProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LECurveProgressView.h; path = LEFrameworks/Classes/LEProgress/LECurveProgressView.h; sourceTree = "<group>"; };
+		0F0E11089D0A40A5F9438567FA006FB5 /* libLEFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLEFrameworks.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B9686C54DDD871F64833E0BFBE02E5 /* LE_emoji_keyboardface@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_keyboardface@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_keyboardface@3x.png"; sourceTree = "<group>"; };
 		129EC74E4210F6F1927E4FD1AE5DD089 /* LEUIFramework.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEUIFramework.h; path = LEFrameworks/Classes/LEAutoLayout/LEUIFramework.h; sourceTree = "<group>"; };
 		13318A35DFCD4372F71010EEDAA38992 /* LEUIFramework.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEUIFramework.m; path = LEFrameworks/Classes/LEAutoLayout/LEUIFramework.m; sourceTree = "<group>"; };
-		16E8262FE9D780A7545590044C95A351 /* LEMapViewUserAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewUserAnnotationView.m; sourceTree = "<group>"; };
-		183C60385C3B4B414FCA74522C59FD23 /* LEMapviewFrameworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LEMapviewFrameworks-dummy.m"; sourceTree = "<group>"; };
 		184289BC376890DCDE0C6534B7327746 /* LE_MessageBackground@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MessageBackground@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MessageBackground@2x.png"; sourceTree = "<group>"; };
-		19657FB83FBFBD7231180465FACC3D66 /* LEMapViewSearchAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSearchAnnotation.m; sourceTree = "<group>"; };
 		1A1A6613BF06A9B23BB8F8C5AC69BD35 /* LERefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LERefresh.h; path = LEFrameworks/Classes/LEBase/LERefresh.h; sourceTree = "<group>"; };
-		1B9ABC1729E6C6F3181935B95AB13AE4 /* LEMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapView.h; sourceTree = "<group>"; };
+		1B113F47F32C4F43CFB8CB8D7439A71F /* LEMapviewFrameworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LEMapviewFrameworks.xcconfig; sourceTree = "<group>"; };
 		1D93B2E1A1D28C533045C60D8A0519DE /* LEBaseTableViewWithRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewWithRefresh.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewWithRefresh.h; sourceTree = "<group>"; };
-		1E3ABC455496C1C69D601B5AAA840812 /* LEMapViewSearchAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewSearchAnnotation.h; sourceTree = "<group>"; };
 		20B69ABAD7FCC0DF16A8D4D224178D11 /* MAOfflineItemCommonCity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItemCommonCity.h; path = MAMapKit.framework/Headers/MAOfflineItemCommonCity.h; sourceTree = "<group>"; };
-		23238D7970584DB2651005E8DD82E709 /* LEMapViewAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotationView.h; sourceTree = "<group>"; };
+		2306C083C7FE91400BEF41D3DCF6F5CE /* LEMapViewSearchAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewSearchAnnotation.h; sourceTree = "<group>"; };
+		2378DF6FA2D3FA5CE9EF474CAFDF7151 /* libPods-LEMapviewFrameworks_Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEMapviewFrameworks_Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24332CC388E18D9C882C128B7E4FC9CB /* MAGroundOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGroundOverlayRenderer.h; path = MAMapKit.framework/Headers/MAGroundOverlayRenderer.h; sourceTree = "<group>"; };
 		247E67CC4D4A5724500C7CB08D0C2177 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		260AD1C51F2C1F5E265F67386F93D045 /* libLEMapviewFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLEMapviewFrameworks.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2614A3E55B79CAA1F3C0068D19246BCF /* LE_qrcode_scan_line@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_line@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_line@3x.png"; sourceTree = "<group>"; };
+		2635EF29FA940F43D31C156CDCE75DB1 /* map_pin_brown_big@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_brown_big@2x.png"; sourceTree = "<group>"; };
+		26479858620FB7BC7C2AB749DBAB3D53 /* map_pin_lightred@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_lightred@3x.png"; sourceTree = "<group>"; };
+		26CF7E64EC3EE8A907E512173E4F9898 /* mapScaleDown2@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "mapScaleDown2@2x.png"; sourceTree = "<group>"; };
 		26FE23EEE3A1F2B4F66871680CCBCAED /* MAUserLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAUserLocation.h; path = MAMapKit.framework/Headers/MAUserLocation.h; sourceTree = "<group>"; };
+		27036B04D38F233FB121C74845389F89 /* LEMapviewFrameworks.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEMapviewFrameworks.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		276E27FF975B421273E72BD69B1DA51F /* LEBaseTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableView.h; path = LEFrameworks/Classes/LEBase/LEBaseTableView.h; sourceTree = "<group>"; };
 		27E2DDB4384B622B71A13A6387873899 /* MAPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolygon.h; path = MAMapKit.framework/Headers/MAPolygon.h; sourceTree = "<group>"; };
+		2978054CD281BDEF11E9AD30E95A76FF /* LEMapSearchBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapSearchBar.h; sourceTree = "<group>"; };
 		29AD73244E243A046B590E3E5786395E /* MAMapKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapKit.h; path = MAMapKit.framework/Headers/MAMapKit.h; sourceTree = "<group>"; };
 		29C69096BA2677D72DFF7B0EC3E0A0CD /* MAMultiColoredPolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiColoredPolylineRenderer.h; path = MAMapKit.framework/Headers/MAMultiColoredPolylineRenderer.h; sourceTree = "<group>"; };
 		2A1B3EDF8F3F3D0AE6BF04935F302FB5 /* MAMapVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapVersion.h; path = MAMapKit.framework/Headers/MAMapVersion.h; sourceTree = "<group>"; };
-		2C1C3E28D5A397B6DE9563C93AA877CF /* LEMapViewAnnotationSubView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotationSubView.h; sourceTree = "<group>"; };
+		2A505764B5EF3D6E36E6C5B7D0BFE29B /* map_userpin_arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_userpin_arrow@2x.png"; sourceTree = "<group>"; };
+		2ADAE172EB17331643588C21DA127698 /* mapScaleDown@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "mapScaleDown@2x.png"; sourceTree = "<group>"; };
+		2B94838BFBF3FD73A58811A61DD6011B /* map_btn_status@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_btn_status@3x.png"; sourceTree = "<group>"; };
 		2D64D769FDFE5F76DCF062372F55AC5B /* LEPieChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEPieChart.m; path = LEFrameworks/Classes/LEChart/LEPieChart.m; sourceTree = "<group>"; };
 		2E9C5554D9280121A588B3BFAA2A66FF /* LEPopup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEPopup.m; path = LEFrameworks/Classes/LEPopup/LEPopup.m; sourceTree = "<group>"; };
+		2FC9A4D8D0E272894520C98142FD8D9A /* map_userpin_circle@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_userpin_circle@2x.png"; sourceTree = "<group>"; };
 		308A7A2CEA92FA20EECF7959D8CE34F3 /* LELineChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LELineChart.h; path = LEFrameworks/Classes/LEChart/LELineChart.h; sourceTree = "<group>"; };
-		314503BC2D79843E87112D4B92AFE3CC /* LEMapViewAnnotationSubView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotationSubView.m; sourceTree = "<group>"; };
 		31F4D2E1DE74BC890720061D8ED1080B /* LE_web_icon_refresh@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_refresh@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_refresh@3x.png"; sourceTree = "<group>"; };
 		332D34F155B2B7EC2DE5DA0E4FB7676A /* MAMultiTexturePolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiTexturePolylineRenderer.h; path = MAMapKit.framework/Headers/MAMultiTexturePolylineRenderer.h; sourceTree = "<group>"; };
-		33F75F2D309F8095B850A091257B3EE4 /* LEMapSearchBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapSearchBar.h; sourceTree = "<group>"; };
 		348815E38D48FCF78773EBD93119C1AF /* LE_lewaverotation.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = LE_lewaverotation.png; path = LEFrameworks/Assets/LEFrameworks.bundle/LE_lewaverotation.png; sourceTree = "<group>"; };
 		34EA6A7BBEEAE486AFD49D0F6A4606AE /* MAPointAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPointAnnotation.h; path = MAMapKit.framework/Headers/MAPointAnnotation.h; sourceTree = "<group>"; };
 		34ED9EECB56F3D645C2119D72EA31EF9 /* MATileOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MATileOverlayRenderer.h; path = MAMapKit.framework/Headers/MATileOverlayRenderer.h; sourceTree = "<group>"; };
@@ -220,9 +334,10 @@
 		39B58F7A8E4F2AD0592AEA48871743E9 /* MAShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAShape.h; path = MAMapKit.framework/Headers/MAShape.h; sourceTree = "<group>"; };
 		3A3B8739E1FAF588A1E3F91AAF81C861 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
 		3AF8B28C4B42ADBFAC6B7EE48E0E5933 /* MAGeodesicPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGeodesicPolyline.h; path = MAMapKit.framework/Headers/MAGeodesicPolyline.h; sourceTree = "<group>"; };
-		3B10D686E6663D4DEC8AC993848ED72E /* LEMapviewFrameworks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapviewFrameworks.h; sourceTree = "<group>"; };
+		3B3856495469D64695B9738B6F1D29AD /* map_pin_lightred_big@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_lightred_big@2x.png"; sourceTree = "<group>"; };
 		3D7F566D3B56E6A4472AC89C4F07A06A /* LEWaveProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEWaveProgressView.m; path = LEFrameworks/Classes/LEProgress/LEWaveProgressView.m; sourceTree = "<group>"; };
 		4087AF3A1DAD654BCEEEA0E7D272D664 /* MATouchPoi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MATouchPoi.h; path = MAMapKit.framework/Headers/MATouchPoi.h; sourceTree = "<group>"; };
+		40C610E141A2B4B72B386D45D618FAEE /* map_pin_selected@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_selected@2x.png"; sourceTree = "<group>"; };
 		42C4A4624143AEC76C2830AAC83C9058 /* MAGroundOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGroundOverlay.h; path = MAMapKit.framework/Headers/MAGroundOverlay.h; sourceTree = "<group>"; };
 		43968EEDFAB13AE7A56A0EE307A48CC6 /* Pods-LEMapviewFrameworks_Test-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LEMapviewFrameworks_Test-resources.sh"; sourceTree = "<group>"; };
 		44EDAB0CB561B2CA46F9DB084A2E2C2B /* LE_web_icon_forward_off@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_off@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_off@2x.png"; sourceTree = "<group>"; };
@@ -231,21 +346,23 @@
 		4796A9432923E294F457B9D3663DC865 /* LE_qrcode_scan_bg@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_bg@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_bg@3x.png"; sourceTree = "<group>"; };
 		481587553C1EAF859E891194F0F335BF /* Pods-LEMapviewFrameworks_Test-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LEMapviewFrameworks_Test-acknowledgements.markdown"; sourceTree = "<group>"; };
 		49D852B336625CC607051E1F1DA825CD /* LE_popup_bg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_popup_bg@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_popup_bg@2x.png"; sourceTree = "<group>"; };
+		4AF96895E5F14B5F7F1378F4C5AF7B6B /* mapScaleUp2@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "mapScaleUp2@2x.png"; sourceTree = "<group>"; };
 		4C639D83EC170556836BC19019D98021 /* LEBadge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBadge.m; path = LEFrameworks/Classes/LEBadge/LEBadge.m; sourceTree = "<group>"; };
-		4C6D2AFDEA89B87A076669A3ACD205EB /* LEMapCallOutViewAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapCallOutViewAnnotation.m; sourceTree = "<group>"; };
 		4F1B3B607DACD6FFE13D0C3D582DA890 /* LE_MessageBackground@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MessageBackground@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MessageBackground@3x.png"; sourceTree = "<group>"; };
 		510A87F5294DB8E3CF67BBB7607F3D10 /* LEWaveProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEWaveProgressView.h; path = LEFrameworks/Classes/LEProgress/LEWaveProgressView.h; sourceTree = "<group>"; };
 		52ACC916A0BE60E07BB2EE50C38E930D /* AMapNearbyUploadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapNearbyUploadInfo.h; path = AMapSearchKit.framework/Headers/AMapNearbyUploadInfo.h; sourceTree = "<group>"; };
 		536D10FA9E1453B0FFB6C0879FF484DA /* LEScanQRCode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEScanQRCode.m; path = LEFrameworks/Classes/LEQRCodeScanner/LEScanQRCode.m; sourceTree = "<group>"; };
+		578316613D08D57EA68AEE656D35BAD4 /* map_pin_searched@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_searched@2x.png"; sourceTree = "<group>"; };
 		57EF3E037DC035CDE7E957FF0FF062EE /* EmojiInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmojiInputView.m; path = LEFrameworks/Classes/LEEmojiInputView/EmojiInputView.m; sourceTree = "<group>"; };
 		597979A4C37D5BC12E3EC6A82220AB64 /* LEAppMessageDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEAppMessageDelegate.h; path = LEFrameworks/Classes/LEAppMessageDelegate/LEAppMessageDelegate.h; sourceTree = "<group>"; };
 		5983B2CFD7FCEF9A879A840A0930C1A5 /* LEBarChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBarChart.h; path = LEFrameworks/Classes/LEChart/LEBarChart.h; sourceTree = "<group>"; };
 		5A7853D26938A7B21862A0C23A84BF11 /* LE_emoji_smileface@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_smileface@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_smileface@3x.png"; sourceTree = "<group>"; };
 		5A9C027108BF4DB385856589CF341157 /* LEWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEWebView.h; path = LEFrameworks/Classes/LEWebview/LEWebView.h; sourceTree = "<group>"; };
 		5B62E50437604FFED38DCD3F11ADC283 /* LEFrameworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEFrameworks-prefix.pch"; sourceTree = "<group>"; };
-		5D1BE2815F18D8B3C7A419A5D12DCF30 /* LEMapSearchBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapSearchBar.m; sourceTree = "<group>"; };
+		5D85137EACBF07C787D75481B7A9FFCC /* LEMapCallOutViewAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapCallOutViewAnnotation.m; sourceTree = "<group>"; };
 		5E7C8D80645FCA972C0EED94ECABD9D1 /* AMapUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapUtility.h; path = AMapFoundationKit.framework/Headers/AMapUtility.h; sourceTree = "<group>"; };
 		5F4E3627E5EA5A61855C6FF75C539BE9 /* MAPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPinAnnotationView.h; path = MAMapKit.framework/Headers/MAPinAnnotationView.h; sourceTree = "<group>"; };
+		600C6D5B712EE928AF7E4F03D7D5BDA1 /* map_pin_red_sel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_red_sel@3x.png"; sourceTree = "<group>"; };
 		6187643A8B9BE2AD2959DA5E73D7C7E2 /* LE_tableview_icon_arrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_tableview_icon_arrow@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_tableview_icon_arrow@3x.png"; sourceTree = "<group>"; };
 		62F3DA9745ACEE36E1B79F474F959578 /* LE_common_btn_blue@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_blue@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_blue@3x.png"; sourceTree = "<group>"; };
 		63300C1C3790342473371088FF024F81 /* LECurveProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LECurveProgressView.m; path = LEFrameworks/Classes/LEProgress/LECurveProgressView.m; sourceTree = "<group>"; };
@@ -256,36 +373,50 @@
 		68A3E4AD176124D89690B8E61AF65C61 /* LEBottomTabbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBottomTabbar.h; path = LEFrameworks/Classes/LEBottomTabbar/LEBottomTabbar.h; sourceTree = "<group>"; };
 		6A30738580E59DAF1B77D3F9128FC363 /* MACircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MACircle.h; path = MAMapKit.framework/Headers/MACircle.h; sourceTree = "<group>"; };
 		6B7881EF8A87D8457EFE2AFDE1C8823B /* MAPolylineRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolylineRenderer.h; path = MAMapKit.framework/Headers/MAPolylineRenderer.h; sourceTree = "<group>"; };
+		6BBEE49276A49DF1F10E7FD8ED55F700 /* LEMapViewSearchAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewSearchAnnotationView.h; sourceTree = "<group>"; };
 		6DD5738A5C23C6CB80DC59102F5398C8 /* Pods-LEMapviewFrameworks_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LEMapviewFrameworks_Test.debug.xcconfig"; sourceTree = "<group>"; };
 		6EA221A41DD488059A1E37337A5B34D9 /* LE_lewave.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = LE_lewave.png; path = LEFrameworks/Assets/LEFrameworks.bundle/LE_lewave.png; sourceTree = "<group>"; };
 		72A0C9D50E49FF4E2CE69A077E40FB1C /* LEFrameworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LEFrameworks-dummy.m"; sourceTree = "<group>"; };
+		75331AD703DBD5EAE07718BF0679AC76 /* map_btn_status2@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_btn_status2@3x.png"; sourceTree = "<group>"; };
 		7565D290C5AAA9A41B8C1938D8C742C4 /* LEBadge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBadge.h; path = LEFrameworks/Classes/LEBadge/LEBadge.h; sourceTree = "<group>"; };
+		75EC64FD5278B3F0E44D8261FAD696B4 /* LEMapviewFrameworks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapviewFrameworks.h; sourceTree = "<group>"; };
 		793C777504ED9974ECDFCC010378FD75 /* LE_emoji_keyboardface@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_keyboardface@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_keyboardface@2x.png"; sourceTree = "<group>"; };
 		79F5930707C980AE36A091E425EBA148 /* MACircleRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MACircleRenderer.h; path = MAMapKit.framework/Headers/MACircleRenderer.h; sourceTree = "<group>"; };
-		7BE4BB18A29AC41B1EBE5885DE95012F /* LEMapViewSearchAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSearchAnnotationView.m; sourceTree = "<group>"; };
+		7BA486E7FFF0D67028736841F435F876 /* map_tip_top@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_tip_top@2x.png"; sourceTree = "<group>"; };
+		7BD39CCD61E816994651D3512203046F /* map_compass@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_compass@2x.png"; sourceTree = "<group>"; };
 		7F3DD01D4CA80CE86F99CCA52CC8749A /* LE_web_icon_share@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_share@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_share@3x.png"; sourceTree = "<group>"; };
+		80528B3B1D35D77800AA2056 /* LEMapViewSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMapViewSettings.h; sourceTree = "<group>"; };
+		80528B3C1D35D77800AA2056 /* LEMapViewSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSettings.m; sourceTree = "<group>"; };
 		80D5A27D7A551873DA136BA50F86D929 /* MAOfflineItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItem.h; path = MAMapKit.framework/Headers/MAOfflineItem.h; sourceTree = "<group>"; };
+		8202A9C32FA3048C118BFBB5053AE0B9 /* map_loc_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_loc_white@3x.png"; sourceTree = "<group>"; };
+		82766A0B7787720A6663BEA8FC439C1C /* map_compass@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_compass@3x.png"; sourceTree = "<group>"; };
 		82DB4F35CF26EDA924DCBEE0040276B6 /* MAOfflineCity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineCity.h; path = MAMapKit.framework/Headers/MAOfflineCity.h; sourceTree = "<group>"; };
+		85973625D3F7C70F5D829D919C5722DD /* map_tip_split@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_tip_split@2x.png"; sourceTree = "<group>"; };
+		869AE88B744BDB6FEE39D4314E525E30 /* ResourceBundle-LEMapviewFrameworks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LEMapviewFrameworks-Info.plist"; sourceTree = "<group>"; };
 		8790D7CC9C309616F7E27BB704E5234A /* LEBasePopupEmptyPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBasePopupEmptyPage.m; path = LEFrameworks/Classes/LEPopup/LEBasePopupEmptyPage.m; sourceTree = "<group>"; };
+		898A51DB460E776FE2D9F0B6C75725D8 /* LEMapViewAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotation.h; sourceTree = "<group>"; };
 		89EAFADBC92DA6B43D26CC3D8F040EFF /* MATileOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MATileOverlay.h; path = MAMapKit.framework/Headers/MATileOverlay.h; sourceTree = "<group>"; };
 		8B80043A42A26C348BA3FDA7740591EA /* AMapSearchError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchError.h; path = AMapSearchKit.framework/Headers/AMapSearchError.h; sourceTree = "<group>"; };
-		8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LEMapviewFrameworks.xcconfig; sourceTree = "<group>"; };
-		8C2BCEB7ADBC66DA5CEEC4BADE304DAF /* LEMapCallOutAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapCallOutAnnotationView.h; sourceTree = "<group>"; };
+		8BAF482AFBFCB47EC371865A1F1287E6 /* LEMapCallOutAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapCallOutAnnotationView.m; sourceTree = "<group>"; };
+		8BE8C5F7C286D4A9C76C59E7D6EE3006 /* LEMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapView.m; sourceTree = "<group>"; };
 		8C42FED34F4F1F575916907619EA6EC2 /* AMapSearchVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchVersion.h; path = AMapSearchKit.framework/Headers/AMapSearchVersion.h; sourceTree = "<group>"; };
-		8C8FFD2196F789BBDFA79D678DED17B9 /* LEMapViewAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotationView.m; sourceTree = "<group>"; };
+		8C606BC1E704D36C785928567D3FB5D8 /* LEMapViewAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotationView.h; sourceTree = "<group>"; };
 		8D5F1E58CDADA8AF504529C13F9E9310 /* MAHeatMapTileOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAHeatMapTileOverlay.h; path = MAMapKit.framework/Headers/MAHeatMapTileOverlay.h; sourceTree = "<group>"; };
-		8D883A6271EE5ACF17AC2659B9001353 /* LEMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapView.m; sourceTree = "<group>"; };
+		8D6BE71EFF535CDFA22EF00646AF2A9E /* LEFrameworks.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEFrameworks.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		904AF746AD29BA58D3CD40D7AB5F153E /* MAAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAAnnotation.h; path = MAMapKit.framework/Headers/MAAnnotation.h; sourceTree = "<group>"; };
 		91955079F673AB2AEE466774A5D1862F /* LE_web_icon_backward_off@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_off@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_off@3x.png"; sourceTree = "<group>"; };
 		922A098097C77927F522790CCD865455 /* LELoadingAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LELoadingAnimationView.m; path = LEFrameworks/Classes/LELoadingIndicator/LELoadingAnimationView.m; sourceTree = "<group>"; };
 		925E010520CA7BDA0D6A9FFB3F3A0F96 /* LEBaseTableViewSectionWithIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewSectionWithIcon.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSectionWithIcon.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94586024D84AD22D842DB697A6E75582 /* EmojiImagePageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EmojiImagePageView.h; path = LEFrameworks/Classes/LEEmojiInputView/EmojiImagePageView.h; sourceTree = "<group>"; };
+		951C7519347D6B70BA993482BA1828F1 /* LEMapViewAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotation.m; sourceTree = "<group>"; };
 		96425E0857A0BF30607011D3CA15176F /* LE_emoji_smileface@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_emoji_smileface@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_emoji_smileface@2x.png"; sourceTree = "<group>"; };
+		98AF95176AD76A07A49BD0A005E5514D /* map_tip_normal@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_tip_normal@2x.png"; sourceTree = "<group>"; };
 		991B8692EEF86E59DB61E7AECC3D407D /* LEFrameworks.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LEFrameworks.xcconfig; sourceTree = "<group>"; };
 		9A107B0740817E734E798F90CDD90894 /* EmojiImagePageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EmojiImagePageView.m; path = LEFrameworks/Classes/LEEmojiInputView/EmojiImagePageView.m; sourceTree = "<group>"; };
 		9A4140515BB8BD490279716B850E08F0 /* AMapURLSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapURLSearch.h; path = AMapFoundationKit.framework/Headers/AMapURLSearch.h; sourceTree = "<group>"; };
 		9AF7EE71C4AA074D035CFB07C54B2B13 /* LE_common_navigation_btn_back@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_navigation_btn_back@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_navigation_btn_back@3x.png"; sourceTree = "<group>"; };
+		9BD6634417FC2C9145492470BA069032 /* map_pin_brown@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_brown@3x.png"; sourceTree = "<group>"; };
 		9D2D64CE07D0B7E47EFA83A0FD3C0688 /* LEBaseTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewCell.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewCell.h; sourceTree = "<group>"; };
 		9D9402F4BD24FC1729858AD6DE3CD30A /* MAAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAAnnotationView.h; path = MAMapKit.framework/Headers/MAAnnotationView.h; sourceTree = "<group>"; };
 		9EC9C26B500D0C039ACE1BCDAE4527F3 /* LEPieChart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEPieChart.h; path = LEFrameworks/Classes/LEChart/LEPieChart.h; sourceTree = "<group>"; };
@@ -293,30 +424,38 @@
 		9FDD2C576D43C13B00E926A289EDB7FB /* LE_common_btn_gray@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_gray@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_gray@3x.png"; sourceTree = "<group>"; };
 		A00E711846D5E6D6DF1F21079F06B887 /* MAOfflineItemMunicipality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItemMunicipality.h; path = MAMapKit.framework/Headers/MAOfflineItemMunicipality.h; sourceTree = "<group>"; };
 		A0E3B3C0791A4B5A06FD7A402C3473DB /* LELineChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LELineChart.m; path = LEFrameworks/Classes/LEChart/LELineChart.m; sourceTree = "<group>"; };
+		A10B7EFEFC1D00D2AB572E0C84905465 /* mapScaleBG@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "mapScaleBG@2x.png"; sourceTree = "<group>"; };
 		A1B0C567F7382CEF3BE87D1212E83B43 /* LETabbarRelatedPageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LETabbarRelatedPageView.h; path = LEFrameworks/Classes/LEBottomTabbar/LETabbarRelatedPageView.h; sourceTree = "<group>"; };
+		A1BD64483CA41866FA8652464150F8E7 /* LEMapViewAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotationView.m; sourceTree = "<group>"; };
+		A27A301798D198A4480DB015DE7D3FF5 /* map_rect_search@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_rect_search@2x.png"; sourceTree = "<group>"; };
 		A36A620262F0E254D1FDA435D6CA3A41 /* AMapURLSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapURLSearchType.h; path = AMapFoundationKit.framework/Headers/AMapURLSearchType.h; sourceTree = "<group>"; };
 		A3A5CE52F8A012CD1E948ACAF8732F99 /* MAMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMapView.h; path = MAMapKit.framework/Headers/MAMapView.h; sourceTree = "<group>"; };
 		A521E29E07DA023415D834D3D3C80433 /* LEBasePopupEmptyPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBasePopupEmptyPage.h; path = LEFrameworks/Classes/LEPopup/LEBasePopupEmptyPage.h; sourceTree = "<group>"; };
-		A790ED6961BEF88CB2EC69FE76F101CA /* LEFrameworks.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LEFrameworks.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8039440B92362C1CA5B6B6E54ABA01B /* map_icon_refreshbg@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_icon_refreshbg@3x.png"; sourceTree = "<group>"; };
 		A99C6EB1B9CD09D044BEAF032B7087A8 /* AMapServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapServices.h; path = AMapFoundationKit.framework/Headers/AMapServices.h; sourceTree = "<group>"; };
-		AAD36FE42BCEA266910070CA73393D9D /* LEMapViewAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotation.m; sourceTree = "<group>"; };
+		AA37EC38170B8BCA80E8B2182A041860 /* LEMapViewUserAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewUserAnnotationView.m; sourceTree = "<group>"; };
 		ACFA84055CF70235D33834737C655717 /* LE_web_icon_close@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_close@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_close@3x.png"; sourceTree = "<group>"; };
+		ADBE940F8CA865A91BC9984E39F55BAE /* map_pin_lightred@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_lightred@2x.png"; sourceTree = "<group>"; };
+		ADF7DC0DB62714855E07AAFA5C1D6EB3 /* map_icon_refresh@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_icon_refresh@2x.png"; sourceTree = "<group>"; };
 		AEF4E8AF45E2E5E60E227BFCB8762E93 /* LE_web_icon_backward_off@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_off@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_off@2x.png"; sourceTree = "<group>"; };
 		B09484A76E47E6313C97CE4CA9664DEE /* LE_web_icon_backward_on@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_backward_on@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_backward_on@3x.png"; sourceTree = "<group>"; };
+		B0D972CCD58E3C28C2DD6E7FAE5AA3DF /* LEMapCallOutViewAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapCallOutViewAnnotation.h; sourceTree = "<group>"; };
 		B244586062401DC625C50942488FB734 /* MAOfflineItemNationWide.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineItemNationWide.h; path = MAMapKit.framework/Headers/MAOfflineItemNationWide.h; sourceTree = "<group>"; };
 		B2749621AB7B0D9ABA992ADADA79A2B8 /* Pods-LEMapviewFrameworks_Test-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LEMapviewFrameworks_Test-frameworks.sh"; sourceTree = "<group>"; };
-		B30BF6CF88432CB84189ECF62F163537 /* LEMapViewUserAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewUserAnnotationView.h; sourceTree = "<group>"; };
+		B4344ACBBD473A644BE176986003A8F4 /* map_pin_red_big@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_red_big@2x.png"; sourceTree = "<group>"; };
 		B61A85A43505837986EF690747FABB50 /* MAPolygonRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolygonRenderer.h; path = MAMapKit.framework/Headers/MAPolygonRenderer.h; sourceTree = "<group>"; };
-		B86CBA14098405E5F7B13E74D1804BC8 /* LEMapBaseAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapBaseAnnotationView.m; sourceTree = "<group>"; };
+		B9B2019A7C8EE3E745D7A3A20EDF8EA0 /* LEMapViewSearchAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSearchAnnotation.m; sourceTree = "<group>"; };
 		B9C82601E5B843779B507774D93EAF6C /* MAOverlayRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlayRenderer.h; path = MAMapKit.framework/Headers/MAOverlayRenderer.h; sourceTree = "<group>"; };
 		BA01B045F002BD0AB0D1E253354B3A5A /* MAOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlay.h; path = MAMapKit.framework/Headers/MAOverlay.h; sourceTree = "<group>"; };
 		BA86BA7B564382E7DB0CC7CC4B57B18D /* ResourceBundle-LEFrameworks-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LEFrameworks-Info.plist"; sourceTree = "<group>"; };
 		BB44D3372DCBE5FD9C566FFF2710CAA4 /* AMapNearbySearchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapNearbySearchManager.h; path = AMapSearchKit.framework/Headers/AMapNearbySearchManager.h; sourceTree = "<group>"; };
 		BCE450A45E368DAC7AD2DAD460A7DB44 /* AMapFoundationVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapFoundationVersion.h; path = AMapFoundationKit.framework/Headers/AMapFoundationVersion.h; sourceTree = "<group>"; };
 		BDEFB6DF7DE80398B550DCB33BE7D5B4 /* MAOfflineMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOfflineMap.h; path = MAMapKit.framework/Headers/MAOfflineMap.h; sourceTree = "<group>"; };
+		C08493D57FAF9439E38EC11B55031C51 /* map_btn_status2@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_btn_status2@2x.png"; sourceTree = "<group>"; };
+		C091345DB6DB4783EC5459F9C6A6F867 /* LEMapviewFrameworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEMapviewFrameworks-prefix.pch"; sourceTree = "<group>"; };
 		C0DB90A5060892F83FEC847DA56F0D34 /* LEExcelView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEExcelView.m; path = LEFrameworks/Classes/LEExcelView/LEExcelView.m; sourceTree = "<group>"; };
+		C13E594604ED7171F948F82BFB326F4A /* map_btn_status3@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_btn_status3@3x.png"; sourceTree = "<group>"; };
 		C17753EAE8BBA8084B74F9DD03AA5AB7 /* LEBaseTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableView.m; path = LEFrameworks/Classes/LEBase/LEBaseTableView.m; sourceTree = "<group>"; };
-		C18109205128A6B864C07EF21F6AC24A /* LEMapBaseAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapBaseAnnotationView.h; sourceTree = "<group>"; };
 		C24A9D0546B6463430C7AE1B3462600E /* HMPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMPageControl.m; path = LEFrameworks/Classes/LEEmojiInputView/HMPageControl/HMPageControl.m; sourceTree = "<group>"; };
 		C2BC148D97296BED63ACF4E91DD95489 /* LEBottomTabbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBottomTabbar.m; path = LEFrameworks/Classes/LEBottomTabbar/LEBottomTabbar.m; sourceTree = "<group>"; };
 		C2D41B3F0F58D505DDA02CD1D1023DDB /* LE_common_navigation_btn_back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_navigation_btn_back@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_navigation_btn_back@2x.png"; sourceTree = "<group>"; };
@@ -324,6 +463,8 @@
 		C44ACBDCD76010E09130D875EE24CCAA /* AMap.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
 		C4DB52C0B4B96123DE3B9EEF0D341554 /* LEBaseEmptyTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseEmptyTableViewCell.m; path = LEFrameworks/Classes/LEBase/LEBaseEmptyTableViewCell.m; sourceTree = "<group>"; };
 		C529B364A803AE049539067F348EDB04 /* LE_web_icon_share@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_share@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_share@2x.png"; sourceTree = "<group>"; };
+		C5D5EB2C098891912049BBE71CECF4E4 /* LEMapSearchBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapSearchBar.m; sourceTree = "<group>"; };
+		C6F90CC62D903C9597727BD31B37FF94 /* LEMapViewAnnotationSubView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewAnnotationSubView.m; sourceTree = "<group>"; };
 		C7314266EC4A099293B0534F4E4E8AC3 /* MAPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAPolyline.h; path = MAMapKit.framework/Headers/MAPolyline.h; sourceTree = "<group>"; };
 		CB06ADB6B330D92DC3D3206AEB4EDE3B /* LELocalNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LELocalNotification.m; path = LEFrameworks/Classes/LELocalNotification/LELocalNotification.m; sourceTree = "<group>"; };
 		CC6A2FA96826A65D5FFCDE6191014449 /* AMapURLSearchConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapURLSearchConfig.h; path = AMapFoundationKit.framework/Headers/AMapURLSearchConfig.h; sourceTree = "<group>"; };
@@ -333,20 +474,24 @@
 		CEC226871C4DEBDC700568152D52D0C9 /* MAGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGeometry.h; path = MAMapKit.framework/Headers/MAGeometry.h; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CEE9FC33C61F5C5F1054D461E306E40E /* LEBaseTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewCell.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewCell.m; sourceTree = "<group>"; };
-		CF76FB13039771B52F51B767A1BFBEFB /* LEMapCallOutAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapCallOutAnnotationView.m; sourceTree = "<group>"; };
 		D0A3B1471663C8AFA90F6321707D544A /* LE_common_btn_gray@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_common_btn_gray@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_common_btn_gray@2x.png"; sourceTree = "<group>"; };
 		D14CF43C29E09B6C15A584EF1E46B15A /* MAMultiPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiPoint.h; path = MAMapKit.framework/Headers/MAMultiPoint.h; sourceTree = "<group>"; };
-		D17B5FB56015109B0152AB93D1FEDCF0 /* LEMapviewFrameworks-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LEMapviewFrameworks-prefix.pch"; sourceTree = "<group>"; };
+		D1C247429858A70F4F7DC4EAFDF138E7 /* map_rect_search@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_rect_search@3x.png"; sourceTree = "<group>"; };
+		D40E3F5B39DAE19A03194B9190DEECC2 /* map_tip_normal@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_tip_normal@3x.png"; sourceTree = "<group>"; };
 		D4D96ADC08F600E19D2CBD59AA0F35C4 /* LEBaseEmptyTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseEmptyTableViewCell.h; path = LEFrameworks/Classes/LEBase/LEBaseEmptyTableViewCell.h; sourceTree = "<group>"; };
 		D5B9568C6C22EDF7E3C9775C37645E6E /* LE_tableview_icon_arrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_tableview_icon_arrow@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_tableview_icon_arrow@2x.png"; sourceTree = "<group>"; };
+		D634587D37855DB4809621127407079D /* map_pin_lightred_sel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_lightred_sel@3x.png"; sourceTree = "<group>"; };
 		D85DB1EE5262095F28EB6BDC7B4239AC /* LE_web_icon_forward_on@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_on@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_on@2x.png"; sourceTree = "<group>"; };
 		DA014725FF55DDD4DA02E7729E01E08C /* MAIndoorInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAIndoorInfo.h; path = MAMapKit.framework/Headers/MAIndoorInfo.h; sourceTree = "<group>"; };
 		DA3D1D000BC25DA87DBA467AA3842B6E /* LEBaseTableViewSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewSection.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSection.m; sourceTree = "<group>"; };
 		DA55216C364A3CBB889871A8CE003203 /* LE_web_icon_refresh@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_refresh@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_refresh@2x.png"; sourceTree = "<group>"; };
-		DE203275FDF5A533FC8AA9E5ED6013F2 /* libLEMapviewFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLEMapviewFrameworks.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC04161CF0555E6921F04800DE5B9C21 /* LEMapCallOutAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapCallOutAnnotationView.h; sourceTree = "<group>"; };
+		DC8CFC936BAA1CD22BC852F05093D787 /* LEMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapView.h; sourceTree = "<group>"; };
+		DD9B5F3B789B05457CA32F9A7E0BF822 /* LEMapViewSearchAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LEMapViewSearchAnnotationView.m; sourceTree = "<group>"; };
 		DE8F1D41A678FE7951045D5A7ADDF8B5 /* LEBaseTableViewSectionWithIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewSectionWithIcon.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSectionWithIcon.h; sourceTree = "<group>"; };
 		DEC13147761879A75E67719A5A8B715E /* LEScanQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEScanQRCode.h; path = LEFrameworks/Classes/LEQRCodeScanner/LEScanQRCode.h; sourceTree = "<group>"; };
 		DEE0882767394E7406AA67E58B1DB0DB /* AMapSearchKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchKit.h; path = AMapSearchKit.framework/Headers/AMapSearchKit.h; sourceTree = "<group>"; };
+		DEE4556B93F5E258B7CFD51F50A1926C /* LEMapViewAnnotationSubView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotationSubView.h; sourceTree = "<group>"; };
 		E02806660D2A5C416E78E873BF82C1BB /* LE_web_icon_forward_off@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_web_icon_forward_off@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_web_icon_forward_off@3x.png"; sourceTree = "<group>"; };
 		E03B45C94246185149D1441E5BD85F46 /* Pods-LEMapviewFrameworks_Test-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LEMapviewFrameworks_Test-acknowledgements.plist"; sourceTree = "<group>"; };
 		E1430BA8DA1B758442377D8A118F981E /* HMPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMPageControl.h; path = LEFrameworks/Classes/LEEmojiInputView/HMPageControl/HMPageControl.h; sourceTree = "<group>"; };
@@ -354,28 +499,34 @@
 		E48D8683C4008E7157CAFE594B955F34 /* LE_MultiImagePickerCheck@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MultiImagePickerCheck@3x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MultiImagePickerCheck@3x.png"; sourceTree = "<group>"; };
 		E5EFCEDAD450D762051B522A338EFFA3 /* AMapSearchObj.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMapSearchObj.h; path = AMapSearchKit.framework/Headers/AMapSearchObj.h; sourceTree = "<group>"; };
 		E6EC6E0DF40DE5FB4E272E5600039070 /* LEBaseTableViewWithRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBaseTableViewWithRefresh.m; path = LEFrameworks/Classes/LEBase/LEBaseTableViewWithRefresh.m; sourceTree = "<group>"; };
-		E9C2D58E67C56E1087606F2E71AC1EEB /* LEMapCallOutViewAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapCallOutViewAnnotation.h; sourceTree = "<group>"; };
-		EBF68D9F7605B402EB2865C501AC2C70 /* LEMapViewSearchAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewSearchAnnotationView.h; sourceTree = "<group>"; };
+		EB7C1246A66E050E640FB452192C39B0 /* map_icon_refresh@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_icon_refresh@3x.png"; sourceTree = "<group>"; };
+		ECB2C990A36C4F1022290C6A6B56D5A1 /* map_pin_red@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_red@3x.png"; sourceTree = "<group>"; };
 		ECF0434FDE0113AA65DB4A0904AB2C90 /* EmojiInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EmojiInputView.h; path = LEFrameworks/Classes/LEEmojiInputView/EmojiInputView.h; sourceTree = "<group>"; };
+		ED065E1853EFA4B0905B1E6491055070 /* LEMapviewFrameworks-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LEMapviewFrameworks-dummy.m"; sourceTree = "<group>"; };
+		EDBB551329D6A637382A8E374352BEB1 /* map_tip_hot@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_tip_hot@2x.png"; sourceTree = "<group>"; };
 		EE2E6EB25DBDF1D71FD01177D403A725 /* MAOverlayPathRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAOverlayPathRenderer.h; path = MAMapKit.framework/Headers/MAOverlayPathRenderer.h; sourceTree = "<group>"; };
 		EF151FD389B2C90B721E8574333839F1 /* LE_MultiImagePickerCheck@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_MultiImagePickerCheck@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_MultiImagePickerCheck@2x.png"; sourceTree = "<group>"; };
 		F08913632AA04AA2A362708496247254 /* Pods-LEMapviewFrameworks_Test-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LEMapviewFrameworks_Test-dummy.m"; sourceTree = "<group>"; };
 		F18707150B5151BFAA070B4E7583D1B2 /* MAMultiPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAMultiPolyline.h; path = MAMapKit.framework/Headers/MAMultiPolyline.h; sourceTree = "<group>"; };
 		F1A6224B4F2C0F388139E128BBE186DB /* LEBaseTableViewSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEBaseTableViewSection.h; path = LEFrameworks/Classes/LEBase/LEBaseTableViewSection.h; sourceTree = "<group>"; };
+		F1B4E8E099DC37A8CE50CAFB346E7E19 /* map_pin_red@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_red@2x.png"; sourceTree = "<group>"; };
 		F23E6921FEB0ED439AA629F7AD2ED7A3 /* LE_NSDate+Category.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LE_NSDate+Category.m"; path = "LEFrameworks/Classes/LEDateCategory/LE_NSDate+Category.m"; sourceTree = "<group>"; };
-		F48A5A46A37600325E607B80F3B1F674 /* LEMapViewAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewAnnotation.h; sourceTree = "<group>"; };
+		F48DC4856646DE7F90DE0B7B75315821 /* mapScaleUp@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "mapScaleUp@2x.png"; sourceTree = "<group>"; };
 		F4E1656619D02AA0B3A6D01D3533C3EE /* Pods-LEMapviewFrameworks_Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LEMapviewFrameworks_Test.release.xcconfig"; sourceTree = "<group>"; };
 		F52795F110DAA563100702F5ED7F1C9F /* LEBarChart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEBarChart.m; path = LEFrameworks/Classes/LEChart/LEBarChart.m; sourceTree = "<group>"; };
+		F5CBE3F97C5ED145BDAE8E92DE4D8F6B /* LEMapViewUserAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LEMapViewUserAnnotationView.h; sourceTree = "<group>"; };
+		F5D730C9364D192F6537948535A47A70 /* map_btn_status@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_btn_status@2x.png"; sourceTree = "<group>"; };
 		F6AEF681097D063C5043EECCA603596E /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		F716EEBE6A77F0A6C3D565F13384DF19 /* map_pin_lightred_sel@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_lightred_sel@2x.png"; sourceTree = "<group>"; };
 		F7C0408F3A9C470AE4884291D8B9988D /* LETabbarRelatedPageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LETabbarRelatedPageView.m; path = LEFrameworks/Classes/LEBottomTabbar/LETabbarRelatedPageView.m; sourceTree = "<group>"; };
 		F809AA26E01ED9851815B45711A533F2 /* LE_qrcode_scan_bg@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "LE_qrcode_scan_bg@2x.png"; path = "LEFrameworks/Assets/LEFrameworks.bundle/LE_qrcode_scan_bg@2x.png"; sourceTree = "<group>"; };
-		FBAF4BAABD15CA534B94CC86BC3214F8 /* libLEFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLEFrameworks.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB86DB13D4439D94C24878DF4F0CCD78 /* map_pin_brown@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_brown@2x.png"; sourceTree = "<group>"; };
 		FC53AB38B77B350DC12E5BB0804C9EE5 /* LEWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEWebView.m; path = LEFrameworks/Classes/LEWebview/LEWebView.m; sourceTree = "<group>"; };
 		FCE2B2E8937B008E8C8548EAE4954009 /* LEFrameworks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEFrameworks.h; path = LEFrameworks/Classes/LEFrameworks.h; sourceTree = "<group>"; };
-		FD732BD66667F2E3796480E001E884C9 /* libPods-LEMapviewFrameworks_Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEMapviewFrameworks_Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1A22F63F45EE04398E66C8134A4D26 /* LE_NSDate+Category.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LE_NSDate+Category.h"; path = "LEFrameworks/Classes/LEDateCategory/LE_NSDate+Category.h"; sourceTree = "<group>"; };
 		FE48B9C2A3784F575015BFD6CDD0480D /* LESegmentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LESegmentView.m; path = LEFrameworks/Classes/LESegmentView/LESegmentView.m; sourceTree = "<group>"; };
 		FE60B7D09B3C53E3451B470A389E32C7 /* LE_EmojiToolBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LE_EmojiToolBar.h; path = LEFrameworks/Classes/LEEmojiInputView/LE_EmojiToolBar.h; sourceTree = "<group>"; };
+		FE7A3699768F2EAE8D78DB433FFF9E21 /* map_pin_brown_sel@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "map_pin_brown_sel@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +535,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4EF8E4D83DF2E761D8B54F9E4FAE2B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		810E3C65F3BA74B75BCF26D12A18A778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E5B2F378DAB8AF173ECFCE63506DE0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,17 +561,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE10B550E7DB25E237020D0F56583133 /* Frameworks */ = {
+		CE50A878A7FB278B9DFC92089D490D05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97F2CE7EE671EF35BB8F2C125446EF6D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BA6E95662DF6EA9A24ED6473BBD15DE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				02BF8415D638648CC7F05AD8E3BFD0C4 /* LEMapBaseAnnotationView.h */,
+				0825DF89CFBED8FBFF2E96664F20FBC2 /* LEMapBaseAnnotationView.m */,
+				DC04161CF0555E6921F04800DE5B9C21 /* LEMapCallOutAnnotationView.h */,
+				8BAF482AFBFCB47EC371865A1F1287E6 /* LEMapCallOutAnnotationView.m */,
+				B0D972CCD58E3C28C2DD6E7FAE5AA3DF /* LEMapCallOutViewAnnotation.h */,
+				5D85137EACBF07C787D75481B7A9FFCC /* LEMapCallOutViewAnnotation.m */,
+				2978054CD281BDEF11E9AD30E95A76FF /* LEMapSearchBar.h */,
+				C5D5EB2C098891912049BBE71CECF4E4 /* LEMapSearchBar.m */,
+				DC8CFC936BAA1CD22BC852F05093D787 /* LEMapView.h */,
+				8BE8C5F7C286D4A9C76C59E7D6EE3006 /* LEMapView.m */,
+				898A51DB460E776FE2D9F0B6C75725D8 /* LEMapViewAnnotation.h */,
+				951C7519347D6B70BA993482BA1828F1 /* LEMapViewAnnotation.m */,
+				DEE4556B93F5E258B7CFD51F50A1926C /* LEMapViewAnnotationSubView.h */,
+				C6F90CC62D903C9597727BD31B37FF94 /* LEMapViewAnnotationSubView.m */,
+				8C606BC1E704D36C785928567D3FB5D8 /* LEMapViewAnnotationView.h */,
+				A1BD64483CA41866FA8652464150F8E7 /* LEMapViewAnnotationView.m */,
+				75EC64FD5278B3F0E44D8261FAD696B4 /* LEMapviewFrameworks.h */,
+				2306C083C7FE91400BEF41D3DCF6F5CE /* LEMapViewSearchAnnotation.h */,
+				B9B2019A7C8EE3E745D7A3A20EDF8EA0 /* LEMapViewSearchAnnotation.m */,
+				6BBEE49276A49DF1F10E7FD8ED55F700 /* LEMapViewSearchAnnotationView.h */,
+				DD9B5F3B789B05457CA32F9A7E0BF822 /* LEMapViewSearchAnnotationView.m */,
+				F5CBE3F97C5ED145BDAE8E92DE4D8F6B /* LEMapViewUserAnnotationView.h */,
+				AA37EC38170B8BCA80E8B2182A041860 /* LEMapViewUserAnnotationView.m */,
+				80528B3B1D35D77800AA2056 /* LEMapViewSettings.h */,
+				80528B3C1D35D77800AA2056 /* LEMapViewSettings.m */,
+				E534464B26B72B1D5C89A4BB52B17C41 /* LEMapviewFrameworks.bundle */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		1DFB095787E8F0E7A0900197B0734D00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +659,30 @@
 				8680428DDDBADF0966D2356DDAB24BF2 /* Resources */,
 			);
 			path = AMap3DMap;
+			sourceTree = "<group>";
+		};
+		2344D2E42734CBB457D26EB1E568C148 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93CE084A68D5DF88E4BB92F1C0C89248 /* LEMapviewFrameworks */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		236DC2CDD64C16771257C94E00985260 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A2765364422D4D410263999DFC43D87D /* LEMapviewFrameworks.bundle */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3177AC20072C0CEF950505A73BB3EC2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84CDEDB4EA2C4676B143CC363002FEDD /* LEMapviewFrameworks */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		321803238C0285985D180FF09D7AE2D1 /* Resources */ = {
@@ -528,35 +743,6 @@
 				3A3B8739E1FAF588A1E3F91AAF81C861 /* AMapSearchKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3EA8236C4138B689E36659035C0733E1 /* LEMapviewFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7631611DE73918C24BFB4FFD03446BEA /* Classes */,
-			);
-			path = LEMapviewFrameworks;
-			sourceTree = "<group>";
-		};
-		3EE7B007268FD7BF67B88D80202FE118 /* LEMapviewFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3EA8236C4138B689E36659035C0733E1 /* LEMapviewFrameworks */,
-				44B75F9F15DE3BD61FBAE4773F3F8EE7 /* Support Files */,
-			);
-			name = LEMapviewFrameworks;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		44B75F9F15DE3BD61FBAE4773F3F8EE7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */,
-				183C60385C3B4B414FCA74522C59FD23 /* LEMapviewFrameworks-dummy.m */,
-				D17B5FB56015109B0152AB93D1FEDCF0 /* LEMapviewFrameworks-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LEMapviewFrameworks";
 			sourceTree = "<group>";
 		};
 		582797BAC89B66DEBFF0E96D378321D5 /* AMapFoundation */ = {
@@ -648,54 +834,36 @@
 			path = LEFrameworks;
 			sourceTree = "<group>";
 		};
-		7631611DE73918C24BFB4FFD03446BEA /* Classes */ = {
+		79ED79195BD06EC24970CE095ADE5D46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C18109205128A6B864C07EF21F6AC24A /* LEMapBaseAnnotationView.h */,
-				B86CBA14098405E5F7B13E74D1804BC8 /* LEMapBaseAnnotationView.m */,
-				8C2BCEB7ADBC66DA5CEEC4BADE304DAF /* LEMapCallOutAnnotationView.h */,
-				CF76FB13039771B52F51B767A1BFBEFB /* LEMapCallOutAnnotationView.m */,
-				E9C2D58E67C56E1087606F2E71AC1EEB /* LEMapCallOutViewAnnotation.h */,
-				4C6D2AFDEA89B87A076669A3ACD205EB /* LEMapCallOutViewAnnotation.m */,
-				33F75F2D309F8095B850A091257B3EE4 /* LEMapSearchBar.h */,
-				5D1BE2815F18D8B3C7A419A5D12DCF30 /* LEMapSearchBar.m */,
-				1B9ABC1729E6C6F3181935B95AB13AE4 /* LEMapView.h */,
-				8D883A6271EE5ACF17AC2659B9001353 /* LEMapView.m */,
-				F48A5A46A37600325E607B80F3B1F674 /* LEMapViewAnnotation.h */,
-				AAD36FE42BCEA266910070CA73393D9D /* LEMapViewAnnotation.m */,
-				2C1C3E28D5A397B6DE9563C93AA877CF /* LEMapViewAnnotationSubView.h */,
-				314503BC2D79843E87112D4B92AFE3CC /* LEMapViewAnnotationSubView.m */,
-				23238D7970584DB2651005E8DD82E709 /* LEMapViewAnnotationView.h */,
-				8C8FFD2196F789BBDFA79D678DED17B9 /* LEMapViewAnnotationView.m */,
-				3B10D686E6663D4DEC8AC993848ED72E /* LEMapviewFrameworks.h */,
-				1E3ABC455496C1C69D601B5AAA840812 /* LEMapViewSearchAnnotation.h */,
-				19657FB83FBFBD7231180465FACC3D66 /* LEMapViewSearchAnnotation.m */,
-				EBF68D9F7605B402EB2865C501AC2C70 /* LEMapViewSearchAnnotationView.h */,
-				7BE4BB18A29AC41B1EBE5885DE95012F /* LEMapViewSearchAnnotationView.m */,
-				B30BF6CF88432CB84189ECF62F163537 /* LEMapViewUserAnnotationView.h */,
-				16E8262FE9D780A7545590044C95A351 /* LEMapViewUserAnnotationView.m */,
+				8D6BE71EFF535CDFA22EF00646AF2A9E /* LEFrameworks.bundle */,
+				27036B04D38F233FB121C74845389F89 /* LEMapviewFrameworks.bundle */,
+				0F0E11089D0A40A5F9438567FA006FB5 /* libLEFrameworks.a */,
+				260AD1C51F2C1F5E265F67386F93D045 /* libLEMapviewFrameworks.a */,
+				2378DF6FA2D3FA5CE9EF474CAFDF7151 /* libPods-LEMapviewFrameworks_Test.a */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		76E4D9206A29F85E83530BD173E75AF0 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3EE7B007268FD7BF67B88D80202FE118 /* LEMapviewFrameworks */,
-			);
-			name = "Development Pods";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				76E4D9206A29F85E83530BD173E75AF0 /* Development Pods */,
+				2344D2E42734CBB457D26EB1E568C148 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				B173494415691CC0CA95960170F17146 /* Pods */,
-				E268D03C665CAA245B71FEC2FFB707A2 /* Products */,
+				79ED79195BD06EC24970CE095ADE5D46 /* Products */,
 				F3924F8ECFBE68CBC9776171062F2E0E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		84CDEDB4EA2C4676B143CC363002FEDD /* LEMapviewFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				236DC2CDD64C16771257C94E00985260 /* Classes */,
+			);
+			path = LEMapviewFrameworks;
 			sourceTree = "<group>";
 		};
 		8680428DDDBADF0966D2356DDAB24BF2 /* Resources */ = {
@@ -704,6 +872,24 @@
 				C44ACBDCD76010E09130D875EE24CCAA /* AMap.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		93CE084A68D5DF88E4BB92F1C0C89248 /* LEMapviewFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2D2B6137275FEA6286E13D298A7EACE /* LEMapviewFrameworks */,
+				3177AC20072C0CEF950505A73BB3EC2F /* Resources */,
+				CEC851D41353845858411507ABD5304A /* Support Files */,
+			);
+			name = LEMapviewFrameworks;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A2765364422D4D410263999DFC43D87D /* LEMapviewFrameworks.bundle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LEMapviewFrameworks.bundle;
 			sourceTree = "<group>";
 		};
 		B173494415691CC0CA95960170F17146 /* Pods */ = {
@@ -723,6 +909,18 @@
 				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC851D41353845858411507ABD5304A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B113F47F32C4F43CFB8CB8D7439A71F /* LEMapviewFrameworks.xcconfig */,
+				ED065E1853EFA4B0905B1E6491055070 /* LEMapviewFrameworks-dummy.m */,
+				C091345DB6DB4783EC5459F9C6A6F867 /* LEMapviewFrameworks-prefix.pch */,
+				869AE88B744BDB6FEE39D4314E525E30 /* ResourceBundle-LEMapviewFrameworks-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LEMapviewFrameworks";
 			sourceTree = "<group>";
 		};
 		D106C88AD4FABAB6096C65B1D5C8E72C /* Pods-LEMapviewFrameworks_Test */ = {
@@ -756,15 +954,12 @@
 			path = AMapSearch;
 			sourceTree = "<group>";
 		};
-		E268D03C665CAA245B71FEC2FFB707A2 /* Products */ = {
+		E2D2B6137275FEA6286E13D298A7EACE /* LEMapviewFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A790ED6961BEF88CB2EC69FE76F101CA /* LEFrameworks.bundle */,
-				FBAF4BAABD15CA534B94CC86BC3214F8 /* libLEFrameworks.a */,
-				DE203275FDF5A533FC8AA9E5ED6013F2 /* libLEMapviewFrameworks.a */,
-				FD732BD66667F2E3796480E001E884C9 /* libPods-LEMapviewFrameworks_Test.a */,
+				0BA6E95662DF6EA9A24ED6473BBD15DE /* Classes */,
 			);
-			name = Products;
+			path = LEMapviewFrameworks;
 			sourceTree = "<group>";
 		};
 		E42AB44270C2F8289BFCBCBD6698F3EE /* Frameworks */ = {
@@ -773,6 +968,59 @@
 				247E67CC4D4A5724500C7CB08D0C2177 /* AMapFoundationKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E534464B26B72B1D5C89A4BB52B17C41 /* LEMapviewFrameworks.bundle */ = {
+			isa = PBXGroup;
+			children = (
+				C08493D57FAF9439E38EC11B55031C51 /* map_btn_status2@2x.png */,
+				75331AD703DBD5EAE07718BF0679AC76 /* map_btn_status2@3x.png */,
+				0AB997B84050E470EAF272C4F1E42572 /* map_btn_status3@2x.png */,
+				C13E594604ED7171F948F82BFB326F4A /* map_btn_status3@3x.png */,
+				F5D730C9364D192F6537948535A47A70 /* map_btn_status@2x.png */,
+				2B94838BFBF3FD73A58811A61DD6011B /* map_btn_status@3x.png */,
+				7BD39CCD61E816994651D3512203046F /* map_compass@2x.png */,
+				82766A0B7787720A6663BEA8FC439C1C /* map_compass@3x.png */,
+				ADF7DC0DB62714855E07AAFA5C1D6EB3 /* map_icon_refresh@2x.png */,
+				EB7C1246A66E050E640FB452192C39B0 /* map_icon_refresh@3x.png */,
+				027E158117C2D5C43DFB26265A794AD8 /* map_icon_refreshbg@2x.png */,
+				A8039440B92362C1CA5B6B6E54ABA01B /* map_icon_refreshbg@3x.png */,
+				081379AC6D33A2CC144E10E17C066559 /* map_loc_white@2x.png */,
+				8202A9C32FA3048C118BFBB5053AE0B9 /* map_loc_white@3x.png */,
+				FB86DB13D4439D94C24878DF4F0CCD78 /* map_pin_brown@2x.png */,
+				9BD6634417FC2C9145492470BA069032 /* map_pin_brown@3x.png */,
+				2635EF29FA940F43D31C156CDCE75DB1 /* map_pin_brown_big@2x.png */,
+				02845FF935A74D8FDC627F55D5EAC652 /* map_pin_brown_sel@2x.png */,
+				FE7A3699768F2EAE8D78DB433FFF9E21 /* map_pin_brown_sel@3x.png */,
+				ADBE940F8CA865A91BC9984E39F55BAE /* map_pin_lightred@2x.png */,
+				26479858620FB7BC7C2AB749DBAB3D53 /* map_pin_lightred@3x.png */,
+				3B3856495469D64695B9738B6F1D29AD /* map_pin_lightred_big@2x.png */,
+				F716EEBE6A77F0A6C3D565F13384DF19 /* map_pin_lightred_sel@2x.png */,
+				D634587D37855DB4809621127407079D /* map_pin_lightred_sel@3x.png */,
+				F1B4E8E099DC37A8CE50CAFB346E7E19 /* map_pin_red@2x.png */,
+				ECB2C990A36C4F1022290C6A6B56D5A1 /* map_pin_red@3x.png */,
+				B4344ACBBD473A644BE176986003A8F4 /* map_pin_red_big@2x.png */,
+				09184300574A914E8BB817C7FBB2F72C /* map_pin_red_sel@2x.png */,
+				600C6D5B712EE928AF7E4F03D7D5BDA1 /* map_pin_red_sel@3x.png */,
+				578316613D08D57EA68AEE656D35BAD4 /* map_pin_searched@2x.png */,
+				40C610E141A2B4B72B386D45D618FAEE /* map_pin_selected@2x.png */,
+				A27A301798D198A4480DB015DE7D3FF5 /* map_rect_search@2x.png */,
+				D1C247429858A70F4F7DC4EAFDF138E7 /* map_rect_search@3x.png */,
+				EDBB551329D6A637382A8E374352BEB1 /* map_tip_hot@2x.png */,
+				98AF95176AD76A07A49BD0A005E5514D /* map_tip_normal@2x.png */,
+				D40E3F5B39DAE19A03194B9190DEECC2 /* map_tip_normal@3x.png */,
+				85973625D3F7C70F5D829D919C5722DD /* map_tip_split@2x.png */,
+				7BA486E7FFF0D67028736841F435F876 /* map_tip_top@2x.png */,
+				2A505764B5EF3D6E36E6C5B7D0BFE29B /* map_userpin_arrow@2x.png */,
+				0A0CEC93A659C54D4774FD100E8B20A7 /* map_userpin_arrow@3x.png */,
+				2FC9A4D8D0E272894520C98142FD8D9A /* map_userpin_circle@2x.png */,
+				A10B7EFEFC1D00D2AB572E0C84905465 /* mapScaleBG@2x.png */,
+				26CF7E64EC3EE8A907E512173E4F9898 /* mapScaleDown2@2x.png */,
+				2ADAE172EB17331643588C21DA127698 /* mapScaleDown@2x.png */,
+				4AF96895E5F14B5F7F1378F4C5AF7B6B /* mapScaleUp2@2x.png */,
+				F48DC4856646DE7F90DE0B7B75315821 /* mapScaleUp@2x.png */,
+			);
+			path = LEMapviewFrameworks.bundle;
 			sourceTree = "<group>";
 		};
 		F1330E40C2107F89B4194D6A9B350A36 /* Support Files */ = {
@@ -838,45 +1086,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96E04B7287EEB8E971A197B3C31457A8 /* Headers */ = {
+		FCBD9839C531A1B709E551AB3ABA9E1E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFAEB1DB460E1F9AB41096B5D27FF4D2 /* LEMapBaseAnnotationView.h in Headers */,
-				E5CAB93A13409EB7E1417E450C15E19D /* LEMapCallOutAnnotationView.h in Headers */,
-				03D13C10990DE38F3F3521262073450C /* LEMapCallOutViewAnnotation.h in Headers */,
-				2581434E0331CE7D25A7E473301A18AD /* LEMapSearchBar.h in Headers */,
-				6B9D4322EA58C5BA6578896A1726BB39 /* LEMapView.h in Headers */,
-				2D32870480FCFA9C06BB3C0D6E2695D3 /* LEMapViewAnnotation.h in Headers */,
-				6F28EDF0F5C8C98426EE6C1CD292A043 /* LEMapViewAnnotationSubView.h in Headers */,
-				2498974932F97D417A06736B4C7E2F68 /* LEMapViewAnnotationView.h in Headers */,
-				BBC6D6773B88A7E1EC2819F6E3CE50C8 /* LEMapviewFrameworks.h in Headers */,
-				227975B8CF00AF599F58BAC502E11ECB /* LEMapViewSearchAnnotation.h in Headers */,
-				34E1EC5F74B3AA3FB6ED79B150BF8EFF /* LEMapViewSearchAnnotationView.h in Headers */,
-				22C61D2954D71E9AFEF8B125807F7792 /* LEMapViewUserAnnotationView.h in Headers */,
+				6B3D22286BE9FF849BAEB7E53288429D /* LEMapBaseAnnotationView.h in Headers */,
+				479853339DE7AA4902E95DEAAFEC3B52 /* LEMapCallOutAnnotationView.h in Headers */,
+				4E32588BEB2AA804833C39BD5E70E398 /* LEMapCallOutViewAnnotation.h in Headers */,
+				93A664F7BBF8BE3C755F42507445D789 /* LEMapSearchBar.h in Headers */,
+				80528B3D1D35D77800AA2056 /* LEMapViewSettings.h in Headers */,
+				11CFBD66946A5D5F605F0FFFE3E193CD /* LEMapView.h in Headers */,
+				587677980455D055B16FBEE590507356 /* LEMapViewAnnotation.h in Headers */,
+				320CA26A169DE0BA029D6BE59F50A8A4 /* LEMapViewAnnotationSubView.h in Headers */,
+				CC48B36E366695380CEB54611E563851 /* LEMapViewAnnotationView.h in Headers */,
+				6E7E7753815AE12896FF9493AFACC159 /* LEMapviewFrameworks.h in Headers */,
+				B5BA80A71004477CA24CB9AE4216D0F9 /* LEMapViewSearchAnnotation.h in Headers */,
+				B280065D6EAF63E7E9DDBFA10133BC52 /* LEMapViewSearchAnnotationView.h in Headers */,
+				27A1B08C5B5C8A85523087355B2601E5 /* LEMapViewUserAnnotationView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		219C3121616836580C0513E9E9450AB3 /* LEMapviewFrameworks */ = {
+		3B1C5361B7F96D68AC4963E8BD521F2F /* LEMapviewFrameworks-LEMapviewFrameworks */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4972752BCD6869EE25599FC1274C60E0 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */;
+			buildConfigurationList = 9E502267A935BFAFA6CC1C1F441E2D9B /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks-LEMapviewFrameworks" */;
 			buildPhases = (
-				7307759905E217FFC9FFC8E1E4B4FC97 /* Sources */,
-				AE10B550E7DB25E237020D0F56583133 /* Frameworks */,
-				96E04B7287EEB8E971A197B3C31457A8 /* Headers */,
+				B7DA7EB53F53C3AEFDEA0BACD5FCF160 /* Sources */,
+				CE50A878A7FB278B9DFC92089D490D05 /* Frameworks */,
+				B6F38B1E045CE71E03CC5EE5C5F5E963 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E99D2DDB6629C82FB99A54DF681715C6 /* PBXTargetDependency */,
 			);
-			name = LEMapviewFrameworks;
-			productName = LEMapviewFrameworks;
-			productReference = DE203275FDF5A533FC8AA9E5ED6013F2 /* libLEMapviewFrameworks.a */;
-			productType = "com.apple.product-type.library.static";
+			name = "LEMapviewFrameworks-LEMapviewFrameworks";
+			productName = "LEMapviewFrameworks-LEMapviewFrameworks";
+			productReference = 27036B04D38F233FB121C74845389F89 /* LEMapviewFrameworks.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		3E34EE452DD726C6EEBF93777C050558 /* LEFrameworks */ = {
 			isa = PBXNativeTarget;
@@ -893,7 +1141,26 @@
 			);
 			name = LEFrameworks;
 			productName = LEFrameworks;
-			productReference = FBAF4BAABD15CA534B94CC86BC3214F8 /* libLEFrameworks.a */;
+			productReference = 0F0E11089D0A40A5F9438567FA006FB5 /* libLEFrameworks.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		572A6DF96E758C18598BCF2D5C805DF7 /* LEMapviewFrameworks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03E8D2CF231A8C07AE82186FC6278099 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */;
+			buildPhases = (
+				E375973E818030723D34485B528122B7 /* Sources */,
+				810E3C65F3BA74B75BCF26D12A18A778 /* Frameworks */,
+				FCBD9839C531A1B709E551AB3ABA9E1E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2549A5407508B7238E28DEFB842F6E61 /* PBXTargetDependency */,
+				7B25901CF2B33E47905C3AD96CB235F3 /* PBXTargetDependency */,
+			);
+			name = LEMapviewFrameworks;
+			productName = LEMapviewFrameworks;
+			productReference = 260AD1C51F2C1F5E265F67386F93D045 /* libLEMapviewFrameworks.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7E8A400507A7688B2EFACDE2131FF7AE /* Pods-LEMapviewFrameworks_Test */ = {
@@ -911,7 +1178,7 @@
 			);
 			name = "Pods-LEMapviewFrameworks_Test";
 			productName = "Pods-LEMapviewFrameworks_Test";
-			productReference = FD732BD66667F2E3796480E001E884C9 /* libPods-LEMapviewFrameworks_Test.a */;
+			productReference = 2378DF6FA2D3FA5CE9EF474CAFDF7151 /* libPods-LEMapviewFrameworks_Test.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FB257BA88D2D67B6F125D2D41E446E1F /* LEFrameworks-LEFrameworks */ = {
@@ -928,7 +1195,7 @@
 			);
 			name = "LEFrameworks-LEFrameworks";
 			productName = "LEFrameworks-LEFrameworks";
-			productReference = A790ED6961BEF88CB2EC69FE76F101CA /* LEFrameworks.bundle */;
+			productReference = 8D6BE71EFF535CDFA22EF00646AF2A9E /* LEFrameworks.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -948,13 +1215,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E268D03C665CAA245B71FEC2FFB707A2 /* Products */;
+			productRefGroup = 79ED79195BD06EC24970CE095ADE5D46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3E34EE452DD726C6EEBF93777C050558 /* LEFrameworks */,
 				FB257BA88D2D67B6F125D2D41E446E1F /* LEFrameworks-LEFrameworks */,
-				219C3121616836580C0513E9E9450AB3 /* LEMapviewFrameworks */,
+				572A6DF96E758C18598BCF2D5C805DF7 /* LEMapviewFrameworks */,
+				3B1C5361B7F96D68AC4963E8BD521F2F /* LEMapviewFrameworks-LEMapviewFrameworks */,
 				7E8A400507A7688B2EFACDE2131FF7AE /* Pods-LEMapviewFrameworks_Test */,
 			);
 		};
@@ -1005,29 +1273,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		7307759905E217FFC9FFC8E1E4B4FC97 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		B6F38B1E045CE71E03CC5EE5C5F5E963 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66EA03B40AEAE00B9D88F6CD171D6A27 /* LEMapBaseAnnotationView.m in Sources */,
-				1C69A262D73816878D1BE04366AFB618 /* LEMapCallOutAnnotationView.m in Sources */,
-				4D3409873CA40D8CB29E7E753CC335AD /* LEMapCallOutViewAnnotation.m in Sources */,
-				0416B562017E79D6793B71E43164E077 /* LEMapSearchBar.m in Sources */,
-				8622A78CE02DC8541DCAAE8942E1B980 /* LEMapView.m in Sources */,
-				59B90B16AA63C3470CEC104D86918DB5 /* LEMapViewAnnotation.m in Sources */,
-				9552402C75AB4E52DE792389F9AC6105 /* LEMapViewAnnotationSubView.m in Sources */,
-				DD533D32283F9E55B6D4C25613700872 /* LEMapViewAnnotationView.m in Sources */,
-				8E4B31B2ABDA27CD795A7363FF41F57D /* LEMapviewFrameworks-dummy.m in Sources */,
-				58509776397C3339278AF7D0A8F59965 /* LEMapViewSearchAnnotation.m in Sources */,
-				3BC9B75566A8B9850560458E5FF58083 /* LEMapViewSearchAnnotationView.m in Sources */,
-				BA7D09DBA3FF288B787F8FD979A915AA /* LEMapViewUserAnnotationView.m in Sources */,
+				DE7C6134A9E571EFA3D4B6365C260C53 /* map_btn_status2@2x.png in Resources */,
+				3BBACF72FF2DFE681C78EEA765947FBD /* map_btn_status2@3x.png in Resources */,
+				00716C257817E77124064ECD757304F3 /* map_btn_status3@2x.png in Resources */,
+				4F66FD33EC70486EC0DA6585F3176B5E /* map_btn_status3@3x.png in Resources */,
+				D0889E1720B27698647FCE38F595B820 /* map_btn_status@2x.png in Resources */,
+				CAC9FBA29DA6BC5BE12A46303AC02577 /* map_btn_status@3x.png in Resources */,
+				C1A79147E0422E28FD9C537F800B1EF3 /* map_compass@2x.png in Resources */,
+				B4B00F5D05BAC409E49334090398F5A1 /* map_compass@3x.png in Resources */,
+				6DDD2F057BC663A9DCBD3C6AC799E578 /* map_icon_refresh@2x.png in Resources */,
+				7DBEA65A6B1DF16989E202E1C0117584 /* map_icon_refresh@3x.png in Resources */,
+				5FCE5F42366F09CC12414D4DA279B29A /* map_icon_refreshbg@2x.png in Resources */,
+				2D07D5EEF92BB9D618582CE29FDF0A95 /* map_icon_refreshbg@3x.png in Resources */,
+				E1AFBB672F97A9C954C01F789A1F226F /* map_loc_white@2x.png in Resources */,
+				72B03B094E33AC9AE9E345575589EC49 /* map_loc_white@3x.png in Resources */,
+				6F9175AF1300DB8FDAF93D90E3CCBFB2 /* map_pin_brown@2x.png in Resources */,
+				CD75B5DF1DC03471C4C6F227ABFCF8E8 /* map_pin_brown@3x.png in Resources */,
+				68A98B667001EF75B060F38FC1A12048 /* map_pin_brown_big@2x.png in Resources */,
+				2DB0A4D810CA663104A442CC30D525D6 /* map_pin_brown_sel@2x.png in Resources */,
+				D2C9BCD7209ED64402AF9E115949E3A5 /* map_pin_brown_sel@3x.png in Resources */,
+				9BF6AEC8B7B74814E80A3C76CDD4B26D /* map_pin_lightred@2x.png in Resources */,
+				DEADEFBDE410929A7A76D462100005E0 /* map_pin_lightred@3x.png in Resources */,
+				065F785EB94A34653DDB092C77DCFE11 /* map_pin_lightred_big@2x.png in Resources */,
+				889FF63419D96534639D4EC31D04F6E9 /* map_pin_lightred_sel@2x.png in Resources */,
+				002E6D3BB4DCA641C7451D7C35306114 /* map_pin_lightred_sel@3x.png in Resources */,
+				7B0805DDBBD0220CA2D0384644070FA8 /* map_pin_red@2x.png in Resources */,
+				7331AD228DE598A954B99D9A9031DCA2 /* map_pin_red@3x.png in Resources */,
+				4A945B49C8935B8E496AEE6AA7FEC3C0 /* map_pin_red_big@2x.png in Resources */,
+				71655E4E0E56DC2054C544F9CB58A4AE /* map_pin_red_sel@2x.png in Resources */,
+				4986DD3B3F07B223AC4F179ECCF05F27 /* map_pin_red_sel@3x.png in Resources */,
+				E9E540D975F3853D18B5636E6CA68442 /* map_pin_searched@2x.png in Resources */,
+				AE3ED64E07A90A40D13BACC350B30598 /* map_pin_selected@2x.png in Resources */,
+				8AA5C2D2B6981574A75018B27C78747B /* map_rect_search@2x.png in Resources */,
+				FFDCB40C499E7A05E20FA63442FA6D35 /* map_rect_search@3x.png in Resources */,
+				346420D9310C5457999DA5F26CEE87D8 /* map_tip_hot@2x.png in Resources */,
+				6FCFEEEC6BB030E0EA8F675EB231BB52 /* map_tip_normal@2x.png in Resources */,
+				13E24F8FB01418C7D1CC91043A309370 /* map_tip_normal@3x.png in Resources */,
+				7056C068A83BCFAA1CC2AC7CCCC7593A /* map_tip_split@2x.png in Resources */,
+				3B2F467059D0FB8B262A885C3C9BAD5E /* map_tip_top@2x.png in Resources */,
+				644DD2F8D79DF9028BCE8547D3C527F0 /* map_userpin_arrow@2x.png in Resources */,
+				6336C5BA2266146EDDEB674D8E9C6CC6 /* map_userpin_arrow@3x.png in Resources */,
+				3BD87613CFABAD7C4F57D6FEDE86A2BF /* map_userpin_circle@2x.png in Resources */,
+				28190874CB372F8FAF2FF70904B97FFB /* mapScaleBG@2x.png in Resources */,
+				4463CF47964A0445C5BAB6957CCEDF14 /* mapScaleDown2@2x.png in Resources */,
+				2C76185D06E0F1654FC155E1384D3B74 /* mapScaleDown@2x.png in Resources */,
+				212C5D9E90EA5C9901601228350926F5 /* mapScaleUp2@2x.png in Resources */,
+				7DFA3001CA2B52C801764E4603BCB59B /* mapScaleUp@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		8513AE743823EB8BBC09520315FD9AF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7DA7EB53F53C3AEFDEA0BACD5FCF160 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1074,6 +1383,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E375973E818030723D34485B528122B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37DCEB459D11D373C8DE591061943DC /* LEMapBaseAnnotationView.m in Sources */,
+				AA29A299E95778B651090052981E1CAD /* LEMapCallOutAnnotationView.m in Sources */,
+				8D6A48717C7E1DFA16576B6237F5256C /* LEMapCallOutViewAnnotation.m in Sources */,
+				3AEFDE29C5D62DEBBE4B31AE01A50C35 /* LEMapSearchBar.m in Sources */,
+				CF422F58B2EC179204F08C44811288D8 /* LEMapView.m in Sources */,
+				B969B45FE1DAAADF3993C32E98A3FCDE /* LEMapViewAnnotation.m in Sources */,
+				949F224DE7E23F405916422161ADBAA6 /* LEMapViewAnnotationSubView.m in Sources */,
+				CC630709506B4B213920045679BA09ED /* LEMapViewAnnotationView.m in Sources */,
+				ABEA0C681885E5079F21326AF1A97008 /* LEMapviewFrameworks-dummy.m in Sources */,
+				7096C2B500BFCADD2FD73C9F5EA04624 /* LEMapViewSearchAnnotation.m in Sources */,
+				4F5287BE85C20D59F2092EC0830B0169 /* LEMapViewSearchAnnotationView.m in Sources */,
+				08AB6EAE741E62338D45BC1755DCF4FD /* LEMapViewUserAnnotationView.m in Sources */,
+				059EA538F57CB281A879B71DEF068E8A /* map_btn_status2@2x.png in Sources */,
+				53B99E33A1EE955FE99D17E229AD0987 /* map_btn_status2@3x.png in Sources */,
+				B20E71F415240725EA65A1993651704E /* map_btn_status3@2x.png in Sources */,
+				D85F3BCA259C04A5CEC644828F4F4E88 /* map_btn_status3@3x.png in Sources */,
+				4AF7122C040B4E10D5EF9D3CEB1D6F4A /* map_btn_status@2x.png in Sources */,
+				32F377331AC7BB5405611AB45D2A4C74 /* map_btn_status@3x.png in Sources */,
+				B981B342F0DBC36D6ED8B387E374377F /* map_compass@2x.png in Sources */,
+				05DACF47EC6C62E5909B8834AFF7604F /* map_compass@3x.png in Sources */,
+				24A62FEBD5F5F1EF17B47F23AA032CC3 /* map_icon_refresh@2x.png in Sources */,
+				1C56038DAA7581DBC5F3F2AD9856F152 /* map_icon_refresh@3x.png in Sources */,
+				3FB3902315C63FC4D8C7D300BAE8E73E /* map_icon_refreshbg@2x.png in Sources */,
+				EEE907BF26BCCC25D29178203A503CA9 /* map_icon_refreshbg@3x.png in Sources */,
+				052758A59860F994B8C4042E4CFD59B2 /* map_loc_white@2x.png in Sources */,
+				0D332E05482E22067CB99E3AF1B0A6AA /* map_loc_white@3x.png in Sources */,
+				643121859A84EF1E37E43A4F5A09A304 /* map_pin_brown@2x.png in Sources */,
+				A35826729FEDEEEEEFC2090F780C0BC2 /* map_pin_brown@3x.png in Sources */,
+				5CB5812B2133C602525FF2F043611BFD /* map_pin_brown_big@2x.png in Sources */,
+				1FB5FF1EB34820D8A202DCF0D0205DD3 /* map_pin_brown_sel@2x.png in Sources */,
+				96B8D03778AC59B22A997F3224A4C7C8 /* map_pin_brown_sel@3x.png in Sources */,
+				D5499917D5E4D0E72DCE7B3AC999CCCC /* map_pin_lightred@2x.png in Sources */,
+				BB54BC2E710C2FA11C9946E1F4D6BB0F /* map_pin_lightred@3x.png in Sources */,
+				7FD3844208EAE81FE10D8A35B1577F64 /* map_pin_lightred_big@2x.png in Sources */,
+				A0476D1012394B427F987D20A99882C5 /* map_pin_lightred_sel@2x.png in Sources */,
+				009125753C7C7BCCCA2F71046FCB12CC /* map_pin_lightred_sel@3x.png in Sources */,
+				BAF23894B6D1E0E03892C8DC879D498A /* map_pin_red@2x.png in Sources */,
+				BC2E13E12EBB112CA2D2B5312E22453C /* map_pin_red@3x.png in Sources */,
+				7C32F73181269731730CB929761AC164 /* map_pin_red_big@2x.png in Sources */,
+				3BEDA5C4A156475B242957D458E4B27F /* map_pin_red_sel@2x.png in Sources */,
+				C7395A438D79AF31B2C7ABAAA8CB08CE /* map_pin_red_sel@3x.png in Sources */,
+				4053E59F3804144B35C80D214892E887 /* map_pin_searched@2x.png in Sources */,
+				C4262BDC1A2B1195E6BDE59CDFF7CA7B /* map_pin_selected@2x.png in Sources */,
+				9A89B9068885D116BD398065C2089B79 /* map_rect_search@2x.png in Sources */,
+				3E342CF030771A91C7B792EE20117356 /* map_rect_search@3x.png in Sources */,
+				9C5E951B1C5E996DC11ABB85612917FF /* map_tip_hot@2x.png in Sources */,
+				8808682045DF7AB37CD21BC6B494AA2A /* map_tip_normal@2x.png in Sources */,
+				7ED41C044263CE8DEB41E3DEAA7394B0 /* map_tip_normal@3x.png in Sources */,
+				8042CFE50F25DBFDA04985092CDDFF04 /* map_tip_split@2x.png in Sources */,
+				4C23683CDF71757F54AD9714EBC9C7AC /* map_tip_top@2x.png in Sources */,
+				5D047194EF4DCAB70EA654790721E917 /* map_userpin_arrow@2x.png in Sources */,
+				80528B3E1D35D77800AA2056 /* LEMapViewSettings.m in Sources */,
+				22E151EB132C3930E729EBCF8DA242F5 /* map_userpin_arrow@3x.png in Sources */,
+				B8E82F517EAEB984FCF6919F47050595 /* map_userpin_circle@2x.png in Sources */,
+				88CF48F86C29A3006FDC1010EC1DCAB3 /* mapScaleBG@2x.png in Sources */,
+				016F9D168ECF7282423DC053EA1DD3A4 /* mapScaleDown2@2x.png in Sources */,
+				E9B445109754A33E584DE925376968C6 /* mapScaleDown@2x.png in Sources */,
+				97D26663E4AD430A805F613D80434DBD /* mapScaleUp2@2x.png in Sources */,
+				D13F594E91C0DAA5C7E256716FE98C71 /* mapScaleUp@2x.png in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D94027483CD36F7EB0FC8D2D9C174D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1088,8 +1463,14 @@
 		1E7AA097A4E7F39A9C50AE8BACD1BCE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LEMapviewFrameworks;
-			target = 219C3121616836580C0513E9E9450AB3 /* LEMapviewFrameworks */;
+			target = 572A6DF96E758C18598BCF2D5C805DF7 /* LEMapviewFrameworks */;
 			targetProxy = D85104C52DAE405DDD2555DB48E5CAE0 /* PBXContainerItemProxy */;
+		};
+		2549A5407508B7238E28DEFB842F6E61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LEFrameworks;
+			target = 3E34EE452DD726C6EEBF93777C050558 /* LEFrameworks */;
+			targetProxy = 86C27D816C5F76F61C8D79B23164A51E /* PBXContainerItemProxy */;
 		};
 		6E879DCB5C5FBE02252EC8ECF5B8A8BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1097,11 +1478,11 @@
 			target = 3E34EE452DD726C6EEBF93777C050558 /* LEFrameworks */;
 			targetProxy = 50028E15C62B993A54CB83C366485854 /* PBXContainerItemProxy */;
 		};
-		E99D2DDB6629C82FB99A54DF681715C6 /* PBXTargetDependency */ = {
+		7B25901CF2B33E47905C3AD96CB235F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = LEFrameworks;
-			target = 3E34EE452DD726C6EEBF93777C050558 /* LEFrameworks */;
-			targetProxy = 1772653AD885B2FAD70890F2A2CF6333 /* PBXContainerItemProxy */;
+			name = "LEMapviewFrameworks-LEMapviewFrameworks";
+			target = 3B1C5361B7F96D68AC4963E8BD521F2F /* LEMapviewFrameworks-LEMapviewFrameworks */;
+			targetProxy = 7A013CEC1BC692041D4607DBB30D8186 /* PBXContainerItemProxy */;
 		};
 		FC71A9B9E7F4786155736A1E48C2DE18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1154,9 +1535,9 @@
 			};
 			name = Debug;
 		};
-		5B6C1389721EA07DA1EF003858F6DF64 /* Debug */ = {
+		5023A9F98C225A3B1DCD44D8BEA94200 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */;
+			baseConfigurationReference = 1B113F47F32C4F43CFB8CB8D7439A71F /* LEMapviewFrameworks.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1174,6 +1555,23 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		5EEF4A203D09FC429796FBBD564FED61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B113F47F32C4F43CFB8CB8D7439A71F /* LEMapviewFrameworks.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LEMapviewFrameworks";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/LEMapviewFrameworks/ResourceBundle-LEMapviewFrameworks-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = LEMapviewFrameworks;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		6BBF64A3E36C06CF19FF4B09D019C4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1195,6 +1593,27 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		B06A8CE2E2EAA667C768F0E9B60B92F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B113F47F32C4F43CFB8CB8D7439A71F /* LEMapviewFrameworks.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		C1F8617F7AD2144FD5BDF6555C9D4F17 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1229,27 +1648,6 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
-		};
-		CD648C999DE1597ADE32180C2B791CD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BF3853DA14DBF0B2160DD00A2F65A34 /* LEMapviewFrameworks.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LEMapviewFrameworks/LEMapviewFrameworks-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		D0592C6E06D4DEB3C5B4CE68CDE39597 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1352,9 +1750,35 @@
 			};
 			name = Release;
 		};
+		F91C837E21924040BB86F7302386FE70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B113F47F32C4F43CFB8CB8D7439A71F /* LEMapviewFrameworks.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LEMapviewFrameworks";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/LEMapviewFrameworks/ResourceBundle-LEMapviewFrameworks-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = LEMapviewFrameworks;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03E8D2CF231A8C07AE82186FC6278099 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5023A9F98C225A3B1DCD44D8BEA94200 /* Debug */,
+				B06A8CE2E2EAA667C768F0E9B60B92F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1EA1AABA0F5EB92EECC0AA55744989E5 /* Build configuration list for PBXNativeTarget "LEFrameworks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1373,20 +1797,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4972752BCD6869EE25599FC1274C60E0 /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B6C1389721EA07DA1EF003858F6DF64 /* Debug */,
-				CD648C999DE1597ADE32180C2B791CD3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		62E4A4CC6C6413109D9853278985AE24 /* Build configuration list for PBXNativeTarget "LEFrameworks-LEFrameworks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C74D78D5A1C880C4E3BDCEC8D3239C28 /* Debug */,
 				C1F8617F7AD2144FD5BDF6555C9D4F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E502267A935BFAFA6CC1C1F441E2D9B /* Build configuration list for PBXNativeTarget "LEMapviewFrameworks-LEMapviewFrameworks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91C837E21924040BB86F7302386FE70 /* Debug */,
+				5EEF4A203D09FC429796FBBD564FED61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

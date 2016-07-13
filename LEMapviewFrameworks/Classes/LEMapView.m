@@ -7,6 +7,7 @@
 //
 
 #import "LEMapView.h"
+#import "LEMapViewSettings.h"
 
 
 
@@ -71,8 +72,8 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         return line;
     }
     return nil;
-}
--(id) initUIWithFrame:(CGRect) frame  AnnotationIcon:(UIImage *) icon CallOutBackground:(UIImage *) callOut AnnotationViewClass:(NSString *) annotationView CallOutViewClass:(NSString *) callOutClass MapDelegate:(id<LEMapViewDelegate>) delegate {
+} 
+-(id) initWithAutoLayoutSettings:(LEAutoLayoutSettings *)settings AnnotationIcon:(UIImage *) icon CallOutBackground:(UIImage *) callOut AnnotationViewClass:(NSString *) annotationView CallOutViewClass:(NSString *) callOutClass MapDelegate:(id<LEMapViewDelegate>) delegate{
     self.curAnnotationIcon=icon;
     self.curCallOutBackground =callOut;
     self.curAnnotationViewClass=annotationView;
@@ -83,12 +84,10 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     curMapRotationStatus=MapRotationStatusNone;
     self.polylineWidth=8;
     self.polylineStrokeColor=[UIColor colorWithRed:0.8804 green:0.8802 blue:0.523 alpha:0.986772629310345];
-    self.polylineFillColor=[UIColor colorWithRed:0.0013 green:0.0031 blue:0.0053 alpha:0.815705818965517];
-    self=[super initWithFrame:frame];
+    self=[super initWithAutoLayoutSettings:settings];
     [self initMap];
     return self;
 }
-
 -(void) onRefreshedData:(NSMutableArray *)data{
     curDataArrays=data;
     [self onRemoveAllAnnotations];
@@ -181,7 +180,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 }
 
 -(void) initCompass{
-    UIImage *img=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_compass"];
+    UIImage *img=[[LEMapViewSettings sharedInstance] leCompass];
     curCompass=[LEUIFramework getUIImageViewWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopRight Offset:CGPointMake(0, StatusBarHeight+NavigationBarHeight) CGSize:CGSizeMake(50, 50)] Image:img];
     [curCompass setUserInteractionEnabled:YES];
     [curCompass addTapEventWithSEL:@selector(onRotateToNormal) Target:self];
@@ -200,14 +199,14 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [super touchesBegan:touches withEvent:event];
     if(curMapRotationStatus!=MapRotationStatusNone){
         curMapRotationStatus=curMapRotationStatus==MapRotationStatusMap?MapRotationStatusUser:MapRotationStatusMap;
-        [reLocate setImage:[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:curMapRotationStatus==MapRotationStatusMap? @"map_btn_status3": @"map_btn_status2"]  forState:UIControlStateNormal];
+        [reLocate setImage:curMapRotationStatus==MapRotationStatusMap?[[LEMapViewSettings sharedInstance] leLocateStatusFollow]:[LEMapViewSettings sharedInstance].leLocateStatusRotate  forState:UIControlStateNormal];
         //        [self resetUserAnnotationImage];
     }
 }
 -(void) onCheckRotating{
     [curCompass setTransform:CGAffineTransformMakeRotation(-curMapView.rotationDegree*M_PI/180.0)];
     if (fabs(curMapView.centerCoordinate.longitude-lastUserCoordinate.longitude)>0.00002 && fabs(curMapView.centerCoordinate.latitude-lastUserCoordinate.latitude)>0.00002){
-        [reLocate setImage:[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_btn_status"] forState:UIControlStateNormal];
+        [reLocate setImage:[[LEMapViewSettings sharedInstance] leLocateStatusNormal] forState:UIControlStateNormal];
         curMapRotationStatus=MapRotationStatusNone;
         if(curMapView.cameraDegree!=0)
             [curMapView setCameraDegree:0 animated:YES duration:0.2];
@@ -219,7 +218,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
             if(curMapView.cameraDegree!=0)
                 [curMapView setCameraDegree:0 animated:YES duration:0.2];
         }
-        [reLocate setImage: [[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:curMapRotationStatus==MapRotationStatusMap?@"map_btn_status3":@"map_btn_status2"] forState:UIControlStateNormal];
+        [reLocate setImage:curMapRotationStatus==MapRotationStatusMap?[LEMapViewSettings  sharedInstance].leLocateStatusFollow: [LEMapViewSettings  sharedInstance].leLocateStatusRotate forState:UIControlStateNormal];
     }
     //    [self resetUserAnnotationImage];
     [self onCheckAnnotationAngle];
@@ -229,13 +228,13 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //        NSLog(@"onRotateSwitch %d %f %f %f %f %f %f",isRotateSwitcherOn,curMapView.centerCoordinate.longitude,curMapView.userLocation.coordinate.longitude,lastUserCoordinate.longitude, curMapView.centerCoordinate.latitude,curMapView.userLocation.coordinate.latitude,lastUserCoordinate.latitude);
     if ( fabs(curMapView.centerCoordinate.longitude-lastUserCoordinate.longitude)>0.00002 && fabs(curMapView.centerCoordinate.latitude-lastUserCoordinate.latitude)>0.00002){
         [curMapView setCenterCoordinate:lastUserCoordinate animated:YES];
-        [reLocate setImage:[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_btn_status2"] forState:UIControlStateNormal];
+        [reLocate setImage:[[LEMapViewSettings sharedInstance] leLocateStatusRotate] forState:UIControlStateNormal];
         curMapRotationStatus=MapRotationStatusUser;
         if(curMapView.cameraDegree!=0)
             [curMapView setCameraDegree:0 animated:YES duration:0.2];
     }else if (curMapRotationStatus==MapRotationStatusUser) {
         curMapRotationStatus=MapRotationStatusMap;
-        [reLocate setImage:[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_btn_status3"] forState:UIControlStateNormal];
+        [reLocate setImage:[[LEMapViewSettings sharedInstance] leLocateStatusFollow] forState:UIControlStateNormal];
         //        [self resetUserAnnotationImage];
         float degree= curMapView.userLocation.heading.trueHeading-curMapView.rotationDegree;
         [UIView animateWithDuration:0.1 animations:^{
@@ -250,7 +249,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         if(curMapView.cameraDegree!=0)
             [curMapView setCameraDegree:0 animated:YES duration:0.2];
         curMapRotationStatus=MapRotationStatusUser;
-        [reLocate setImage: [[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_btn_status2"] forState:UIControlStateNormal];
+        [reLocate setImage: [[LEMapViewSettings sharedInstance] leLocateStatusRotate] forState:UIControlStateNormal];
         //        [self resetUserAnnotationImage];
         float degree=curMapView.userLocation.heading.trueHeading-curMapView.rotationDegree;
         [UIView animateWithDuration:0.1 animations:^{
@@ -297,21 +296,21 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [self initCompass];
     [self checkGPSSettings];
     //
-    UIImage *buttonImage=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_btn_status3"];
+    UIImage *buttonImage=[[LEMapViewSettings sharedInstance] leLocateStatusFollow];
     reLocate=[[UIButton alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideBottomLeft Offset:CGPointMake(7, -NavigationBarHeight/2) CGSize:CGSizeMake(50, 50)]];
     [self addSubview:reLocate];
     [reLocate addTarget:self action:@selector(onRotateSwitch) forControlEvents:UIControlEventTouchUpInside];
     [reLocate setImage:buttonImage forState:UIControlStateNormal];
     
-    UIImage *imgScale=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"mapScaleBG"];
+    UIImage *imgScale=[[LEMapViewSettings sharedInstance] leScaleBackground];
     UIImageView *scaleView=[[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width-imgScale.size.width-7, reLocate.frame.origin.y+reLocate.frame.size.height-imgScale.size.height+3, 94/2,150/2)];
     [scaleView setUserInteractionEnabled:YES];
     [scaleView setImage:imgScale];
     [self addSubview:scaleView];
-    UIImage *imgScaleUp=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"mapScaleUp"];
-    UIImage *imgScaleUp2=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"mapScaleUp2"];
-    UIImage *imgScaleDown=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"mapScaleDown"];
-    UIImage *imgScaleDown2=[[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"mapScaleDown2"];
+    UIImage *imgScaleUp=[[LEMapViewSettings sharedInstance] leScaleUp];
+    UIImage *imgScaleUp2=[[LEMapViewSettings sharedInstance] leScaleUpHighlighted];
+    UIImage *imgScaleDown=[[LEMapViewSettings sharedInstance] leScaleDown];
+    UIImage *imgScaleDown2=[[LEMapViewSettings sharedInstance] leScaleDownHighlighted];
     UIButton *sizeUp=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 94/2, 150/2/2)];
     UIButton *sizeDown=[[UIButton alloc]initWithFrame:CGRectMake(0, 150/2/2, 94/2, 150/2/2)];
     [scaleView addSubview:sizeUp];

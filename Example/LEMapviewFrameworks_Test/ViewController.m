@@ -167,17 +167,7 @@
     TestLEMapview *map;
 }
 
-//#import "LEMapView.h"                       //地图主体部分
-//#import "LEMapViewAnnotation.h"             //地图主体图钉View对应的Annotation
-//#import "LEMapViewSearchAnnotation.h"       //地图搜索图钉View对应的Annotation
-//#import "LEMapCallOutViewAnnotation.h"      //地图Callout图钉View对应的Annotation
-//#import "LEMapBaseAnnotationView.h"         //地图图钉View的基类
-//#import "LEMapViewAnnotationView.h"         //地图主体图钉View
-//#import "LEMapViewSearchAnnotationView.h"   //地图搜索图钉View
-//#import "LEMapCallOutAnnotationView.h"      //地图CallOut图钉View
-//#import "LEMapViewUserAnnotationView.h"     //地图用户图钉View
-//#import "LEMapViewAnnotationSubView.h"      //地图Callout基类
-//#import "LEMapSearchBar.h"                  //地图搜索条
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -185,7 +175,7 @@
     [self setEdgesForExtendedLayout:UIRectEdgeLeft&UIRectEdgeRight&UIRectEdgeBottom];
     [self setNavigationTitle:@"LEMapView 测试"];
     LEBaseTableView *tb=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self.view ParentView:self.view TableViewCell:@"TestCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self AutoRefresh:NO]];
-    [tb onRefreshedWithData:[@[@"LEMapView", @"LEMapSearchBar"]mutableCopy]];
+    [tb onRefreshedWithData:[@[@"LEMapView"] mutableCopy]];
     [tb setTopRefresh:NO];
     [tb setBottomRefresh:NO];
 }  
@@ -199,9 +189,8 @@
             LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
             
             [self.navigationController pushViewController:vc animated:YES];
-            [vc setNavigationTitle:@"测试LEMapView"];
-            map=[[TestLEMapview alloc] initUIWithFrame:view.viewContainer.bounds AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[ColorBlue imageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
-            [view.viewContainer addSubview:map];
+            [vc setNavigationTitle:@"综合测试"];
+            map=[[TestLEMapview alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:view.viewContainer EdgeInsects:UIEdgeInsetsZero] AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[ColorBlue imageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
             [map setEnableAnnotationRotation:YES];
             [map setEnablePolyline:YES];
             [map setEnableAnnotationCentered:YES];
@@ -246,7 +235,7 @@
 }
 -(void) onMapRequestLaunchedWithData:(NSDictionary *) data{
     NSLogObject(data);
-    [self.view addLocalNotification:[NSString stringWithFormat:@"Request %@,%@:%@",[data objectForKey:@"latitude"],[data objectForKey:@"longitude"],[data objectForKey:@"index"]]];
+    [self.view addLocalNotification:[NSString stringWithFormat:@"Requesting with startlatitude=%@,endlatitude=%@,startlongitude=%@,endlongitude=%@",[data objectForKey:@"startlatitude"],[data objectForKey:@"endlatitude"],[data objectForKey:@"startlongitude"],[data objectForKey:@"endlongitude"]]];
 }
 
 @end

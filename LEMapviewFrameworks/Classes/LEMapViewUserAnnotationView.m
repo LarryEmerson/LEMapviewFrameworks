@@ -7,12 +7,13 @@
 //
 
 #import "LEMapViewUserAnnotationView.h"
+#import "LEMapViewSettings.h"
 
 @implementation LEMapViewUserAnnotationView
 
 - (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier]) {
-        UIImage *imageIcon = [[LEUIFramework sharedInstance] getImageFromLEFrameworksWithName:@"map_userpin_arrow"];
+        UIImage *imageIcon = [[LEMapViewSettings sharedInstance] lePinForUserAsArrow];
         self.userImage = [[UIImageView alloc]initWithImage:imageIcon];
         [self addSubview:self.userImage];
         [self.userImage setFrame:CGRectMake(-imageIcon.size.width/2, -imageIcon.size.height/2, imageIcon.size.width, imageIcon.size.height)];

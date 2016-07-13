@@ -7,9 +7,7 @@
 //
 
 #import "LEMapSearchBar.h"
-#import "LEBaseTableView.h"
-#import "LEBaseTableViewCell.h"
-
+#import "LEFrameworks.h"
 #import "LEMapViewSearchAnnotation.h"
 
 
@@ -17,55 +15,65 @@
 @end
 @implementation LEMapSearchBarEmptyCell
 -(void) initUI{
+    [LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideCenter Offset:CGPointZero CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"暂无内容" FontSize:LayoutFontSize10 Font:nil Width:0 Height:0 Color:ColorTextBlack Line:1 Alignment:NSTextAlignmentCenter]];
 }
 @end
-@interface LEMapSearchBarTableView : LEBaseTableView
+@interface LEMapSearchBarCell : LEBaseTableViewCell
 @end
-@implementation LEMapSearchBarTableView
--(UITableViewCell *) _cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    LEBaseTableViewCell *cell = [self dequeueReusableCellWithIdentifier:CommonTableViewReuseableCellIdentifier];
-    if (cell == nil) {
-        cell = [[LEBaseTableViewCell alloc] initWithSettings:[[LETableViewCellSettings alloc] initWithSelectionDelegate:self.cellSelectionDelegate]];
-    }
-    AMapTip *tip = self.itemsArray[indexPath.row];
-    [cell setData:@{KeyOfCellTitle:tip.name} IndexPath:indexPath];
-    return cell;
+@implementation LEMapSearchBarCell{
+    UILabel *curLabel;
+}
+-(void) initUI{
+    curLabel=[LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:nil FontSize:LayoutFontSize10 Font:nil Width:0 Height:0 Color:ColorTextBlack Line:1 Alignment:NSTextAlignmentLeft]];
+}
+-(void) setData:(id)data IndexPath:(NSIndexPath *)path{
+    [super setData:data IndexPath:path];
+    AMapTip *tip=(AMapTip *)data;
+    [curLabel leSetText:tip.name];
 }
 @end
-
-@interface LEMapSearchBar()<UISearchBarDelegate,LETableViewCellSelectionDelegate,LEGetDataDelegate,AMapSearchDelegate>
+//@interface LEMapSearchBarTableView : LEBaseTableViewWithRefresh
+//@end
+//@implementation LEMapSearchBarTableView
+//-(UITableViewCell *) _cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    LEMapSearchBarCell *cell = [self dequeueReusableCellWithIdentifier:CommonTableViewReuseableCellIdentifier];
+//    if (cell == nil) {
+//        cell = [[LEMapSearchBarCell alloc] initWithSettings:[[LETableViewCellSettings alloc] initWithSelectionDelegate:self.cellSelectionDelegate]];
+//    }
+//    AMapTip *tip = self.itemsArray[indexPath.row];
+//    [cell setData:tip.name IndexPath:indexPath];
+//    return cell;
+//}
+//@end
+@interface LEMapSearchBar()<UISearchBarDelegate,LETableViewCellSelectionDelegate,AMapSearchDelegate>
 @end
-
 @implementation LEMapSearchBar{
     UIView *parentView;
     UIView *maskView;
     UISearchBar *searchBar;
     UIButton *buttonCancle;
     //
-    LEMapSearchBarTableView *tableView;
+    LEBaseTableView *tableView;
     AMapSearchAPI *search;
     NSMutableArray *tips;
     LEMapViewSearchAnnotation *curSearchAnnotation;
     NSMutableArray *curSearchAnnotationArray;
-    
     UIView *tableViewContainer;
-    
 }
-
 -(id) initWithSuperView:(UIView *) parent{
     parentView=parent;
     self.globalVar=[LEUIFramework sharedInstance];
-    self=[super initWithFrame:CGRectMake(0, 0, self.globalVar.ScreenWidth, NavigationBarHeight+StatusBarHeight)];
+    self=[super initWithFrame:CGRectMake(0, 0, self.globalVar.ScreenWidth, NavigationBarHeight)];
     [self initUI];
     [parent addSubview:self];
     return self;
 }
 -(void) initUI{
+    tips=[[NSMutableArray alloc] init];
     maskView=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
     [maskView setBackgroundColor:ColorMask2];
     [maskView setAlpha:0];
-    
-    searchBar=[[UISearchBar alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopCenter Offset:CGPointMake(0, StatusBarHeight) CGSize:CGSizeMake(self.globalVar.ScreenWidth, NavigationBarHeight)]];
+    searchBar=[[UISearchBar alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopCenter Offset:CGPointZero CGSize:CGSizeMake(self.globalVar.ScreenWidth, NavigationBarHeight)]];
     [searchBar setDelegate:self];
     [searchBar setPlaceholder:@"请输入地点"];
     [searchBar setBarStyle:UIBarStyleDefault];
@@ -73,13 +81,13 @@
     [searchBar setTranslucent:YES];
     [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     //
-    tableViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorOutsideBottomCenter RelativeView:searchBar Offset:CGPointZero CGSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.bounds.size.height-StatusBarHeight-NavigationBarHeight)]];
-    tableView=[[LEMapSearchBarTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self ParentView:tableViewContainer TableViewCell:nil EmptyTableViewCell:@"LEMapSearchBarEmptyCell" GetDataDelegate:self TableViewCellSelectionDelegate:self]];
+    tableViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorOutsideBottomCenter RelativeView:searchBar Offset:CGPointZero CGSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.bounds.size.height-NavigationBarHeight)]];
+    tableView=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self ParentView:tableViewContainer TableViewCell:@"LEMapSearchBarCell" EmptyTableViewCell:@"LEMapSearchBarEmptyCell" GetDataDelegate:nil TableViewCellSelectionDelegate:self]];
     
     [tableView setTopRefresh:NO];
     [tableView setBottomRefresh:NO];
     //    [tableViewContainer setBackgroundColor:[UIColor colorWithRed:0.311 green:1.000 blue:0.932 alpha:0.138]];
-    //    [tableView setBackgroundColor:[UIColor colorWithRed:1.000 green:0.000 blue:0.000 alpha:0.138]];
+    //    [tableView setBackgroundColor:[UIColor colorWithRed:0.9859 green:0.0 blue:0.027 alpha:0.5]];
     //
     [tableViewContainer addTapEventWithSEL:@selector(onCancleSearch) Target:self];
     [self initSearch];
@@ -94,11 +102,10 @@
     NSTimeInterval animationDuration;
     [animationDurationValue getValue:&animationDuration];
     [UIView animateWithDuration:animationDuration animations:^{
-        [tableViewContainer leSetSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.frame.size.height-keyboardRect.size.height-StatusBarHeight-NavigationBarHeight+BottomTabbarHeight)];
+        [tableViewContainer leSetSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.frame.size.height-keyboardRect.size.height-NavigationBarHeight)];
         [tableView leSetSize:tableViewContainer.bounds.size];
     } completion:^(BOOL finished){ }];
 }
-
 - (void)keyboardWillHide:(NSNotification *)notification {
     NSDictionary* userInfo = [notification userInfo];
     NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
@@ -107,11 +114,10 @@
     NSTimeInterval animationDuration;
     [animationDurationValue getValue:&animationDuration];
     [UIView animateWithDuration:animationDuration animations:^{
-        [tableViewContainer leSetSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.frame.size.height-keyboardRect.size.height-StatusBarHeight-NavigationBarHeight+BottomTabbarHeight)];
+        [tableViewContainer leSetSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.frame.size.height-keyboardRect.size.height-NavigationBarHeight)];
         [tableView leSetSize:tableViewContainer.bounds.size];
     } completion:^(BOOL finished){ }];
 }
-
 - (void) onCancleSearch{
     [searchBar setText:@""];
     [searchBar setUserInteractionEnabled:NO];
@@ -133,7 +139,6 @@
         [tableViewContainer setAlpha:1];
     }];
     [bar setShowsCancelButton:YES animated:YES];
-    
 }
 - (void)searchBarTextDidEndEditing:(UISearchBar *) bar{
     [UIView animateWithDuration:1 animations:^(void){
@@ -149,17 +154,16 @@
     [self searchTipsWithKey:searchText];
 }
 - (void)searchBarSearchButtonClicked:(UISearchBar *)bar{
-//    NSLog(@"searchBarSearchButtonClicked %@",searchBar.text);
+    //    NSLog(@"searchBarSearchButtonClicked %@",searchBar.text);
     NSString *key = bar.text;
     [self clearAndSearchGeocodeWithKey:key];
     //    [displayController setActive:NO animated:NO];
     searchBar.placeholder = key;
+    [searchBar resignFirstResponder];
 }
 //
--(void) onRefreshData{}
--(void) onLoadMore{}
 -(void) onTableViewCellSelectedWithInfo:(NSDictionary *)info{
-//    NSLogObject(info);
+    NSLogObject(info);
     NSIndexPath *index=[info objectForKey:KeyOfCellIndexPath];
     AMapTip *tip = [tips objectAtIndex:index.row];
     [self clear];
@@ -171,17 +175,17 @@
     if(search){
         [search setDelegate:nil];
     }
-    
 }
 -(void) initSearch{
     tips = [NSMutableArray array];
     curSearchAnnotationArray=[[NSMutableArray alloc] init];
-//    if([MAMapServices sharedServices]&&[MAMapServices sharedServices].apiKey)
-//        search=[[AMapSearchAPI alloc]initWithSearchKey:[MAMapServices sharedServices].apiKey Delegate:self];
+    if([AMapServices sharedServices]&&[AMapServices sharedServices].apiKey){
+        search=[[AMapSearchAPI alloc]init];
+        [search setDelegate:self];
+    }
 }
 /* 地理编码 搜索. */
-- (void)searchGeocodeWithKey:(NSString *)key
-{
+- (void)searchGeocodeWithKey:(NSString *)key{
     if (key.length == 0) {
         return;
     }
@@ -190,40 +194,30 @@
     if(search)
         [search AMapGeocodeSearch:geo];
 }
-
 /* 输入提示 搜索.*/
-- (void)searchTipsWithKey:(NSString *)key
-{
+- (void)searchTipsWithKey:(NSString *)key{
     if (key.length == 0) {
         return;
     }
     AMapInputTipsSearchRequest *aMapTips = [[AMapInputTipsSearchRequest alloc] init];
     aMapTips.keywords = key;
-    //    NSMutableArray *cityArray=[[NSMutableArray alloc]init];
-    //    [cityArray addObject:@"常州"];
     aMapTips.city=@"常州";
-    if(search)
+    if(search){
         [search AMapInputTipsSearch:aMapTips];
+    }
 }
 /* 清除annotation. */
-- (void)clear
-{
-//    [curMapView removeAnnotations:curSearchAnnotationArray];
-//    [curMapView removeAnnotation:curSearchAnnotation];
+- (void)clear{
     curSearchAnnotation=nil;
     [curSearchAnnotationArray removeAllObjects];
 }
-
-- (void)clearAndSearchGeocodeWithKey:(NSString *)key
-{
-    /* 清除annotation. */
+- (void)clearAndSearchGeocodeWithKey:(NSString *)key{
     [self clear];
     [self searchGeocodeWithKey:key];
 }
 /* 地理编码回调.*/
-- (void)onGeocodeSearchDone:(AMapGeocodeSearchRequest *)request response:(AMapGeocodeSearchResponse *)response
-{
-//    NSLog(@"%@ || %@",request,response);
+- (void)onGeocodeSearchDone:(AMapGeocodeSearchRequest *)request response:(AMapGeocodeSearchResponse *)response{
+    //    NSLog(@"%@ || %@",request,response);
     if (response.geocodes.count == 0) {
         return;
     }
@@ -240,22 +234,14 @@
         [self.delegate onDoneSearchWith:curSearchAnnotationArray];
     }
     [tableView onRefreshedWithData:[@[]mutableCopy]];
-//    if (curSearchAnnotationArray.count == 1) {
-//        [curMapView setCenterCoordinate:[curSearchAnnotationArray[0] coordinate] animated:YES];
-//    } else {
-//        [curMapView setVisibleMapRect:[CommonUtility minMapRectForAnnotations:curSearchAnnotationArray] animated:NO];
-//    }
-//    [curMapView addAnnotations:curSearchAnnotationArray];
-    //    NSLog(@"onGeocodeSearchDone");
     [self onCancleSearch];
 }
-
 /* 输入提示回调. */
 - (void)onInputTipsSearchDone:(AMapInputTipsSearchRequest *)request response:(AMapInputTipsSearchResponse *)response{
-//    NSLog(@"onInputTipsSearchDone %@",response.tips);
     [tips removeAllObjects];
     [tips addObjectsFromArray:response.tips];
+    //    NSLog(@"onInputTipsSearchDone %@",tips);
     [tableView onRefreshedWithData:tips];
+    [tableView reloadData];
 }
-
 @end

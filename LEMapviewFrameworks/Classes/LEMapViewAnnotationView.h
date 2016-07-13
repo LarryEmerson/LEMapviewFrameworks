@@ -7,7 +7,7 @@
 //
 
 #import "LEMapBaseAnnotationView.h"
-
+#import "LEMapViewAnnotation.h"
 @interface LEMapViewAnnotationView : LEMapBaseAnnotationView
 @property (nonatomic) UIImageView *curAnnotationIcon;
 @property (nonatomic) float originalAngle;

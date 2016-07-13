@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "LEMapviewFrameworks.h"
+#import "LEFrameworks.h"
 
 @interface TestLEMapViewEndPoint :   NSObject<MAAnnotation>{
 @private
@@ -146,45 +147,98 @@
 }
 @end
 
-@interface ViewController ()<LEMapViewDelegate>
+
+@interface TestCell : LEBaseTableViewCell
 @end
-@implementation ViewController
+@implementation TestCell{
+    UILabel *label;
+}
+-(void) initUI{
+    label=[LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"" FontSize:14 Font:nil Width:0 Height:0 Color:ColorBlack Line:1 Alignment:NSTextAlignmentLeft]];
+}
+-(void) setData:(id)data IndexPath:(NSIndexPath *)path{
+    [super setData:data IndexPath:path];
+    [label leSetText:data];
+}
+@end
+@interface ViewController ()<LEMapViewDelegate,LETableViewCellSelectionDelegate,LEMapSearchBarDelegate>
+@end
+@implementation ViewController{
+    TestLEMapview *map;
+}
+
+//#import "LEMapView.h"                       //地图主体部分
+//#import "LEMapViewAnnotation.h"             //地图主体图钉View对应的Annotation
+//#import "LEMapViewSearchAnnotation.h"       //地图搜索图钉View对应的Annotation
+//#import "LEMapCallOutViewAnnotation.h"      //地图Callout图钉View对应的Annotation
+//#import "LEMapBaseAnnotationView.h"         //地图图钉View的基类
+//#import "LEMapViewAnnotationView.h"         //地图主体图钉View
+//#import "LEMapViewSearchAnnotationView.h"   //地图搜索图钉View
+//#import "LEMapCallOutAnnotationView.h"      //地图CallOut图钉View
+//#import "LEMapViewUserAnnotationView.h"     //地图用户图钉View
+//#import "LEMapViewAnnotationSubView.h"      //地图Callout基类
+//#import "LEMapSearchBar.h"                  //地图搜索条
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self onTestMap];
-} 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    [self setEdgesForExtendedLayout:UIRectEdgeLeft&UIRectEdgeRight&UIRectEdgeBottom];
+    [self setNavigationTitle:@"LEMapView 测试"];
+    LEBaseTableView *tb=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self.view ParentView:self.view TableViewCell:@"TestCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self AutoRefresh:NO]];
+    [tb onRefreshedWithData:[@[@"LEMapView", @"LEMapSearchBar"]mutableCopy]];
+    [tb setTopRefresh:NO];
+    [tb setBottomRefresh:NO];
+}  
+-(void) onTableViewCellSelectedWithInfo:(NSDictionary *)info{
+    NSIndexPath *index=[info objectForKey:KeyOfCellIndexPath];
+    switch (index.row) {
+        case 0:
+        {
+            [AMapServices sharedServices].apiKey =  @"e81cd43379b47cb53892f6a7577597a4";
+            LEBaseViewController *vc=[[LEBaseViewController alloc] init];
+            LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
+            
+            [self.navigationController pushViewController:vc animated:YES];
+            [vc setNavigationTitle:@"测试LEMapView"];
+            map=[[TestLEMapview alloc] initUIWithFrame:view.viewContainer.bounds AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[ColorBlue imageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
+            [view.viewContainer addSubview:map];
+            [map setEnableAnnotationRotation:YES];
+            [map setEnablePolyline:YES];
+            [map setEnableAnnotationCentered:YES];
+            [map setPolylineWidth:8];
+            [map setPolylineStrokeColor:[UIColor colorWithRed:1.0 green:0.6302 blue:0.6661 alpha:1.0]];
+            NSMutableArray *array=[[NSMutableArray alloc] init];
+            [array addObject:@{@"latitude":@"31.810000",@"longitude":@"119.985000",@"index":@"1"}];
+            [array addObject:@{@"latitude":@"31.807000",@"longitude":@"119.987000",@"index":@"2"}];
+            [array addObject:@{@"latitude":@"31.804000",@"longitude":@"119.992000",@"index":@"3"}];
+            [array addObject:@{@"latitude":@"31.807000",@"longitude":@"119.995000",@"index":@"4"}];
+            [array addObject:@{@"latitude":@"31.810000",@"longitude":@"119.997000",@"index":@"5"}];
+            [array addObject:@{@"latitude":@"31.813000",@"longitude":@"119.999000",@"index":@"6"}];
+            [array addObject:@{@"latitude":@"31.816000",@"longitude":@"119.996000",@"index":@"7"}];
+            [array addObject:@{@"latitude":@"31.819000",@"longitude":@"119.992000",@"index":@"8"}];
+            [array addObject:@{@"latitude":@"31.816000",@"longitude":@"119.988000",@"index":@"9"}];
+            [array addObject:@{@"latitude":@"31.812000",@"longitude":@"119.986000",@"index":@"10"}];
+            [array addObject:@{@"latitude":@"31.810282",@"longitude":@"119.992165",@"index":@"11"}];
+            [array addObject:@{@"latitude":@"31.814282",@"longitude":@"119.993265",@"index":@"12"}];
+            [map onRefreshedData:array];
+            
+            [map.onGetMapview setCenterCoordinate:CLLocationCoordinate2DMake(31.810282,119.992165) animated:YES];
+            LEMapSearchBar *bar=[[LEMapSearchBar alloc] initWithSuperView:view.viewContainer];
+            [bar setDelegate:self];
+        }
+            break;
+        case 1:
+        {
+        }
+            break;
+        default:
+            break;
+    }
 }
-
--(void) onTestMap{
-    [AMapServices sharedServices].apiKey =  @"e81cd43379b47cb53892f6a7577597a4";
-    TestLEMapview *map=[[TestLEMapview alloc] initUIWithFrame:self.view.bounds AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[ColorBlue imageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
-    [self.view addSubview:map];
-    [map setEnableAnnotationRotation:YES];
-    [map setEnablePolyline:YES];
-    [map setEnableAnnotationCentered:YES];
-    [map setPolylineWidth:8];
-    [map setPolylineStrokeColor:[UIColor colorWithRed:1.0 green:0.6302 blue:0.6661 alpha:1.0]];
-    NSMutableArray *array=[[NSMutableArray alloc] init];
-    [array addObject:@{@"latitude":@"31.810000",@"longitude":@"119.985000",@"index":@"1"}];
-    [array addObject:@{@"latitude":@"31.807000",@"longitude":@"119.987000",@"index":@"2"}];
-    [array addObject:@{@"latitude":@"31.804000",@"longitude":@"119.992000",@"index":@"3"}];
-    [array addObject:@{@"latitude":@"31.807000",@"longitude":@"119.995000",@"index":@"4"}];
-    [array addObject:@{@"latitude":@"31.810000",@"longitude":@"119.997000",@"index":@"5"}];
-    [array addObject:@{@"latitude":@"31.813000",@"longitude":@"119.999000",@"index":@"6"}];
-    [array addObject:@{@"latitude":@"31.816000",@"longitude":@"119.996000",@"index":@"7"}];
-    [array addObject:@{@"latitude":@"31.819000",@"longitude":@"119.992000",@"index":@"8"}];
-    [array addObject:@{@"latitude":@"31.816000",@"longitude":@"119.988000",@"index":@"9"}];
-    [array addObject:@{@"latitude":@"31.812000",@"longitude":@"119.986000",@"index":@"10"}];
-    [array addObject:@{@"latitude":@"31.810282",@"longitude":@"119.992165",@"index":@"11"}];
-    [array addObject:@{@"latitude":@"31.814282",@"longitude":@"119.993265",@"index":@"12"}];
-    [map onRefreshedData:array];
-    
-    [map.onGetMapview setCenterCoordinate:CLLocationCoordinate2DMake(31.810282,119.992165) animated:YES];
+-(void) onDoneSearchWith:(NSMutableArray *)array{
+    NSLogObject(array);
+    [map.onGetMapview addAnnotations:array];
+    [map.onGetMapview showAnnotations:array animated:YES];
 }
 -(void) onCallOutViewClickedWithData:(NSDictionary *) data{
     NSLogObject(data);

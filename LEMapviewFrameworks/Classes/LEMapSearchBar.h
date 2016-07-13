@@ -10,7 +10,7 @@
 #import "LEUIFramework.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
-
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @protocol LEMapSearchBarDelegate<NSObject>
 -(void) onDoneSearchWith:(NSMutableArray *) array;
 @end

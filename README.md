@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/LEMapviewFrameworks.svg?style=flat)](http://cocoapods.org/pods/LEMapviewFrameworks)
 
 ## #import "LEMapviewFrameworks.h"
-![](http://cocoapods.org/pods/LEMapviewFrameworks/LEMapviewFrameworks.gif)
+![](https://github.com/LarryEmerson/LEMapviewFrameworks/blob/master/Example/LEMapviewFrameworks.gif)
 #### 类说明
 ```
 "LEMapView.h"                       //地图主体部分（需设置）

@@ -10,14 +10,6 @@
 #import "LEFrameworks.h"
 #import "LEMapViewSearchAnnotation.h"
 
-
-@interface LEMapSearchBarEmptyCell : LEBaseEmptyTableViewCell
-@end
-@implementation LEMapSearchBarEmptyCell
--(void) initUI{
-    [LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideCenter Offset:CGPointZero CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"暂无内容" FontSize:LayoutFontSize10 Font:nil Width:0 Height:0 Color:ColorTextBlack Line:1 Alignment:NSTextAlignmentCenter]];
-}
-@end
 @interface LEMapSearchBarCell : LEBaseTableViewCell
 @end
 @implementation LEMapSearchBarCell{
@@ -32,19 +24,6 @@
     [curLabel leSetText:tip.name];
 }
 @end
-//@interface LEMapSearchBarTableView : LEBaseTableViewWithRefresh
-//@end
-//@implementation LEMapSearchBarTableView
-//-(UITableViewCell *) _cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    LEMapSearchBarCell *cell = [self dequeueReusableCellWithIdentifier:CommonTableViewReuseableCellIdentifier];
-//    if (cell == nil) {
-//        cell = [[LEMapSearchBarCell alloc] initWithSettings:[[LETableViewCellSettings alloc] initWithSelectionDelegate:self.cellSelectionDelegate]];
-//    }
-//    AMapTip *tip = self.itemsArray[indexPath.row];
-//    [cell setData:tip.name IndexPath:indexPath];
-//    return cell;
-//}
-//@end
 @interface LEMapSearchBar()<UISearchBarDelegate,LETableViewCellSelectionDelegate,AMapSearchDelegate>
 @end
 @implementation LEMapSearchBar{
@@ -82,7 +61,7 @@
     [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     //
     tableViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorOutsideBottomCenter RelativeView:searchBar Offset:CGPointZero CGSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.bounds.size.height-NavigationBarHeight)]];
-    tableView=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self ParentView:tableViewContainer TableViewCell:@"LEMapSearchBarCell" EmptyTableViewCell:@"LEMapSearchBarEmptyCell" GetDataDelegate:nil TableViewCellSelectionDelegate:self]];
+    tableView=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self ParentView:tableViewContainer TableViewCell:@"LEMapSearchBarCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self]];
     
     [tableView setTopRefresh:NO];
     [tableView setBottomRefresh:NO];
@@ -158,12 +137,12 @@
     NSString *key = bar.text;
     [self clearAndSearchGeocodeWithKey:key];
     //    [displayController setActive:NO animated:NO];
-    searchBar.placeholder = key;
+    //    searchBar.placeholder = key;
     [searchBar resignFirstResponder];
 }
 //
 -(void) onTableViewCellSelectedWithInfo:(NSDictionary *)info{
-    NSLogObject(info);
+    //    NSLogObject(info);
     NSIndexPath *index=[info objectForKey:KeyOfCellIndexPath];
     AMapTip *tip = [tips objectAtIndex:index.row];
     [self clear];
@@ -242,6 +221,5 @@
     [tips addObjectsFromArray:response.tips];
     //    NSLog(@"onInputTipsSearchDone %@",tips);
     [tableView onRefreshedWithData:tips];
-    [tableView reloadData];
 }
 @end

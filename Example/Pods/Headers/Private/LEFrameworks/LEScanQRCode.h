@@ -1,0 +1,1 @@
+../../../LEFrameworks/LEFrameworks/Classes/LEQRCode/LEScanQRCode.h

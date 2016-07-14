@@ -129,9 +129,9 @@
 -(void) initUI{
     [self leSetSize:CGSizeMake(200, 80)];
     [self.callOutViewContainer leSetLeAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
-    btn=[LEUIFramework getUIButtonWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointZero CGSize:CGSizeMake(50, 50)] ButtonSettings:[[LEAutoLayoutUIButtonSettings alloc] initWithTitle:@"@" FontSize:10 Font:nil Image:nil BackgroundImage:[ColorMask imageStrechedFromSizeOne] Color:ColorWhite SelectedColor:ColorGray MaxWidth:0 SEL:@selector(onBtn) Target:self]];
-    [btn setBackgroundImage:[ColorMask5 imageStrechedFromSizeOne] forState:UIControlStateHighlighted];
-    label=[LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self.callOutViewContainer Anchor:LEAnchorInsideCenter Offset:CGPointZero CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"Callout" FontSize:0 Font:LEBoldFont(LayoutFontSize14) Width:0 Height:0 Color:ColorWhite Line:1 Alignment:NSTextAlignmentCenter]];
+    btn=[LEUIFramework leGetButtonWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointZero CGSize:CGSizeMake(50, 50)] ButtonSettings:[[LEAutoLayoutUIButtonSettings alloc] initWithTitle:@"@" FontSize:10 Font:nil Image:nil BackgroundImage:[LEColorMask leImageStrechedFromSizeOne] Color:LEColorWhite SelectedColor:LEColorGray MaxWidth:0 SEL:@selector(onBtn) Target:self]];
+    [btn setBackgroundImage:[LEColorMask5 leImageStrechedFromSizeOne] forState:UIControlStateHighlighted];
+    label=[LEUIFramework leGetLabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self.callOutViewContainer Anchor:LEAnchorInsideCenter Offset:CGPointZero CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"Callout" FontSize:0 Font:LEBoldFont(LELayoutFontSize14) Width:0 Height:0 Color:LEColorWhite Line:1 Alignment:NSTextAlignmentCenter]];
 }
 -(void) setData:(NSDictionary *)data{
     int index=[[data objectForKey:@"index"] intValue];
@@ -142,8 +142,8 @@
     }
 }
 -(void) onBtn{
-    NSLogFunc;
-    [self addLocalNotification:@"测试按钮"];
+    LELogFunc;
+    [self leAddLocalNotification:@"测试按钮"];
 }
 @end
 
@@ -154,7 +154,7 @@
     UILabel *label;
 }
 -(void) initUI{
-    label=[LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"" FontSize:14 Font:nil Width:0 Height:0 Color:ColorBlack Line:1 Alignment:NSTextAlignmentLeft]];
+    label=[LEUIFramework leGetLabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LELayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"" FontSize:14 Font:nil Width:0 Height:0 Color:LEColorBlack Line:1 Alignment:NSTextAlignmentLeft]];
 }
 -(void) setData:(id)data IndexPath:(NSIndexPath *)path{
     [super setData:data IndexPath:path];
@@ -173,7 +173,7 @@
     [super viewDidLoad];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setEdgesForExtendedLayout:UIRectEdgeLeft&UIRectEdgeRight&UIRectEdgeBottom];
-    [self setNavigationTitle:@"LEMapView 测试"];
+    [self leSetNavigationTitle:@"LEMapView 测试"];
     LEBaseTableView *tb=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self.view ParentView:self.view TableViewCell:@"TestCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self AutoRefresh:NO]];
     [tb onRefreshedWithData:[@[@"LEMapView"] mutableCopy]];
     [tb setTopRefresh:NO];
@@ -189,8 +189,8 @@
             LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
             
             [self.navigationController pushViewController:vc animated:YES];
-            [vc setNavigationTitle:@"综合测试"];
-            map=[[TestLEMapview alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:view.viewContainer EdgeInsects:UIEdgeInsetsZero] AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[ColorBlue imageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
+            [vc leSetNavigationTitle:@"综合测试"];
+            map=[[TestLEMapview alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:view.viewContainer EdgeInsects:UIEdgeInsetsZero] AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[LEColorBlue leImageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
             [map setEnableAnnotationRotation:YES];
             [map setEnablePolyline:YES];
             [map setEnableAnnotationCentered:YES];
@@ -225,17 +225,17 @@
     }
 }
 -(void) onDoneSearchWith:(NSMutableArray *)array{
-    NSLogObject(array);
+    LELogObject(array);
     [map.onGetMapview addAnnotations:array];
     [map.onGetMapview showAnnotations:array animated:YES];
 }
 -(void) onCallOutViewClickedWithData:(NSDictionary *) data{
-    NSLogObject(data);
-    [self.view addLocalNotification:[NSString stringWithFormat:@"CallOut %@,%@:%@",[data objectForKey:@"latitude"],[data objectForKey:@"longitude"],[data objectForKey:@"index"]]];
+    LELogObject(data);
+    [self.view leAddLocalNotification:[NSString stringWithFormat:@"CallOut %@,%@:%@",[data objectForKey:@"latitude"],[data objectForKey:@"longitude"],[data objectForKey:@"index"]]];
 }
 -(void) onMapRequestLaunchedWithData:(NSDictionary *) data{
-    NSLogObject(data);
-    [self.view addLocalNotification:[NSString stringWithFormat:@"Requesting with startlatitude=%@,endlatitude=%@,startlongitude=%@,endlongitude=%@",[data objectForKey:@"startlatitude"],[data objectForKey:@"endlatitude"],[data objectForKey:@"startlongitude"],[data objectForKey:@"endlongitude"]]];
+    LELogObject(data);
+    [self.view leAddLocalNotification:[NSString stringWithFormat:@"Requesting with startlatitude=%@,endlatitude=%@,startlongitude=%@,endlongitude=%@",[data objectForKey:@"startlatitude"],[data objectForKey:@"endlatitude"],[data objectForKey:@"startlongitude"],[data objectForKey:@"endlongitude"]]];
 }
 
 @end

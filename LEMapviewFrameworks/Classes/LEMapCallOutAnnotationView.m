@@ -24,7 +24,7 @@
 -(void) initUI{
     LEMapCallOutViewAnnotation *anno=(LEMapCallOutViewAnnotation *)self.annotation;
     imgPin=anno.curAnnotationIcon;
-    SuppressPerformSelectorLeakWarning(
+    LESuppressPerformSelectorLeakWarning(
                                        callOutView=[[NSClassFromString(subViewClassName) alloc] performSelector:NSSelectorFromString(@"initWithAnnotation:") withObject:self.annotation];
                                        );
     [self addSubview:callOutView];

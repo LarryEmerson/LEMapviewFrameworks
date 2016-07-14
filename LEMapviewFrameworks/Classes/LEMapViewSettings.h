@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LEFrameworks.h"
 @interface LEMapViewSettings : NSObject
-singleton_interface(LEMapViewSettings)
+LESingleton_interface(LEMapViewSettings);
 @property (nonatomic) NSBundle *leMapviewBundle;
 @property (nonatomic) UIImage *leCompass;
 @property (nonatomic) UIImage *leLocateStatusNormal;

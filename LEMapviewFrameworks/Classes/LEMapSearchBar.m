@@ -16,7 +16,7 @@
     UILabel *curLabel;
 }
 -(void) initUI{
-    curLabel=[LEUIFramework getUILabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:nil FontSize:LayoutFontSize10 Font:nil Width:0 Height:0 Color:ColorTextBlack Line:1 Alignment:NSTextAlignmentLeft]];
+    curLabel=[LEUIFramework leGetLabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LELayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:nil FontSize:LELayoutFontSize10 Font:nil Width:0 Height:0 Color:LEColorTextBlack Line:1 Alignment:NSTextAlignmentLeft]];
 }
 -(void) setData:(id)data IndexPath:(NSIndexPath *)path{
     [super setData:data IndexPath:path];
@@ -42,7 +42,7 @@
 -(id) initWithSuperView:(UIView *) parent{
     parentView=parent;
     self.globalVar=[LEUIFramework sharedInstance];
-    self=[super initWithFrame:CGRectMake(0, 0, self.globalVar.ScreenWidth, NavigationBarHeight)];
+    self=[super initWithFrame:CGRectMake(0, 0, LESCREEN_WIDTH, LENavigationBarHeight)];
     [self initUI];
     [parent addSubview:self];
     return self;
@@ -50,9 +50,9 @@
 -(void) initUI{
     tips=[[NSMutableArray alloc] init];
     maskView=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
-    [maskView setBackgroundColor:ColorMask2];
+    [maskView setBackgroundColor:LEColorMask2];
     [maskView setAlpha:0];
-    searchBar=[[UISearchBar alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopCenter Offset:CGPointZero CGSize:CGSizeMake(self.globalVar.ScreenWidth, NavigationBarHeight)]];
+    searchBar=[[UISearchBar alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopCenter Offset:CGPointZero CGSize:CGSizeMake(LESCREEN_WIDTH, LENavigationBarHeight)]];
     [searchBar setDelegate:self];
     [searchBar setPlaceholder:@"请输入地点"];
     [searchBar setBarStyle:UIBarStyleDefault];
@@ -60,7 +60,7 @@
     [searchBar setTranslucent:YES];
     [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     //
-    tableViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorOutsideBottomCenter RelativeView:searchBar Offset:CGPointZero CGSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.bounds.size.height-NavigationBarHeight)]];
+    tableViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorOutsideBottomCenter RelativeView:searchBar Offset:CGPointZero CGSize:CGSizeMake(LESCREEN_WIDTH, parentView.bounds.size.height-LENavigationBarHeight)]];
     tableView=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self ParentView:tableViewContainer TableViewCell:@"LEMapSearchBarCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self]];
     
     [tableView setTopRefresh:NO];
@@ -68,7 +68,7 @@
     //    [tableViewContainer setBackgroundColor:[UIColor colorWithRed:0.311 green:1.000 blue:0.932 alpha:0.138]];
     //    [tableView setBackgroundColor:[UIColor colorWithRed:0.9859 green:0.0 blue:0.027 alpha:0.5]];
     //
-    [tableViewContainer addTapEventWithSEL:@selector(onCancleSearch) Target:self];
+    [tableViewContainer leAddTapEventWithSEL:@selector(onCancleSearch) Target:self];
     [self initSearch];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -81,7 +81,7 @@
     NSTimeInterval animationDuration;
     [animationDurationValue getValue:&animationDuration];
     [UIView animateWithDuration:animationDuration animations:^{
-        [tableViewContainer leSetSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.frame.size.height-keyboardRect.size.height-NavigationBarHeight)];
+        [tableViewContainer leSetSize:CGSizeMake(LESCREEN_WIDTH, parentView.frame.size.height-keyboardRect.size.height-LENavigationBarHeight)];
         [tableView leSetSize:tableViewContainer.bounds.size];
     } completion:^(BOOL finished){ }];
 }
@@ -93,7 +93,7 @@
     NSTimeInterval animationDuration;
     [animationDurationValue getValue:&animationDuration];
     [UIView animateWithDuration:animationDuration animations:^{
-        [tableViewContainer leSetSize:CGSizeMake(self.globalVar.ScreenWidth, parentView.frame.size.height-keyboardRect.size.height-NavigationBarHeight)];
+        [tableViewContainer leSetSize:CGSizeMake(LESCREEN_WIDTH, parentView.frame.size.height-keyboardRect.size.height-LENavigationBarHeight)];
         [tableView leSetSize:tableViewContainer.bounds.size];
     } completion:^(BOOL finished){ }];
 }
@@ -124,7 +124,7 @@
         [maskView setAlpha:0];
         [tableViewContainer setAlpha:0];
     } completion:^(BOOL done){
-        [self leSetSize:CGSizeMake(self.globalVar.ScreenWidth, NavigationBarHeight)];
+        [self leSetSize:CGSizeMake(LESCREEN_WIDTH, LENavigationBarHeight)];
         [tableViewContainer setHidden:YES]; 
     }];
     [bar setShowsCancelButton:NO animated:YES];

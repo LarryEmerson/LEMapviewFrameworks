@@ -167,7 +167,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         if (curSearchAnnotationArray.count == 1) {
             [curMapView setCenterCoordinate:[curSearchAnnotationArray[0] coordinate] animated:YES];
         } else {
-            [curMapView showAnnotations:curSearchAnnotationArray edgePadding:UIEdgeInsetsMake(LayoutSideSpace, LayoutSideSpace, LayoutSideSpace, LayoutSideSpace) animated:NO];
+            [curMapView showAnnotations:curSearchAnnotationArray edgePadding:UIEdgeInsetsMake(LELayoutSideSpace, LELayoutSideSpace, LELayoutSideSpace, LELayoutSideSpace) animated:NO];
         }
     }
 }
@@ -181,9 +181,9 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 
 -(void) initCompass{
     UIImage *img=[[LEMapViewSettings sharedInstance] leCompass];
-    curCompass=[LEUIFramework getUIImageViewWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopRight Offset:CGPointMake(0, StatusBarHeight+NavigationBarHeight) CGSize:CGSizeMake(50, 50)] Image:img];
+    curCompass=[LEUIFramework leGetImageViewWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopRight Offset:CGPointMake(0, LEStatusBarHeight+LENavigationBarHeight) CGSize:CGSizeMake(50, 50)] Image:img];
     [curCompass setUserInteractionEnabled:YES];
-    [curCompass addTapEventWithSEL:@selector(onRotateToNormal) Target:self];
+    [curCompass leAddTapEventWithSEL:@selector(onRotateToNormal) Target:self];
 }
 //-(void) resetUserAnnotationImage{
 //    if(curUserAnnotationView){
@@ -262,7 +262,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //     NSLog(@"  onRotateSwitch %d",isRotateSwitcherOn);
 }
 - (void)mapView:(MAMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
-    NSLogFunc;
+    LELogFunc;
 }
 -(void) mapView:(MAMapView *)mapView mapWillZoomByUser:(BOOL)wasUserAction{
     [self onBeginChecking];
@@ -297,7 +297,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [self checkGPSSettings];
     //
     UIImage *buttonImage=[[LEMapViewSettings sharedInstance] leLocateStatusFollow];
-    reLocate=[[UIButton alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideBottomLeft Offset:CGPointMake(7, -NavigationBarHeight/2) CGSize:CGSizeMake(50, 50)]];
+    reLocate=[[UIButton alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideBottomLeft Offset:CGPointMake(7, -LENavigationBarHeight/2) CGSize:CGSizeMake(50, 50)]];
     [self addSubview:reLocate];
     [reLocate addTarget:self action:@selector(onRotateSwitch) forControlEvents:UIControlEventTouchUpInside];
     [reLocate setImage:buttonImage forState:UIControlStateNormal];
@@ -390,8 +390,8 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     LEMapViewAnnotation *anno=(LEMapViewAnnotation *)annotation;
     LEMapViewAnnotationView *annotationView =(LEMapViewAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier: @"annotation"];
     if (annotationView == nil) {
-        SuppressPerformSelectorLeakWarning(
-                                           annotationView = [[self.curAnnotationViewClass getInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithAnnotation:reuseIdentifier:") withObject:anno withObject: @"annotation"];
+        LESuppressPerformSelectorLeakWarning(
+                                           annotationView = [[self.curAnnotationViewClass leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithAnnotation:reuseIdentifier:") withObject:anno withObject: @"annotation"];
                                            );
     }
     if(self.enableAnnotationCentered) {
@@ -415,7 +415,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     }
 }
 - (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    NSLogFunc;
+    LELogFunc;
 }
 -(void) mapView:(MAMapView *)mapView mapDidZoomByUser:(BOOL)wasUserAction{
     [self onEndChecking];

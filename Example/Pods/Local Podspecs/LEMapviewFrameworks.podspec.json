@@ -17,7 +17,7 @@
   "platforms": {
     "ios": "7.0"
   },
-  "source_files": "LEMapviewFrameworks/Classes/**/*",
+  "source_files": "LEMapviewFrameworks/Classes/*.{h,m}",
   "resource_bundles": {
     "LEMapviewFrameworks": [
       "LEMapviewFrameworks/Classes/LEMapviewFrameworks.bundle/*.png"

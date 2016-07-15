@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'LEMapviewFrameworks'
-s.version          = '0.1.2'
+s.version          = '0.1.3'
 s.summary          = '高德地图进一步封装'
 
 # This description is used to generate tags and improve search results.
@@ -27,10 +27,10 @@ s.source           = { :git => 'https://github.com/LarryEmerson/LEMapviewFramewo
 
 s.ios.deployment_target = '7.0'
 
-s.source_files = 'LEMapviewFrameworks/Classes/**/*'
+s.source_files = 'LEMapviewFrameworks/Classes/*.{h,m}'
 
 s.resource_bundles = {
-'LEMapviewFrameworks' => ['LEMapviewFrameworks/Classes/LEMapviewFrameworks.bundle/*.png']
+'LEMapviewFrameworks' => ['LEMapviewFrameworks/LEMapviewFrameworksRes/LEMapviewFrameworks.bundle/*.png']
 }
 
 # s.public_header_files = 'Pod/Classes/**/*.h'

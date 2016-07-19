@@ -8,12 +8,23 @@
 
 #import "LEMapCallOutViewAnnotation.h"
 
-@implementation LEMapCallOutViewAnnotation
-@synthesize callOutBackground=_callOutBackground; 
+@interface LEMapCallOutViewAnnotation ()
+@property (nonatomic) CLLocationCoordinate2D userCoordinate;
+@property (nonatomic) UIImage *callOutBackground;
+@end
+@implementation LEMapCallOutViewAnnotation 
 -(id) initWithCoordinate:(CLLocationCoordinate2D) coordinate Index:(int) index AnnotationIcon:(UIImage *)icon  CallOutBackground:(UIImage *) bg  Data:(NSDictionary *) data UserCoordinate:(CLLocationCoordinate2D) userCoordinate{
     self.userCoordinate=userCoordinate; 
     self.callOutBackground=bg;
     return [super initWithCoordinate:coordinate Index:index AnnotationIcon:icon Data:data];
 }
-
+-(void) leSetCalloutBackground:(UIImage *) image{
+    self.callOutBackground=image;
+}
+-(void) leGetUserCoordinate:(CLLocationCoordinate2D) location{
+    self.userCoordinate=location;
+}
+-(UIImage *) leGetCalloutBackground{
+    return self.callOutBackground;
+}
 @end

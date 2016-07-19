@@ -8,32 +8,45 @@
 
 #import "LEMapViewSettings.h"
 
-
+@interface LEMapViewSettings ()
+@property (nonatomic, readwrite) NSBundle *leMapviewBundle;
+@property (nonatomic, readwrite) UIImage *leCompass;
+@property (nonatomic, readwrite) UIImage *leLocateStatusNormal;
+@property (nonatomic, readwrite) UIImage *leLocateStatusRotate;
+@property (nonatomic, readwrite) UIImage *leLocateStatusFollow;
+@property (nonatomic, readwrite) UIImage *leScaleBackground;
+@property (nonatomic, readwrite) UIImage *leScaleUp;
+@property (nonatomic, readwrite) UIImage *leScaleUpHighlighted;
+@property (nonatomic, readwrite) UIImage *leScaleDown;
+@property (nonatomic, readwrite) UIImage *leScaleDownHighlighted;
+@property (nonatomic, readwrite) UIImage *lePinForSearched;
+@property (nonatomic, readwrite) UIImage *lePinForUserAsArrow;
+@end
 @implementation LEMapViewSettings
 #pragma Singleton
 LESingleton_implementation(LEMapViewSettings);
 
 -(void) leExtraInits{
     self.leMapviewBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"LEMapviewFrameworks" ofType:@"bundle"]];
-    self.leCompass              =[self getImageWithName:@"map_compass"];
-    self.leLocateStatusNormal   =[self getImageWithName:@"map_btn_status"];
-    self.leLocateStatusRotate   =[self getImageWithName:@"map_btn_status2"];
-    self.leLocateStatusFollow   =[self getImageWithName:@"map_btn_status3"];
-    self.leScaleBackground      =[self getImageWithName:@"mapScaleBG"];
-    self.leScaleUp              =[self getImageWithName:@"mapScaleUp"];
-    self.leScaleDown            =[self getImageWithName:@"mapScaleDown"];
-    self.leScaleUpHighlighted   =[self getImageWithName:@"mapScaleUp2"];
-    self.leScaleDownHighlighted =[self getImageWithName:@"mapScaleDown2"];
-    self.lePinForSearched       =[self getImageWithName:@"map_pin_searched"];
-    self.lePinForUserAsArrow    =[self getImageWithName:@"map_userpin_arrow"];
+    self.leCompass              =[self leGetImageWithName:@"map_compass"];
+    self.leLocateStatusNormal   =[self leGetImageWithName:@"map_btn_status"];
+    self.leLocateStatusRotate   =[self leGetImageWithName:@"map_btn_status2"];
+    self.leLocateStatusFollow   =[self leGetImageWithName:@"map_btn_status3"];
+    self.leScaleBackground      =[self leGetImageWithName:@"mapScaleBG"];
+    self.leScaleUp              =[self leGetImageWithName:@"mapScaleUp"];
+    self.leScaleDown            =[self leGetImageWithName:@"mapScaleDown"];
+    self.leScaleUpHighlighted   =[self leGetImageWithName:@"mapScaleUp2"];
+    self.leScaleDownHighlighted =[self leGetImageWithName:@"mapScaleDown2"];
+    self.lePinForSearched       =[self leGetImageWithName:@"map_pin_searched"];
+    self.lePinForUserAsArrow    =[self leGetImageWithName:@"map_userpin_arrow"];
     
 }
-- (NSString *) getImagePathWithName:(NSString *) name{
+- (NSString *) leGetImagePathWithName:(NSString *) name{
     NSString *path= [NSString stringWithFormat:@"%@/%@.png",self.leMapviewBundle.bundlePath,name];
     return path;
 }
-- (UIImage *) getImageWithName:(NSString *) name{
-    UIImage *image = [[UIImage alloc] initWithContentsOfFile:[self getImagePathWithName:name]];
+- (UIImage *) leGetImageWithName:(NSString *) name{
+    UIImage *image = [[UIImage alloc] initWithContentsOfFile:[self leGetImagePathWithName:name]];
     return image;
 }
 @end

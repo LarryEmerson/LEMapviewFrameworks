@@ -8,8 +8,9 @@
 
 #import "LEMapBaseAnnotationView.h"
 #import "LEMapCallOutViewAnnotation.h"
-@interface LEMapCallOutAnnotationView : LEMapBaseAnnotationView 
-@property (nonatomic) id callOutDelegate;
-- (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier CallOutDelegate:(id) delegate  SubViewClass:(NSString *) subClass;
--(void) reSetCenterOffset:(int) offset;
+@interface LEMapCallOutAnnotationView : LEMapBaseAnnotationView
+-(id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier CallOutDelegate:(id) delegate  SubViewClass:(NSString *) subClass;
+-(id<LEMapViewDelegate>) leGetDelegate;
+-(void) leReSetCenterOffset:(int) offset;
+-(void) leSetDelegate:(id<LEMapViewDelegate>) delegate;
 @end

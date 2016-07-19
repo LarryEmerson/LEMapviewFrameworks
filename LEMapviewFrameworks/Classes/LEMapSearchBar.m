@@ -15,16 +15,17 @@
 @implementation LEMapSearchBarCell{
     UILabel *curLabel;
 }
--(void) initUI{
+-(void) leExtraInits{
     curLabel=[LEUIFramework leGetLabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LELayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:nil FontSize:LELayoutFontSize10 Font:nil Width:0 Height:0 Color:LEColorTextBlack Line:1 Alignment:NSTextAlignmentLeft]];
 }
--(void) setData:(id)data IndexPath:(NSIndexPath *)path{
-    [super setData:data IndexPath:path];
+-(void) leSetData:(id)data IndexPath:(NSIndexPath *)path{
+    [super leSetData:data IndexPath:path];
     AMapTip *tip=(AMapTip *)data;
     [curLabel leSetText:tip.name];
 }
 @end
 @interface LEMapSearchBar()<UISearchBarDelegate,LETableViewCellSelectionDelegate,AMapSearchDelegate>
+@property (nonatomic) id<LEMapSearchBarDelegate> delegate;
 @end
 @implementation LEMapSearchBar{
     UIView *parentView;
@@ -39,15 +40,17 @@
     NSMutableArray *curSearchAnnotationArray;
     UIView *tableViewContainer;
 }
+-(void) leSetDelegate:(id<LEMapSearchBarDelegate>)delegate{
+    self.delegate=delegate;
+}
 -(id) initWithSuperView:(UIView *) parent{
-    parentView=parent;
-    self.globalVar=[LEUIFramework sharedInstance];
+    parentView=parent; 
     self=[super initWithFrame:CGRectMake(0, 0, LESCREEN_WIDTH, LENavigationBarHeight)];
-    [self initUI];
+    [self leExtraInits];
     [parent addSubview:self];
     return self;
 }
--(void) initUI{
+-(void) leExtraInits{
     tips=[[NSMutableArray alloc] init];
     maskView=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
     [maskView setBackgroundColor:LEColorMask2];
@@ -63,8 +66,8 @@
     tableViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorOutsideBottomCenter RelativeView:searchBar Offset:CGPointZero CGSize:CGSizeMake(LESCREEN_WIDTH, parentView.bounds.size.height-LENavigationBarHeight)]];
     tableView=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self ParentView:tableViewContainer TableViewCell:@"LEMapSearchBarCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self]];
     
-    [tableView setTopRefresh:NO];
-    [tableView setBottomRefresh:NO];
+    [tableView leSetTopRefresh:NO];
+    [tableView leSetBottomRefresh:NO];
     //    [tableViewContainer setBackgroundColor:[UIColor colorWithRed:0.311 green:1.000 blue:0.932 alpha:0.138]];
     //    [tableView setBackgroundColor:[UIColor colorWithRed:0.9859 green:0.0 blue:0.027 alpha:0.5]];
     //
@@ -141,9 +144,9 @@
     [searchBar resignFirstResponder];
 }
 //
--(void) onTableViewCellSelectedWithInfo:(NSDictionary *)info{
+-(void) leOnTableViewCellSelectedWithInfo:(NSDictionary *)info{
     //    NSLogObject(info);
-    NSIndexPath *index=[info objectForKey:KeyOfCellIndexPath];
+    NSIndexPath *index=[info objectForKey:LEKeyOfIndexPath];
     AMapTip *tip = [tips objectAtIndex:index.row];
     [self clear];
     [self clearAndSearchGeocodeWithKey:[tip.district stringByAppendingString:tip.name]];
@@ -210,9 +213,9 @@
         [curSearchAnnotationArray addObject:geocodeAnnotation];
     }];
     if(self.delegate){
-        [self.delegate onDoneSearchWith:curSearchAnnotationArray];
+        [self.delegate leOnDoneSearchWith:curSearchAnnotationArray];
     }
-    [tableView onRefreshedWithData:[@[]mutableCopy]];
+    [tableView leOnRefreshedWithData:[@[]mutableCopy]];
     [self onCancleSearch];
 }
 /* 输入提示回调. */
@@ -220,6 +223,6 @@
     [tips removeAllObjects];
     [tips addObjectsFromArray:response.tips];
     //    NSLog(@"onInputTipsSearchDone %@",tips);
-    [tableView onRefreshedWithData:tips];
+    [tableView leOnRefreshedWithData:tips];
 }
 @end

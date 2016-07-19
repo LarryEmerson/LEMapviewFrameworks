@@ -8,22 +8,25 @@
 
 #import "LEMapBaseAnnotationView.h"
 
+@interface LEMapBaseAnnotationView ()
+@property (nonatomic) NSDictionary *leMapData;
+@end
 @implementation LEMapBaseAnnotationView
 
 - (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier{
     if(self=[super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier]){
-        [self initUI]; 
+        [self leExtraInits]; 
     }
     return self;
+} 
+-(NSDictionary *) leGetMapData{
+    return self.leGetMapData;
 }
--(void) initUI{
-
+-(void) leSetMapData:(NSDictionary *) data{
+    self.leMapData=data;
+    [self leRefreshUI];
 }
--(void) setCurData:(NSDictionary *)curData{
-    _curData=curData;
-    [self refreshUI];
-}
--(void) refreshUI{
-
+-(void) leRefreshUI{
+    
 }
 @end

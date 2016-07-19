@@ -12,10 +12,9 @@
 #import <AMapSearchKit/AMapSearchAPI.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 @protocol LEMapSearchBarDelegate<NSObject>
--(void) onDoneSearchWith:(NSMutableArray *) array;
+-(void) leOnDoneSearchWith:(NSMutableArray *) array;
 @end
-@interface LEMapSearchBar : UIView
-@property (nonatomic) LEUIFramework *globalVar;
-@property (nonatomic) id<LEMapSearchBarDelegate> delegate;
+@interface LEMapSearchBar : UIView 
 -(id) initWithSuperView:(UIView *) parent;
+-(void) leSetDelegate:(id<LEMapSearchBarDelegate>) delegate;
 @end

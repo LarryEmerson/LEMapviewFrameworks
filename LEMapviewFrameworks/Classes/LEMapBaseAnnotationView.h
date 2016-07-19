@@ -7,9 +7,9 @@
 //
 
 #import <MAMapKit/MAMapKit.h> 
-
+#import "LEFrameworks.h"
 @interface LEMapBaseAnnotationView : MAAnnotationView
-@property (nonatomic) NSDictionary *curData;
--(void) initUI;
--(void) refreshUI;
+-(NSDictionary *) leGetMapData;
+-(void) leSetMapData:(NSDictionary *) data; 
+-(void) leRefreshUI;
 @end

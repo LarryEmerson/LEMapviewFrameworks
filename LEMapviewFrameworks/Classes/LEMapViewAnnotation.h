@@ -10,8 +10,8 @@
 #import <MAMapKit/MAMapKit.h>
 
 @protocol LEMapViewDelegate <NSObject>
--(void) onCallOutViewClickedWithData:(NSDictionary *) data;
--(void) onMapRequestLaunchedWithData:(NSDictionary *) data;
+-(void) leOnCallOutViewClickedWithData:(NSDictionary *) data;
+-(void) leOnMapRequestLaunchedWithData:(NSDictionary *) data;
 @end
 
 @interface LEMapViewAnnotation : NSObject<MAAnnotation>{
@@ -24,8 +24,8 @@
 @property (nonatomic, assign) CLLocationCoordinate2D nextCoordinate;
 @property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, readonly, copy) NSString *subtitle;
-@property (nonatomic) int index;
-@property (nonatomic) UIImage *curAnnotationIcon;
-@property (nonatomic) NSDictionary *curData;
+@property (nonatomic, readonly) int leIndex;
+@property (nonatomic, readonly) UIImage *leCurrentAnnotationIcon;
+@property (nonatomic, readonly) NSDictionary *leMapData;
 -(id) initWithCoordinate:(CLLocationCoordinate2D) coordinate Index:(int) index AnnotationIcon:(UIImage *) icon Data:(NSDictionary *) data;
 @end

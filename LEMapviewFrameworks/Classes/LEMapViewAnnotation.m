@@ -8,19 +8,24 @@
 
 #import "LEMapViewAnnotation.h"
 
+@interface LEMapViewAnnotation ()
+@property (nonatomic, readwrite) int leIndex;
+@property (nonatomic, readwrite) UIImage *leCurrentAnnotationIcon;
+@property (nonatomic, readwrite) NSDictionary *leMapData;
+@end
 @implementation LEMapViewAnnotation
 
 @synthesize coordinate=_coordinate;
 @synthesize title = _title;
 @synthesize subtitle = _subtitle;
-@synthesize curAnnotationIcon = _curAnnotationIcon;
-@synthesize curData=_curData;
+@synthesize leCurrentAnnotationIcon = _leCurrentAnnotationIcon;
+@synthesize leMapData=_leMapData;
 -(id) initWithCoordinate:(CLLocationCoordinate2D) coordinate Index:(int) index  AnnotationIcon:(UIImage *) icon Data:(NSDictionary *)data{
     if (self = [super init]) {
         self.coordinate = coordinate;
-        self.index=index;
-        self.curAnnotationIcon=icon;
-        self.curData=data;
+        self.leIndex=index;
+        self.leCurrentAnnotationIcon=icon;
+        self.leMapData=data;
     }
     return self;
 }

@@ -10,5 +10,5 @@
 #import "LEUIFramework.h"
 
 @interface LEMapViewUserAnnotationView : MAAnnotationView
-@property (nonatomic) UIImageView *userImage; 
+@property (nonatomic, readonly) UIImageView *leUserImage;
 @end

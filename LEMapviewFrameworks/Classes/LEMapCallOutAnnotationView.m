@@ -8,6 +8,10 @@
 
 #import "LEMapCallOutAnnotationView.h"
 #import "LEMapViewAnnotationSubView.h" 
+@interface LEMapCallOutAnnotationView()
+@property (nonatomic) id<LEMapViewDelegate> leCallOutDelegate;
+@end
+
 @implementation LEMapCallOutAnnotationView{
     UIImageView *curAnnotationIcon;
     
@@ -16,29 +20,35 @@
     LEMapViewAnnotationSubView *callOutView;
     UIImage *imgPin;
 }
+-(void) leSetDelegate:(id<LEMapViewDelegate>) delegate{
+    self.leCallOutDelegate=delegate;
+}
+-(id<LEMapViewDelegate>) leGetDelegate{
+    return self.leCallOutDelegate;
+}
 - (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *) reuseIdentifier CallOutDelegate:(id) delegate SubViewClass:(NSString *) subClass{
-    self.callOutDelegate=delegate;
+    self.leCallOutDelegate=delegate;
     subViewClassName=subClass;
     return [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
 }
--(void) initUI{
+-(void) leExtraInits{
     LEMapCallOutViewAnnotation *anno=(LEMapCallOutViewAnnotation *)self.annotation;
-    imgPin=anno.curAnnotationIcon;
+    imgPin=anno.leCurrentAnnotationIcon;
     LESuppressPerformSelectorLeakWarning(
-                                       callOutView=[[NSClassFromString(subViewClassName) alloc] performSelector:NSSelectorFromString(@"initWithAnnotation:") withObject:self.annotation];
-                                       );
+                                         callOutView=[[NSClassFromString(subViewClassName) alloc] performSelector:NSSelectorFromString(@"initWithAnnotation:") withObject:self.annotation];
+                                         );
     [self addSubview:callOutView];
-    [callOutView setCallOutDelegate:self.callOutDelegate];
-    [callOutView setCurAnnotationView:self];
-    [callOutView setData:anno.curData];
+    [callOutView leSetDelegate:self.leCallOutDelegate];
+    [callOutView leSetCurrentAnnotationView:self];
+    [callOutView leSetData:anno.leMapData];
     [self setFrame:CGRectMake(0, 0, callOutView.bounds.size.width, callOutView.bounds.size.height)];
     [self setCenterOffset:CGPointMake(0, -imgPin.size.height -callOutView.bounds.size.height/2 )];
 }
--(void) reSetCenterOffset:(int) offset{ 
+-(void) leReSetCenterOffset:(int) offset{ 
     [self setFrame:CGRectMake(0, 0, self.bounds.size.width, offset )];
     [self setCenterOffset:CGPointMake(0, -imgPin.size.height -offset/2 )];
 }
--(void) refreshUI{
-    [callOutView setData:self.curData];
+-(void) leRefreshUI{
+    [callOutView leSetData:self.leGetMapData];
 }
 @end

@@ -10,18 +10,18 @@
 #import "LEFrameworks.h"
 @interface LEMapViewSettings : NSObject
 LESingleton_interface(LEMapViewSettings);
-@property (nonatomic) NSBundle *leMapviewBundle;
-@property (nonatomic) UIImage *leCompass;
-@property (nonatomic) UIImage *leLocateStatusNormal;
-@property (nonatomic) UIImage *leLocateStatusRotate;
-@property (nonatomic) UIImage *leLocateStatusFollow;
-@property (nonatomic) UIImage *leScaleBackground;
-@property (nonatomic) UIImage *leScaleUp;
-@property (nonatomic) UIImage *leScaleUpHighlighted;
-@property (nonatomic) UIImage *leScaleDown;
-@property (nonatomic) UIImage *leScaleDownHighlighted;
-@property (nonatomic) UIImage *lePinForSearched;
-@property (nonatomic) UIImage *lePinForUserAsArrow;
-- (NSString *) getImagePathWithName:(NSString *) name;
-- (UIImage *) getImageWithName:(NSString *) name;
+@property (nonatomic, readonly) NSBundle *leMapviewBundle;
+@property (nonatomic, readonly) UIImage *leCompass;
+@property (nonatomic, readonly) UIImage *leLocateStatusNormal;
+@property (nonatomic, readonly) UIImage *leLocateStatusRotate;
+@property (nonatomic, readonly) UIImage *leLocateStatusFollow;
+@property (nonatomic, readonly) UIImage *leScaleBackground;
+@property (nonatomic, readonly) UIImage *leScaleUp;
+@property (nonatomic, readonly) UIImage *leScaleUpHighlighted;
+@property (nonatomic, readonly) UIImage *leScaleDown;
+@property (nonatomic, readonly) UIImage *leScaleDownHighlighted;
+@property (nonatomic, readonly) UIImage *lePinForSearched;
+@property (nonatomic, readonly) UIImage *lePinForUserAsArrow;
+- (NSString *) leGetImagePathWithName:(NSString *) name;
+- (UIImage *) leGetImageWithName:(NSString *) name;
 @end

@@ -26,7 +26,7 @@
 1-LEMapCallOutViewAnnotation->LEMapCallOutAnnotationView->SubViewClass(自定义)
 2-MAUserLocation->LEMapViewUserAnnotationView
 3-LEMapViewSearchAnnotation->LEMapViewSearchAnnotationView
-4-else的情况(可重写:onOverwriteViewForAnnotation:FromMapview:){
+4-else的情况(可重写:leOnOverwriteViewForAnnotation:FromMapview:){
     LEMapViewAnnotation->curAnnotationViewClass（自定义）
 }
 ```
@@ -34,7 +34,7 @@
 ```
 地图图钉点击事件优先级（）
 1-LEMapViewAnnotationView->LEMapCallOutViewAnnotation
-2-else的情况（可重写:onOverwriteMapView:didSelectAnnotationView:）
+2-else的情况（可重写:leOnOverwriteMapView:didSelectAnnotationView:）
 ```
 
 

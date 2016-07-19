@@ -7,29 +7,32 @@
 //
 
 #import "LEMapViewAnnotationView.h"
-@implementation LEMapViewAnnotationView{
-}
+@interface LEMapViewAnnotationView()
+@property (nonatomic, readwrite) UIImageView *leCurrentAnnotationIcon;
+@property (nonatomic, readwrite) float leOriginalAngle;
+@end
+@implementation LEMapViewAnnotationView
 
--(void) initUI { 
+-(void) leExtraInits { 
     LEMapViewAnnotation *anno=(LEMapViewAnnotation *)self.annotation;
-    self.curAnnotationIcon=[[UIImageView alloc]initWithImage:anno.curAnnotationIcon];
-    [self addSubview:self.curAnnotationIcon];
-    [self setFrame:CGRectMake(0, 0, self.curAnnotationIcon.bounds.size.width, self.curAnnotationIcon.bounds.size.height)];
-    [self setCenterOffset:CGPointMake(0, -self.curAnnotationIcon.bounds.size.height/2)];
-    [self onResetAngle];
+    self.leCurrentAnnotationIcon=[[UIImageView alloc]initWithImage:anno.leCurrentAnnotationIcon];
+    [self addSubview:self.leCurrentAnnotationIcon];
+    [self setFrame:CGRectMake(0, 0, self.leCurrentAnnotationIcon.bounds.size.width, self.leCurrentAnnotationIcon.bounds.size.height)];
+    [self setCenterOffset:CGPointMake(0, -self.leCurrentAnnotationIcon.bounds.size.height/2)];
+    [self leOnResetAngle];
 }
--(void) onResetAngle{
+-(void) leOnResetAngle{
     LEMapViewAnnotation *anno=(LEMapViewAnnotation *)self.annotation;
     if(anno.nextCoordinate.latitude!=0&&anno.nextCoordinate.longitude!=0){
-        self.originalAngle=90-[self angleBetweenFirstPoint:anno.coordinate SecondPoint:anno.nextCoordinate];
+        self.leOriginalAngle=90-[self angleBetweenFirstPoint:anno.coordinate SecondPoint:anno.nextCoordinate];
     }
-    [self onSetAngle:0];
+    [self leOnSetAngle:0];
 }
--(void) onSetAngle:(float) angle{
-    float finalAngle=(-(angle+self.originalAngle))*M_PI/180;
-    [self.curAnnotationIcon setTransform:CGAffineTransformMakeRotation(finalAngle)];
+-(void) leOnSetAngle:(float) angle{
+    float finalAngle=(-(angle+self.leOriginalAngle))*M_PI/180;
+    [self.leCurrentAnnotationIcon setTransform:CGAffineTransformMakeRotation(finalAngle)];
 }
--(void) onSetViewCenter:(CGPoint) point{
+-(void) leOnSetViewCenter:(CGPoint) point{
     [self setCenterOffset:point];
 }
 -(float) angleBetweenFirstPoint:(CLLocationCoordinate2D) first SecondPoint:(CLLocationCoordinate2D)second {

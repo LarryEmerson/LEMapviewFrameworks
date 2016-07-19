@@ -11,8 +11,6 @@
 
 
 
-@interface LEMapView()
-@end
 
 #define RefreshZoomLevel 16
 #define RefreshMoveSpace 0.003
@@ -24,14 +22,27 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     MapRotationStatusUser = 1,
     MapRotationStatusMap =2,
 };
-
+@interface LEMapView()
+@property (nonatomic) id<LEAppMessageDelegate> leAppMessageDelegate;
+@property (nonatomic) id<LEMapViewUserLocationDelegate> leUserLocationDelegate;
+@property (nonatomic) id<LEMapViewDelegate> leMapDelegate;
+@property (nonatomic) UIImage *curAnnotationIcon;
+@property (nonatomic) UIImage *curCallOutBackground;
+@property (nonatomic) NSString *curAnnotationViewClass;
+@property (nonatomic) NSString *curCallOutViewClass;
+@property (nonatomic) BOOL enableAnnotationRotation;
+@property (nonatomic) BOOL enablePolyline;
+@property (nonatomic) BOOL enableAnnotationCentered;
+@property (nonatomic) MAPolyline *curMApolyline;
+@property (nonatomic) UIColor *polylineStrokeColor;
+@property (nonatomic) CGFloat polylineWidth;
+@end
 @implementation LEMapView{
     UIImageView *curTopView;
     MAMapView *curMapView;
     NSMutableArray *curAnnotationArray;
     CLLocationManager *locationManager;
     NSMutableArray *curAnnotationDetails;
-    //
     BOOL isZoomInited;
     BOOL isRefreshDataOK;
     float lastRegion;
@@ -41,22 +52,76 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     CLLocationCoordinate2D lastCoor;
     NSTimer *curTimer;
     NSTimer *curTipTimer;
-    //
     int topHeight;
     LEMapViewUserAnnotationView *curUserAnnotationView;
     MACircle *curUserCircle;
     LEMapCallOutAnnotationView *curCallOutView;
-    
     NSMutableArray *curDataArrays;
-    //
     UIButton *reLocate;
     UIImageView *curCompass;
     MapRotationStatus curMapRotationStatus;
     NSTimer *curCheckRotateTimer;
-    
-    //
     NSMutableArray *curSearchAnnotationArray;
 }
+//
+-(void) leSetAppMessageDelegate:(id<LEAppMessageDelegate>) messageDelegate{
+    self.leAppMessageDelegate=messageDelegate;
+}
+-(void) leSetUserLocationDelegate:(id<LEMapViewUserLocationDelegate>) locationDelegate{
+    self.leUserLocationDelegate=locationDelegate;
+}
+-(void) leSetMapDelegate:(id<LEMapViewDelegate>) mapDelegate{
+    self.leMapDelegate=mapDelegate;
+}
+-(void) leSetAnnotationIcon:(UIImage *) annotationIcon{
+    self.curAnnotationIcon=annotationIcon;
+}
+-(UIImage *) leGetAnnotationIcon{
+    return self.curAnnotationIcon;
+}
+-(void) leSetCalloutBackground:(UIImage *) calloutBackground{
+    self.curCallOutBackground=calloutBackground;
+}
+-(UIImage *) leGetCalloutBackground{
+    return self.curCallOutBackground;
+}
+-(void) leSetAnnotationViewClass:(NSString *) annotationViewClass{
+    self.curAnnotationViewClass=annotationViewClass;
+}
+-(void) leSetCalloutViewClass:(NSString *) calloutViewClass{
+    self.curCallOutViewClass=calloutViewClass;
+}
+-(void) leSetEnableAnnotationRotation:(BOOL) enable{
+    self.enableAnnotationRotation=enable;
+}
+-(BOOL) leGetEnableAnnotationRotation{
+    return self.enableAnnotationRotation;
+}
+-(void) leSetEnablePolyline:(BOOL) enable{
+    self.enablePolyline=enable;
+}
+-(BOOL) leGetEnablePolyline{
+    return self.enablePolyline;
+}
+-(void) leSetEnableAnnotationCentered:(BOOL) enable{
+    self.enableAnnotationCentered=enable;
+}
+-(BOOL) leGetEnableAnnotationCentered{
+    return self.enableAnnotationCentered;
+}
+-(void) leSetMAPolyline:(MAPolyline *) line{
+    self.curMApolyline=line;
+}
+-(MAPolyline *) leGetMAPolyline{
+    return self.curMApolyline;
+}
+-(void) leSetPolylineStrokeColor:(UIColor *) color{
+    self.polylineStrokeColor=color;
+}
+-(void) leSetPolylineWidth:(CGFloat) polylineWidth{
+    self.polylineWidth=polylineWidth;
+}
+//
 -(MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id<MAOverlay>)overlay{
     if ([overlay isKindOfClass:[MACircle class]]) {
         MACircleRenderer *circleView = [[MACircleRenderer alloc] initWithCircle:overlay];
@@ -88,25 +153,25 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [self initMap];
     return self;
 }
--(void) onRefreshedData:(NSMutableArray *)data{
+-(void) leOnRefreshedData:(NSMutableArray *)data{
     curDataArrays=data;
-    [self onRemoveAllAnnotations];
-    [self onOverwriteAnnotationMakerWithData:data];
+    [self leOnRemoveAllAnnotations];
+    [self leOnOverwriteAnnotationMakerWithData:data];
 }
--(void) onRemoveAllAnnotations{
+-(void) leOnRemoveAllAnnotations{
     [curMapView removeAnnotations:curAnnotationArray];
     [curAnnotationArray removeAllObjects];
 }
--(MAMapView *) onGetMapview{
+-(MAMapView *) leOnGetMapview{
     return curMapView;
 } 
--(void) onAddAnnotationToCacheWith:(NSObject<MAAnnotation> *) annotation{
+-(void) leOnAddAnnotationToCacheWith:(NSObject<MAAnnotation> *) annotation{
     [curAnnotationArray addObject:annotation];
 }
--(void) onRefreshMapviewAnnotationsAfterAnnotationsAdded{
+-(void) leOnRefreshMapviewAnnotationsAfterAnnotationsAdded{
     [curMapView addAnnotations:curAnnotationArray];
 }
--(void) onOverwriteAnnotationMakerWithData:(NSMutableArray *) data{
+-(void) leOnOverwriteAnnotationMakerWithData:(NSMutableArray *) data{
     NSInteger count=data.count;
     CLLocationCoordinate2D commonPolylineCoords[count];
     for (int i=0; i<data.count; i++) {
@@ -120,10 +185,10 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
             CLLocationCoordinate2D coor=CLLocationCoordinate2DMake([[dic objectForKey:@"latitude"] floatValue], [[dic objectForKey:@"longitude"] floatValue]);
             [anno setNextCoordinate:coor];
         }
-        [self onAddAnnotationToCacheWith:anno];
+        [self leOnAddAnnotationToCacheWith:anno];
         
     }
-    [self onRefreshMapviewAnnotationsAfterAnnotationsAdded];
+    [self leOnRefreshMapviewAnnotationsAfterAnnotationsAdded];
     if(self.enablePolyline){
         [curMapView removeOverlay:self.curMApolyline];
         self.curMApolyline = [MAPolyline polylineWithCoordinates:commonPolylineCoords count:count];
@@ -140,7 +205,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
             if([annotation isKindOfClass:[LEMapViewAnnotation class]]){
                 LEMapBaseAnnotationView *view=(LEMapBaseAnnotationView *)[curMapView viewForAnnotation:annotation];
                 if([view isKindOfClass:[LEMapViewAnnotationView class]]){
-                    [(LEMapViewAnnotationView *)view onSetAngle:curMapView.rotationDegree];
+                    [(LEMapViewAnnotationView *)view leOnSetAngle:curMapView.rotationDegree];
                 }
             }
         }
@@ -158,7 +223,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [curCheckRotateTimer invalidate];
 }
 
--(void) onRefreshSearchedLocations:(NSMutableArray *) array{
+-(void) leOnRefreshSearchedLocations:(NSMutableArray *) array{
     [curMapView removeAnnotations:curSearchAnnotationArray];
     [curSearchAnnotationArray removeAllObjects];
     if(array.count>0){
@@ -192,7 +257,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 //}
 -(void) resetUserAnnotationRotation:(float) angle{
     if(curUserAnnotationView){
-        [curUserAnnotationView.userImage setTransform:CGAffineTransformMakeRotation(angle)];
+        [curUserAnnotationView.leUserImage setTransform:CGAffineTransformMakeRotation(angle)];
     }
 }
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -357,11 +422,11 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 //
 -(MAAnnotationView *) mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{ 
     if([annotation isKindOfClass:[LEMapCallOutViewAnnotation class]]){
-        curCallOutView=(LEMapCallOutAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:ReUseIdentifierForCallOutView];
+        curCallOutView=(LEMapCallOutAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:LEReuseableCellIdentifierForCallOutView];
         if(!curCallOutView){
-            curCallOutView=[[LEMapCallOutAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:ReUseIdentifierForCallOutView CallOutDelegate: self.leMapDelegate SubViewClass:self.curCallOutViewClass];
+            curCallOutView=[[LEMapCallOutAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:LEReuseableCellIdentifierForCallOutView CallOutDelegate: self.leMapDelegate SubViewClass:self.curCallOutViewClass];
         }
-        [curCallOutView setCallOutDelegate:self.leMapDelegate];
+        [curCallOutView leSetDelegate:self.leMapDelegate];
         [curCallOutView setAnnotation:annotation];
         //        [curCallOutView setCurData:anno.curData];
         return curCallOutView;
@@ -382,24 +447,24 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         [searchView setAnnotation:geoAnno];
         return searchView;
     } else{
-        return [self onOverwriteViewForAnnotation:annotation FromMapview:mapView];
+        return [self leOnOverwriteViewForAnnotation:annotation FromMapview:mapView];
     }
     return nil;
 }
--(MAAnnotationView *) onOverwriteViewForAnnotation:(id<MAAnnotation>) annotation FromMapview:(MAMapView *) mapView{
+-(MAAnnotationView *) leOnOverwriteViewForAnnotation:(id<MAAnnotation>) annotation FromMapview:(MAMapView *) mapView{
     LEMapViewAnnotation *anno=(LEMapViewAnnotation *)annotation;
     LEMapViewAnnotationView *annotationView =(LEMapViewAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier: @"annotation"];
     if (annotationView == nil) {
         LESuppressPerformSelectorLeakWarning(
-                                           annotationView = [[self.curAnnotationViewClass leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithAnnotation:reuseIdentifier:") withObject:anno withObject: @"annotation"];
-                                           );
+                                             annotationView = [[self.curAnnotationViewClass leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithAnnotation:reuseIdentifier:") withObject:anno withObject: @"annotation"];
+                                             );
     }
     if(self.enableAnnotationCentered) {
-        [annotationView onSetViewCenter:CGPointZero];
+        [annotationView leOnSetViewCenter:CGPointZero];
     }
     [annotationView setAnnotation:annotation];
-    [annotationView setCurData:anno.curData];
-    [annotationView onResetAngle];
+    [annotationView leSetMapData:anno.leMapData];
+    [annotationView leOnResetAngle];
     return annotationView;
 }
 // // //
@@ -429,7 +494,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         [curTimer invalidate];
         [curTipTimer invalidate];
         if(!curCallOutView){
-            curTimer=[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(onNeedRefreshMap) userInfo:nil repeats:NO];
+            curTimer=[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(leOnNeedRefreshMap) userInfo:nil repeats:NO];
         }
         lastCoor=curMapView.centerCoordinate;
         isRefreshDataOK=YES;
@@ -442,8 +507,8 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     lastZoom=curMapView.zoomLevel;
     lastZoomForRefresh=curMapView.zoomLevel;
     lastUserCoordinate=curMapView.userLocation.coordinate;
-    if(self.leUserLocationDelegate&&[self.leUserLocationDelegate respondsToSelector:@selector(onUserLocationRefreshedWith:)]){
-        [self.leUserLocationDelegate onUserLocationRefreshedWith:[[CLLocation alloc] initWithLatitude:lastUserCoordinate.latitude longitude:lastUserCoordinate.longitude]];
+    if(self.leUserLocationDelegate&&[self.leUserLocationDelegate respondsToSelector:@selector(leOnUserLocationRefreshedWith:)]){
+        [self.leUserLocationDelegate leOnUserLocationRefreshedWith:[[CLLocation alloc] initWithLatitude:lastUserCoordinate.latitude longitude:lastUserCoordinate.longitude]];
     }
     [self onCheckAnnotationAngle];
 }
@@ -451,24 +516,24 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     if([view isKindOfClass:[LEMapViewAnnotationView class]]){
         //add
         LEMapViewAnnotation *an=(LEMapViewAnnotation *) view.annotation;
-        [self removeCalloutView];
-        LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.index AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.index] UserCoordinate:mapView.userLocation.coordinate];
+        [self leRemoveCalloutView];
+        LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.leIndex AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.leIndex] UserCoordinate:mapView.userLocation.coordinate];
         [mapView addAnnotation:anno];
         [curMapView setCenterCoordinate:anno.coordinate animated:YES];
     }else{
-        [self onOverwriteMapView:mapView didSelectAnnotationView:view];
+        [self leOnOverwriteMapView:mapView didSelectAnnotationView:view];
     }
 }
--(void) onOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+-(void) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
     
 }
--(void) removeCalloutView{
+-(void) leRemoveCalloutView{
     if(curCallOutView&&curCallOutView.annotation){
         [curMapView removeAnnotations:@[curCallOutView.annotation]];
         curCallOutView=nil;
     }
 }
--(void) onNeedRefreshMap{
+-(void) leOnNeedRefreshMap{
     //    NSLogFunc;
     CLLocationCoordinate2D location1= [curMapView convertPoint:CGPointMake(0, 0) toCoordinateFromView:curMapView];
     CLLocationCoordinate2D location2=[curMapView convertPoint:CGPointMake(curMapView.bounds.size.width,curMapView.frame.size.height) toCoordinateFromView:curMapView];
@@ -491,12 +556,12 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [parameters setObject:[NSNumber numberWithFloat:startlatitude] forKey:@"startlatitude"];
     [parameters setObject:[NSNumber numberWithFloat:endlatitude] forKey:@"endlatitude"];
     if(self.leMapDelegate){
-        [self.leMapDelegate onMapRequestLaunchedWithData:parameters];
+        [self.leMapDelegate leOnMapRequestLaunchedWithData:parameters];
     }
 }
 -(void) onShowAppMessageWith:(NSString *) message{
     if(self.leAppMessageDelegate&&[self.leAppMessageDelegate respondsToSelector:@selector(onShowAppMessageWith:)]){
-        [self.leAppMessageDelegate onShowAppMessageWith:message];
+        [self.leAppMessageDelegate leOnShowAppMessageWith:message];
     }
 }
 -(void) onShowMapTip{
@@ -527,8 +592,8 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //    31.809794 119.992120
     
     lastUserCoordinate=userLocation.coordinate;
-    if(self.leUserLocationDelegate&&[self.leUserLocationDelegate respondsToSelector:@selector(onUserLocationRefreshedWith:)]){
-        [self.leUserLocationDelegate onUserLocationRefreshedWith:[[CLLocation alloc] initWithLatitude:lastUserCoordinate.latitude longitude:lastUserCoordinate.longitude]];
+    if(self.leUserLocationDelegate&&[self.leUserLocationDelegate respondsToSelector:@selector(leOnUserLocationRefreshedWith:)]){
+        [self.leUserLocationDelegate leOnUserLocationRefreshedWith:[[CLLocation alloc] initWithLatitude:lastUserCoordinate.latitude longitude:lastUserCoordinate.longitude]];
     }
     [curMapView removeOverlay:curUserCircle];
     curUserCircle=[MACircle circleWithCenterCoordinate:lastUserCoordinate radius:500];

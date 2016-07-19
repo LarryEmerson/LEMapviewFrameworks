@@ -11,12 +11,11 @@
 #import "LEUIFramework.h" 
 #import "LEMapCallOutAnnotationView.h"
 @interface LEMapViewAnnotationSubView : UIButton
-@property (nonatomic) UIView *callOutViewContainer;
-@property (nonatomic) id callOutDelegate;
-@property (nonatomic) LEMapCallOutViewAnnotation *annotation;
-@property (nonatomic) UIImageView *curBG;
-@property (nonatomic) LEMapCallOutAnnotationView *curAnnotationView;
 -(id) initWithAnnotation:(LEMapCallOutViewAnnotation *) anno;
--(void) setData:(NSDictionary *) data; 
--(void) initUI;
+-(void) leSetDelegate:(id<LEMapViewDelegate>) delegate;
+-(void) leSetData:(NSDictionary *) data;
+-(void) leSetCurrentAnnotationView:(LEMapCallOutAnnotationView *) view;
+-(UIView *) leGetCalloutViewContainer;
+-(UIImageView *) leGetCalloutBackground;
+-(LEMapCallOutViewAnnotation *) leGetAnnotation;
 @end

@@ -9,9 +9,9 @@
 #import "LEMapBaseAnnotationView.h"
 #import "LEMapViewAnnotation.h"
 @interface LEMapViewAnnotationView : LEMapBaseAnnotationView
-@property (nonatomic) UIImageView *curAnnotationIcon;
-@property (nonatomic) float originalAngle;
--(void) onSetAngle:(float) angle;
--(void) onSetViewCenter:(CGPoint) point;
--(void) onResetAngle;
+//@property (nonatomic) UIImageView *curAnnotationIcon;
+//@property (nonatomic) float originalAngle;
+-(void) leOnSetAngle:(float) angle;
+-(void) leOnSetViewCenter:(CGPoint) point;
+-(void) leOnResetAngle;
 @end

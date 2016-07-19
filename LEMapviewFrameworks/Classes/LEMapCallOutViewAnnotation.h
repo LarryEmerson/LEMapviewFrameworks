@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h> 
 #import "LEMapViewAnnotation.h"
-#define ReUseIdentifierForCallOutView @"CallOut"
+#define LEReuseableCellIdentifierForCallOutView @"CallOut"
 @interface LEMapCallOutViewAnnotation : LEMapViewAnnotation
-@property (nonatomic) CLLocationCoordinate2D userCoordinate;
-@property (nonatomic) UIImage *callOutBackground;
+
 -(id) initWithCoordinate:(CLLocationCoordinate2D) coordinate Index:(int) index AnnotationIcon:(UIImage *)icon  CallOutBackground:(UIImage *) bg Data:(NSDictionary *) data UserCoordinate:(CLLocationCoordinate2D) userCoordinate;
+-(void) leSetCalloutBackground:(UIImage *) image;
+-(void) leGetUserCoordinate:(CLLocationCoordinate2D) location;
+-(UIImage *) leGetCalloutBackground;
 @end

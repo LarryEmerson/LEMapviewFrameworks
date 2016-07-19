@@ -22,7 +22,7 @@
 #import "LEUIFramework.h"
 
 @protocol LEMapViewUserLocationDelegate <NSObject>
--(void) onUserLocationRefreshedWith:(CLLocation *) location;
+-(void) leOnUserLocationRefreshedWith:(CLLocation *) location;
 @end
 
 
@@ -30,69 +30,107 @@
 /**
  * @brief 自定义提示信息回调
  */
-@property (nonatomic) id<LEAppMessageDelegate> leAppMessageDelegate;
+-(void) leSetAppMessageDelegate:(id<LEAppMessageDelegate>) messageDelegate;
 /**
  * @brief 自定义位置信息变动回调
  */
-@property (nonatomic) id<LEMapViewUserLocationDelegate> leUserLocationDelegate;
+-(void) leSetUserLocationDelegate:(id<LEMapViewUserLocationDelegate>) locationDelegate;
 /**
  * @brief 地图位置变动后的数据请求及Callout点击后的回调
  */
-@property (nonatomic) id<LEMapViewDelegate> leMapDelegate;
+-(void) leSetMapDelegate:(id<LEMapViewDelegate>) mapDelegate;
 /**
  * @brief 自定义图钉的图片->LEMapViewAnnotationView
  */
-@property (nonatomic) UIImage *curAnnotationIcon;
+-(void) leSetAnnotationIcon:(UIImage *) annotationIcon;
+-(UIImage *) leGetAnnotationIcon;
 /**
  * @brief 自定义callout的图片
  */
-@property (nonatomic) UIImage *curCallOutBackground;
+-(void) leSetCalloutBackground:(UIImage *) calloutBackground;
+-(UIImage *) leGetCalloutBackground;
 /**
  * @brief 自定义图钉的类名->LEMapViewAnnotation
  */
-@property (nonatomic) NSString *curAnnotationViewClass;
+-(void) leSetAnnotationViewClass:(NSString *) annotationViewClass;
 /**
  * @brief 自定义Callout的类名
  */
-@property (nonatomic) NSString *curCallOutViewClass;
+-(void) leSetCalloutViewClass:(NSString *) calloutViewClass;
 /**
  * @brief 图钉是否固定于地图，跟随地图旋转
  */
-@property (nonatomic) BOOL enableAnnotationRotation;
+-(void) leSetEnableAnnotationRotation:(BOOL) enable;
+-(BOOL) leGetEnableAnnotationRotation;
 /**
  * @brief 是否绘制图钉的连线（轨迹）
  */
-@property (nonatomic) BOOL enablePolyline;
+-(void) leSetEnablePolyline:(BOOL) enable;
+-(BOOL) leGetEnablePolyline;
 /**
  * @brief 图钉是否居中于坐标点
  */
-@property (nonatomic) BOOL enableAnnotationCentered;
+-(void) leSetEnableAnnotationCentered:(BOOL) enable;
+-(BOOL) leGetEnableAnnotationCentered;
 /**
  * @brief 当前轨迹
  */
-@property (nonatomic) MAPolyline *curMApolyline;
+-(void) leSetMAPolyline:(MAPolyline *) line;
+-(MAPolyline *) leGetMAPolyline;
 /**
  * @brief 设置轨迹颜色
  */
-@property (nonatomic) UIColor *polylineStrokeColor;
+-(void) leSetPolylineStrokeColor:(UIColor *) color;
 /**
  * @brief 设置轨迹宽度
  */
-@property (nonatomic) CGFloat polylineWidth;
-/**
+-(void) leSetPolylineWidth:(CGFloat) polylineWidth;
+/** ===============================================
  * @brief 初始化
  */
 -(id) initWithAutoLayoutSettings:(LEAutoLayoutSettings *)settings AnnotationIcon:(UIImage *) icon CallOutBackground:(UIImage *) callOut AnnotationViewClass:(NSString *) annotationView CallOutViewClass:(NSString *) callOutClass MapDelegate:(id<LEMapViewDelegate>) delegate;
-//-(void) initMap;
--(void) onNeedRefreshMap;
--(void) onRefreshedData:(NSMutableArray *)data;
--(void) onRefreshSearchedLocations:(NSMutableArray *) array;
--(void) onRemoveAllAnnotations;
--(MAMapView *) onGetMapview;
--(void) onAddAnnotationToCacheWith:(NSObject<MAAnnotation> *) annotation;
--(void) onRefreshMapviewAnnotationsAfterAnnotationsAdded;
--(void) onOverwriteAnnotationMakerWithData:(NSMutableArray *) data;
--(MAAnnotationView *) onOverwriteViewForAnnotation:(id<MAAnnotation>) annotation FromMapview:(MAMapView *) mapView;
--(void) onOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view;
--(void) removeCalloutView;
+/**
+ * @brief 获取地图引用
+ */
+-(MAMapView *) leOnGetMapview;
+/**
+ * @brief 刷新地图
+ */
+-(void) leOnNeedRefreshMap;
+/**
+ * @brief 刷新地图地点
+ */
+-(void) leOnRefreshedData:(NSMutableArray *)data;
+/**
+ * @brief 刷新地图搜索的地点
+ */
+-(void) leOnRefreshSearchedLocations:(NSMutableArray *) array;
+/**
+ * @brief 删除所有annotations
+ */
+-(void) leOnRemoveAllAnnotations;
+/**
+ * @brief 新增地图地点
+ */
+-(void) leOnAddAnnotationToCacheWith:(NSObject<MAAnnotation> *) annotation;
+/**
+ * @brief 新增地图后刷新
+ */
+-(void) leOnRefreshMapviewAnnotationsAfterAnnotationsAdded;
+/**
+ * @brief 地图地点解析（可重写）
+ */
+-(void) leOnOverwriteAnnotationMakerWithData:(NSMutableArray *) data;
+/**
+ * @brief 地图annottaion->annotationView（可重写）
+ */
+-(MAAnnotationView *) leOnOverwriteViewForAnnotation:(id<MAAnnotation>) annotation FromMapview:(MAMapView *) mapView;
+/**
+ * @brief 地图地点点击事件（可重写）
+ */
+-(void) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view;
+/**
+ * @brief 删除Callout
+ */
+-(void) leRemoveCalloutView;
 @end

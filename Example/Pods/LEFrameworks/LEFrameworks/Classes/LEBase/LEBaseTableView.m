@@ -19,13 +19,13 @@
 @property (nonatomic, readwrite) NSString *leTableViewCellClassName;
 @property (nonatomic, readwrite) UIView *leSuperViewContainer;
 @property (nonatomic, readwrite) UIView *leParentView;
-@property (nonatomic, readwrite) id<LEGetDataDelegate> leGetDataDelegate;
-@property (nonatomic, readwrite) id<LETableViewCellSelectionDelegate> leTableViewCellSelectionDelegate;
+@property (nonatomic, readwrite) id<LETableViewDataSourceDelegate> leDataSourceDelegate;
+@property (nonatomic, readwrite) id<LETableViewCellSelectionDelegate> leCellSelectionDelegate;
 @property (nonatomic, readwrite) BOOL leIsAutoRefresh;
 @end
 @interface LEBaseTableView ()
 @property (nonatomic, readwrite) LEBaseEmptyTableViewCell *leEmptyTableViewCell;
-@property (nonatomic, readwrite) id<LEGetDataDelegate> leGetDataDelegate;
+@property (nonatomic, readwrite) id<LETableViewDataSourceDelegate> leDataSourceDelegate;
 @property (nonatomic, readwrite) id<LETableViewCellSelectionDelegate> leCellSelectionDelegate;
 @property (nonatomic, readwrite) UIView * leSuperViewContainer;
 @property (nonatomic, readwrite) NSMutableArray *leItemsArray;
@@ -34,6 +34,9 @@
 @end
 
 @implementation LETableViewCellSettings
+-(void) leSetGesture:(BOOL) gesture{
+    self.leGesture=gesture;
+}
 -(id) initWithSelectionDelegate:(id<LETableViewCellSelectionDelegate>) delegate EnableGesture:(BOOL) gesture{
     return [self initWithSelectionDelegate:delegate TableViewCellStyle:UITableViewCellStyleDefault reuseIdentifier:LEReuseableCellIdentifier EnableGesture:gesture];
 }
@@ -62,20 +65,20 @@
 -(void) leSetParentView:(UIView *) view{
     self.leParentView=view;
 }
--(id) initWithSuperViewContainer:(UIView *) superView ParentView:(UIView *) parent GetDataDelegate:(id<LEGetDataDelegate>) get   TableViewCellSelectionDelegate:(id<LETableViewCellSelectionDelegate>) selection{
+-(id) initWithSuperViewContainer:(UIView *) superView ParentView:(UIView *) parent GetDataDelegate:(id<LETableViewDataSourceDelegate>) get   TableViewCellSelectionDelegate:(id<LETableViewCellSelectionDelegate>) selection{
     return [self initWithSuperViewContainer:superView ParentView:parent TableViewCell:nil EmptyTableViewCell:nil GetDataDelegate:get TableViewCellSelectionDelegate:selection];
 }
--(id) initWithSuperViewContainer:(UIView *) superView ParentView:(UIView *) parent TableViewCell:(NSString *) cell EmptyTableViewCell:(NSString *) empty GetDataDelegate:(id<LEGetDataDelegate>) get   TableViewCellSelectionDelegate:(id<LETableViewCellSelectionDelegate>) selection{
+-(id) initWithSuperViewContainer:(UIView *) superView ParentView:(UIView *) parent TableViewCell:(NSString *) cell EmptyTableViewCell:(NSString *) empty GetDataDelegate:(id<LETableViewDataSourceDelegate>) get   TableViewCellSelectionDelegate:(id<LETableViewCellSelectionDelegate>) selection{
     return [self initWithSuperViewContainer:superView ParentView:parent TableViewCell:cell EmptyTableViewCell:empty GetDataDelegate:get TableViewCellSelectionDelegate:selection AutoRefresh:NO];
 }
--(id) initWithSuperViewContainer:(UIView *) superView ParentView:(UIView *) parent TableViewCell:(NSString *) cell EmptyTableViewCell:(NSString *) empty GetDataDelegate:(id<LEGetDataDelegate>) get   TableViewCellSelectionDelegate:(id<LETableViewCellSelectionDelegate>) selection AutoRefresh:(BOOL) autorefresh{
+-(id) initWithSuperViewContainer:(UIView *) superView ParentView:(UIView *) parent TableViewCell:(NSString *) cell EmptyTableViewCell:(NSString *) empty GetDataDelegate:(id<LETableViewDataSourceDelegate>) get   TableViewCellSelectionDelegate:(id<LETableViewCellSelectionDelegate>) selection AutoRefresh:(BOOL) autorefresh{
     self=[super init];
     self.leSuperViewContainer=superView;
     self.leParentView=parent;
     self.leTableViewCellClassName=cell;
     self.leEmptyTableViewCellClassName=empty;
-    self.leGetDataDelegate=get;
-    self.leTableViewCellSelectionDelegate=selection;
+    self.leDataSourceDelegate=get;
+    self.leCellSelectionDelegate=selection;
     self.leIsAutoRefresh=autorefresh;
     return self;
 }
@@ -86,14 +89,16 @@
 @implementation LEBaseTableView{
     BOOL ignoredFirstEmptyCell;
 }
+-(void) leSetEmptyTableViewCell:(LEBaseEmptyTableViewCell *) emptyTableViewCell{
+    self.leEmptyTableViewCell=emptyTableViewCell;
+}
 - (id) initWithSettings:(LETableViewSettings *) settings{
     self.leEmptyTableViewCellClassName=settings.leEmptyTableViewCellClassName?settings.leEmptyTableViewCellClassName:@"LEBaseEmptyTableViewCell";
     self.leTableViewCellClassName=settings.leTableViewCellClassName;
     UIView *superView=settings.leSuperViewContainer;
-    UIView *leParentView=settings.leParentView;
-    id<LEGetDataDelegate> getDatadelegate=settings.leGetDataDelegate;
-    [self setLeGetDataDelegate:getDatadelegate];
-    [self setLeCellSelectionDelegate:settings.leTableViewCellSelectionDelegate];
+    UIView *leParentView=settings.leParentView; 
+    [self setLeDataSourceDelegate:settings.leDataSourceDelegate];
+    [self setLeCellSelectionDelegate:settings.leCellSelectionDelegate];
     self = [super initWithFrame:leParentView.bounds style:UITableViewStylePlain];
     [self setLeAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:leParentView EdgeInsects:UIEdgeInsetsZero]];
     [self leExecAutoLayout];
@@ -129,16 +134,16 @@
 }
 //
 -(void) onDelegateRefreshData{
-    if(self.leGetDataDelegate){
-        if([self.leGetDataDelegate respondsToSelector:@selector(leOnRefreshData)]){
-            [self.leGetDataDelegate leOnRefreshData];
+    if(self.leDataSourceDelegate){
+        if([self.leDataSourceDelegate respondsToSelector:@selector(leOnRefreshData)]){
+            [self.leDataSourceDelegate leOnRefreshData];
         }
     }
 }
 -(void) onDelegateLoadMore{
-    if(self.leGetDataDelegate){
-        if([self.leGetDataDelegate respondsToSelector: @selector(leOnLoadMore)]){
-            [self.leGetDataDelegate leOnLoadMore];
+    if(self.leDataSourceDelegate){
+        if([self.leDataSourceDelegate respondsToSelector: @selector(leOnLoadMore)]){
+            [self.leDataSourceDelegate leOnLoadMore];
         }
     }
 }
@@ -182,13 +187,13 @@
         UITableViewCell *cell=[self dequeueReusableCellWithIdentifier:LEReuseableCellIdentifier];
         if(!cell){
             LESuppressPerformSelectorLeakWarning(
-                                               cell=[[self.leTableViewCellClassName leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithSettings:") withObject:[[LETableViewCellSettings alloc] initWithSelectionDelegate:self.leCellSelectionDelegate]];
-                                               );
+                                                 cell=[[self.leTableViewCellClassName leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithSettings:") withObject:[[LETableViewCellSettings alloc] initWithSelectionDelegate:self.leCellSelectionDelegate]];
+                                                 );
         }
         if(self.leItemsArray&&indexPath.row<self.leItemsArray.count){
             LESuppressPerformSelectorLeakWarning(
-                                               [cell performSelector:NSSelectorFromString(@"leSetData:IndexPath:") withObject:[self.leItemsArray objectAtIndex:indexPath.row] withObject:indexPath];
-                                               );
+                                                 [cell performSelector:NSSelectorFromString(@"leSetData:IndexPath:") withObject:[self.leItemsArray objectAtIndex:indexPath.row] withObject:indexPath];
+                                                 );
         }
         return cell;
     }
@@ -221,8 +226,8 @@
     if(indexPath.section==0 && [self leNumberOfRowsInSection:0]==0 && [self leNumberOfSections] <=1){
         if(!self.leEmptyTableViewCell){
             LESuppressPerformSelectorLeakWarning(
-                                               self.leEmptyTableViewCell=[[self.leEmptyTableViewCellClassName leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithSettings:") withObject:@{LEKeyOfCellTitle:@"暂时还没有相关内容"}];
-                                               );
+                                                 self.leEmptyTableViewCell=[[self.leEmptyTableViewCellClassName leGetInstanceFromClassName] performSelector:NSSelectorFromString(@"initWithSettings:") withObject:@{LEKeyOfCellTitle:@"暂时还没有相关内容"}];
+                                                 );
         }
         return self.leEmptyTableViewCell;
     }

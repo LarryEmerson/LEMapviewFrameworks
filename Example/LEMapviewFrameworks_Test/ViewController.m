@@ -48,8 +48,8 @@
 @end
 @implementation TestLEMapViewEndPointView
 -(void) leExtraInits {
-    LEMapViewAnnotation *anno=(LEMapViewAnnotation *)self.annotation;
-    self.curAnnotationIcon=[[UIImageView alloc]initWithImage:anno.leCurrentAnnotationIcon];
+    TestLEMapViewEndPoint *anno=(TestLEMapViewEndPoint *)self.annotation;
+    self.curAnnotationIcon=[[UIImageView alloc]initWithImage:anno.curAnnotationIcon];
     [self addSubview:self.curAnnotationIcon];
     [self setFrame:CGRectMake(0, 0, self.curAnnotationIcon.bounds.size.width, self.curAnnotationIcon.bounds.size.height)];
     [self setCenterOffset:CGPointMake(0, -self.curAnnotationIcon.bounds.size.height/2)];

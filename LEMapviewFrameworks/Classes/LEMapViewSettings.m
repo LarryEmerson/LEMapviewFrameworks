@@ -14,7 +14,6 @@
 @property (nonatomic, readwrite) UIImage *leLocateStatusNormal;
 @property (nonatomic, readwrite) UIImage *leLocateStatusRotate;
 @property (nonatomic, readwrite) UIImage *leLocateStatusFollow;
-@property (nonatomic, readwrite) UIImage *leScaleBackground;
 @property (nonatomic, readwrite) UIImage *leScaleUp;
 @property (nonatomic, readwrite) UIImage *leScaleUpHighlighted;
 @property (nonatomic, readwrite) UIImage *leScaleDown;
@@ -31,8 +30,7 @@ LESingleton_implementation(LEMapViewSettings);
     self.leCompass              =[self leGetImageWithName:@"map_compass"];
     self.leLocateStatusNormal   =[self leGetImageWithName:@"map_btn_status"];
     self.leLocateStatusRotate   =[self leGetImageWithName:@"map_btn_status2"];
-    self.leLocateStatusFollow   =[self leGetImageWithName:@"map_btn_status3"];
-    self.leScaleBackground      =[self leGetImageWithName:@"mapScaleBG"];
+    self.leLocateStatusFollow   =[self leGetImageWithName:@"map_btn_status3"]; 
     self.leScaleUp              =[self leGetImageWithName:@"mapScaleUp"];
     self.leScaleDown            =[self leGetImageWithName:@"mapScaleDown"];
     self.leScaleUpHighlighted   =[self leGetImageWithName:@"mapScaleUp2"];

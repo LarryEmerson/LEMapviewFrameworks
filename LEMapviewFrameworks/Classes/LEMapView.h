@@ -28,6 +28,18 @@
 
 @interface LEMapView : UIView<MAMapViewDelegate>
 /**
+ * @brief 自定义定位按钮开启关闭
+ */
+-(void) leSetEnableRelocate:(BOOL) enable;
+/**
+ * @brief 自定义缩放按钮开启关闭
+ */
+-(void) leSetEnableScale:(BOOL) enable;
+/**
+ * @brief 自定义罗盘位置及开启关闭
+ */
+-(void) leSetCompassAnchor:(LEAnchors) anchor Offset:(CGPoint) offset Enable:(BOOL) enable;
+/**
  * @brief 自定义提示信息回调
  */
 -(void) leSetAppMessageDelegate:(id<LEAppMessageDelegate>) messageDelegate;
@@ -128,7 +140,11 @@
 /**
  * @brief 地图地点点击事件（可重写）
  */
--(void) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view;
+-(BOOL) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view;
+/**
+ * @brief 地图地点点击事件（可重写）
+ */
+-(void) leOnOverwriteMapView:(MAMapView *)mapView didDeselectAnnotationView:(MAAnnotationView *)view;
 /**
  * @brief 删除Callout
  */

@@ -20,7 +20,7 @@
     return self;
 } 
 -(NSDictionary *) leGetMapData{
-    return self.leGetMapData;
+    return self.leMapData;
 }
 -(void) leSetMapData:(NSDictionary *) data{
     self.leMapData=data;

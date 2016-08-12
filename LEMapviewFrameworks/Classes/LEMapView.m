@@ -58,10 +58,25 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     LEMapCallOutAnnotationView *curCallOutView;
     NSMutableArray *curDataArrays;
     UIButton *reLocate;
+    UIView *scaleView;
     UIImageView *curCompass;
     MapRotationStatus curMapRotationStatus;
     NSTimer *curCheckRotateTimer;
     NSMutableArray *curSearchAnnotationArray;
+}
+-(void) leSetEnableRelocate:(BOOL) enable{
+    [reLocate setHidden:!enable];
+}
+-(void) leSetEnableScale:(BOOL) enable{
+    [scaleView setHidden:!enable];
+}
+-(void) leSetCompassAnchor:(LEAnchors) anchor Offset:(CGPoint) offset Enable:(BOOL) enable{
+    if(enable){
+        [curCompass.leAutoLayoutSettings setLeAnchor:anchor];
+        [curCompass.leAutoLayoutSettings setLeOffset:offset];
+        [curCompass leExecAutoLayout];
+    }
+    [curCompass setHidden:!enable];
 }
 //
 -(void) leSetAppMessageDelegate:(id<LEAppMessageDelegate>) messageDelegate{
@@ -246,7 +261,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 
 -(void) initCompass{
     UIImage *img=[[LEMapViewSettings sharedInstance] leCompass];
-    curCompass=[LEUIFramework leGetImageViewWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopRight Offset:CGPointMake(0, LEStatusBarHeight+LENavigationBarHeight) CGSize:CGSizeMake(50, 50)] Image:img];
+    curCompass=[LEUIFramework leGetImageViewWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideTopRight Offset:CGPointMake(0, LEStatusBarHeight) CGSize:img.size] Image:img];
     [curCompass setUserInteractionEnabled:YES];
     [curCompass leAddTapEventWithSEL:@selector(onRotateToNormal) Target:self];
 }
@@ -362,34 +377,27 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [self checkGPSSettings];
     //
     UIImage *buttonImage=[[LEMapViewSettings sharedInstance] leLocateStatusFollow];
-    reLocate=[[UIButton alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideBottomLeft Offset:CGPointMake(7, -LENavigationBarHeight/2) CGSize:CGSizeMake(50, 50)]];
+    reLocate=[[UIButton alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideBottomLeft Offset:CGPointMake(LELayoutSideSpace, -LEStatusBarHeight) CGSize:buttonImage.size]];
     [self addSubview:reLocate];
     [reLocate addTarget:self action:@selector(onRotateSwitch) forControlEvents:UIControlEventTouchUpInside];
     [reLocate setImage:buttonImage forState:UIControlStateNormal];
     
-    UIImage *imgScale=[[LEMapViewSettings sharedInstance] leScaleBackground];
-    UIImageView *scaleView=[[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width-imgScale.size.width-7, reLocate.frame.origin.y+reLocate.frame.size.height-imgScale.size.height+3, 94/2,150/2)];
-    [scaleView setUserInteractionEnabled:YES];
-    [scaleView setImage:imgScale];
-    [self addSubview:scaleView];
     UIImage *imgScaleUp=[[LEMapViewSettings sharedInstance] leScaleUp];
     UIImage *imgScaleUp2=[[LEMapViewSettings sharedInstance] leScaleUpHighlighted];
     UIImage *imgScaleDown=[[LEMapViewSettings sharedInstance] leScaleDown];
     UIImage *imgScaleDown2=[[LEMapViewSettings sharedInstance] leScaleDownHighlighted];
-    UIButton *sizeUp=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 94/2, 150/2/2)];
-    UIButton *sizeDown=[[UIButton alloc]initWithFrame:CGRectMake(0, 150/2/2, 94/2, 150/2/2)];
-    [scaleView addSubview:sizeUp];
-    [scaleView addSubview:sizeDown];
-    [sizeUp setImage:imgScaleUp forState:UIControlStateNormal];
-    [sizeUp setImage:imgScaleUp2 forState:UIControlStateHighlighted];
-    [sizeDown setImage:imgScaleDown forState:UIControlStateNormal];
-    [sizeDown setImage:imgScaleDown2 forState:UIControlStateHighlighted];
+    int scaleW=imgScaleUp.size.width;
+    int scaleH=imgScaleUp.size.height+imgScaleDown.size.height;
+    scaleView=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideBottomRight Offset:CGPointMake(-LELayoutSideSpace, -LEStatusBarHeight) CGSize:CGSizeMake(scaleW, scaleH)]];
+    UIButton *sizeUp=[[UIButton alloc]initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:scaleView Anchor:LEAnchorInsideTopCenter Offset:CGPointZero CGSize:imgScaleUp.size]];
+    UIButton *sizeDown=[[UIButton alloc]initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:scaleView Anchor:LEAnchorInsideBottomCenter Offset:CGPointZero CGSize:imgScaleDown.size]];
+    [sizeUp setBackgroundImage:imgScaleUp forState:UIControlStateNormal];
+    [sizeUp setBackgroundImage:imgScaleUp2 forState:UIControlStateHighlighted];
+    [sizeDown setBackgroundImage:imgScaleDown forState:UIControlStateNormal];
+    [sizeDown setBackgroundImage:imgScaleDown2 forState:UIControlStateHighlighted];
     [sizeUp addTarget:self action:@selector(onSizeDownMap) forControlEvents:UIControlEventTouchUpInside];
     [sizeDown addTarget:self action:@selector(onSizeUpMap) forControlEvents:UIControlEventTouchUpInside];
-    [sizeUp setImageEdgeInsets:UIEdgeInsetsMake(6, 0, 0, 0)];
-    [sizeDown setImageEdgeInsets:UIEdgeInsetsMake(-6, 0, 0, 0)];
-    //
-    
+    // 
 }
 
 -(void) checkGPSSettings{
@@ -513,19 +521,19 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [self onCheckAnnotationAngle];
 }
 -(void) mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
-    if([view isKindOfClass:[LEMapViewAnnotationView class]]){
-        //add
-        LEMapViewAnnotation *an=(LEMapViewAnnotation *) view.annotation;
-        [self leRemoveCalloutView];
-        LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.leIndex AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.leIndex] UserCoordinate:mapView.userLocation.coordinate];
-        [mapView addAnnotation:anno];
-        [curMapView setCenterCoordinate:anno.coordinate animated:YES];
-    }else{
-        [self leOnOverwriteMapView:mapView didSelectAnnotationView:view];
+    if(![self leOnOverwriteMapView:mapView didSelectAnnotationView:view]){
+        if([view isKindOfClass:[LEMapViewAnnotationView class]]){
+            //add
+            LEMapViewAnnotation *an=(LEMapViewAnnotation *) view.annotation;
+            [self leRemoveCalloutView];
+            LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.leIndex AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.leIndex] UserCoordinate:mapView.userLocation.coordinate];
+            [mapView addAnnotation:anno];
+            [curMapView setCenterCoordinate:anno.coordinate animated:YES];
+        }
     }
 }
--(void) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
-    
+-(BOOL) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+    return NO;
 }
 -(void) leRemoveCalloutView{
     if(curCallOutView&&curCallOutView.annotation){
@@ -570,6 +578,9 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     
 }
 -(void) mapView:(MAMapView *)mapView didDeselectAnnotationView:(MAAnnotationView *)view{
+    [self leOnOverwriteMapView:mapView didDeselectAnnotationView:view];
+}
+-(void) leOnOverwriteMapView:(MAMapView *)mapView didDeselectAnnotationView:(MAAnnotationView *)view{
     if(curCallOutView&&curCallOutView.annotation){
         [mapView removeAnnotations:@[curCallOutView.annotation]];
         curCallOutView=nil;

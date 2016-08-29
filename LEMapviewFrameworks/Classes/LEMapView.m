@@ -234,6 +234,8 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     if(locationManager){
         [locationManager stopUpdatingLocation];
         [locationManager stopUpdatingHeading];
+        [locationManager setDelegate:nil];
+        locationManager=nil;
     }
     [curCheckRotateTimer invalidate];
 }

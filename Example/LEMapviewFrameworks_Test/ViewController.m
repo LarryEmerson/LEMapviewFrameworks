@@ -109,14 +109,16 @@
     }
     return nil;
 }
--(void) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
+-(BOOL) leOnOverwriteMapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view{
     if([view isKindOfClass:[TestLEMapViewEndPointView class]]){
         TestLEMapViewEndPoint *an=(TestLEMapViewEndPoint *) view.annotation;
         [self leRemoveCalloutView];
         LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.index AnnotationIcon:self.leGetAnnotationIcon CallOutBackground:self.leGetCalloutBackground  Data:an.curData UserCoordinate:mapView.userLocation.coordinate];
         [mapView addAnnotation:anno];
         [mapView setCenterCoordinate:anno.coordinate animated:YES];
+        return YES;
     }
+    return NO;
 }
 @end
 

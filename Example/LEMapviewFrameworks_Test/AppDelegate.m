@@ -21,7 +21,7 @@
     ViewController *viewController=[[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewController];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [nav setNavigationBarHidden:NO animated:YES];
+    [nav setNavigationBarHidden:YES animated:NO];
     [self.window setRootViewController:nav];
     [self.window makeKeyAndVisible];
     return YES;

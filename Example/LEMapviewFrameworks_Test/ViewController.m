@@ -168,15 +168,11 @@
 @implementation ViewController{
     TestLEMapview *map;
 }
-
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setExtendedLayoutIncludesOpaqueBars:NO];
-    [self setEdgesForExtendedLayout:UIRectEdgeLeft&UIRectEdgeRight&UIRectEdgeBottom];
-    [self leSetNavigationTitle:@"LEMapView 测试"];
-    LEBaseTableView *tb=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self.view ParentView:self.view TableViewCell:@"TestCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self AutoRefresh:NO]];
+- (void)leExtraInits {
+    LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:self SuperView:self.view Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:nil];
+    [navi leSetNavigationTitle:@"LEMapView 测试"];
+    UIView *view=[UIView new].leSuperView(self.view).leEdgeInsects(UIEdgeInsetsMake(LEStatusBarHeight+LENavigationBarHeight, 0, 0, 0)).leAutoLayout;
+    LEBaseTableView *tb=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self.view ParentView:view TableViewCell:@"TestCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self AutoRefresh:NO]];
     [tb leOnRefreshedWithData:[@[@"LEMapView"] mutableCopy]];
     [tb leSetTopRefresh:NO];
     [tb leSetBottomRefresh:NO];
@@ -189,10 +185,10 @@
             [AMapServices sharedServices].apiKey =  @"e81cd43379b47cb53892f6a7577597a4";
             LEBaseViewController *vc=[[LEBaseViewController alloc] init];
             LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
-            
-            [self.navigationController pushViewController:vc animated:YES];
-            [vc leSetNavigationTitle:@"综合测试"];
-            map=[[TestLEMapview alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:view.leViewContainer EdgeInsects:UIEdgeInsetsZero] AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[LEColorBlue leImageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
+            LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:vc SuperView:view.leViewContainer Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:[[LEUIFramework sharedInstance] leGetImageFromLEFrameworksWithName:@"LE_web_icon_backward_on"]]; 
+            [self leThroughNavigationAnimatedPush:vc];
+            [navi leSetNavigationTitle:@"综合测试"];
+            map=[[TestLEMapview alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:view.leViewBelowCustomizedNavigation EdgeInsects:UIEdgeInsetsZero] AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[LEColorBlue leImageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"TestLEMapviewSubview" MapDelegate:self];
             [map leSetEnableAnnotationRotation:YES];
             [map leSetEnablePolyline:YES];
             [map leSetEnableAnnotationCentered:YES];
@@ -214,7 +210,7 @@
             [map leOnRefreshedData:array];
             
             [map.leOnGetMapview setCenterCoordinate:CLLocationCoordinate2DMake(31.810282,119.992165) animated:YES];
-            LEMapSearchBar *bar=[[LEMapSearchBar alloc] initWithSuperView:view.leViewContainer];
+            LEMapSearchBar *bar=[[LEMapSearchBar alloc] initWithSuperView:view.leViewBelowCustomizedNavigation];
             [bar leSetDelegate:self];
         }
             break;

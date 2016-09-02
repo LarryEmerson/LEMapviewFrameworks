@@ -27,5 +27,6 @@
 @property (nonatomic, readonly) int leIndex;
 @property (nonatomic, readonly) UIImage *leCurrentAnnotationIcon;
 @property (nonatomic, readonly) NSDictionary *leMapData;
+@property (nonatomic) float zAxisOffset;
 -(id) initWithCoordinate:(CLLocationCoordinate2D) coordinate Index:(int) index AnnotationIcon:(UIImage *) icon Data:(NSDictionary *) data;
 @end

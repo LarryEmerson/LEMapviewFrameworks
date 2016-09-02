@@ -438,6 +438,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         }
         [curCallOutView leSetDelegate:self.leMapDelegate];
         [curCallOutView setAnnotation:annotation];
+        curCallOutView.layer.transform=CATransform3DMakeTranslation(0, 0, 5);
         //        [curCallOutView setCurData:anno.curData];
         return curCallOutView;
     }else if([annotation isKindOfClass:[MAUserLocation class]]){
@@ -473,6 +474,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         [annotationView leOnSetViewCenter:CGPointZero];
     }
     [annotationView setAnnotation:annotation];
+    annotationView.layer.transform=CATransform3DMakeTranslation(0, 0, anno.zAxisOffset);
     [annotationView leSetMapData:anno.leMapData];
     [annotationView leOnResetAngle];
     return annotationView;

@@ -4,7 +4,7 @@ PODS:
   - AMapFoundation (1.2.0)
   - AMapSearch (4.2.0):
     - AMapFoundation (~> 1.0)
-  - LEFrameworks (0.5.4)
+  - LEFrameworks (0.5.6)
   - LEMapviewFrameworks (0.1.6):
     - AMap3DMap
     - AMapSearch
@@ -21,7 +21,7 @@ SPEC CHECKSUMS:
   AMap3DMap: 35a5e1ce80796ecf996b2c7b847b4ac94e97e448
   AMapFoundation: 8acc2bf4eed79aab4d21002ddb8b24a6f3f3621c
   AMapSearch: 788020fca7ed18819e8bc2bfca716a6775a05ada
-  LEFrameworks: 1ee1a99bf963b73c41db8628ade3771d8b299107
+  LEFrameworks: a4f5f8c78c16ead243e7e02d799885c69563a6ea
   LEMapviewFrameworks: d3d20154500788f5786fc937fb5ec73123254e8e
 
 PODFILE CHECKSUM: c46fc8e33c00af16e9e4133460dc29c5c6345032

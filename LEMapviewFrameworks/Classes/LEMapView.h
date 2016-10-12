@@ -21,12 +21,25 @@
 #import "LEAppMessageDelegate.h"
 #import "LEUIFramework.h"
 
+@interface LEMapViewCache : NSObject
+LESingleton_interface(LEMapViewCache)
+@property (nonatomic) MAMapView *leGlobalMapView;
+@end
+
 @protocol LEMapViewUserLocationDelegate <NSObject>
 -(void) leOnUserLocationRefreshedWith:(CLLocation *) location;
 @end
 
 
 @interface LEMapView : UIView<MAMapViewDelegate>
+/**
+ * @brief 重置MapView
+ */
+-(void) leRestoreMapView;
+/**
+ * @brief 手动释放地图内存占用
+ */
+-(void) leReleaseView NS_REQUIRES_SUPER;
 /**
  * @brief 自定义定位按钮开启关闭
  */

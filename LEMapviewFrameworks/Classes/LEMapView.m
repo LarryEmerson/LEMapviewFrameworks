@@ -16,6 +16,10 @@
 #define RefreshMoveSpace 0.003
 #define ZoomSize 1200
 
+@implementation LEMapViewCache
+LESingleton_implementation(LEMapViewCache)
+@end
+
 typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //Inside
     MapRotationStatusNone = 0,
@@ -181,7 +185,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     return curMapView;
 } 
 -(void) leOnAddAnnotationToCacheWith:(NSObject<MAAnnotation> *) annotation{
-    [curAnnotationArray addObject:annotation];
+    [curAnnotationArray addObject:annotation];   
 }
 -(void) leOnRefreshMapviewAnnotationsAfterAnnotationsAdded{
     [curMapView addAnnotations:curAnnotationArray];
@@ -227,18 +231,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     }
 }
 //
--(void) dealloc{
-    self.leMapDelegate=nil;
-    [curMapView setShowsUserLocation:NO];
-    [curMapView setDelegate:nil];
-    if(locationManager){
-        [locationManager stopUpdatingLocation];
-        [locationManager stopUpdatingHeading];
-        [locationManager setDelegate:nil];
-        locationManager=nil;
-    }
-    [curCheckRotateTimer invalidate];
-}
+
 
 -(void) leOnRefreshSearchedLocations:(NSMutableArray *) array{
     [curMapView removeAnnotations:curSearchAnnotationArray];
@@ -358,12 +351,50 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     curCheckRotateTimer=[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(onCheckRotating) userInfo:nil repeats:YES];
 }
 //========================End Compass
-
+-(void) leRestoreMapView{
+    if(![curMapView.superview isEqual:self]){
+        if([LEMapViewCache sharedInstance].leGlobalMapView){
+            curMapView=[LEMapViewCache sharedInstance].leGlobalMapView;
+            [curMapView removeAnnotations:curMapView.annotations];
+            [curMapView setFrame:self.bounds];
+        }else{
+            curMapView =[[MAMapView alloc] initWithFrame:self.bounds];
+            [LEMapViewCache sharedInstance].leGlobalMapView=curMapView;
+        }
+        [self addSubview:curMapView];
+        [curMapView setDelegate:self];
+    }
+}
+-(void) leReleaseView{
+    LELogFunc
+    [curMapView removeAnnotations:curMapView.annotations];
+    self.leMapDelegate=nil;
+    self.leAppMessageDelegate=nil;
+    self.leUserLocationDelegate=nil;
+    self.curMApolyline=nil;
+    curUserCircle=nil;
+    curCallOutView=nil;
+    [curMapView setShowsUserLocation:NO];
+    [curMapView setDelegate:nil];
+    if(locationManager){
+        [locationManager stopUpdatingLocation];
+        [locationManager stopUpdatingHeading];
+        [locationManager setDelegate:nil];
+        locationManager=nil;
+    }
+    [curCheckRotateTimer invalidate];
+}
 -(void) initMap {
-    curMapView =[[MAMapView alloc] initWithFrame:self.bounds];
+    if([LEMapViewCache sharedInstance].leGlobalMapView){
+        curMapView=[LEMapViewCache sharedInstance].leGlobalMapView;
+        [curMapView removeAnnotations:curMapView.annotations];
+        [curMapView setFrame:self.bounds];
+    }else{
+        curMapView =[[MAMapView alloc] initWithFrame:self.bounds];
+        [LEMapViewCache sharedInstance].leGlobalMapView=curMapView;
+    }
     [self addSubview:curMapView];
     [curMapView setDelegate:self];
-    
     [curMapView setZoomEnabled:YES];
     [curMapView setRotateEnabled:YES];
     [curMapView setRotateCameraEnabled:YES];
@@ -373,7 +404,9 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     //    [curMapView setCompassOrigin:CGPointMake([LEUIFramework sharedInstance].ScreenWidth-StatusBarHeight/2-curMapView.compassSize.width, StatusBarHeight*1.5+NavigationBarHeight)];
     [curMapView setShowsScale:NO];
     [curMapView removeOverlays:curMapView.overlays];
-    [curMapView setShowsUserLocation:YES];
+    [curMapView setShowsUserLocation:NO];
+    [curMapView setPausesLocationUpdatesAutomatically:YES];
+    [curMapView setAllowsBackgroundLocationUpdates:NO];
     //
     [self initCompass];
     [self checkGPSSettings];
@@ -415,9 +448,9 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     }else{
         isOn=NO;
     }
-    if(isOn==NO){
+    if(isOn==NO){  
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"定位服务未开启"
-                                                        message:@"请在系统设置中开启定位服务\r\n(设置>隐私>定位服务>开启常州违章)"
+                                                        message:[NSString stringWithFormat:@"请在系统设置中开启定位服务\r\n(设置>隐私>定位服务>开启%@)",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]]
                                                        delegate:self
                                               cancelButtonTitle:@"知道了"
                                               otherButtonTitles:nil,nil];
@@ -492,7 +525,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     }
 }
 - (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    LELogFunc;
+    LELogFunc; 
 }
 -(void) mapView:(MAMapView *)mapView mapDidZoomByUser:(BOOL)wasUserAction{
     [self onEndChecking];

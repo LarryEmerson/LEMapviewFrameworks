@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'LEMapviewFrameworks'
-s.version          = '0.1.7'
+s.version          = '0.1.8'
 s.summary          = '高德地图进一步封装'
 
 # This description is used to generate tags and improve search results.
@@ -38,5 +38,4 @@ s.resource_bundles = {
 s.dependency 'AMap3DMap'
 s.dependency 'AMapSearch'
 s.dependency 'LEFrameworks'
-
 end

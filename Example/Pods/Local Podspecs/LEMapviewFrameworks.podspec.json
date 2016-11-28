@@ -1,6 +1,6 @@
 {
   "name": "LEMapviewFrameworks",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "summary": "高德地图进一步封装",
   "homepage": "https://github.com/LarryEmerson/LEMapviewFrameworks",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/LarryEmerson/LEMapviewFrameworks.git",
-    "tag": "0.1.7"
+    "tag": "0.1.8"
   },
   "platforms": {
     "ios": "7.0"
@@ -31,6 +31,9 @@
 
     ],
     "LEFrameworks": [
+
+    ],
+    "LEFoundation": [
 
     ]
   }

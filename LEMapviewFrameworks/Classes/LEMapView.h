@@ -18,7 +18,8 @@
 #import "LEMapCallOutAnnotationView.h"
 #import "LEMapCallOutViewAnnotation.h"
 #import <AMapFoundationKit/AMapUtility.h>
-#import "LEAppMessageDelegate.h"
+#import <LEFoundation/LEFoundations.h>
+
 #import "LEUIFramework.h"
 
 @interface LEMapViewCache : NSObject

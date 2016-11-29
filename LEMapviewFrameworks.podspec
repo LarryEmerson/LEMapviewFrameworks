@@ -38,4 +38,5 @@ s.resource_bundles = {
 s.dependency 'AMap3DMap'
 s.dependency 'AMapSearch'
 s.dependency 'LEFrameworks'
+s.dependency 'LEFoundation'
 end

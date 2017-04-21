@@ -15,7 +15,7 @@
 @implementation LEMapSearchBarCell{
     UILabel *curLabel;
 }
--(void) leExtraInits{
+-(void) leAdditionalInits{
     curLabel=[LEUIFramework leGetLabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LELayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:nil FontSize:LELayoutFontSize10 Font:nil Width:0 Height:0 Color:LEColorTextBlack Line:1 Alignment:NSTextAlignmentLeft]];
 }
 -(void) leSetData:(id)data IndexPath:(NSIndexPath *)path{
@@ -46,11 +46,11 @@
 -(id) initWithSuperView:(UIView *) parent{
     parentView=parent; 
     self=[super initWithFrame:CGRectMake(0, 0, LESCREEN_WIDTH, LENavigationBarHeight)];
-    [self leExtraInits];
+    [self leAdditionalInits];
     [parent addSubview:self];
     return self;
 }
--(void) leExtraInits{
+-(void) leAdditionalInits{
     tips=[[NSMutableArray alloc] init];
     maskView=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
     [maskView setBackgroundColor:LEColorMask2];

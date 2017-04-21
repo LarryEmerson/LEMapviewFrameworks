@@ -26,7 +26,7 @@
     [self leSetSize:imgBG.size];
     self.callOutViewContainer=[[UIView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
     [self.callOutViewContainer setUserInteractionEnabled:NO];
-    [self leExtraInits];
+    [self leAdditionalInits];
     [self addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
     return self;
 }

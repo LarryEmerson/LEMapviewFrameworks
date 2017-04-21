@@ -31,7 +31,7 @@
     subViewClassName=subClass;
     return [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
 }
--(void) leExtraInits{
+-(void) leAdditionalInits{
     LEMapCallOutViewAnnotation *anno=(LEMapCallOutViewAnnotation *)self.annotation;
     imgPin=anno.leCurrentAnnotationIcon;
     LESuppressPerformSelectorLeakWarning(

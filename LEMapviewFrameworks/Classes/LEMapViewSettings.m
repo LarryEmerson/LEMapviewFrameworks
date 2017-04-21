@@ -24,8 +24,7 @@
 @implementation LEMapViewSettings
 #pragma Singleton
 LESingleton_implementation(LEMapViewSettings);
-
--(void) leExtraInits{
+-(void) leAdditionalInits{
     self.leMapviewBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"LEMapviewFrameworks" ofType:@"bundle"]];
     self.leCompass              =[self leGetImageWithName:@"map_compass"];
     self.leLocateStatusNormal   =[self leGetImageWithName:@"map_btn_status"];

@@ -13,7 +13,7 @@
 @end
 @implementation LEMapViewAnnotationView
 
--(void) leExtraInits { 
+-(void) leAdditionalInits { 
     LEMapViewAnnotation *anno=(LEMapViewAnnotation *)self.annotation;
     self.leCurrentAnnotationIcon=[[UIImageView alloc]initWithImage:anno.leCurrentAnnotationIcon];
     [self addSubview:self.leCurrentAnnotationIcon];

@@ -15,7 +15,7 @@
 
 - (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier{
     if(self=[super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier]){
-        [self leAdditionalInits]; 
+        [self leAdditionalInits];
     }
     return self;
 } 

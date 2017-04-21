@@ -22,8 +22,8 @@
 }
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, assign) CLLocationCoordinate2D nextCoordinate;
-@property (nonatomic, readonly, copy) NSString *title;
-@property (nonatomic, readonly, copy) NSString *subtitle;
+//@property (nonatomic, copy) NSString *title;
+//@property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, readonly) int leIndex;
 @property (nonatomic, readonly) UIImage *leCurrentAnnotationIcon;
 @property (nonatomic, readonly) NSDictionary *leMapData;

@@ -1,15 +1,16 @@
 PODS:
-  - AMap3DMap (4.4.1):
+  - AMap3DMap (5.0.0):
     - AMapFoundation (~> 1.3)
-  - AMapFoundation (1.3.2)
-  - AMapSearch (4.4.0):
+  - AMapFoundation (1.4.0)
+  - AMapSearch (5.0.0):
     - AMapFoundation (~> 1.2)
-  - LEFoundation (0.1.2)
-  - LEFrameworks (0.6.2):
+  - LEFoundation (0.1.7)
+  - LEFrameworks (0.6.4):
     - LEFoundation
-  - LEMapviewFrameworks (0.1.8):
+  - LEMapviewFrameworks (0.1.9):
     - AMap3DMap
     - AMapSearch
+    - LEFoundation
     - LEFrameworks
 
 DEPENDENCIES:
@@ -20,13 +21,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AMap3DMap: a46189dbf185d498e452294d7f600c20af0486af
-  AMapFoundation: 843dc27b2c02bc0bc2ef3346bb3dd0456cf64dbb
-  AMapSearch: a6c7c83905dbe12aa059c7ff83cb0726cb4fc32f
-  LEFoundation: 0ae39ec6fa64da7f670962345ec6e7323993e4ba
-  LEFrameworks: d7eda14ed3cef8f08b989562707a84e2c199b2c6
-  LEMapviewFrameworks: '058df8ab2fe3153112e89dbd02b972d2266f7033'
+  AMap3DMap: 4d0a53d0e57c7c758560225dfdaf593b306bd468
+  AMapFoundation: 458974f46a39df8407fd818ab83d2630d494c726
+  AMapSearch: cf7fd100d533995822d92c22586abfaf7cdf6eef
+  LEFoundation: a490ec109d741927dfadb238d984e1689e1581e3
+  LEFrameworks: c92bffbbac5c4bf84fa9a2faafe43702e9816640
+  LEMapviewFrameworks: a47d5676b7545be0674c34be3eab2215d1240fe6
 
 PODFILE CHECKSUM: c46fc8e33c00af16e9e4133460dc29c5c6345032
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

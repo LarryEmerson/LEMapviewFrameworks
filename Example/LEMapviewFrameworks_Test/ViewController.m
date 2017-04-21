@@ -19,8 +19,8 @@
 }
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, assign) CLLocationCoordinate2D nextCoordinate;
-@property (nonatomic, readonly, copy) NSString *title;
-@property (nonatomic, readonly, copy) NSString *subtitle;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic) int index;
 @property (nonatomic) UIImage *curAnnotationIcon;
 @property (nonatomic) NSDictionary *curData;
@@ -47,7 +47,7 @@
 @property (nonatomic) UIImageView *curAnnotationIcon;
 @end
 @implementation TestLEMapViewEndPointView
--(void) leExtraInits {
+-(void) leAdditionalInits {
     TestLEMapViewEndPoint *anno=(TestLEMapViewEndPoint *)self.annotation;
     self.curAnnotationIcon=[[UIImageView alloc]initWithImage:anno.curAnnotationIcon];
     [self addSubview:self.curAnnotationIcon];
@@ -128,7 +128,7 @@
     UILabel *label;
     UIButton *btn;
 }
--(void) leExtraInits{
+-(void) leAdditionalInits{
     [self leSetSize:CGSizeMake(200, 80)];
     [self.leGetCalloutViewContainer leSetLeAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self EdgeInsects:UIEdgeInsetsZero]];
     btn=[LEUIFramework leGetButtonWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointZero CGSize:CGSizeMake(50, 50)] ButtonSettings:[[LEAutoLayoutUIButtonSettings alloc] initWithTitle:@"@" FontSize:10 Font:nil Image:nil BackgroundImage:[LEColorMask leImageStrechedFromSizeOne] Color:LEColorWhite SelectedColor:LEColorGray MaxWidth:0 SEL:@selector(onBtn) Target:self]];
@@ -155,7 +155,7 @@
 @implementation TestCell{
     UILabel *label;
 }
--(void) leExtraInits{
+-(void) leAdditionalInits{
     label=[LEUIFramework leGetLabelWithSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:self Anchor:LEAnchorInsideLeftCenter Offset:CGPointMake(LELayoutSideSpace, 0) CGSize:CGSizeZero] LabelSettings:[[LEAutoLayoutLabelSettings alloc] initWithText:@"" FontSize:14 Font:nil Width:0 Height:0 Color:LEColorBlack Line:1 Alignment:NSTextAlignmentLeft]];
 }
 -(void) leSetData:(id)data IndexPath:(NSIndexPath *)path{
@@ -168,7 +168,7 @@
 @implementation ViewController{
     TestLEMapview *map;
 }
-- (void)leExtraInits {
+- (void)leAdditionalInits {
     LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:self SuperView:self.view Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:nil];
     [navi leSetNavigationTitle:@"LEMapView 测试"];
     UIView *view=[UIView new].leSuperView(self.view).leEdgeInsects(UIEdgeInsetsMake(LEStatusBarHeight+LENavigationBarHeight, 0, 0, 0)).leAutoLayout;
@@ -182,7 +182,7 @@
     switch (index.row) {
         case 0:
         {
-            [AMapServices sharedServices].apiKey =  @"e81cd43379b47cb53892f6a7577597a4";
+            [AMapServices sharedServices].apiKey =  @"fa6b639546c1ce2acf4ae42f966a6cac";
             LEBaseViewController *vc=[[LEBaseViewController alloc] init];
             LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
             LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:vc SuperView:view.leViewContainer Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:[[LEUIFramework sharedInstance] leGetImageFromLEFrameworksWithName:@"LE_web_icon_backward_on"]]; 

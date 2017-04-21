@@ -9,20 +9,55 @@
 #import "LEFoundation.h"
 #import <CommonCrypto/CommonDigest.h>
 
+@implementation LEWeakReferenceWrapper {
+    __weak id weakReference;
+}
++(id) leWrapNonretainedObject:(id)obj {
+    return [[LEWeakReferenceWrapper alloc] initWithNonretainedObject:obj];
+}
+-(id) init {
+    return [self initWithNonretainedObject:nil];
+}
+-(id) initWithNonretainedObject:(id)obj {
+    self = [super init];
+    if (self) {
+        weakReference = obj;
+    }
+    return self;
+}
+-(id) leGet {
+    return weakReference;
+}
+@end
+
 @implementation NSObject (LEFoundation)
 -(NSString *) leStringValue{
     return [NSString stringWithFormat:@"%@",self];
 }
--(void) leExtraInits{}
+//-(void) leExtraInits{
+//    [self leAdditionalInits];
+//}
+-(void) leAdditionalInits{}
 -(void) leRelease{}
+-(void(^)()) leReleased{
+    return ^void(){
+        [self leRelease];
+    };
+}
 
++(instancetype) leNew{
+    return [[self class] new];
+}
+-(void(^)()) leEnd{
+    return ^void(){};
+}
 -(NSString *) leObjToJSONString{
     NSString *jsonString = @"";
     if([[[UIDevice currentDevice].name lowercaseString] rangeOfString:@"simulator"].location !=NSNotFound){
         if([self isKindOfClass:[NSDictionary class]]||[self isMemberOfClass:[NSDictionary class]]){
-            jsonString = [self JSONStringWithDictionary:self];
+            jsonString = [NSObject JSONStringWithDictionary:(NSDictionary *)self];
         }else if([self isKindOfClass:[NSArray class]]||[self isMemberOfClass:[NSArray class]]){
-            jsonString = [self JSONStringWithArray:self];
+            jsonString = [NSObject JSONStringWithArray:(NSArray *)self];
         }
     }else{
         NSError *error=nil;
@@ -38,7 +73,7 @@
     }
     return jsonString;
 }
--(NSString*) JSONStringWithDictionary:(NSDictionary *) dic {
++(NSString*) JSONStringWithDictionary:(NSDictionary *) dic {
     NSMutableString *jsonString=[[NSMutableString alloc] initWithString:@""];
     NSString *value=nil;
     for (NSString *key in dic.allKeys) {
@@ -67,7 +102,7 @@
     [jsonString appendString:@"}"];
     return jsonString;
 }
--(NSString*) JSONStringWithArray:(NSArray *) array {
++(NSString*) JSONStringWithArray:(NSArray *) array {
     NSMutableString *jsonString=[[NSMutableString alloc] initWithString:@""];
     for (int i=0; i<array.count; i++) {
         id obj=[array objectAtIndex:i];
@@ -89,6 +124,8 @@
     [jsonString appendString:@"]"];
     return jsonString;
 }
+//
+
 @end
 
 @implementation NSString (LEFoundation)
@@ -101,11 +138,14 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 -(NSObject *) leGetInstanceFromClassName{
-    NSObject *obj=[NSClassFromString(self) alloc];
-    NSAssert(obj!=nil,([NSString stringWithFormat:@"请检查类名是否正确：%@",self]));
-    return obj;
+    Class class=[self leClass];
+    return class?[class alloc]:nil;
 }
-
+-(Class) leClass{
+    Class class=NSClassFromString(self);
+    NSAssert(class!=[NSNull null],([NSString stringWithFormat:@"请检查类名是否正确：%@",self]));
+    return class;
+}
 -(id)leJSONValue {
     NSData* data = [self dataUsingEncoding:NSUTF8StringEncoding];
     __autoreleasing NSError* error = nil;
@@ -138,4 +178,4 @@
 }
 @end
 
- 
+

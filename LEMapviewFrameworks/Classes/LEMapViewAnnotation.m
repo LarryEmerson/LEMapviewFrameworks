@@ -16,8 +16,6 @@
 @implementation LEMapViewAnnotation
 
 @synthesize coordinate=_coordinate;
-@synthesize title = _title;
-@synthesize subtitle = _subtitle;
 @synthesize leCurrentAnnotationIcon = _leCurrentAnnotationIcon;
 @synthesize leMapData=_leMapData;
 -(id) initWithCoordinate:(CLLocationCoordinate2D) coordinate Index:(int) index  AnnotationIcon:(UIImage *) icon Data:(NSDictionary *)data{

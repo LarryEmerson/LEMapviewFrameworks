@@ -9,10 +9,7 @@
 #import "LEMapViewSearchAnnotation.h"
 
 @implementation LEMapViewSearchAnnotation
-@synthesize coordinate=_coordinate;
-@synthesize title = _title;
-@synthesize subtitle = _subtitle;
-
+@synthesize coordinate=_coordinate; 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate {
     if (self = [super init]) {
         self.coordinate = coordinate;

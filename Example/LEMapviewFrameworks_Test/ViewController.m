@@ -182,7 +182,7 @@
     switch (index.row) {
         case 0:
         {
-            [AMapServices sharedServices].apiKey =  @"fa6b639546c1ce2acf4ae42f966a6cac";
+            [AMapServices sharedServices].apiKey =  @"xxx";
             LEBaseViewController *vc=[[LEBaseViewController alloc] init];
             LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
             LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:vc SuperView:view.leViewContainer Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:[[LEUIFramework sharedInstance] leGetImageFromLEFrameworksWithName:@"LE_web_icon_backward_on"]]; 

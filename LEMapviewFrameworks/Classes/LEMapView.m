@@ -67,6 +67,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     MapRotationStatus curMapRotationStatus;
     NSTimer *curCheckRotateTimer;
     NSMutableArray *curSearchAnnotationArray;
+    BOOL skipHeading;
 }
 -(void) leSetEnableRelocate:(BOOL) enable{
     [reLocate setHidden:!enable];
@@ -278,6 +279,9 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
         //        [self resetUserAnnotationImage];
     }
 }
+-(void) leSetSkipHeading:(BOOL) skipHead{
+    skipHeading=skipHead;
+}
 -(void) onCheckRotating{
     [curCompass setTransform:CGAffineTransformMakeRotation(-curMapView.rotationDegree*M_PI/180.0)];
     if (fabs(curMapView.centerCoordinate.longitude-lastUserCoordinate.longitude)>0.00002 && fabs(curMapView.centerCoordinate.latitude-lastUserCoordinate.latitude)>0.00002){
@@ -362,6 +366,8 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
             [LEMapViewCache sharedInstance].leGlobalMapView=curMapView;
         }
         [self addSubview:curMapView];
+        [self bringSubviewToFront:curCompass];
+        [curMapView removeOverlay:curUserCircle];
         [curMapView setDelegate:self];
     }
 }
@@ -385,6 +391,7 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [curCheckRotateTimer invalidate];
 }
 -(void) initMap {
+    skipHeading=NO;
     if([LEMapViewCache sharedInstance].leGlobalMapView){
         curMapView=[LEMapViewCache sharedInstance].leGlobalMapView;
         [curMapView removeAnnotations:curMapView.annotations];
@@ -648,16 +655,18 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     [curMapView addOverlay:curUserCircle];
     
     //    if(curMapRotationStatus!=MapRotationStatusNone){
-    [UIView animateWithDuration:0.1 animations:^{
-        if(curMapRotationStatus==MapRotationStatusMap){
-            [curMapView setRotationDegree:userLocation.heading.trueHeading animated:YES duration:0.1];
-            [curCompass setTransform:CGAffineTransformMakeRotation((360-userLocation.heading.trueHeading)*M_PI/180.0)];
-        }else{
-            [self resetUserAnnotationRotation:(userLocation.heading.trueHeading-curMapView.rotationDegree)*M_PI/180.0];
-        }
-        //            [curCompass setTransform:CGAffineTransformIdentity];
-        //            [curCompass setTransform:CGAffineTransformMakeRotation(degree)];
-    }];
+    if(!skipHeading){
+        [UIView animateWithDuration:0.1 animations:^{
+            if(curMapRotationStatus==MapRotationStatusMap){
+                [curMapView setRotationDegree:userLocation.heading.trueHeading animated:YES duration:0.1];
+                [curCompass setTransform:CGAffineTransformMakeRotation((360-userLocation.heading.trueHeading)*M_PI/180.0)];
+            }else{
+                [self resetUserAnnotationRotation:(userLocation.heading.trueHeading-curMapView.rotationDegree)*M_PI/180.0];
+            }
+            //            [curCompass setTransform:CGAffineTransformIdentity];
+            //            [curCompass setTransform:CGAffineTransformMakeRotation(degree)];
+        }];        
+    }
     //    }
     
     if(!isZoomInited){

@@ -33,6 +33,7 @@ LESingleton_interface(LEMapViewCache)
 
 
 @interface LEMapView : UIView<MAMapViewDelegate>
+-(void) leSetSkipHeading:(BOOL) skipHead;
 /**
  * @brief 重置MapView
  */

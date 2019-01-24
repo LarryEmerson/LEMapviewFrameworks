@@ -163,17 +163,21 @@
     [label leSetText:data];
 }
 @end
-@interface ViewController ()<LEMapViewDelegate,LETableViewCellSelectionDelegate,LEMapSearchBarDelegate>
+#import "AddPosDemo.h"
+@interface ViewController ()<LEMapViewDelegate,LETableViewCellSelectionDelegate,LEMapSearchBarDelegate,LENavigationDelegate,LEMapViewDelegate>
 @end
 @implementation ViewController{
     TestLEMapview *map;
+    AddPosMapView *map2;
+    UIImageView *adderAnno;
+    int step;
 }
 - (void)leAdditionalInits {
     LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:self SuperView:self.view Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:nil];
     [navi leSetNavigationTitle:@"LEMapView 测试"];
     UIView *view=[UIView new].leSuperView(self.view).leEdgeInsects(UIEdgeInsetsMake(LEStatusBarHeight+LENavigationBarHeight, 0, 0, 0)).leAutoLayout;
     LEBaseTableView *tb=[[LEBaseTableView alloc] initWithSettings:[[LETableViewSettings alloc] initWithSuperViewContainer:self.view ParentView:view TableViewCell:@"TestCell" EmptyTableViewCell:nil GetDataDelegate:nil TableViewCellSelectionDelegate:self AutoRefresh:NO]];
-    [tb leOnRefreshedWithData:[@[@"LEMapView"] mutableCopy]];
+    [tb leOnRefreshedWithData:[@[@"LEMapView",@"Add Pos"] mutableCopy]];
     [tb leSetTopRefresh:NO];
     [tb leSetBottomRefresh:NO];
 }  
@@ -182,7 +186,7 @@
     switch (index.row) {
         case 0:
         {
-            [AMapServices sharedServices].apiKey =  @"xxx";
+            [AMapServices sharedServices].apiKey =  @"73ae4d1ec53d626fd11f01a4f8982b0b";
             LEBaseViewController *vc=[[LEBaseViewController alloc] init];
             LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
             LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:nil ViewController:vc SuperView:view.leViewContainer Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:[[LEUIFramework sharedInstance] leGetImageFromLEFrameworksWithName:@"LE_web_icon_backward_on"]]; 
@@ -216,10 +220,64 @@
             break;
         case 1:
         {
+            [AMapServices sharedServices].apiKey =  @"73ae4d1ec53d626fd11f01a4f8982b0b";
+            LEBaseViewController *vc=[[LEBaseViewController alloc] init];
+            LEBaseView *view=[[LEBaseView alloc] initWithViewController:vc];
+            LEBaseNavigation *navi=[[LEBaseNavigation alloc] initWithDelegate:self ViewController:vc SuperView:view.leViewContainer Offset:LEStatusBarHeight BackgroundImage:[LEColorWhite leImageStrechedFromSizeOne] TitleColor:LEColorTextBlack LeftItemImage:[[LEUIFramework sharedInstance] leGetImageFromLEFrameworksWithName:@"LE_web_icon_backward_on"]];
+            [navi leSetRightNavigationItemWith:@"Add" Image:nil Color:LEColorRed];
+            [self leThroughNavigationAnimatedPush:vc];
+            [navi leSetNavigationTitle:@"添加地点"];
+            
+            map2=[[AddPosMapView alloc] initWithAutoLayoutSettings:[[LEAutoLayoutSettings alloc] initWithSuperView:view.leViewBelowCustomizedNavigation EdgeInsects:UIEdgeInsetsZero] AnnotationIcon:[UIImage imageNamed:@"arrow@2x.jpg"] CallOutBackground:[LEColorBlue leImageStrechedFromSizeOne] AnnotationViewClass:@"LEMapViewAnnotationView" CallOutViewClass:@"AddPosMapViewSubview" MapDelegate:nil];
+            
+            [map2 leSetEnableAnnotationRotation:YES];
+            [map2 leSetEnablePolyline:YES];
+            [map2 leSetEnableAnnotationCentered:YES];
+            [map2 leSetPolylineWidth:8];
+            [map2 leSetPolylineStrokeColor:[UIColor colorWithRed:1.0 green:0.6302 blue:0.6661 alpha:1.0]];
+            NSMutableArray *array=[[NSMutableArray alloc] init];
+//            [array addObject:@{@"latitude":@"31.810000",@"longitude":@"119.985000",@"index":@"1"}];
+//            [array addObject:@{@"latitude":@"31.807000",@"longitude":@"119.987000",@"index":@"2"}];
+//            [array addObject:@{@"latitude":@"31.804000",@"longitude":@"119.992000",@"index":@"3"}];
+//            [array addObject:@{@"latitude":@"31.807000",@"longitude":@"119.995000",@"index":@"4"}];
+//            [array addObject:@{@"latitude":@"31.810000",@"longitude":@"119.997000",@"index":@"5"}];
+//            [array addObject:@{@"latitude":@"31.813000",@"longitude":@"119.999000",@"index":@"6"}];
+//            [array addObject:@{@"latitude":@"31.816000",@"longitude":@"119.996000",@"index":@"7"}];
+//            [array addObject:@{@"latitude":@"31.819000",@"longitude":@"119.992000",@"index":@"8"}];
+//            [array addObject:@{@"latitude":@"31.816000",@"longitude":@"119.988000",@"index":@"9"}];
+//            [array addObject:@{@"latitude":@"31.812000",@"longitude":@"119.986000",@"index":@"10"}];
+//            [array addObject:@{@"latitude":@"31.810282",@"longitude":@"119.992165",@"index":@"11"}];
+//            [array addObject:@{@"latitude":@"31.814282",@"longitude":@"119.993265",@"index":@"12"}];
+            [map2 leOnRefreshedData:array];
+            [map2.leOnGetMapview setShowsUserLocation:YES];
+            [map2.leOnGetMapview setCenterCoordinate:CLLocationCoordinate2DMake(31.816000,119.996000) animated:YES];
+            adderAnno=[UIImageView new].leSuperView(view.leViewBelowCustomizedNavigation).leAnchor(LEAnchorInsideCenter).leImage([UIImage imageNamed:@"arrow@2x.jpg"]).leAutoLayout;
+            [adderAnno leSetOffset:CGPointMake(0, -adderAnno.bounds.size.height)];
+            [self aniAdder];
+            adderAnno.hidden=YES;
+            
         }
             break;
         default:
             break;
+    }
+}
+-(void) aniAdder{
+    [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [adderAnno leSetOffset:CGPointMake(0, -adderAnno.bounds.size.height/2)];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [adderAnno leSetOffset:CGPointMake(0, -adderAnno.bounds.size.height)];
+        } completion:^(BOOL finished) {
+            [self aniAdder];
+        }];
+    }];
+}
+-(void) leNavigationRightButtonTapped{
+    step++;
+    adderAnno.hidden=step%2==0;
+    if(step%2==0){
+        [map2 addPos];
     }
 }
 -(void) leOnDoneSearchWith:(NSMutableArray *)array{

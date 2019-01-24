@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F6206167A896105569C934D /* libPods-LEMapviewFrameworks_Test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE5DFDB119C3B7BAB060F0F /* libPods-LEMapviewFrameworks_Test.a */; };
+		803C5DDF200F18EB00BD4719 /* AddPosDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 803C5DDE200F18EB00BD4719 /* AddPosDemo.m */; };
 		80528B201D34BB8A00AA2056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B1F1D34BB8A00AA2056 /* main.m */; };
 		80528B231D34BB8A00AA2056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B221D34BB8A00AA2056 /* AppDelegate.m */; };
 		80528B261D34BB8A00AA2056 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80528B251D34BB8A00AA2056 /* ViewController.m */; };
@@ -25,6 +26,8 @@
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		61E13F6F2B23527F95DCE161 /* Pods-LEMapviewFrameworks_Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEMapviewFrameworks_Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEMapviewFrameworks_Test/Pods-LEMapviewFrameworks_Test.debug.xcconfig"; sourceTree = "<group>"; };
+		803C5DDD200F18EB00BD4719 /* AddPosDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddPosDemo.h; sourceTree = "<group>"; };
+		803C5DDE200F18EB00BD4719 /* AddPosDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddPosDemo.m; sourceTree = "<group>"; };
 		80528B1C1D34BB8A00AA2056 /* LEMapviewFrameworks_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEMapviewFrameworks_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80528B1F1D34BB8A00AA2056 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		80528B211D34BB8A00AA2056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				80528B221D34BB8A00AA2056 /* AppDelegate.m */,
 				80528B241D34BB8A00AA2056 /* ViewController.h */,
 				80528B251D34BB8A00AA2056 /* ViewController.m */,
+				803C5DDD200F18EB00BD4719 /* AddPosDemo.h */,
+				803C5DDE200F18EB00BD4719 /* AddPosDemo.m */,
 				80528B371D3507AE00AA2056 /* arrow@2x.jpg */,
 				80528B381D3507AE00AA2056 /* end@2x.jpg */,
 				80528B271D34BB8A00AA2056 /* Main.storyboard */,
@@ -261,6 +266,7 @@
 				80528B261D34BB8A00AA2056 /* ViewController.m in Sources */,
 				80528B231D34BB8A00AA2056 /* AppDelegate.m in Sources */,
 				80528B201D34BB8A00AA2056 /* main.m in Sources */,
+				803C5DDF200F18EB00BD4719 /* AddPosDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,13 +383,14 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V96P5GMK4T;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = LEMapviewFrameworks_Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.360cbs.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -397,13 +404,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V96P5GMK4T;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = LEMapviewFrameworks_Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.360cbs.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

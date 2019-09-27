@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'LEMapviewFrameworks'
-s.version          = '0.2.1'
+s.version          = '0.2.2'
 s.summary          = '高德地图进一步封装'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ s.author           = { 'LarryEmerson' => 'larryemerson@163.com' }
 s.source           = { :git => 'https://github.com/LarryEmerson/LEMapviewFrameworks.git', :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-s.ios.deployment_target = '7.0'
+s.ios.deployment_target = '8.1'
 
 s.source_files = 'LEMapviewFrameworks/Classes/*.{h,m}'
 

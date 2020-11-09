@@ -14,4 +14,5 @@
 -(void) leOnSetAngle:(float) angle;
 -(void) leOnSetViewCenter:(CGPoint) point;
 -(void) leOnResetAngle;
+-(float) angleBetweenFirstPoint:(CLLocationCoordinate2D) first SecondPoint:(CLLocationCoordinate2D)second ;
 @end

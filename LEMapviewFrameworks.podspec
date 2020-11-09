@@ -36,7 +36,7 @@ s.resource_bundles = {
 # s.public_header_files = 'Pod/Classes/**/*.h'
 # s.frameworks = 'UIKit', 'MapKit'
 s.dependency 'AMap3DMap'
-s.dependency 'AMapSearch'
+s.dependency 'AMapSearch' 
 s.dependency 'LEFrameworks'
 s.dependency 'LEFoundation'
 end

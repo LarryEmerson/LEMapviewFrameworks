@@ -446,18 +446,22 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
     BOOL isOn=YES;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         locationManager=[[CLLocationManager alloc]init];
+        [locationManager requestAlwaysAuthorization];
+        if([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
         [locationManager requestWhenInUseAuthorization];
     }
     if([CLLocationManager locationServicesEnabled]){
-        if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
+        if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied
+           || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted
+           || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
             isOn=NO;
         }
     }else{
         isOn=NO;
     }
     if(isOn==NO){  
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"定位服务未开启"
-                                                        message:[NSString stringWithFormat:@"请在系统设置中开启定位服务\r\n(设置>隐私>定位服务>开启%@)",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]]
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"发现定位服务未开启"
+                                                        message:[NSString stringWithFormat:@"定位服务手动开启方法：\r\n(设置>隐私>定位服务>开启%@)",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]]
                                                        delegate:self
                                               cancelButtonTitle:@"知道了"
                                               otherButtonTitles:nil,nil];

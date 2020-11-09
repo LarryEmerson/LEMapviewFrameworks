@@ -5,10 +5,8 @@
 //  Created by Larry Emerson on 15/8/27.
 //  Copyright (c) 2015年 LarryEmerson. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
 #import <MAMapKit/MAMapKit.h>
-
+#import <Foundation/Foundation.h> 
 @protocol LEMapViewDelegate <NSObject>
 -(void) leOnCallOutViewClickedWithData:(NSDictionary *) data;
 -(void) leOnMapRequestLaunchedWithData:(NSDictionary *) data;

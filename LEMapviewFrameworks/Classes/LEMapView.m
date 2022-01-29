@@ -574,9 +574,11 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
             //add
             LEMapViewAnnotation *an=(LEMapViewAnnotation *) view.annotation;
             [self leRemoveCalloutView];
-            LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.leIndex AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.leIndex] UserCoordinate:mapView.userLocation.coordinate];
-            [mapView addAnnotation:anno];
-            [curMapView setCenterCoordinate:anno.coordinate animated:YES];
+            if(an.leIndex<curDataArrays.count){
+                LEMapCallOutViewAnnotation *anno=[[LEMapCallOutViewAnnotation alloc] initWithCoordinate:an.coordinate Index:an.leIndex AnnotationIcon:self.curAnnotationIcon CallOutBackground:self.curCallOutBackground  Data:[curDataArrays objectAtIndex:an.leIndex] UserCoordinate:mapView.userLocation.coordinate];
+                [mapView addAnnotation:anno];
+                [curMapView setCenterCoordinate:anno.coordinate animated:YES];
+            }
         }
     }
 }

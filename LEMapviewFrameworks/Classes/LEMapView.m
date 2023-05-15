@@ -443,30 +443,35 @@ typedef NS_ENUM(NSInteger, MapRotationStatus) {
 }
 
 -(void) checkGPSSettings{
-    BOOL isOn=YES;
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         locationManager=[[CLLocationManager alloc]init];
         [locationManager requestAlwaysAuthorization];
         if([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
         [locationManager requestWhenInUseAuthorization];
     }
-    if([CLLocationManager locationServicesEnabled]){
-        if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied
-           || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted
-           || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        BOOL isOn=YES;
+        if([CLLocationManager locationServicesEnabled]){
+            if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied
+               || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted
+               || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined){
+                isOn=NO;
+            }
+        }else{
             isOn=NO;
         }
-    }else{
-        isOn=NO;
-    }
-    if(isOn==NO){  
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"发现定位服务未开启"
-                                                        message:[NSString stringWithFormat:@"定位服务手动开启方法：\r\n(设置>隐私>定位服务>开启%@)",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]]
-                                                       delegate:self
-                                              cancelButtonTitle:@"知道了"
-                                              otherButtonTitles:nil,nil];
-        [alert show];
-    }
+        if(isOn==NO){
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"发现定位服务未开启"
+                                                                message:[NSString stringWithFormat:@"定位服务手动开启方法：\r\n(设置>隐私>定位服务>开启%@)",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]]
+                                                               delegate:self
+                                                      cancelButtonTitle:@"知道了"
+                                                      otherButtonTitles:nil,nil];
+                [alert show];                
+            });
+        }
+    });
+    
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==0){
